@@ -1,7 +1,4 @@
----
-title: "Task"
-lightbox: true
----
+# Judgment task {@sec-task}
 
 ```{r}
 #| label: setup

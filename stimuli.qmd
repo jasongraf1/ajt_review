@@ -1,7 +1,4 @@
----
-title: "Stimuli"
-lightbox: true
----
+# Stimuli {@sec-stimuli}
 
 ```{r}
 #| label: setup

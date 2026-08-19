@@ -1,11 +1,9 @@
 ---
-title: "References"
-bibliography: articles_selected_final.bib
-suppress-bibliography: false
-csl: unified-style-linguistics.csl
+title: "List of articles"
 nocite: |
   @*
 ---
 
 ::: {#refs}
+
 :::

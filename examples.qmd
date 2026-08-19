@@ -1,10 +1,8 @@
----
-title: "Experimental Design"
----
+# Examples {@sec-examples}
 
 Here I've listed excerpts from studies illustrating some examples of good practice and (sadly many more) examples of poor practice. 
 
-For some really good examples of how to report things clearly, I recommend sprouse_gender_2021 and francis_resumptive_2015.
+For some really good examples of how to report things clearly, I recommend @sprouse_gender_2021 and @francis_resumptive_2015.
 
 In all the examples below, all bold-face emphasis is my own.
 
@@ -65,7 +63,7 @@ From @letuchiy_tense_2017:
 
 
 
-## Examples of vague or confusing descriptions{#sec-vague}
+## Examples of vague or confusing descriptions {#sec-vague}
 
 From @bhatt_codeswitching_1997:
 

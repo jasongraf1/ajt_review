@@ -1,6 +1,4 @@
----
-title: "Participants"
----
+# Participants {@sec-participants}
 
 ```{r}
 #| label: setup

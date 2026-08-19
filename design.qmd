@@ -1,7 +1,4 @@
----
-title: "Experimental Design"
-lightbox: true
----
+# Experimental design {@sec-design}
 
 ```{r}
 #| label: setup
