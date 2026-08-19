@@ -1,6 +1,4 @@
----
-title: "Overview"
----
+# Overview {@sec-home}
 
 ```{r}
 #| label: setup
@@ -37,13 +35,9 @@ n_excluded <- length(unique(raw$article_index)) - length(unique(filtered$article
 ```
 
 
-This is just a (not so) quick overview of where we stand with coding, and some observations about what we've found so far. 
+This is just a (not so) quick overview of where we stand with coding the articles, and some observations about what we've found so far. 
 
 Coding has been a slog to say the least...
-
-## Where we are with annotations 
-
-### By Journal
 
 So far we've annotated **`r paste0(n_coded,"/",total_articles, " (", perc_coded, "%)")` articles**, containing a total of `r nrow(raw)` individual acceptability judgment task (AJT) studies. Some of these (N = `r n_excluded`) were exculded because they didn't actually include formal AJT experiments.
 
@@ -56,7 +50,7 @@ make_stacked_perc_barplot(full, "journal")
 We've still got just a few journals to finish!
 :::
 
-### By year
+We can see how the use of AJT studies has changed over time.
 
 ```{r}
 #| label: fig-art-by-year
@@ -64,23 +58,6 @@ We've still got just a few journals to finish!
 #| lightbox: false
 make_stacked_perc_barplot(full, "year", sort = F, orientation = "v")
 ```
-
-
-## Annotation contribution
-
-Most of the coding was done by JG!
-
-```{r}
-#| label: tbl-coder-summary
-#| tbl-cap: "Articles coded by coder"
-raw |>
-  distinct(article_index, coder_id) |> 
-  mutate(coder_id = toupper(coder_id)) |>
-  count(coder_id, name = "Articles coded", sort = T) |>
-  rename(Name = "coder_id") |> 
-  knitr::kable()
-```
-
 
 ## Languages investigated
 
@@ -99,8 +76,20 @@ clean |>
   make_split_gg_barplot("language", base_size = 12)
 ```
 
+## Annotation contribution
 
+Most of the coding was done by JG!
 
+```{r}
+#| label: tbl-coder-summary
+#| tbl-cap: "Articles coded by coder"
+raw |>
+  distinct(article_index, coder_id) |> 
+  mutate(coder_id = toupper(coder_id)) |>
+  count(coder_id, name = "Articles coded", sort = T) |>
+  rename(Name = "coder_id") |> 
+  knitr::kable()
+```
 
 
 
