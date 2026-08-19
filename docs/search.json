@@ -1,0 +1,406 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Where we are with annotations\nThis is just a (not so) quick overview of where we stand with coding, and some observations about what we’ve found so far.\nCoding has been a slog to say the least…",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#where-we-are-with-annotations",
+    "href": "index.html#where-we-are-with-annotations",
+    "title": "Overview",
+    "section": "",
+    "text": "By Journal\nSo far we’ve annotated 224/310 (72.3%) articles, containing a total of 380 individual acceptability judgment task (AJT) studies. Some of these (N = 24) were exculded because they didn’t actually include formal AJT experiments.\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: We’ve still got just a few journals to finish!\n\n\n\n\n\nBy year\n\n\n\n\n\n\n\n\nFigure 2: Numbers of AJs in these journals have been increasing since the 2010s.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#annotation-contribution",
+    "href": "index.html#annotation-contribution",
+    "title": "Overview",
+    "section": "Annotation contribution",
+    "text": "Annotation contribution\nMost of the coding was done by JG!\n\n\n\n\nTable 1: Articles coded by coder\n\n\n\n\n\n\nName\nArticles coded\n\n\n\n\nJG\n160\n\n\nMJ\n25\n\n\nLR\n20\n\n\nDD\n19",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#languages-investigated",
+    "href": "index.html#languages-investigated",
+    "title": "Overview",
+    "section": "Languages investigated",
+    "text": "Languages investigated\nWe’ve identified 48 language varieties studied in our review thus far. We’ll need to double check the “Not Reported” cases. I don’t think we should be applying a strict version of the “Bender Rule” here, but we could do so at a later point. This will mostly apply to the English studies.\n\n\n\n\n\n\n\n\nFigure 3: English is by far the most commonly studied language in the sample",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "participants.html",
+    "href": "participants.html",
+    "title": "Participants",
+    "section": "",
+    "text": "Key takeaways",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Participants</span>"
+    ]
+  },
+  {
+    "objectID": "participants.html#key-takeaways",
+    "href": "participants.html#key-takeaways",
+    "title": "Participants",
+    "section": "",
+    "text": "We find that most studies involve fewer than 60-70 participants (mean = 77.112462, median = 50), but there are some with huge numbers, for example, Sprouse, Messick & Bobaljik (2021) had 3072 participants.\nThe population that participants are assumed to be sampled from is rarely explicitly stated.\nUniversity affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies. The platforms sample from “Mixed” populations.\nCompensation is not reported very often, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).\nNot all studies report demographics, but usually at least L1 is specified.\nPower analysis is almost never reported / conducted.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Participants</span>"
+    ]
+  },
+  {
+    "objectID": "participants.html#numbers",
+    "href": "participants.html#numbers",
+    "title": "Participants",
+    "section": "Numbers",
+    "text": "Numbers\nHow many total participants were recruited?\nWe’ve had several studies (N = 17) for which the number of participants was not fully clear.\n\n\n\n\n\n\n\n\nFigure 2.1: Numbers of participants vary, but usually are less than 100",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Participants</span>"
+    ]
+  },
+  {
+    "objectID": "participants.html#participant-characteristics",
+    "href": "participants.html#participant-characteristics",
+    "title": "Participants",
+    "section": "Participant characteristics",
+    "text": "Participant characteristics\n\nPopulationDemographics\n\n\nWhat was the population that participants were sampled from?\nThe population from which participants are sampled is not always clearly reported. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses. These are coded as “Mixed”.\n\n\n\n\n\n\n\n\nFigure 2.2: Proportions of populations reported across studies\n\n\n\n\n\n\n\nWhich participant demographics were reported?\nNot all studies report demographics, but usually at least being a native speaker is specified. Any mention of average age or sex proportions counted as reporting for our purposes.\n\n\n\n\n\n\n\n\nFigure 2.3: Proportions of demographics reported across studies",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Participants</span>"
+    ]
+  },
+  {
+    "objectID": "participants.html#recruitment-and-compensation",
+    "href": "participants.html#recruitment-and-compensation",
+    "title": "Participants",
+    "section": "Recruitment and compensation",
+    "text": "Recruitment and compensation\n\nRecruitmentCompensation\n\n\nHow were participants recruited?\nUniversity affiliation (students and/or staff) is the most common way to get participants, but online platforms have become much more common as we annotate more recent studies. Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe how involvement from students was solicited (e.g. via fliers, social media, classrooms, word-of-mouth).\n\n\n\n\n\n\n\n\nFigure 2.4: Proportions of recruitment methods reported across studies\n\n\n\n\n\n\n\nHow were participants compensated?\nCompensation is not often reported, particularly when off-line recruitment methods are used. Online platforms such as AMT and Prolific pay participants directly, so this may be assumed by authors. But this should be explicitly reported (and often is).\n\n\n\n\n\n\n\n\nFigure 2.5: Proportions of compensation methods reported across studies",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Participants</span>"
+    ]
+  },
+  {
+    "objectID": "design.html",
+    "href": "design.html",
+    "title": "Experimental Design",
+    "section": "",
+    "text": "Key takeaways",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "design.html#key-takeaways",
+    "href": "design.html#key-takeaways",
+    "title": "Experimental Design",
+    "section": "",
+    "text": "Most studies focus on syntax, not surprisingly. In many cases, the line between morphology and syntax or syntax and semantics is a bit blurry, but this is not really a main focus, so…\nExplicit reporting of design features, such as exact numbers of conditions, is not very consistent.\nStudiues vary widely in the numbers of conditions they include, and many studies, especially earlier ones, report overly complex designs.",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "design.html#linguistic-levels-in-focus",
+    "href": "design.html#linguistic-levels-in-focus",
+    "title": "Experimental Design",
+    "section": "Linguistic levels in focus",
+    "text": "Linguistic levels in focus\n\n\n\n\n\n\n\n\nFigure 3.1: Proportions of studies focusing of levels of linguistic structure",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "design.html#design-structure",
+    "href": "design.html#design-structure",
+    "title": "Experimental Design",
+    "section": "Design structure",
+    "text": "Design structure\n\nReporting of condition numbersConditionsDesign structure\n\n\nThe exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure (e.g. “We used a 2x3 design crossing factor A with factor B”) but then leave the reader to compute the final total.\nIn many instances certain contrasts are not considered part of the experimental conditions, thus under-representing the complexity of the design.\n\n\n\n\nTable 3.1: Studies do not report the exact numbers of experimental conditions clearly enough.\n\n\n\n\n\n\nNot Reported\nReported\n\n\n\n\n195 (56.7%)\n149 (43.3%)\n\n\n\n\n\n\n\n\n\n\nHow many experimental conditions are there?\nThere are 344 studies where the total number of conditions is not clear. Those with larger numbers (&gt;10) should probably be re-examined. There are even a few studies (N = 4) with very large (&gt;50) numbers of conditions, which should certain be checked and confirmed.\nAgain, many of these numbers are deducted / inferred from incomplete descriptions of designs. We’ve included some examples of vague descriptions in Examples of over-complicated design below.\n\n\n\n\n\n\n\n\nFigure 3.2: There is a surprisingly wide range of experimental conditions included in AJ studies\n\n\n\n\n\n\nDid the study use a within-subjects or between-subjects design?\n\n\n\n\n\n\n\n\nFigure 3.3: Most studies use within-subjects designs",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "design.html#additional-design-characteristics",
+    "href": "design.html#additional-design-characteristics",
+    "title": "Experimental Design",
+    "section": "Additional design characteristics",
+    "text": "Additional design characteristics\n\nRandomizationPresentationOther features\n\n\nWere items presented in a fixed or (semi-)random order across participants?\n\nRandom: fully random for each participant\nSemi-random (’psuedo-random): order is largely random, but with some prescribed conditions on order (e.g. no adjacent items of the same condition)\nFixed: order is the same across (sets of) participants. Fixed orders are probably more common, as paper questionnaires do not allow for participant-specific re-ordering, but this is not always reported explicitly.\n\n\n\n\n\n\n\n\n\nFigure 3.4: A surprising number of studies fail to report how items were ordered\n\n\n\n\n\n\n\nHow were the experimental trials organized for presentation?\n\nBlocks: items are arranged into and present as predetermined sets\nSemi-random (’psuedo-random): order is largely random, but with some prescribed conditions on order (e.g. no adjacent items of the same condition)\n\nHere “intermixed” involves items of different conditions being intermixed without blocking. Blocking typically also involves intermixing within blocks.\n\n\n\n\n\n\n\n\nFigure 3.5: Most studies intermix items without blocking\n\n\n\n\n\n\n\n\nSome studies (N = 113) include pre-test trials, typically as practice trials for the task. This is common with Magnitude Estimation studies. Very few (N = 6) include post-test trials.\nMany studies balanced items across (predicted) conditions, but this is not always reported clearly.\nA small percentage of studies involve the same items in multiple tasks.\n\n\n\n\n\nTable 3.2: Reporting rates for other design details\n\n\n\n\n\n\nDetail\nNo\nYes\n% Yes\n\n\n\n\nIncluded post-test trials?\n339\n5\n1.5\n\n\nIncluded pre-test trials?\n233\n111\n32.3\n\n\nItems used in multiple tasks?\n289\n55\n16.0\n\n\nStimuli balanced across conditions?\n158\n186\n54.1",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "stimuli.html",
+    "href": "stimuli.html",
+    "title": "Stimuli",
+    "section": "",
+    "text": "Key takeaways",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stimuli</span>"
+    ]
+  },
+  {
+    "objectID": "stimuli.html#key-takeaways",
+    "href": "stimuli.html#key-takeaways",
+    "title": "Stimuli",
+    "section": "",
+    "text": "Explicit reporting of item numbers is not very consistent. The number of items per condition is rarely explicitly mentioned, nor is the number of participants who see a given item. The choice of the number of items used is almost never explained or justified, e.g. via power analysis.\nDetailed information about fillers is very rare. Studies often report the number of fillers, and some general descriptions, but almost none report why they chose that number (same goes for target items). Also, when item sets are provided, filler items are almost never included.",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stimuli</span>"
+    ]
+  },
+  {
+    "objectID": "stimuli.html#item-reporting",
+    "href": "stimuli.html#item-reporting",
+    "title": "Stimuli",
+    "section": "Item Reporting",
+    "text": "Item Reporting\nExact numbers of stimulus items can often be reconstructed / deduced from information in the article, with varying degrees of effort and certainty. But readers ideally should never be required to do this for themselves.\nA surprising number of articles do not accurately report item numbers.\n\n\n\n\nTable 4.1: Studies explicitly reporting the exact numbers of critical experimental items\n\n\n\n\n\n\nNot Reported\nReported\n% Reported\n\n\n\n\n207\n137\n39.8\n\n\n\n\n\n\n\n\n\n\nTotal itemsItems per conditionFillers\n\n\nWhat was the total number of target items created for the study not including fillers or distractors?\nThere are 344 studies where the total number of items is not clear. Additionally we have 32 studies with 200 or more items. These need to be re-checked (the largest is 5^{4}!).\nOn the lower end, there are some studies that report semi-formal surveys of small sets of items, or even just one item, as in Boas (2011). These are often reported in footnotes with minimal details.\n\n\n\n\n\n\n\n\nFigure 4.1: Distribution of critical item counts across studies\n\n\n\n\n\n\nHow many critical items are there per experimental condition?\nThe number of items per condition (min = 1, median = 12, max = 464) is an important aspect of study design, as it directly relates to the power of the study. Frustratingly, this is not always reported clearly.\nWe find 74 studies did not provide clear information about item numbers per condition.\n\n\n\n\n\n\n\n\nFigure 4.2: Distribution of critical item counts per condition across studies\n\n\n\n\n\n\nWhat was the number of filler or distractor items?\n\n\n\n\n\n\n\n\nFigure 4.3: Distribution of critical item counts per condition across studies",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stimuli</span>"
+    ]
+  },
+  {
+    "objectID": "stimuli.html#additional-stimuli-characteristics",
+    "href": "stimuli.html#additional-stimuli-characteristics",
+    "title": "Stimuli",
+    "section": "Additional stimuli characteristics",
+    "text": "Additional stimuli characteristics\n\nConstructionControlsContextPiloting\n\n\nWere the items constructed by the researchers or based on authentic materials?\n\n\n\n\n\n\n\n\nFigure 4.4: Most items are constructed by researchers, but this is also not always reported clearly\n\n\n\n\n\n\n\nWere the items balanced/controlled for internal features that were not the focus of investigation, e.g. frequency, length, etc.?\n\n\n\n\n\n\n\n\nFigure 4.5: Non-focal factors are rarely controlled for in item design\n\n\n\n\n\n\n\nWere items presented with additional context?\n\n\n\n\n\n\n\n\nFigure 4.6: Most items are constructed by researchers, but this is also not always reported clearly\n\n\n\n\n\n\n\nWere items pilot-tested or normed in any way?\nA handful of studied explicitly report piloting or norming items, but no studies explicitly report NOT doing so.\n\n\n\n\n\nYes\nNo\nNot Reported\n% NOT Reported\n\n\n\n\n34\n0\n310\n90.1\n\n\n\nStudies rarely report running any kind of norming or pilot testing of critical items",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Stimuli</span>"
+    ]
+  },
+  {
+    "objectID": "task.html",
+    "href": "task.html",
+    "title": "Task",
+    "section": "",
+    "text": "Key takeaways",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Task</span>"
+    ]
+  },
+  {
+    "objectID": "task.html#key-takeaways",
+    "href": "task.html#key-takeaways",
+    "title": "Task",
+    "section": "",
+    "text": "Likert-type scales dominate: about 7 in 10 studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.\nThe construct being rated is often unclear. “Acceptability” is the most common term used to describe the judgment by the authors, but “Not Reported” is the second most common category — meaning readers often have to guess whether participants were rating grammaticality, naturalness, or something else entirely.\nTask administration details are rarely reported: timing (self-paced vs. fixed), whether sessions were supervised, whether there were practice/pilot trials, breaks, or comprehension checks are almost never mentioned.\nDelivery format has shifted toward computer-based administration, but a substantial share of studies still don’t report much detail on how the task was delivered.",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Task</span>"
+    ]
+  },
+  {
+    "objectID": "task.html#response-format",
+    "href": "task.html#response-format",
+    "title": "Task",
+    "section": "Response format",
+    "text": "Response format\n\nScale typeScale lengthRating terminology\n\n\nWhat was the scale of participants’ responses?\n\n\n\n\n\n\n\n\nFigure 5.1: Ordinal (Likert) scales are by far the most common response format.\n\n\n\n\n\n\n\nHow many levels of acceptability were used (2, 7, 100, …)?\nFor studies using an ordinal scale of 3 or more levels, the number of response levels is fairly concentrated around 7 and 5 points.\n\n\n\n\n\n\n\n\nFigure 5.2: Distribution of response scale lengths (Likert scales of 3 or more only)\n\n\n\n\n\n\n\nWhat terminology did the authors use to refer to their judgment task with participants (e.g. “rate how acceptable / natural /… each sentence is”)?\nThe label used matters. “Acceptability,” “grammaticality,” and “naturalness” are not interchangeable constructs, yet a suprising number of studies (N = 63) don’t specify which one they’re measuring (need to check this).\nAn important note is that most studies do not provide the exact instructions given to participants, and only offer paraphrases. In at least one case (Francis 2010), the authors’ paraphrase in the text was inconsistent with the actual instructions seen by participants.\n\n\n\n\n\n\n\n\nFigure 5.3: Terminology used to describe the judgment being elicited",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Task</span>"
+    ]
+  },
+  {
+    "objectID": "task.html#presentation-and-delivery",
+    "href": "task.html#presentation-and-delivery",
+    "title": "Task",
+    "section": "Presentation and delivery",
+    "text": "Presentation and delivery\n\nModalityDelivery format\n\n\nWhat modality was the judgment task delivered in?\n\n\n\n\n\n\n\n\nFigure 5.4: Written presentation dominates; auditory AJTs remain relatively rare\n\n\n\n\n\n\n\nWas the task duration recorded?\n\n\n\n\n\n\n\n\nFigure 5.5: Computer-based delivery is now the most common format, though paper surveys persist",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Task</span>"
+    ]
+  },
+  {
+    "objectID": "task.html#task-administration",
+    "href": "task.html#task-administration",
+    "title": "Task",
+    "section": "Task administration",
+    "text": "Task administration\nBeyond the response format itself, details of how the task was administered — timing, supervision, practice, and attention checks — matter for interpreting results, but are inconsistently reported.\n\nDurationTimingSupervisionOther details\n\n\nWas the task duration recorded?\n\n\n\n\n\n\n\n\nFigure 5.6: Did the study mention how long participants took (usually as an average)?\n\n\n\n\n\n\n\nWere items presented in a fixed or variable amount of time, or was the presentation self-paced (participants proceded at their own pace)? Some studies may use speeded judgment tasks. Most are self-paced but this is not always explicitly stated.\n\n\n\n\n\n\n\n\nFigure 5.7: Whether the task was self-paced or had a fixed presentation time is rarely reported\n\n\n\n\n\n\n\nWas the study conducted under supervision of the researcher (e.g. in a lab or classroom with researcher present)?\nAny study administered in a lab or classroom was coded as “Yes”. Studies using online crowd-sourcing platforms (AMT, Prolific) we automatically coded as “No”. In many other cases though it’s unclear whether the task was performed under any kind of supervision.\n\n\n\n\n\n\n\n\nFigure 5.8: Whether sessions were supervised (e.g. in-lab vs. unsupervised online)\n\n\n\n\n\n\n\nDetails about participant breaks or management are rare, as are the use of comprehension checks or pilot testing of the task.\n\n\n\n\nTable 5.1: Reporting rates for other task administration details\n\n\n\n\n\n\nDetail\nNot Reported\nReported\n% Reported\n\n\n\n\nBreaks offered\n336\n8\n2.3\n\n\nComprehension checks included\n320\n24\n7.0\n\n\nConfidence ratings used\n343\n1\n0.3\n\n\nPilot testing conducted\n326\n18\n5.2",
+    "crumbs": [
+      "Design",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Task</span>"
+    ]
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Analysis",
+    "section": "",
+    "text": "Key takeaways",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "analysis.html#key-takeaways",
+    "href": "analysis.html#key-takeaways",
+    "title": "Analysis",
+    "section": "",
+    "text": "Mixed-effects regression is now the dominant analysis approach, having overtaken ANOVA, which is consistent with the field’s broader shift toward models that can handle by-participant and by-item variability directly rather than aggregating it away. That said, random effect structure is inconsistently reported. Often it is simply reported as “random effects of subject and item”, without specifying the exact random effect structure.\nEffect sizes are usually absent, except when reported as regression coefficients. Most studies not using regression (e.g. ANOVA or t-tests) report only significance tests and F or t scores, not a standardized measure of effect magnitude such as \\(\\eta^2\\) or Cohen’s \\(d\\).\nPower analysis is almost never conducted (or at least almost never reported), despite sample and item sizes varying enormously across the field (see Design and Stimuli).\nBayesian methods remain rare, and multiple-comparison corrections are almost never mentioned.\nAnalysis software is reported inconsistently. R is the most common tool when specified, but over half of studies don’t say what software was used at all.",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "analysis.html#statistical-approach",
+    "href": "analysis.html#statistical-approach",
+    "title": "Analysis",
+    "section": "Statistical approach",
+    "text": "Statistical approach\n\nStatistical methodSoftwareBayesian methods\n\n\nWhat statistical methods were used to test hypotheses?\n\n\n\n\n\n\n\n\nFigure 6.1: Mixed-effects regression is now more common than traditional ANOVA\n\n\n\n\n\n\n\nWhat software tools were used for analysis?\n\n\n\n\n\n\n\n\nFigure 6.2: R is the most common analysis software when reported, but reporting is inconsistent\n\n\n\n\n\n\n\nDid the analysis use Bayesian methods?\n\n\n\n\nTable 6.1: Very few studies use Bayesian analysis methods\n\n\n\n\n\n\nNo\nYes\n\n\n\n\n332 (96.5%)\n12 (3.5%)",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "analysis.html#model-specification",
+    "href": "analysis.html#model-specification",
+    "title": "Analysis",
+    "section": "Model specification",
+    "text": "Model specification\n\nBy-item/subject effectsRating scale treatmentPreprocessing\n\n\nWere adjustments made for by-participant or by-item variation (e.g. as ‘random effects’ or F1 and F2 ANOVA)?\nMany studies use separate by-subject and by-item ANOVAs, and we include those here along with mixed-effects regression models. Both approaches are used to simultaneously test whether an effect generalizes across both human participants and stimulus items.\n\n\n\n\n\n\n\n\nFigure 6.3: Random effect structure used in mixed-effects models, where reported\n\n\n\n\n\n\n\nWas the response analysed as a continuous scale, an ordinal factor, or dichotomous value?\n\n\n\n\n\n\n\n\nFigure 6.4: How the response variable was treated in the statistical model\n\n\n\n\n\nThis choice matters for which models are appropriate, and doesn’t always match how the scale was presented to participants (see Task). A substantial percentage of studies analyzed Likert-scale ratings as continuous data.\n\n\n\n\nTable 6.2: Statistical scales used to analyze response types\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponse type\nContinuous\nDichotomous\nOrdinal\n% Treated as Continuous\n\n\n\n\nContinuous\n40\n0\n0\n100.0\n\n\nDichotomous (Binary)\n10\n31\n0\n24.4\n\n\nOrdinal (Likert)\n184\n1\n44\n80.3\n\n\n\n\n\n\n\n\n\n\nZ-score normalization is by far the most common manipulation, but this is still a minority of studies, although it’s standard in Magnitude Estimation. Log-transformation is also occasionally used.\n\n\n\n\n\n\n\n\nFigure 6.5: Most studies do not report any preprocessing or transformation of ratings",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "analysis.html#reporting-rigor-effect-size-power-correction-and-thresholds",
+    "href": "analysis.html#reporting-rigor-effect-size-power-correction-and-thresholds",
+    "title": "Analysis",
+    "section": "Reporting rigor: Effect size, power, correction, and thresholds",
+    "text": "Reporting rigor: Effect size, power, correction, and thresholds\nEffect sizes are usually reported as regression coefficients. Statistical significance (p-value) is almost always reported, but the threshold for “significance” used by the authors is almost never explicitly declared.\nPower analysis and multiple comparison correction are very rare.\n\n\n\n\nTable 6.3: Reporting rates for power analysis, multiple-comparison correction, and significance thresholds\n\n\n\n\n\n\n\n\n\n\n\n\nDetail\nNot Reported\nReported\n% Reported\n\n\n\n\nEffect size reported\n237\n107\n31.1\n\n\nMultiple-comparison correction applied\n342\n2\n0.6\n\n\nPower analysis conducted\n339\n5\n1.5\n\n\nSignificance threshold specified\n321\n23\n6.7",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "transparency.html",
+    "href": "transparency.html",
+    "title": "Transparency",
+    "section": "",
+    "text": "Key takeaways",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Transparency</span>"
+    ]
+  },
+  {
+    "objectID": "transparency.html#key-takeaways",
+    "href": "transparency.html#key-takeaways",
+    "title": "Transparency",
+    "section": "",
+    "text": "Materials are more often shared than data, but still less than half the time. When items are made available, they’re most often published directly in the article or its supplementary materials rather than deposited in a dedicated repository.\nRaw data and analysis code are rarely made available. The large majority of studies say nothing about whether data or code can be accessed.\nPreregistration is essentially absent from this literature — only a handful of studies report having preregistered their design or analysis.\nThere’s a visible upward trend in materials and data sharing in more recent years, likely reflecting the broader open-science movement, but it starts from a very low baseline.",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Transparency</span>"
+    ]
+  },
+  {
+    "objectID": "transparency.html#materials-availability",
+    "href": "transparency.html#materials-availability",
+    "title": "Transparency",
+    "section": "Materials availability",
+    "text": "Materials availability\n\n\n\n\n\n\n\n\nFigure 7.1: How (or whether) experimental items were made available",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Transparency</span>"
+    ]
+  },
+  {
+    "objectID": "transparency.html#data-and-code-availability",
+    "href": "transparency.html#data-and-code-availability",
+    "title": "Transparency",
+    "section": "Data and code availability",
+    "text": "Data and code availability\n\n\n\n\n\n\n\n\nFigure 7.2: How (or whether) raw data and/or analysis code were made available",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Transparency</span>"
+    ]
+  },
+  {
+    "objectID": "transparency.html#preregistration",
+    "href": "transparency.html#preregistration",
+    "title": "Transparency",
+    "section": "Preregistration",
+    "text": "Preregistration\n\n\n\n\nTable 7.1: Preregistration is almost never reported in this literature\n\n\n\n\n\n\nNot Reported\nYes\n\n\n\n\n341 (99.1%)\n3 (0.9%)",
+    "crumbs": [
+      "Rigor",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Transparency</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html",
+    "href": "examples.html",
+    "title": "Experimental Design",
+    "section": "",
+    "text": "Some GOOD examples\nHere I’ve listed excerpts from studies illustrating some examples of good practice and (sadly many more) examples of poor practice.\nFor some really good examples of how to report things clearly, I recommend sprouse_gender_2021 and francis_resumptive_2015.\nIn all the examples below, all bold-face emphasis is my own.\nFrom Janda & Reynolds (2019):\nFrom Jánosi, van Craenenbroeck & Vanden Wyngaerd (2014):\nFrom Francis et al. (2015)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#sec-good-exx",
+    "href": "examples.html#sec-good-exx",
+    "title": "Experimental Design",
+    "section": "",
+    "text": "“There was no time limit, participants were allowed to go back to items as many times as they wanted, and they were prompted to go back and finish any items that they had skipped.” (p.480)\n\n\nThis gives specific details of task procedure timing and whether participants could change answer or go back.\n\n\n\n“To determine whether the difference between the ratings of two sentences is significant or not, we performed paired two-sample student’s t-tests. As is customary, we took a p-value below 0.05 to indicate a significant difference.” (p.131)\n\n\nThis explicitly mentions the significance level assumed.\n\n\n\n“To summarize, the design includes three factors: Grammatical Role (3 levels: subject, direct object and coverb object), Possession (2 levels: non-possessive and possessive) and Resumption (2 levels: gap and RP), for a total of 12 conditions. Each condition crosses with five different sets of lexical items, for a total of 60 experimental items. […] Although participants rated all 60 experimental items, the 12 items containing the verb tung4 ‘with’ were excluded from the current analysis because of some special restrictions on this verb which did not apply to the other four verbs.” (p.64)\n\n\nThis gives a very clear description of design conditions and items. Likewise they give clear description of fillers:\n\n\n“60 filler sentences were also included, for a total of 120 sentences. The filler sentences, which did not contain any RCs, were distributed into three categories, according to their pre-determined acceptability (Bad, Medium, and Good). The Medium fillers contained minor anomalies (for example, a quantified noun preceded by the incorrect numeral classifier), while the Bad fillers had more severe grammatical errors (for example, a quantified noun with classifier omitted).” (p.64)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#sec-complicated",
+    "href": "examples.html#sec-complicated",
+    "title": "Experimental Design",
+    "section": "Examples of over-complicated design",
+    "text": "Examples of over-complicated design\nFrom Dąbrowska (2008):\n\n“The experiment described in this paper was designed to investigate how each of these three factors [subject, verb, auxiliary] individually contributes to speakers’ judgment. It will also examine two additional grammatical factors: the presence or absence of a complementizer and the number of clauses intervening between the WH word and the gap, as well as the effects of plausibility and syntactic complexity.”\n\n\nThere were seven experimental conditions included according to the paper.\n\nFrom Mikkelsen (2011):\n\n“Five factors went into the construction of the critical stimuli in experiment 1 (values in parentheses after each factor): clause type (specificational, nonspecificational), pronoun (mig ‘me’/ det ‘it’, ham ‘him’), adverbial (ikke ‘not’, jo≈ ‘you know’, sikkert ‘probably’), context (reason, contrast), and pronoun position (unshifted, shifted). By hypothesis, clause type and pronoun position were the only relevant factors for grammaticality, and the other three were chosen as the most likely alternative factors to affect grammaticality: lexical identity of pronoun, lexical identity of the adverbial element that the pronoun shifts over, and the discourse context of the clause containing the candidate for object shift.” (p.242-3)\n\n\nIf those are all crossed that is 48 unique conditions. Why not fix the non-relevant factors, and what is the relation of these control factors to the critical factors?\n\nFrom Kim & Yoon (2009):\n\nThe sentences with TSC and SSC violations were constructed to reflect various combinations of the factors (i.e., logophoric role (cf. see (15)–(18); subject vs. non-subject antecedent; c-commanding vs. non-c-commanding antecedent; and varying case-marking/grammatical function of the anaphor)).\n\n\nWhat are these “various combinations”?\n\nFrom Letuchiy (2017):\n\n“I carried out several surveys on the social network vk.com. In each of the surveys, I asked native speakers which of several sentences they considered to be (un)grammatical. I only invited answers like “grammatical” and “ungrammatical”; no scale of acceptability was employed. The average number of speakers involved was around 20–30; for some surveys, though, this rose to 50 respondents.”",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#sec-vague",
+    "href": "examples.html#sec-vague",
+    "title": "Experimental Design",
+    "section": "Examples of vague or confusing descriptions",
+    "text": "Examples of vague or confusing descriptions\nFrom Bhatt (1997):\n\n“There were 40 items designed to cover most of the syntactic constraints proposed in the literature, such as, the Government constraint (Di Sciullo et al., 1986), the Functional Head constraint (Belazi et al., 1994), the Equivalence constraint (Poplack, 1980), and the System Morpheme and the Island constraints (Myers-Scotton, 1993a).”\n\n\nThe paper does not list how many constraints (conditions) there were.\n\nFrom Featherston (2005b):\n\n“Subjects thus saw thirty-two experimental sentences in total (2 extraction types x 2 complement clause types x 8 matrix verbs). These experimental materials were implemented in eight different lexicalizations, so that each subject saw a version of the materials such that each experimental condition appeared once and each lexicalization appeared four times.”\n\n\nso how many unique stimulus token sentences were there: 32 or (8 x 32) = 256?\n\nFrom Featherston (2005a):\n\n“In order to test for superiority, we tested twenty-six different multiple wh-question structures, hoping thus to establish whether German has such an effect, and if so, which combinations of grammatical functions as wh-items would trigger it. Twenty-six sentences of the form of (7) were constructed, such that each could be transformed into the multiple wh-questions we tested.” (p. 678)\n\n\nSo how many unique stimulus token sentences were there: 26 or (26 x 26) = 676? There’s no way they asked participants to rate ~700 sentences!\n\n\nWasow & Arnold (2005), Lingua\nFrom Frazier & Clifton (2005):\n\n“Twenty-four sentences like (14) were constructed, with six versions of each. These 24 sentences were combined with 114 other sentences and two-sentence discourses of a wide variety of constructions, including 32 sentences that were unacceptable for a variety of reasons (gender or number disagreement, missing or extra arguments, semantic anomaly, etc.) […] Six counterbalanced lists were constructed, such that each list included 4 sentences in each version, and each sentence appeared on each version in one list.”\n\n\nSo how many filler items did each participant see: 114 or 114/6 = 19?\n\nFrom Clifton & Frazier (2010):\n\n“Twenty-four sentences like those in (14) were constructed with three versions of each (all appear in Appendix B). […] Each person saw a total of 108 sentences, including the 24 sentences used in experiment 2 and filler sentences plus sentences from several unrelated experiments.”\n\n\nHow many total items were constructed (24x3 = 72), and how many did each participant see? No mention of counterbalanced lists, so we assume 72 critical items each?\n\nFrom Sprouse et al. (2011):\n\n“These experimental materials [for experiment 2] were interleaved with those of experiment 1; therefore, all of the experimental details are identical to those described in section 3.”\n\n\nSo do the current items count as fillers for the first experiment? No mention of this is made in description in Section 3: “The 48 target tokens (4 islands × 6 conditions × 2 tokens) in each list were combined with 48 unrelated filler items. The filler items were chosen such that the composition of each survey was 50% acceptable and 50% unacceptable (by hypothesis), as well as 50% interrogative and 50% declarative.” Where do the 10 exp. 2 items fit in here?\nDo all the other items in experiment 1 now count as fillers for experiment 2?\nThis is a common example of people interleaving item sets from multiple experiments, but this is rarely described clearly.\n\nFrom Letuchiy (2017):\n\n“I carried out several surveys on the social network vk.com. In each of the surveys, I asked native speakers which of several sentences they considered to be (un)grammatical. I only invited answers like “grammatical” and “ungrammatical”; no scale of acceptability was employed. The average number of speakers involved was around 20–30; for some surveys, though, this rose to 50 respondents.”\n\n\nAn rather extreme example of vagueness in reporting design parameters.\n\nFrom Ellsiepen & Bader (2018):\n\n“Materials. Thirty-two experimental items were created. A full example item can be found in Table 2. Each experimental sentence started with a short introductory main clause, followed by a complement clause that contained two NPs and an indefinite subject pronoun, which was dropped in the passive conditions. The dative object NP was always animate. Three [binary] variables were manipulated in a factorial design: Order between the dative NP and the theme NP (Order: dative 1st, dative 2nd), voice (Voice: active, passive), and animacy of the theme NP (Animacy: animate, inanimate), where this NP was accusative in the active conditions and nominative in the passive conditions. Our focus in constructing the items was on the plausibility of the sentences for both lexicalizations of the theme NP. In addition, we controlled for length as measured by the number of syllables. Three pairwise t-tests confirmed that there were no significant differences between animate and inanimate second NP (t(31) = –0.53, p &gt; .1), between dative NP and animate second NP (t(31) = 1.21, p &gt; .1), or between dative NP and inanimate second NP (t(31) = 1.68, p &gt; .1). Three additional experiments and 29 unrelated sentences with mild to severe grammaticality problems served as filler items, amounting to 159 test sentences in the whole experiment.”\n\n\nThere should be 256 total test sentences (32 ‘items’ x 8 conditions), yet there are 159 test sentences? How do we get to this number?\n\nFrom Frazier et al. (2018), a rather complicated trail of design breadcrumbs:\n\nSixteen items like the one illustrated in (6) were constructed. Each item had four versions, defined by the factorial combination of +NR versus −NR and the use of a verb that permitted Neg Raising versus one that did not[…]”\n\n\nSo this should be 16 x 4 = 64 test sentences…\n\n\n“Four different virtual counterbalanced lists were constructed such that each list contained an equal number of sentences in each condition […] and each item appeared in each condition in one list […]”\n\n\nSo presumably each participant saw only 16 test sentences…\n\n\n“The experimental items were combined with 26 filler items, 16 of which were sharply syntactically anomalous with the remainder containing minor syntactic anomalies or clear semantic anomalies. The first 16 items were used to ensure that participants were paying attention and making appropriate judgments[…]”\n\n\nSo that means each participant saw 16 test + 26 fillers = 42 sentences total… Does that include the “first 16 items”, or were those in addition to the 26 filler items?\n\n\n“Participants received a questionnaire, a consent request, and instructions as in experiment 1. They then received three practice items, followed by the 58 items in the experiments, in an individually randomized order.”\n\n\nHow do we get to 58 trials (‘items’) per participant? Are there really 26 + 16 fillers? What is going on here?\n\nFrom Kim & Yoon (2009):\n\n“The test materials consisted of 100 items—62 target items and 38 non-target items. The target items were composed of 2 types of Korean sentences violating TSC […] with 5 tokens in each type, 9 types of Korean sentences attesting both TSC and SSC violations, again with 5 tokens in each type. Sentences with only TSC violation (10 tokens) exemplify core binding, while the remaining 52 tokens that violate both TSC and SSC were meant to exemplify various types of exempt binding.”\n\n\nSo there are 2 x 5 = 10 tokens violating TSC; 9 x 5 = 45 tokens attesting both TSC and SSC violations, 10 tokens with only TSC violation; and 52 tokens that violate both TSC and SSC. That’s 10 + 45 + 10 + 52 = 117 target tokens…\n\nFrom Francis (2010):\n\nInformation reported in the text is inconsistent with what was actually done. In the body it says,\n\n\n“The survey consisted of a series of sentences for which participants were asked to rate each sentence on 9-point scale, where 9 means ‘completely acceptable’ and 1 means ‘completely unacceptable’ (see Appendix B for exact instructions).” (p.20)\n\n\nBut un the Appendix, the verbatim instructions do not mention acceptability:\n\n\n“Please read each of the sentences listed below. For each sentence, we would like you to indicate your reaction to the sentence. Mark your response sheet by circling a number from (1) to (9). Use (9) for sentences that seem fully normal, and understandable to you. Use (1) for sentences that seem very odd, awkward, or difficult for you to understand. If your feelings about the sentence are somewhere between these extremes, use one of the middle responses from (2) to (8). Please try to use the entire scale, not just the end points of the scale.”",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Experimental Design</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Bhatt, Rakesh Mohan. 1997. Code-switching, constraints, and optimal\ngrammars. Lingua. International review of general linguistics. Revue\ninternationale de linguistique générale\n102(4). 223–251. doi:10.1016/s0024-3841(97)00007-7.\n\n\nBoas, Hans C. 2011. Coercion and leaking argument structures in\nConstruction Grammar. Linguistics 49(6). doi:10.1515/ling.2011.036.\n\n\nClifton, Charles & Lyn Frazier. 2010. When are downward-entailing\ncontexts identified? The case of the domain widener\niever/i.\nLinguistic Inquiry 41(4). 681–689. doi:10.1162/ling_a_00017.\n\n\nDąbrowska, Ewa. 2008. Questions with long-distance dependencies:\nA usage-based perspective. Cognitive Linguistics\n19(3). doi:10.1515/cogl.2008.015.\n\n\nEllsiepen, Emilia & Markus Bader. 2018. Constraints on argument\nlinearization in german. Glossa: a journal of general\nlinguistics 3(1). doi:10.5334/gjgl.258.\n\n\nFeatherston, Sam. 2005a. Universals and grammaticality: Wh-constraints\nin German and English. Linguistics\n43(4). doi:10.1515/ling.2005.43.4.667.\n\n\nFeatherston, Sam. 2005b. That-trace in german. Lingua. International\nreview of general linguistics. Revue internationale de linguistique\ngénérale 115(9). 1277–1302. doi:10.1016/j.lingua.2004.04.001.\n\n\nFrancis, Elaine J. 2010. Grammatical weight and relative clause\nextraposition in English. cogl 21(1). 35–74.\ndoi:10.1515/cogl.2010.002.\n\n\nFrancis, Elaine J., Charles Lam, Carol Chun Zheng, John Hitz &\nStephen Matthews. 2015. Resumptive pronouns, structural complexity, and\nthe elusive distinction between grammar and performance:\nEvidence from Cantonese. Lingua.\nInternational review of general linguistics. Revue internationale de\nlinguistique générale 162. 56–81. doi:10.1016/j.lingua.2015.04.006.\n\n\nFrazier, Lyn & Charles Clifton. 2005. The syntax-discourse divide:\nProcessing ellipsis. Syntax (Oxford, England) 8(2). 121–174.\ndoi:10.1111/j.1467-9612.2005.00077.x.\n\n\nFrazier, Lyn, Charles Clifton, Stephanie Rich & John Duff. 2018.\nAnticipating negation: The dos and don’ts of neg raising.\nSyntax (Oxford, England) 21(2). 160–194. doi:10.1111/synt.12151.\n\n\nJanda, Laura A. & Robert J. Reynolds. 2019. Construal vs.\nRedundancy: Russian aspect in context. Cognitive\nLinguistics 30(3). 467–497. doi:10.1515/cog-2017-0084.\n\n\nJánosi, Adrienn, Jeroen van Craenenbroeck & Guido Vanden Wyngaerd.\n2014. Long split focalization in Hungarian and the typology\nof A′-dependencies. Lingua.\nInternational review of general linguistics. Revue internationale de\nlinguistique générale 150. 117–136.\ndoi:10.1016/j.lingua.2014.07.009.\n\n\nKim, Ji-Hye & James H. Yoon. 2009. Long-distance bound local\nanaphors in Korean—An empirical study of the\nKorean anaphor caki-casin. Lingua. International review\nof general linguistics. Revue internationale de linguistique\ngénérale 119(5). 733–755. doi:10.1016/j.lingua.2008.10.002.\n\n\nLetuchiy, Alexander. 2017. On tense and irrealis marking in triclausal\nconstructions (and what distinguishes them from biclausal\nconstructions). Linguistics 56(1). 163–206. doi:10.1515/ling-2017-0034.\n\n\nMikkelsen, Line. 2011. On prosody and focus in object shift. Syntax\n(Oxford, England) 14(3). 230–264. doi:10.1111/j.1467-9612.2011.00152.x.\n\n\nSprouse, Jon, Shin Fukuda, Hajime Ono & Robert Kluender. 2011.\nReverse island effects and the backward search for a licensor in\nmultiple wh-questions. Syntax (Oxford, England) 14(2). 179–203.\ndoi:10.1111/j.1467-9612.2011.00153.x.\n\n\nSprouse, Jon, Troy Messick & Jonathan David Bobaljik. 2021. Gender\nasymmetries in ellipsis: An experimental comparison of\nmarkedness and frequency accounts in English. Journal\nof Linguistics 58(2). 345–379. doi:10.1017/s0022226721000323.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>References</span>"
+    ]
+  }
+]
