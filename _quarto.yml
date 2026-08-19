@@ -71,6 +71,8 @@ knitr:
     dev: "svglite"
 
 bibliography: [articles_selected_final.bib]
+nocite: |
+  @*
 link-citations: true
 csl: unified-style-linguistics.csl  # optional
 
