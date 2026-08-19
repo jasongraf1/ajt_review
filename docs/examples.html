@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Experimental Design – AJT Systematic Review</title>
+<title>Examples – AJT Systematic Review</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -74,6 +94,35 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;1,8..144,100;1,8..144,200&amp;family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="custom_bib.css">
 </head>
@@ -87,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./examples.html"><span class="chapter-title">Experimental Design</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./examples.html"><span class="chapter-title">Examples</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -104,6 +153,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">AJT Systematic Review</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/jasongraf1/ajt_review" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -136,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./design.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Experimental Design</span></a>
+  <a href="./design.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Experimental design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -146,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./task.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Task</span></a>
+  <a href="./task.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Judgment task</span></a>
   </div>
 </li>
       </ul>
@@ -174,12 +224,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./examples.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Experimental Design</span></a>
+  <a href="./examples.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Examples</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">List of articles</span></a>
   </div>
 </li>
     </ul>
@@ -203,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Experimental Design</span></h1>
+<h1 class="title"><span class="chapter-title">Examples</span></h1>
 </div>
 
 
@@ -221,25 +271,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Here I’ve listed excerpts from studies illustrating some examples of good practice and (sadly many more) examples of poor practice.</p>
-<p>For some really good examples of how to report things clearly, I recommend sprouse_gender_2021 and francis_resumptive_2015.</p>
+<p>For some really good examples of how to report things clearly, I recommend <span class="citation" data-cites="sprouse_gender_2021">Sprouse, Messick &amp; Bobaljik (<a href="references.html#ref-sprouse_gender_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="francis_resumptive_2015">Francis et al. (<a href="references.html#ref-francis_resumptive_2015" role="doc-biblioref">2015</a>)</span>.</p>
 <p>In all the examples below, all bold-face emphasis is my own.</p>
 <section id="sec-good-exx" class="level2">
 <h2 class="anchored" data-anchor-id="sec-good-exx">Some GOOD examples</h2>
-<p>From <span class="citation" data-cites="janda_construal_2019">Janda &amp; Reynolds (2019)</span>:</p>
+<p>From <span class="citation" data-cites="janda_construal_2019">Janda &amp; Reynolds (<a href="references.html#ref-janda_construal_2019" role="doc-biblioref">2019</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“There was no time limit, participants were allowed to go back to items as many times as they wanted, and they were prompted to go back and finish any items that they had skipped.” (p.480)</p>
 </blockquote>
 <ul>
 <li>This gives specific details of task procedure timing and whether participants could change answer or go back.</li>
 </ul>
-<p>From <span class="citation" data-cites="janosi_long_2014">Jánosi, van Craenenbroeck &amp; Vanden Wyngaerd (2014)</span>:</p>
+<p>From <span class="citation" data-cites="janosi_long_2014">Jánosi, van Craenenbroeck &amp; Vanden Wyngaerd (<a href="references.html#ref-janosi_long_2014" role="doc-biblioref">2014</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“To determine whether the difference between the ratings of two sentences is significant or not, we performed paired two-sample student’s t-tests. <strong>As is customary, we took a p-value below 0.05 to indicate a significant difference</strong>.” (p.131)</p>
 </blockquote>
 <ul>
 <li>This explicitly mentions the significance level assumed.</li>
 </ul>
-<p>From <span class="citation" data-cites="francis_resumptive_2015">Francis et al. (2015)</span></p>
+<p>From <span class="citation" data-cites="francis_resumptive_2015">Francis et al. (<a href="references.html#ref-francis_resumptive_2015" role="doc-biblioref">2015</a>)</span></p>
 <blockquote class="blockquote">
 <p>“To summarize, the design includes three factors: Grammatical Role (3 levels: subject, direct object and coverb object), Possession (2 levels: non-possessive and possessive) and Resumption (2 levels: gap and RP), <strong>for a total of 12 conditions. Each condition crosses with five different sets of lexical items, for a total of 60 experimental items.</strong> […] Although <strong>participants rated all 60 experimental items</strong>, the 12 items containing the verb tung4 ‘with’ were excluded from the current analysis because of some special restrictions on this verb which did not apply to the other four verbs.” (p.64)</p>
 </blockquote>
@@ -252,49 +302,49 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-complicated" class="level2">
 <h2 class="anchored" data-anchor-id="sec-complicated">Examples of over-complicated design</h2>
-<p>From <span class="citation" data-cites="dabrowska_questions_2008a">Dąbrowska (2008)</span>:</p>
+<p>From <span class="citation" data-cites="dabrowska_questions_2008a">Dąbrowska (<a href="references.html#ref-dabrowska_questions_2008a" role="doc-biblioref">2008</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“The experiment described in this paper was designed to investigate how each of these three factors [subject, verb, auxiliary] individually contributes to speakers’ judgment. It will also examine two additional grammatical factors: the presence or absence of a complementizer and the number of clauses intervening between the WH word and the gap, as well as the effects of plausibility and syntactic complexity.”</p>
 </blockquote>
 <ul>
 <li>There were seven experimental conditions included according to the paper.</li>
 </ul>
-<p>From <span class="citation" data-cites="mikkelsen_prosody_2011">Mikkelsen (2011)</span>:</p>
+<p>From <span class="citation" data-cites="mikkelsen_prosody_2011">Mikkelsen (<a href="references.html#ref-mikkelsen_prosody_2011" role="doc-biblioref">2011</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“Five factors went into the construction of the critical stimuli in experiment 1 (values in parentheses after each factor): clause type (specificational, nonspecificational), pronoun (<em>mig</em> ‘me’/ <em>det</em> ‘it’, <em>ham</em> ‘him’), adverbial (<em>ikke</em> ‘not’, <em>jo≈</em> ‘you know’, <em>sikkert</em> ‘probably’), context (reason, contrast), and pronoun position (unshifted, shifted). <strong><em>By hypothesis, clause type and pronoun position were the only relevant factors for grammaticality</em></strong>, and the other three were chosen as the most likely alternative factors to affect grammaticality: lexical identity of pronoun, lexical identity of the adverbial element that the pronoun shifts over, and the discourse context of the clause containing the candidate for object shift.” (p.242-3)</p>
 </blockquote>
 <ul>
 <li>If those are all crossed that is 48 unique conditions. Why not fix the non-relevant factors, and what is the relation of these control factors to the critical factors?</li>
 </ul>
-<p>From <span class="citation" data-cites="kim_longdistance_2009">Kim &amp; Yoon (2009)</span>:</p>
+<p>From <span class="citation" data-cites="kim_longdistance_2009">Kim &amp; Yoon (<a href="references.html#ref-kim_longdistance_2009" role="doc-biblioref">2009</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>The sentences with TSC and SSC violations were constructed to reflect various combinations of the factors (i.e., logophoric role (cf.&nbsp;see (15)–(18); subject vs.&nbsp;non-subject antecedent; c-commanding vs.&nbsp;non-c-commanding antecedent; and varying case-marking/grammatical function of the anaphor)).</p>
 </blockquote>
 <ul>
 <li>What are these “various combinations”?</li>
 </ul>
-<p>From <span class="citation" data-cites="letuchiy_tense_2017">Letuchiy (2017)</span>:</p>
+<p>From <span class="citation" data-cites="letuchiy_tense_2017">Letuchiy (<a href="references.html#ref-letuchiy_tense_2017" role="doc-biblioref">2017</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“I carried out several surveys on the social network vk.com. In each of the surveys, I asked native speakers which of several sentences they considered to be (un)grammatical. I only invited answers like “grammatical” and “ungrammatical”; no scale of acceptability was employed. The average number of speakers involved was around 20–30; for some surveys, though, this rose to 50 respondents.”</p>
 </blockquote>
 </section>
 <section id="sec-vague" class="level2">
 <h2 class="anchored" data-anchor-id="sec-vague">Examples of vague or confusing descriptions</h2>
-<p>From <span class="citation" data-cites="bhatt_codeswitching_1997">Bhatt (1997)</span>:</p>
+<p>From <span class="citation" data-cites="bhatt_codeswitching_1997">Bhatt (<a href="references.html#ref-bhatt_codeswitching_1997" role="doc-biblioref">1997</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“There were 40 items designed to cover most of the syntactic constraints proposed in the literature, such as, the Government constraint (Di Sciullo et al., 1986), the Functional Head constraint (Belazi et al., 1994), the Equivalence constraint (Poplack, 1980), and the System Morpheme and the Island constraints (Myers-Scotton, 1993a).”</p>
 </blockquote>
 <ul>
 <li>The paper does not list how many constraints (conditions) there were.</li>
 </ul>
-<p>From <span class="citation" data-cites="featherston_thattrace_2005">Featherston (2005b)</span>:</p>
+<p>From <span class="citation" data-cites="featherston_thattrace_2005">Featherston (<a href="references.html#ref-featherston_thattrace_2005" role="doc-biblioref">2005b</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“Subjects thus saw thirty-two experimental sentences in total (2 extraction types x 2 complement clause types x 8 matrix verbs). These experimental materials were implemented in eight different lexicalizations, so that each subject saw a version of the materials such that each experimental condition appeared once and each lexicalization appeared four times.”</p>
 </blockquote>
 <ul>
 <li>so how many unique stimulus token sentences were there: 32 or (8 x 32) = 256?</li>
 </ul>
-<p>From <span class="citation" data-cites="featherston_universals_2005a">Featherston (2005a)</span>:</p>
+<p>From <span class="citation" data-cites="featherston_universals_2005a">Featherston (<a href="references.html#ref-featherston_universals_2005a" role="doc-biblioref">2005a</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“In order to test for superiority, <strong>we tested twenty-six different multiple wh-question structures</strong>, hoping thus to establish whether German has such an effect, and if so, which combinations of grammatical functions as wh-items would trigger it. Twenty-six sentences of the form of (7) were constructed, such that <strong>each could be transformed into the multiple wh-questions we tested</strong>.” (p.&nbsp;678)</p>
 </blockquote>
@@ -303,21 +353,21 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <section id="wasow-arnold-2005-lingua" class="level4">
 <h4 class="anchored" data-anchor-id="wasow-arnold-2005-lingua">Wasow &amp; Arnold (2005), <em>Lingua</em></h4>
-<p>From <span class="citation" data-cites="frazier_syntaxdiscourse_2005">Frazier &amp; Clifton (2005)</span>:</p>
+<p>From <span class="citation" data-cites="frazier_syntaxdiscourse_2005">Frazier &amp; Clifton (<a href="references.html#ref-frazier_syntaxdiscourse_2005" role="doc-biblioref">2005</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“Twenty-four sentences like (14) were constructed, with six versions of each. These 24 sentences were combined with 114 other sentences and two-sentence discourses of a wide variety of constructions, including 32 sentences that were unacceptable for a variety of reasons (gender or number disagreement, missing or extra arguments, semantic anomaly, etc.) […] Six counterbalanced lists were constructed, such that each list included 4 sentences in each version, and each sentence appeared on each version in one list.”</p>
 </blockquote>
 <ul>
 <li>So how many filler items did each participant see: 114 or 114/6 = 19?</li>
 </ul>
-<p>From <span class="citation" data-cites="clifton_when_2010a">Clifton &amp; Frazier (2010)</span>:</p>
+<p>From <span class="citation" data-cites="clifton_when_2010a">Clifton &amp; Frazier (<a href="references.html#ref-clifton_when_2010a" role="doc-biblioref">2010</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“Twenty-four sentences like those in (14) were constructed with three versions of each (all appear in Appendix B). […] Each person saw a total of 108 sentences, including the 24 sentences used in experiment 2 and filler sentences plus sentences from several unrelated experiments.”</p>
 </blockquote>
 <ul>
 <li>How many total items were constructed (24x3 = 72), and how many did each participant see? No mention of counterbalanced lists, so we assume 72 critical items each?</li>
 </ul>
-<p>From <span class="citation" data-cites="sprouse_reverse_2011">Sprouse et al. (2011)</span>:</p>
+<p>From <span class="citation" data-cites="sprouse_reverse_2011">Sprouse et al. (<a href="references.html#ref-sprouse_reverse_2011" role="doc-biblioref">2011</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“These experimental materials [for experiment 2] were interleaved with those of experiment 1; therefore, all of the experimental details are identical to those described in section 3.”</p>
 </blockquote>
@@ -326,21 +376,21 @@ ul.task-list li input[type="checkbox"] {
 <li>Do all the other items in experiment 1 now count as fillers for experiment 2?</li>
 <li>This is a common example of people interleaving item sets from multiple experiments, but this is rarely described clearly.</li>
 </ul>
-<p>From <span class="citation" data-cites="letuchiy_tense_2017">Letuchiy (2017)</span>:</p>
+<p>From <span class="citation" data-cites="letuchiy_tense_2017">Letuchiy (<a href="references.html#ref-letuchiy_tense_2017" role="doc-biblioref">2017</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“I carried out several surveys on the social network vk.com. In each of the surveys, I asked native speakers which of several sentences they considered to be (un)grammatical. I only invited answers like “grammatical” and “ungrammatical”; no scale of acceptability was employed. The average number of speakers involved was around 20–30; for some surveys, though, this rose to 50 respondents.”</p>
 </blockquote>
 <ul>
 <li>An rather extreme example of vagueness in reporting design parameters.</li>
 </ul>
-<p>From <span class="citation" data-cites="ellsiepen_constraints_2018">Ellsiepen &amp; Bader (2018)</span>:</p>
+<p>From <span class="citation" data-cites="ellsiepen_constraints_2018">Ellsiepen &amp; Bader (<a href="references.html#ref-ellsiepen_constraints_2018" role="doc-biblioref">2018</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“Materials. <strong>Thirty-two experimental items</strong> were created. A full example item can be found in Table 2. Each experimental sentence started with a short introductory main clause, followed by a complement clause that contained two NPs and an indefinite subject pronoun, which was dropped in the passive conditions. The dative object NP was always animate. <strong>Three [binary] variables were manipulated in a factorial design</strong>: Order between the dative NP and the theme NP (Order: dative 1st, dative 2nd), voice (Voice: active, passive), and animacy of the theme NP (Animacy: animate, inanimate), where this NP was accusative in the active conditions and nominative in the passive conditions. Our focus in constructing the items was on the plausibility of the sentences for both lexicalizations of the theme NP. In addition, we controlled for length as measured by the number of syllables. Three pairwise t-tests confirmed that there were no significant differences between animate and inanimate second NP (t(31) = –0.53, p &gt; .1), between dative NP and animate second NP (t(31) = 1.21, p &gt; .1), or between dative NP and inanimate second NP (t(31) = 1.68, p &gt; .1). Three additional experiments and 29 unrelated sentences with mild to severe grammaticality problems served as filler items, amounting to <strong><em>159 test sentences in the whole experiment</em></strong>.”</p>
 </blockquote>
 <ul>
 <li>There should be 256 total test sentences (32 ‘items’ x 8 conditions), yet there are 159 test sentences? How do we get to this number?</li>
 </ul>
-<p>From <span class="citation" data-cites="frazier_anticipating_2018">Frazier et al. (2018)</span>, a rather complicated trail of design breadcrumbs:</p>
+<p>From <span class="citation" data-cites="frazier_anticipating_2018">Frazier et al. (<a href="references.html#ref-frazier_anticipating_2018" role="doc-biblioref">2018</a>)</span>, a rather complicated trail of design breadcrumbs:</p>
 <blockquote class="blockquote">
 <p><strong>Sixteen items</strong> like the one illustrated in (6) were constructed. <strong>Each item had four versions</strong>, defined by the factorial combination of +NR versus −NR and the use of a verb that permitted Neg Raising versus one that did not[…]”</p>
 </blockquote>
@@ -365,14 +415,14 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>How do we get to 58 trials (‘items’) per participant? Are there really 26 + 16 fillers? What is going on here?</li>
 </ul>
-<p>From <span class="citation" data-cites="kim_longdistance_2009">Kim &amp; Yoon (2009)</span>:</p>
+<p>From <span class="citation" data-cites="kim_longdistance_2009">Kim &amp; Yoon (<a href="references.html#ref-kim_longdistance_2009" role="doc-biblioref">2009</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>“The <strong>test materials consisted of 100 items—62 target items and 38 non-target items</strong>. The target items were composed of 2 types of Korean sentences violating TSC […] with 5 tokens in each type, 9 types of Korean sentences attesting both TSC and SSC violations, again with 5 tokens in each type. Sentences with only TSC violation (10 tokens) exemplify core binding, while the remaining 52 tokens that violate both TSC and SSC were meant to exemplify various types of exempt binding.”</p>
 </blockquote>
 <ul>
 <li>So there are 2 x 5 = 10 tokens violating TSC; 9 x 5 = 45 tokens attesting both TSC and SSC violations, 10 tokens with only TSC violation; and 52 tokens that violate both TSC and SSC. That’s 10 + 45 + 10 + 52 = 117 target tokens…</li>
 </ul>
-<p>From <span class="citation" data-cites="francis_grammatical_2010a">Francis (2010)</span>:</p>
+<p>From <span class="citation" data-cites="francis_grammatical_2010a">Francis (<a href="references.html#ref-francis_grammatical_2010a" role="doc-biblioref">2010</a>)</span>:</p>
 <ul>
 <li>Information reported in the text is inconsistent with what was actually done. In the body it says,</li>
 </ul>
@@ -387,6 +437,59 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bhatt_codeswitching_1997" class="csl-entry" role="listitem">
+Bhatt, Rakesh Mohan. 1997. Code-switching, constraints, and optimal grammars. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 102(4). 223–251. doi:<a href="https://doi.org/10.1016/s0024-3841(97)00007-7">10.1016/s0024-3841(97)00007-7</a>.
+</div>
+<div id="ref-clifton_when_2010a" class="csl-entry" role="listitem">
+Clifton, Charles &amp; Lyn Frazier. 2010. When are downward-entailing contexts identified? <span>The</span> case of the domain widener <span></span>i<span></span>ever<span></span>/i<span></span>. <em>Linguistic Inquiry</em> 41(4). 681–689. doi:<a href="https://doi.org/10.1162/ling_a_00017">10.1162/ling_a_00017</a>.
+</div>
+<div id="ref-dabrowska_questions_2008a" class="csl-entry" role="listitem">
+Dąbrowska, Ewa. 2008. Questions with long-distance dependencies: <span>A</span> usage-based perspective. <em>Cognitive Linguistics</em> 19(3). doi:<a href="https://doi.org/10.1515/cogl.2008.015">10.1515/cogl.2008.015</a>.
+</div>
+<div id="ref-ellsiepen_constraints_2018" class="csl-entry" role="listitem">
+Ellsiepen, Emilia &amp; Markus Bader. 2018. Constraints on argument linearization in german. <em>Glossa: a journal of general linguistics</em> 3(1). doi:<a href="https://doi.org/10.5334/gjgl.258">10.5334/gjgl.258</a>.
+</div>
+<div id="ref-featherston_universals_2005a" class="csl-entry" role="listitem">
+Featherston, Sam. 2005a. Universals and grammaticality: Wh-constraints in <span>German</span> and <span>English</span>. <em>Linguistics</em> 43(4). doi:<a href="https://doi.org/10.1515/ling.2005.43.4.667">10.1515/ling.2005.43.4.667</a>.
+</div>
+<div id="ref-featherston_thattrace_2005" class="csl-entry" role="listitem">
+Featherston, Sam. 2005b. That-trace in german. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 115(9). 1277–1302. doi:<a href="https://doi.org/10.1016/j.lingua.2004.04.001">10.1016/j.lingua.2004.04.001</a>.
+</div>
+<div id="ref-francis_grammatical_2010a" class="csl-entry" role="listitem">
+Francis, Elaine J. 2010. Grammatical weight and relative clause extraposition in <span>English</span>. <em>cogl</em> 21(1). 35–74. doi:<a href="https://doi.org/10.1515/cogl.2010.002">10.1515/cogl.2010.002</a>.
+</div>
+<div id="ref-francis_resumptive_2015" class="csl-entry" role="listitem">
+Francis, Elaine J., Charles Lam, Carol Chun Zheng, John Hitz &amp; Stephen Matthews. 2015. Resumptive pronouns, structural complexity, and the elusive distinction between grammar and performance: <span>Evidence</span> from <span>Cantonese</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 162. 56–81. doi:<a href="https://doi.org/10.1016/j.lingua.2015.04.006">10.1016/j.lingua.2015.04.006</a>.
+</div>
+<div id="ref-frazier_syntaxdiscourse_2005" class="csl-entry" role="listitem">
+Frazier, Lyn &amp; Charles Clifton. 2005. The syntax-discourse divide: Processing ellipsis. <em>Syntax (Oxford, England)</em> 8(2). 121–174. doi:<a href="https://doi.org/10.1111/j.1467-9612.2005.00077.x">10.1111/j.1467-9612.2005.00077.x</a>.
+</div>
+<div id="ref-frazier_anticipating_2018" class="csl-entry" role="listitem">
+Frazier, Lyn, Charles Clifton, Stephanie Rich &amp; John Duff. 2018. Anticipating negation: <span>The</span> dos and don’ts of neg raising. <em>Syntax (Oxford, England)</em> 21(2). 160–194. doi:<a href="https://doi.org/10.1111/synt.12151">10.1111/synt.12151</a>.
+</div>
+<div id="ref-janda_construal_2019" class="csl-entry" role="listitem">
+Janda, Laura A. &amp; Robert J. Reynolds. 2019. Construal vs. Redundancy: <span>Russian</span> aspect in context. <em>Cognitive Linguistics</em> 30(3). 467–497. doi:<a href="https://doi.org/10.1515/cog-2017-0084">10.1515/cog-2017-0084</a>.
+</div>
+<div id="ref-janosi_long_2014" class="csl-entry" role="listitem">
+Jánosi, Adrienn, Jeroen van Craenenbroeck &amp; Guido Vanden Wyngaerd. 2014. Long split focalization in <span>Hungarian</span> and the typology of <span>A</span><span><span class="math inline">\(\prime\)</span></span>-dependencies. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 150. 117–136. doi:<a href="https://doi.org/10.1016/j.lingua.2014.07.009">10.1016/j.lingua.2014.07.009</a>.
+</div>
+<div id="ref-kim_longdistance_2009" class="csl-entry" role="listitem">
+Kim, Ji-Hye &amp; James H. Yoon. 2009. Long-distance bound local anaphors in <span>Korean</span>—<span>An</span> empirical study of the <span>Korean</span> anaphor caki-casin. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 119(5). 733–755. doi:<a href="https://doi.org/10.1016/j.lingua.2008.10.002">10.1016/j.lingua.2008.10.002</a>.
+</div>
+<div id="ref-letuchiy_tense_2017" class="csl-entry" role="listitem">
+Letuchiy, Alexander. 2017. On tense and irrealis marking in triclausal constructions (and what distinguishes them from biclausal constructions). <em>Linguistics</em> 56(1). 163–206. doi:<a href="https://doi.org/10.1515/ling-2017-0034">10.1515/ling-2017-0034</a>.
+</div>
+<div id="ref-mikkelsen_prosody_2011" class="csl-entry" role="listitem">
+Mikkelsen, Line. 2011. On prosody and focus in object shift. <em>Syntax (Oxford, England)</em> 14(3). 230–264. doi:<a href="https://doi.org/10.1111/j.1467-9612.2011.00152.x">10.1111/j.1467-9612.2011.00152.x</a>.
+</div>
+<div id="ref-sprouse_reverse_2011" class="csl-entry" role="listitem">
+Sprouse, Jon, Shin Fukuda, Hajime Ono &amp; Robert Kluender. 2011. Reverse island effects and the backward search for a licensor in multiple wh-questions. <em>Syntax (Oxford, England)</em> 14(2). 179–203. doi:<a href="https://doi.org/10.1111/j.1467-9612.2011.00153.x">10.1111/j.1467-9612.2011.00153.x</a>.
+</div>
+<div id="ref-sprouse_gender_2021" class="csl-entry" role="listitem">
+Sprouse, Jon, Troy Messick &amp; Jonathan David Bobaljik. 2021. Gender asymmetries in ellipsis: <span>An</span> experimental comparison of markedness and frequency accounts in <span>English</span>. <em>Journal of Linguistics</em> 58(2). 345–379. doi:<a href="https://doi.org/10.1017/s0022226721000323">10.1017/s0022226721000323</a>.
+</div>
+</div>
 </section>
 </section>
 
@@ -625,7 +728,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/jasongraf1\.github\.io\/ajt_review\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -959,8 +1062,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text"><span class="chapter-title">References</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="List of articles">
+        <span class="nav-page-text"><span class="chapter-title">List of articles</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
