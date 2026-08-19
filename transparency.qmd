@@ -1,0 +1,60 @@
+---
+title: "Transparency"
+---
+
+```{r}
+#| label: setup
+suppressMessages(library(here)) # for pathing to/from project directory
+suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(janitor)) # for cleaning data
+suppressMessages(library(glue)) # for cleaning data
+
+# source scripts
+clean <- readRDS(here("data", "clean.rds"))
+full <- readRDS(here("data", "full.rds"))
+
+source(here("R", "helpers.R"))
+source(here("R", "plots.R"))
+```
+
+## Key takeaways
+
+- **Materials are more often shared than data**, but still less than half the time. When items *are* made available, they're most often published directly in the article or its supplementary materials rather than deposited in a dedicated repository.
+- **Raw data and analysis code are rarely made available.** The large majority of studies say nothing about whether data or code can be accessed.
+- **Preregistration is essentially absent** from this literature — only a handful of studies report having preregistered their design or analysis.
+- There's a visible upward trend in materials and data sharing in more recent years, likely reflecting the broader open-science movement, but it starts from a very low baseline.
+
+## Materials availability
+
+```{r}
+#| label: fig-item-avail
+#| fig-cap: "How (or whether) experimental items were made available"
+#| fig-width: 8
+#| fig-height: 4
+make_perc_gg_barplot(clean, "item_avail")
+```
+
+## Data and code availability
+
+```{r}
+#| label: fig-data-avail
+#| fig-cap: "How (or whether) raw data and/or analysis code were made available"
+#| fig-width: 8
+#| fig-height: 4
+make_perc_gg_barplot(clean, "data_avail")
+```
+
+
+## Preregistration
+
+```{r}
+#| label: tbl-prereg
+#| tbl-cap: "Preregistration is almost never reported in this literature"
+clean |>
+  count(preregistration) |>
+  mutate(perc = round(100 * n / sum(n), 1),
+         text = glue("{n} ({perc}%)")) |>
+  select(preregistration, text) |>
+  pivot_wider(names_from = preregistration, values_from = text) |>
+  knitr::kable()
+```

@@ -1,0 +1,169 @@
+---
+title: "Experimental Design"
+lightbox: true
+---
+
+```{r}
+#| label: setup
+suppressMessages(library(here)) # for pathing to/from project directory
+suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(janitor)) # for cleaning data
+suppressMessages(library(glue)) # for cleaning data
+
+# source scripts
+clean <- readRDS(here("data", "clean.rds"))
+full <- readRDS(here("data", "full.rds"))
+
+source(here("R", "helpers.R"))
+source(here("R", "plots.R"))
+```
+
+## Key takeaways
+
+- **Most studies focus on syntax**, not surprisingly. In many cases, the line between morphology and syntax or syntax and semantics is a bit blurry, but this is not really a main focus, so...
+- **Explicit reporting of design features**, such as exact numbers of conditions, **is not very consistent**. 
+- **Studiues vary widely in the numbers of conditions** they include, and many studies, especially earlier ones, report overly complex designs. 
+
+## Linguistic levels in focus
+
+```{r}
+#| label: fig-phenom
+#| fig-cap: "Proportions of studies focusing of levels of linguistic structure"
+#| fig-width: 8
+#| fig-height: 4
+make_split_perc_gg_barplot(clean, "linguistic_phenomenon")
+```
+
+
+## Design structure
+
+:::{.panel-tabset}
+
+### Reporting of condition numbers
+
+The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure (e.g. "We used a 2x3 design crossing factor A with factor B") but then leave the reader to compute the final total. 
+
+In many instances certain contrasts are not considered part of the experimental conditions, thus under-representing the complexity of the design.
+
+```{r}
+#| label: tbl-des-perc-rep
+#| tbl-cap: "Studies do not report the exact numbers of **experimental conditions** clearly enough."
+clean |> 
+  count(N_conditions_reported) |> 
+  mutate(
+    N_conditions_reported = ifelse(N_conditions_reported == "Yes", "Reported", "Not Reported"),
+    perc = round(100*n/sum(n),1),
+    text = glue("{n} ({perc}%)")
+  ) |> 
+  select(N_conditions_reported, text) |> 
+  pivot_wider(names_from = "N_conditions_reported", values_from = "text") |> 
+  knitr::kable()
+```
+
+### Conditions
+
+How many **experimental conditions** are there?
+
+There are `r length(is.na(clean$N_conds))` studies where the total number of conditions is not clear. Those with larger numbers (>10) should probably be re-examined. There are even a few studies (N = `r length(which(clean$N_conds >= 50))`) with very large (>50) numbers of conditions, which should certain be checked and confirmed.
+
+Again, many of these numbers are deducted / inferred from incomplete descriptions of designs. We've included some examples of vague descriptions in @sec-complicated below.
+
+```{r}
+#| label: fig-cond-boxplot
+#| fig-cap: "There is a surprisingly wide range of experimental conditions included in AJ studies"
+#| lightbox: false
+make_boxplot(clean, "N_conds", xlab = "Conditions", xrange = c(0, 50))
+```
+
+### Design structure
+
+Did the study use a **within-subjects** or **between-subjects** design?
+
+
+
+```{r}
+#| label: fig-design-type
+#| fig-cap: "Most studies use within-subjects designs"
+#| fig-height: 3.5
+#| fig-width: 8
+make_perc_gg_barplot(clean, "design_type")
+```
+
+:::
+
+## Additional design characteristics
+
+:::{.panel-tabset}
+
+### Randomization
+
+Were items presented in a **fixed or (semi-)random order** across participants?
+
+- *Random*: fully random for each participant
+- *Semi-random* ('psuedo-random): order is largely random, but with some prescribed conditions on order (e.g. no adjacent items of the same condition)
+- *Fixed*: order is the same across (sets of) participants. Fixed orders are probably more common, as paper questionnaires do not allow for participant-specific re-ordering, but this is not always reported explicitly.
+
+```{r}
+#| label: fig-randomization
+#| fig-cap: "A surprising number of studies fail to report how items were ordered"
+#| fig-width: 8
+#| fig-height: 3.5
+make_perc_gg_barplot(clean, "randomization")
+```
+
+### Presentation
+
+How were the **experimental trials organized** for presentation?
+
+- *Blocks*: items are arranged into and present as predetermined sets 
+- *Semi-random* ('psuedo-random): order is largely random, but with some prescribed conditions on order (e.g. no adjacent items of the same condition)
+
+Here "intermixed" involves items of different conditions being intermixed without blocking. Blocking typically also involves intermixing within blocks.
+
+```{r}
+#| label: fig-presentation
+#| fig-cap: "Most studies intermix items without blocking"
+#| fig-width: 8
+#| fig-height: 3
+
+make_perc_gg_barplot(clean, "exp_blocking")
+```
+
+
+### Other features
+
+- Some studies (N = `r nrow(filter(clean, N_pre.test != "0"))`) include pre-test trials, typically as practice trials for the task. This is common with Magnitude Estimation studies. Very few (N = `r nrow(filter(clean, N_post.test != "0"))`) include post-test trials.
+- Many studies balanced items across (predicted) conditions, but this is not always reported clearly.
+- A small percentage of studies involve the same items in multiple tasks.
+
+```{r}
+#| label: tbl-design-details
+#| tbl-cap: "Reporting rates for other design details"
+clean |>
+  mutate(
+    n_pre = ifelse(`N_pre.test` > 0, "Yes", "No"),
+    n_post = ifelse(`N_post.test` > 0, "Yes", "No"),
+  ) |> 
+  select(balanced_items, n_pre, n_post, multiple_tasks) |>
+  pivot_longer(everything(), names_to = "Detail", values_to = "value") |>
+  mutate(
+    Detail = case_when(
+      Detail == "balanced_items" ~ "Stimuli balanced across conditions?",
+      Detail == "n_pre" ~ "Included pre-test trials?",
+      Detail == "n_post" ~ "Included post-test trials?",
+      Detail == "multiple_tasks" ~ "Items used in multiple tasks?"
+    ),
+    value = ifelse(value %in% c("Not Reported", "", "No"), "No", "Yes")
+  ) |>
+  count(Detail, value) |>
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+  mutate(
+    perc_reported = round(100 * Yes / (Yes + No), 1)
+    ) |>
+  rename(`% Yes` = perc_reported) |>
+  knitr::kable()
+```
+
+
+:::
+

@@ -1,0 +1,178 @@
+---
+title: "Task"
+lightbox: true
+---
+
+```{r}
+#| label: setup
+suppressMessages(library(here)) # for pathing to/from project directory
+suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(janitor)) # for cleaning data
+suppressMessages(library(glue)) # for cleaning data
+
+# source scripts
+clean <- readRDS(here("data", "clean.rds"))
+full <- readRDS(here("data", "full.rds"))
+
+source(here("R", "helpers.R"))
+source(here("R", "plots.R"))
+```
+
+## Key takeaways
+
+- **Likert-type scales dominate**: about 7 in 10 studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
+- **The construct being rated is often unclear**. "Acceptability" is the most common term used to describe the judgment by the authors, but "Not Reported" is the *second* most common category — meaning readers often have to guess whether participants were rating grammaticality, naturalness, or something else entirely.
+- **Task administration details are rarely reported**: timing (self-paced vs. fixed), whether sessions were supervised, whether there were practice/pilot trials, breaks, or comprehension checks are almost never mentioned.
+- Delivery format has shifted toward computer-based administration, but a substantial share of studies still don't report much detail on how the task was delivered.
+
+## Response format
+
+::: {.panel-tabset}
+
+### Scale type
+
+What was the **scale** of participants' responses?
+
+```{r}
+#| label: fig-response-scale
+#| fig-cap: "Ordinal (Likert) scales are by far the most common response format."
+#| fig-width: 8
+#| fig-height: 4
+make_perc_gg_barplot(clean, "response_scale", base_size = 12)
+```
+
+### Scale length
+
+How many **levels of acceptability** were used (2, 7, 100, …)?
+
+For studies using an ordinal scale of 3 or more levels, the number of response levels is fairly concentrated around 7 and 5 points.
+
+```{r}
+#| label: fig-response-levels
+#| fig-cap: "Distribution of response scale lengths (Likert scales of 3 or more only)"
+#| fig-width: 8
+#| fig-height: 4
+plot_rating_levels_gg(clean)
+```
+
+### Rating terminology
+
+What **terminology** did the authors use to refer to their judgment task with participants (e.g. "rate how acceptable / natural /… each sentence is")? 
+
+The label used matters. "Acceptability," "grammaticality," and "naturalness" are not interchangeable constructs, yet a suprising number of studies (N = `r nrow(filter(clean, rating_terminology == "Not Reported"))`) don't specify which one they're measuring (need to check this).
+
+An important note is that **most studies do not provide the exact instructions given to participants**, and only offer paraphrases. In at least one case [@francis_grammatical_2010a], the authors' paraphrase in the text was inconsistent with the actual instructions seen by participants. 
+
+```{r}
+#| label: fig-rating-terminology
+#| fig-cap: "Terminology used to describe the judgment being elicited"
+#| fig-width: 8
+#| fig-height: 4.5
+make_split_perc_gg_barplot(clean, "rating_terminology", base_size = 12)
+```
+
+:::
+
+## Presentation and delivery
+
+::: {.panel-tabset}
+
+### Modality
+
+What **modality** was the judgment task delivered in?
+
+```{r}
+#| label: fig-presentation-modality
+#| fig-cap: "Written presentation dominates; auditory AJTs remain relatively rare"
+#| fig-width: 8
+#| fig-height: 3.5
+make_perc_gg_barplot(clean, "presentation_modality")
+```
+
+### Delivery format
+
+Was the **task duration** recorded?
+
+```{r}
+#| label: fig-delivery-format
+#| fig-cap: "Computer-based delivery is now the most common format, though paper surveys persist"
+#| fig-width: 8
+#| fig-height: 3.5
+make_perc_gg_barplot(clean, "delivery_format")
+```
+
+:::
+
+## Task administration
+
+Beyond the response format itself, details of *how* the task was administered — timing, supervision, practice, and attention checks — matter for interpreting results, but are inconsistently reported.
+
+::: {.panel-tabset}
+
+### Duration
+
+Was the **task duration** recorded?
+
+```{r}
+#| label: fig-task-duration
+#| fig-cap: "Did the study mention how long participants took (usually as an average)?"
+#| fig-width: 8
+#| fig-height: 3
+make_perc_gg_barplot(clean, "task_duration")
+```
+
+
+### Timing
+
+Were items presented in a **fixed or variable amount of time**, or was the presentation **self-paced** (participants proceded at their own pace)? Some studies may use speeded judgment tasks. Most are self-paced but this is not always explicitly stated.
+
+```{r}
+#| label: fig-task-timing
+#| fig-cap: "Whether the task was self-paced or had a fixed presentation time is rarely reported"
+#| fig-width: 8
+#| fig-height: 3
+make_perc_gg_barplot(clean, "task_timing")
+```
+
+### Supervision
+
+Was the study conducted under **supervision of the researcher** (e.g. in a lab or classroom with researcher present)?
+
+Any study administered in a lab or classroom was coded as "Yes". Studies using online crowd-sourcing platforms (AMT, Prolific) we automatically coded as "No". In many other cases though it's unclear whether the task was performed under any kind of supervision.  
+
+```{r}
+#| label: fig-task-supervision
+#| fig-cap: "Whether sessions were supervised (e.g. in-lab vs. unsupervised online)"
+#| fig-width: 8
+#| fig-height: 3
+make_perc_gg_barplot(clean, "task_supervision")
+```
+
+### Other details
+
+Details about participant breaks or management are rare, as are the use of comprehension checks or pilot testing of the task.  
+
+
+```{r}
+#| label: tbl-admin-details
+#| tbl-cap: "Reporting rates for other task administration details"
+clean |>
+  select(pilot_testing, breaks, comprehension, confidence) |>
+  pivot_longer(everything(), names_to = "Detail", values_to = "value") |>
+  mutate(
+    Detail = case_when(
+      Detail == "pilot_testing" ~ "Pilot testing conducted",
+      Detail == "breaks" ~ "Breaks offered",
+      Detail == "comprehension" ~ "Comprehension checks included",
+      Detail == "confidence" ~ "Confidence ratings used"
+    ),
+    value = ifelse(value %in% c("Not Reported", ""), "Not Reported", "Reported")
+  ) |>
+  count(Detail, value) |>
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+  mutate(perc_reported = round(100 * Reported / (Reported + `Not Reported`), 1)) |>
+  rename(`% Reported` = perc_reported) |>
+  knitr::kable()
+```
+
+:::

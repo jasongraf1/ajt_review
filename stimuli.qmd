@@ -1,0 +1,201 @@
+---
+title: "Stimuli"
+lightbox: true
+---
+
+```{r}
+#| label: setup
+suppressMessages(library(here)) # for pathing to/from project directory
+suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(janitor)) # for cleaning data
+suppressMessages(library(glue)) # for cleaning data
+
+# source scripts
+clean <- readRDS(here("data", "clean.rds"))
+full <- readRDS(here("data", "full.rds"))
+
+source(here("R", "helpers.R"))
+source(here("R", "plots.R"))
+```
+
+
+## Key takeaways
+
+- **Explicit reporting of item numbers is not very consistent**. The number of items per condition is rarely explicitly mentioned, nor is the number of participants who see a given item. The choice of the number of items used is almost never explained or justified, e.g. via power analysis.
+- Detailed information about **fillers** is very rare. Studies often report the number of fillers, and some general descriptions, but almost none report *why they chose that number* (same goes for target items). Also, when item sets are provided, filler items are almost never included.
+
+## Item Reporting
+
+Exact numbers of stimulus items can often be reconstructed / deduced from information in the article, with varying degrees of effort and certainty. But readers ideally should never be required to do this for themselves.
+
+A surprising number of articles do not accurately report item numbers.
+
+```{r}
+#| label: tbl-items-reported
+#| tbl-cap: "Studies explicitly reporting the exact numbers of critical experimental **items**"
+clean |> 
+  count(N_items_reported) |> 
+  mutate(
+    N_items_reported = ifelse(N_items_reported == "Yes", "Reported", "Not Reported"),
+    # perc = round(100*n/sum(n), 1),
+    # text = glue("{n} ({perc}%)")
+  ) |> 
+  # select(N_items_reported, text) |> 
+  pivot_wider(names_from = "N_items_reported", values_from = "n") |> 
+  mutate(perc = round(100*Reported/(Reported + `Not Reported`), 1)) |> 
+  rename(`% Reported` = perc) |> 
+  knitr::kable()
+```
+
+<br>
+
+:::{.panel-tabset}
+
+### Total items
+
+What was the total number of **target items** created for the study *not* including fillers or distractors?
+
+There are `r length(is.na(clean$N_items))` studies where the total number of items is not clear. Additionally we have `r length(which(clean$N_items >= 200))` studies with 200 or more items. These need to be re-checked (the largest is `r max(clean$N_items, na.rm = T)`!). 
+
+On the lower end, there are some studies that report semi-formal surveys of small sets of items, or even just one item, as in @boas_coercion_2011a. These are often reported in footnotes with minimal details.
+
+```{r}
+#| label: fig-item-boxplot
+#| fig-cap: "Distribution of critical item counts across studies"
+#| warning: false
+#| lightbox: false
+clean |> 
+  make_boxplot("N_items", xlab = "Critical items", xrange = c(0, 420))
+```
+
+### Items per condition
+
+How many **critical items are there per experimental condition**?
+
+The number of items per condition (min = 1, median = `r median(clean$N_items_per_conds, na.rm = T)`, max = `r max(clean$N_items_per_conds, na.rm = T)`) is an important aspect of study design, as it directly relates to the power of the study. Frustratingly, this is not always reported clearly.
+
+We find `r nrow(filter(clean, str_detect(N_items_per_condition, "^\\d", negate=T)))` studies did not provide clear information about item numbers per condition. 
+
+```{r}
+#| label: fig-item-per-cond-boxplot
+#| fig-cap: "Distribution of critical item counts per condition across studies"
+#| warning: false
+#| lightbox: false
+clean |>
+  mutate(
+    N_items_per_condition = as.numeric(N_items_per_condition),
+    N_items_per_condition = ifelse(is.na(N_items_per_condition), 0, N_items_per_condition)
+  ) |>
+  filter(N_items_per_condition>0, N_items_per_condition<100) |> 
+  # make_histogram("N_items_per_condition")
+  make_boxplot("N_items_per_condition", xlab = "Items per condition")
+```
+
+### Fillers 
+
+What was the number of **filler or distractor** items?
+
+```{r}
+#| label: fig-fillers
+#| fig-cap: "Distribution of critical item counts per condition across studies"
+#| warning: false
+clean |>
+  mutate(
+    N_fillers = as.numeric(N_fillers),
+    N_fillers = ifelse(is.na(N_fillers), 0, N_fillers)
+  ) |>
+  filter(N_fillers>0) |> 
+  # make_histogram("N_items_per_condition")
+  make_boxplot("N_fillers", xlab = "Number of filler items")
+```
+
+
+:::
+
+## Additional stimuli characteristics
+
+:::{.panel-tabset}
+
+### Construction
+
+Were the **items constructed by the researchers** or based on authentic materials?
+
+```{r}
+#| label: fig-item-construciton
+#| fig-cap: "Most items are constructed by researchers, but this is also not always reported clearly"
+#| fig-width: 8
+#| fig-height: 3.5
+make_perc_gg_barplot(clean, "item_construction")
+```
+
+### Controls
+
+Were the **items balanced/controlled for internal features** that were *not* the focus of investigation, e.g. frequency, length, etc.?
+
+```{r}
+#| label: fig-item-controls
+#| fig-cap: "Non-focal factors are rarely controlled for in item design"
+#| fig-width: 8
+#| fig-height: 4
+make_split_perc_gg_barplot(clean, "item_balance")
+```
+
+### Context
+
+Were items presented with **additional context**?
+
+```{r}
+#| label: fig-item-context
+#| fig-cap: "Most items are constructed by researchers, but this is also not always reported clearly"
+#| fig-width: 8
+#| fig-height: 3.5
+make_perc_gg_barplot(clean, "contextualization")
+```
+
+### Piloting
+
+Were **items pilot-tested or normed** in any way?
+
+A handful of studied explicitly report piloting or norming items, but no studies explicitly report NOT doing so.
+
+```{r}
+#| label: tbl-items-pilot
+#| fig-cap: "Studies rarely report running any kind of **norming or pilot testing** of critical items"
+clean |> 
+  count(item_plausibility) |> 
+  # mutate(
+  #   item_plausibility = ifelse(item_plausibility == "No", "No", "Not Reported"),
+  #   # perc = round(100*n/sum(n), 1),
+  #   # text = glue("{n} ({perc}%)")
+  # ) |>
+  # select(N_items_reported, text) |> 
+  pivot_wider(names_from = "item_plausibility", values_from = "n") |> 
+  mutate(
+    No = 0,
+    perc = round(100*`Not Reported`/(Yes + `Not Reported`), 1),
+    ) |> 
+  select(Yes, No, `Not Reported`, perc) |> 
+  rename(`% NOT Reported` = perc) |> 
+  knitr::kable()
+```
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

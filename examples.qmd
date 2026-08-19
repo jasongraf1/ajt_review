@@ -1,0 +1,161 @@
+---
+title: "Experimental Design"
+---
+
+Here I've listed excerpts from studies illustrating some examples of good practice and (sadly many more) examples of poor practice. 
+
+For some really good examples of how to report things clearly, I recommend sprouse_gender_2021 and francis_resumptive_2015.
+
+In all the examples below, all bold-face emphasis is my own.
+
+## Some GOOD examples{#sec-good-exx}
+
+From @janda_construal_2019:
+
+>  "There was no time limit, participants were allowed to go back to items as many times as they wanted, and they were prompted to go back and finish any items that they had skipped." (p.480)
+
+- This gives specific details of task procedure timing and whether participants could change answer or go back.
+
+From @janosi_long_2014:
+
+> "To determine whether the difference between the ratings of two sentences is significant or not, we performed paired two-sample student’s t-tests. **As is customary, we took a p-value below 0.05 to indicate a significant difference**." (p.131)
+
+- This explicitly mentions the significance level assumed.
+
+
+From @francis_resumptive_2015
+
+> "To summarize, the design includes three factors: Grammatical Role (3 levels: subject, direct object and coverb object), Possession (2 levels: non-possessive and possessive) and Resumption (2 levels: gap and RP), **for a total of 12 conditions. Each condition crosses with five different sets of lexical items, for a total of 60 experimental items.** [...] Although **participants rated all 60 experimental items**, the 12 items containing the verb tung4 ‘with’ were excluded from the current analysis because of some special restrictions on this verb which did not apply to the other four verbs." (p.64)
+
+- This gives a very clear description of design conditions and items. Likewise they give clear description of fillers:
+
+> "60 filler sentences were also included, for a total of 120 sentences. The filler sentences, which did not contain any RCs, were distributed into three categories, according to their pre-determined acceptability (Bad, Medium, and Good). The Medium fillers contained minor anomalies (for example, a quantified noun preceded by the incorrect numeral classifier), while the Bad fillers had more severe grammatical errors (for example, a quantified noun with classifier omitted)." (p.64)
+
+
+
+
+
+## Examples of over-complicated design{#sec-complicated}
+
+From @dabrowska_questions_2008a:
+
+> "The experiment described in this paper was designed to investigate how each of these three factors [subject, verb, auxiliary] individually contributes to speakers' judgment. It will also examine two additional grammatical factors: the presence or absence of a complementizer and the number of clauses intervening between the WH word and the gap, as well as the effects of plausibility and syntactic complexity."
+
+- There were seven experimental conditions included according to the paper.
+
+
+
+
+From @mikkelsen_prosody_2011:
+
+> "Five factors went into the construction of the critical stimuli in experiment 1 (values in parentheses after each factor): clause type (specificational, nonspecificational), pronoun (*mig* ‘me’/ *det* ‘it’, *ham* ‘him’), adverbial (*ikke* ‘not’, *jo≈* ‘you know’, *sikkert* ‘probably’), context (reason, contrast), and pronoun position (unshifted, shifted). ***By hypothesis, clause type and pronoun position were the only relevant factors for grammaticality***, and the other three were chosen as the most likely alternative factors to affect grammaticality: lexical identity of pronoun, lexical identity of the adverbial element that the pronoun shifts over, and the discourse context of the clause containing the candidate for object shift." (p.242-3)
+
+- If those are all crossed that is 48 unique conditions. Why not fix the non-relevant factors, and what is the relation of these control factors to the critical factors? 
+
+From @kim_longdistance_2009:
+
+> The sentences with TSC and SSC violations were constructed to reflect various combinations of the factors (i.e., logophoric role (cf. see (15)–(18); subject vs. non-subject antecedent; c-commanding vs. non-c-commanding antecedent; and varying case-marking/grammatical function of the anaphor)).
+
+- What are these "various combinations"?
+
+
+From @letuchiy_tense_2017:
+
+> "I carried out several surveys on the social network vk.com. In each of the surveys, I asked native speakers which of several sentences they considered to be (un)grammatical. I only invited answers like “grammatical” and “ungrammatical”; no scale of acceptability was employed. The average number of speakers involved was around 20–30; for some surveys, though, this rose to 50 respondents."
+
+
+
+## Examples of vague or confusing descriptions{#sec-vague}
+
+From @bhatt_codeswitching_1997:
+
+> "There were 40 items designed to cover most of the syntactic constraints proposed in the literature, such as, the Government constraint (Di Sciullo et al., 1986), the Functional Head constraint (Belazi et al., 1994), the Equivalence constraint (Poplack, 1980), and the System Morpheme and the Island constraints (Myers-Scotton, 1993a)."
+
+- The paper does not list how many constraints (conditions) there were. 
+
+From @featherston_thattrace_2005:
+
+> "Subjects thus saw thirty-two experimental sentences in total (2 extraction types x 2 complement clause types x 8 matrix verbs). These experimental materials were implemented in eight different lexicalizations, so that each subject saw a version of the materials such that each experimental condition appeared once and each lexicalization appeared four times."
+
+- so how many unique stimulus token sentences were there: 32 or (8 x 32) = 256?
+
+From @featherston_universals_2005a:
+
+> "In order to test for superiority, **we tested twenty-six different multiple wh-question structures**, hoping thus to establish whether German has such an effect, and if so, which combinations of grammatical functions as wh-items would trigger it. Twenty-six sentences of the form of (7) were constructed, such that **each could be transformed into the multiple wh-questions we tested**." (p. 678)
+
+- So how many unique stimulus token sentences were there: 26 or (26 x 26) = 676? There's no way they asked participants to rate ~700 sentences!
+
+
+#### Wasow & Arnold (2005), *Lingua*
+
+From @frazier_syntaxdiscourse_2005:
+
+> "Twenty-four sentences like (14) were constructed, with six versions of each. These 24 sentences were combined with 114 other sentences and two-sentence discourses of a wide variety of constructions, including 32 sentences that were unacceptable for a variety of reasons (gender or number disagreement, missing or extra arguments, semantic anomaly, etc.) [...] Six counterbalanced lists were constructed, such that each list included 4 sentences in each version, and each sentence appeared on each version in one list."
+
+- So how many filler items did each participant see: 114 or 114/6 = 19?
+
+From @clifton_when_2010a:
+
+>"Twenty-four sentences like those in (14) were constructed with three versions of each (all appear in Appendix B). [...] Each person saw a total of 108 sentences, including the 24 sentences used in experiment 2 and filler sentences plus sentences from several unrelated experiments." 
+
+- How many total items were constructed (24x3 = 72), and how many did each participant see? No mention of counterbalanced lists, so we assume 72 critical items each?
+
+From @sprouse_reverse_2011:
+
+> "These experimental materials [for experiment 2] were interleaved with those of experiment 1; therefore, all of the experimental details are identical to those described in section 3."
+
+- So do the current items count as fillers for the first experiment? No mention of this is made in description in Section 3: "The 48 target tokens (4 islands × 6 conditions × 2 tokens) in each list were combined with 48 unrelated filler items. The filler items were chosen such that the composition of each survey was 50% acceptable and 50% unacceptable (by hypothesis), as well as 50% interrogative and 50% declarative." Where do the 10 exp. 2 items fit in here?
+- Do all the other items in experiment 1 now count as fillers for experiment 2?
+- This is a common example of people interleaving item sets from multiple experiments, but this is rarely described clearly. 
+
+
+From @letuchiy_tense_2017:
+
+> "I carried out several surveys on the social network vk.com. In each of the surveys, I asked native speakers which of several sentences they considered to be (un)grammatical. I only invited answers like “grammatical” and “ungrammatical”; no scale of acceptability was employed. The average number of speakers involved was around 20–30; for some surveys, though, this rose to 50 respondents."
+
+- An rather extreme example of vagueness in reporting design parameters. 
+
+
+From @ellsiepen_constraints_2018:
+
+> "Materials. **Thirty-two experimental items** were created. A full example item can be found in Table 2. Each experimental sentence started with a short introductory main clause, followed by a complement clause that contained two NPs and an indefinite subject pronoun, which was dropped in the passive conditions. The dative object NP was always animate. **Three [binary] variables were manipulated in a factorial design**: Order between the dative NP and the theme NP (Order: dative 1st, dative 2nd), voice (Voice: active, passive), and animacy of the theme NP (Animacy: animate, inanimate), where this NP was accusative in the active conditions and nominative in the passive conditions. Our focus in constructing the items was on the plausibility of the sentences for both lexicalizations of the theme NP. In addition, we controlled for length as measured by the number of syllables. Three pairwise t-tests confirmed that there were no significant differences between animate and inanimate second NP (t(31) = –0.53, p > .1), between dative NP and animate second NP (t(31) = 1.21, p > .1), or between dative NP and inanimate second NP (t(31) = 1.68, p > .1). Three additional experiments and 29 unrelated sentences with mild to severe grammaticality problems served as filler items, amounting to ***159 test sentences in the whole experiment***."
+
+- There should be 256 total test sentences (32 'items' x 8 conditions), yet there are 159 test sentences? How do we get to this number? 
+
+From @frazier_anticipating_2018, a rather complicated trail of design breadcrumbs:
+
+> **Sixteen items** like the one illustrated in (6) were constructed. **Each item had four versions**, defined by the factorial combination of +NR versus −NR and the use of a verb that permitted Neg Raising versus one that did not[...]" 
+
+- So this should be 16 x 4 = 64 test sentences...
+
+> "**Four different virtual counterbalanced lists** were constructed such that each list contained an equal number of sentences in each condition [...] and each item appeared in each condition in one list [...]" 
+
+- So presumably each participant saw only 16 test sentences... 
+
+> "The experimental items were combined with **26 filler items**, 16 of which were sharply syntactically anomalous with the remainder containing minor syntactic anomalies or clear semantic anomalies. The first 16 items were used to ensure that participants were paying attention and making appropriate judgments[...]" 
+
+- So that means each participant saw 16 test + 26 fillers = 42 sentences total... Does that include the "first 16 items", or were those in addition to the 26 filler items?
+
+> "Participants received a questionnaire, a consent request, and instructions as in experiment 1. They then received three practice items, followed by **the 58 items in the experiments**, in an individually randomized order."
+
+- How do we get to 58 trials ('items') per participant? Are there really 26 + 16 fillers? What is going on here?
+
+
+From @kim_longdistance_2009:
+
+> "The **test materials consisted of 100 items---62 target items and 38 non-target items**. The target items were composed of 2 types of Korean sentences violating TSC [...] with 5 tokens in each type, 9 types of Korean sentences attesting both TSC and SSC violations, again with 5 tokens in each type. Sentences with only TSC violation (10 tokens) exemplify core binding, while the remaining 52 tokens that violate both TSC and SSC were meant to exemplify various types of exempt binding."
+
+- So there are 2 x 5 = 10 tokens violating TSC; 9 x 5 = 45 tokens attesting both TSC and SSC violations, 10 tokens with only TSC violation; and 52 tokens that violate both TSC and SSC. That's 10 + 45 + 10 + 52 = 117 target tokens...
+
+
+From @francis_grammatical_2010a:
+
+- Information reported in the text is inconsistent with what was actually done. In the body it says,
+
+> "The survey consisted of a series of sentences for which participants were asked to rate each sentence on 9-point scale, where 9 means **'completely acceptable' and 1 means ‘completely unacceptable’** (see Appendix B for exact instructions)." (p.20)
+
+- But un the Appendix, the verbatim instructions do not mention acceptability:  
+
+> "Please read each of the sentences listed below. For each sentence, we would like you to indicate your reaction to the sentence. Mark your response sheet by circling a number from (1) to (9). Use (9) for sentences that seem fully **normal**, and **understandable** to you. Use (1) for sentences that seem very **odd, awkward, or difficult for you to understand**. If your feelings about the sentence are somewhere between these extremes, use one of the middle responses from (2) to (8). Please try to use the entire scale, not just the end points of the scale."
+
+

@@ -1,0 +1,74 @@
+project:
+  type: book
+  output-dir: docs
+  pre-render: R/data.R
+
+book:
+  title: "AJT Systematic Review"
+  author: "Jason Grafmiller<br>[j.grafmiller@bham.ac.uk](mailto:j.grafmiller@bham.ac.uk)"
+  date: "today"
+  date-format: "D MMMM, YYYY"
+  cover-image: "_images/laptop_cat.jpg"
+  
+  page-footer:
+    left: |
+      Written by Jason Grafmiller.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+
+  chapters:
+    - index.qmd
+    - participants.qmd
+    - part: "Design"
+      chapters:
+      - design.qmd
+      - stimuli.qmd
+      - task.qmd
+    - part: "Rigor"
+      chapters:
+        - analysis.qmd
+        - transparency.qmd
+    - examples.qmd
+    - references.qmd
+
+format:
+  html:
+    mainfont: 'Roboto'
+    fontsize: 100%
+    number-sections: false
+    theme: 
+      light: 
+        - flatly
+        - custom.scss
+      dark: 
+        - darkly
+        - custom_dark.scss
+    css: custom_bib.css
+    include-in-header: roboto_serif.html
+
+execute:
+  echo: false
+  message: false
+  warning: false
+  freeze: auto
+  fig-dpi: 300
+
+editor: source
+engine: knitr
+
+#tbl-cap-location: top
+#fig-cap-location: bottom
+filters:
+  - lightbox
+lightbox: auto
+
+knitr:
+  opts_chunk: 
+    tidy: styler
+    dev: "svglite"
+
+bibliography: [articles_selected_final.bib]
+suppress-bibliography: true
+link-citations: true
+csl: unified-style-linguistics.csl  # optional
+

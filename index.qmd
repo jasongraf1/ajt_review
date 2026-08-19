@@ -1,0 +1,116 @@
+---
+title: "Overview"
+---
+
+```{r}
+#| label: setup
+suppressMessages(library(here)) # for pathing to/from project directory
+suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(janitor)) # for cleaning data
+
+# source scripts
+raw <- readRDS(here("data", "raw.rds"))
+clean <- readRDS(here("data", "clean.rds"))
+full <- readRDS(here("data", "full.rds"))
+
+source(here("R", "helpers.R"))
+source(here("R", "plots.R"))
+
+# Global variables
+total_articles <- nrow(full)
+n_coded <- length(unique(raw$article_index))
+perc_coded <- round(100*n_coded/total_articles, 1)
+journals <- unique(full$journal)
+n_languages <- clean |> 
+  mutate(
+    language = str_replace_all(language, "(/| and )", "; "),
+    language = str_remove_all(language, " -.*")
+  ) |> 
+  pull(language) |> 
+  unique() |> 
+  length()
+
+filtered <- raw |> 
+  filter(!str_detect(coder_comments, "[Ee]xclude|No judgments collected")) 
+
+n_excluded <- length(unique(raw$article_index)) - length(unique(filtered$article_index))
+```
+
+
+This is just a (not so) quick overview of where we stand with coding, and some observations about what we've found so far. 
+
+Coding has been a slog to say the least...
+
+## Where we are with annotations 
+
+### By Journal
+
+So far we've annotated **`r paste0(n_coded,"/",total_articles, " (", perc_coded, "%)")` articles**, containing a total of `r nrow(raw)` individual acceptability judgment task (AJT) studies. Some of these (N = `r n_excluded`) were exculded because they didn't actually include formal AJT experiments.
+
+::: {#fig-art-by-journal}
+```{r}
+#| lightbox: false
+make_stacked_perc_barplot(full, "journal")
+```
+
+We've still got just a few journals to finish!
+:::
+
+### By year
+
+```{r}
+#| label: fig-art-by-year
+#| fig-cap: "Numbers of AJs in these journals have been increasing since the 2010s."
+#| lightbox: false
+make_stacked_perc_barplot(full, "year", sort = F, orientation = "v")
+```
+
+
+## Annotation contribution
+
+Most of the coding was done by JG!
+
+```{r}
+#| label: tbl-coder-summary
+#| tbl-cap: "Articles coded by coder"
+raw |>
+  distinct(article_index, coder_id) |> 
+  mutate(coder_id = toupper(coder_id)) |>
+  count(coder_id, name = "Articles coded", sort = T) |>
+  rename(Name = "coder_id") |> 
+  knitr::kable()
+```
+
+
+## Languages investigated
+
+We've identified `r n_languages` language varieties studied in our review thus far. We'll need to double check the "Not Reported" cases. I don't think we should be applying a strict version of the ["Bender Rule"](https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/) here, but we could do so at a later point. This will mostly apply to the English studies.
+
+```{r}
+#| label: fig-languages
+#| fig-cap: "English is by far the most commonly studied language in the sample"
+#| fig-width: 8
+#| fig-height: 10
+clean |> 
+  mutate(
+    language = str_replace_all(language, "(/| and )", "; "),
+    language = str_remove_all(language, " -.*")
+  ) |> 
+  make_split_gg_barplot("language", base_size = 12)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

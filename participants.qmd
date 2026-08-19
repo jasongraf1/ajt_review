@@ -1,0 +1,111 @@
+---
+title: "Participants"
+---
+
+```{r}
+#| label: setup
+suppressMessages(library(here)) # for pathing to/from project directory
+suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(janitor)) # for cleaning data
+
+# source scripts
+clean <- readRDS(here("data", "clean.rds"))
+full <- readRDS(here("data", "full.rds"))
+
+source(here("R", "helpers.R"))
+source(here("R", "plots.R"))
+```
+
+
+## Key takeaways
+
+- We find that **most studies involve fewer than 60-70 participants** (mean = `r mean(as.numeric(clean$N_parts), na.rm = T)`, median = `r median(as.numeric(clean$N_parts), na.rm = T)`), but there are some with huge numbers, for example, @sprouse_gender_2021 had `r max(clean$N_parts, na.rm = T)` participants. 
+- The **population that participants are assumed to be sampled from is rarely explicitly stated**.
+- University affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies. The platforms sample from "Mixed" populations.
+- **Compensation is not reported very often**, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).
+- Not all studies report demographics, but usually at least L1 is specified.
+- **Power analysis is almost never reported / conducted**.
+
+## Numbers
+
+How many **total participants** were recruited?
+
+We've had several studies (N = `r sum(is.na(as.numeric(clean$N_participants_recruited)))`) for which the number of participants was not fully clear.
+
+```{r}
+#| label: fig-part-num
+#| fig-cap: "Numbers of participants vary, but usually are less than 100"
+#| lightbox: false
+make_boxplot(clean, "N_parts", xlab = "Participants", xrange = c(0, 410))
+```
+
+
+## Participant characteristics
+
+::: {.panel-tabset}
+
+### Population
+
+What was the **population** that participants were sampled from? 
+
+The population from which participants are sampled is not always clearly reported. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses. These are coded as "Mixed".
+
+```{r}
+#| label: fig-part-pop
+#| fig-cap: "Proportions of populations reported across studies"
+#| fig-width: 8
+#| fig-height: 4
+make_perc_gg_barplot(clean, "part_profile", base_size = 14)
+```
+
+### Demographics
+
+Which participant **demographics** were reported?
+
+Not all studies report demographics, but usually at least being a native speaker is specified. Any mention of average age or sex proportions counted as reporting for our purposes.  
+
+```{r}
+#| label: fig-part-demo
+#| fig-cap: "Proportions of demographics reported across studies"
+#| fig-width: 8
+#| fig-height: 4
+make_split_perc_gg_barplot(clean, "demographics_reported", base_size = 14)
+```
+
+:::
+
+## Recruitment and compensation
+
+:::{.panel-tabset}
+
+### Recruitment
+
+How were participants **recruited**?
+
+University affiliation (students and/or staff) is the most common way to get participants, but online platforms have become much more common as we annotate more recent studies. Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe *how* involvement from students was solicited (e.g. via fliers, social media, classrooms, word-of-mouth). 
+
+```{r}
+#| label: fig-part-rec
+#| fig-cap: "Proportions of recruitment methods reported across studies"
+#| fig-width: 8
+#| fig-height: 4.5
+make_perc_gg_barplot(clean, "part_recruitment")
+```
+
+### Compensation
+
+How were participants **compensated**?
+
+Compensation is not often reported, particularly when off-line recruitment methods are used. Online platforms such as AMT and Prolific pay participants directly, so this may be assumed by authors. But this should be explicitly reported (and often is).
+
+```{r}
+#| label: fig-part-comp
+#| fig-cap: "Proportions of compensation methods reported across studies"
+#| fig-width: 8
+#| fig-height: 4
+make_perc_gg_barplot(clean, "compensation")
+```
+
+
+
+:::

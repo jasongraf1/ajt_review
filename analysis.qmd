@@ -1,0 +1,156 @@
+---
+title: "Analysis"
+---
+
+```{r}
+#| label: setup
+suppressMessages(library(here)) # for pathing to/from project directory
+suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(janitor)) # for cleaning data
+suppressMessages(library(glue)) # for cleaning data
+
+# source scripts
+clean <- readRDS(here("data", "clean.rds"))
+full <- readRDS(here("data", "full.rds"))
+
+source(here("R", "helpers.R"))
+source(here("R", "plots.R"))
+```
+
+## Key takeaways
+
+- **Mixed-effects regression is now the dominant analysis approach**, having overtaken ANOVA, which is consistent with the field's broader shift toward models that can handle by-participant and by-item variability directly rather than aggregating it away. That said, random effect structure is inconsistently reported. Often it is simply reported as "random effects of subject and item", without specifying the exact random effect structure. 
+- **Effect sizes are usually absent, except when reported as regression coefficients.** Most studies not using regression (e.g. ANOVA or t-tests) report only significance tests and *F* or *t* scores, not a standardized measure of effect magnitude such as $\eta^2$ or Cohen's $d$.
+- **Power analysis is almost never conducted** (or at least almost never reported), despite sample and item sizes varying enormously across the field (see [Design](design.qmd) and [Stimuli](stimuli.qmd)).
+- **Bayesian methods remain rare**, and multiple-comparison corrections are almost never mentioned.
+- Analysis software is reported inconsistently. R is the most common tool when specified, but over half of studies don't say what software was used at all.
+
+## Statistical approach
+
+::: {.panel-tabset}
+
+### Statistical method
+
+What **statistical methods** were used to test hypotheses?
+
+```{r}
+#| label: fig-statistical-test
+#| fig-cap: "Mixed-effects regression is now more common than traditional ANOVA"
+make_perc_gg_barplot(clean, "statistical_test")
+```
+
+### Software
+
+What **software tools** were used for analysis?
+
+```{r}
+#| label: fig-software
+#| fig-cap: "R is the most common analysis software when reported, but reporting is inconsistent"
+make_perc_gg_barplot(clean, "software")
+```
+
+### Bayesian methods
+
+Did the analysis use **Bayesian** methods?
+
+```{r}
+#| label: tbl-bayesian
+#| tbl-cap: "Very few studies use Bayesian analysis methods"
+clean |>
+  count(bayesian) |>
+  mutate(perc = round(100 * n / sum(n), 1),
+         text = glue("{n} ({perc}%)")) |>
+  select(bayesian, text) |>
+  pivot_wider(names_from = bayesian, values_from = text) |>
+  knitr::kable()
+```
+
+:::
+
+## Model specification
+
+::: {.panel-tabset}
+
+### By-item/subject effects
+
+Were adjustments made for **by-participant or by-item variation** (e.g. as 'random effects' or F1 and F2 ANOVA)?
+
+Many studies use separate by-subject and by-item ANOVAs, and we include those here along with mixed-effects regression models. Both approaches are used to simultaneously test whether an effect generalizes across both human participants and stimulus items.
+
+```{r}
+#| label: fig-random-effects
+#| fig-cap: "Random effect structure used in mixed-effects models, where reported"
+make_split_perc_gg_barplot(clean, "random_effects")
+```
+
+### Rating scale treatment
+
+Was the response analysed as a **continuous scale, an ordinal factor, or dichotomous value**?
+
+```{r}
+#| label: fig-stat-scale
+#| fig-cap: "How the response variable was treated in the statistical model"
+make_perc_gg_barplot(clean, "stat_scale")
+```
+
+This choice matters for which models are appropriate, and doesn't always match how the scale was presented to participants (see [Task](task.qmd)). A substantial percentage of studies analyzed Likert-scale ratings as continuous data. 
+
+```{r}
+#| label: tbl-response-stat-scale
+#| tbl-cap: "Statistical scales used to analyze response types"
+clean |> 
+  filter(response_scale %in% c("Ordinal (Likert)", "Continuous", "Dichotomous (Binary)")) |> 
+  filter(!stat_scale %in% c("Other", "", "Not Reported")) |> 
+  count(response_scale, stat_scale, .drop = F) |> 
+  pivot_wider(names_from = "stat_scale", values_from = "n") |> 
+  mutate(across(2:4, ~ifelse(is.na(.x), 0, .x))) |> 
+  mutate(
+    sum = rowSums(across(where(is.numeric))),
+    perc_reported = round(100 * Continuous / sum, 1)
+    ) |>
+  rename(`% Treated as Continuous` = perc_reported, `Response type` = response_scale) |> 
+  select(-sum) |> 
+  knitr::kable()
+```
+
+
+
+### Preprocessing
+
+*Z*-score normalization is by far the most common manipulation, but this is still a minority of studies, although it's standard in Magnitude Estimation. Log-transformation is also occasionally used. 
+
+```{r}
+#| label: fig-preprocessing
+#| fig-cap: "Most studies do not report any preprocessing or transformation of ratings"
+make_perc_barplot(clean, "preprocessing")
+```
+
+:::
+
+## Reporting rigor: Effect size, power, correction, and thresholds
+
+Effect sizes are usually reported as regression coefficients. Statistical significance (*p*-value) is almost always reported, but the threshold for "significance" used by the authors is almost never explicitly declared.
+
+Power analysis and multiple comparison correction are very rare.
+
+```{r}
+#| label: tbl-rigor-details
+#| tbl-cap: "Reporting rates for power analysis, multiple-comparison correction, and significance thresholds"
+clean |>
+  select(effect_sizes, power_analysis, mult_comp_correction, sig_threshold) |>
+  pivot_longer(everything(), names_to = "Detail", values_to = "value") |>
+  mutate(
+    Detail = case_when(
+      Detail == "effect_sizes" ~ "Effect size reported",
+      Detail == "power_analysis" ~ "Power analysis conducted",
+      Detail == "mult_comp_correction" ~ "Multiple-comparison correction applied",
+      Detail == "sig_threshold" ~ "Significance threshold specified"
+    ),
+    value = ifelse(value %in% c("Not Reported", ""), "Not Reported", "Reported")
+  ) |>
+  count(Detail, value) |>
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+  mutate(perc_reported = round(100 * Reported / (Reported + `Not Reported`), 1)) |>
+  rename(`% Reported` = perc_reported) |>
+  knitr::kable()
+```

@@ -1,0 +1,42 @@
+
+/*-- scss:defaults --*/
+/*-- scss:fonts --*/
+
+h1, h2, h3 {
+  font-family: "Roboto Slab", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.csl-entry{
+  padding-bottom: 10pt;
+  padding-left: 40px;
+  text-indent: -40px;
+  font-weight: 400;
+}
+
+/*
+p, li {
+  font-weight: 500;
+}
+*/
+
+.footer {
+  /* font-weight: 500; */
+  font-size: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sourceCode {
+  font-weight: 400;
+}
+
+blockquote p {
+  font-style: normal;
+}
+
