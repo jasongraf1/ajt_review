@@ -1,4 +1,4 @@
-# Analysis {#sec-analysis}
+# Data Analysis {#sec-analysis}
 
 ```{r}
 #| label: setup
@@ -18,8 +18,8 @@ source(here("R", "plots.R"))
 ## Key takeaways
 
 - **Mixed-effects regression is now the dominant analysis approach**, having overtaken ANOVA, which is consistent with the field's broader shift toward models that can handle by-participant and by-item variability directly rather than aggregating it away. That said, random effect structure is inconsistently reported. Often it is simply reported as "random effects of subject and item", without specifying the exact random effect structure. 
-- **Effect sizes are usually absent, except when reported as regression coefficients.** Most studies not using regression (e.g. ANOVA or t-tests) report only significance tests and *F* or *t* scores, not a standardized measure of effect magnitude such as $\eta^2$ or Cohen's $d$.
-- **Power analysis is almost never conducted** (or at least almost never reported), despite sample and item sizes varying enormously across the field (see [Design](design.qmd) and [Stimuli](stimuli.qmd)).
+- **Effect sizes are usually absent, except when reported as regression coefficients.** Most studies not using regression (e.g. ANOVA or t-tests) report only significance tests and *F* or *t* scores, not a standardized measure of effect magnitude such as $\eta^2$ or Cohen's $d$. 
+- **Power analysis is almost never conducted** (or at least never reported), despite sample and item sizes varying enormously across the field (see [Experimental Design](design.qmd) and [Stimuli](stimuli.qmd)).
 - **Bayesian methods remain rare**, and multiple-comparison corrections are almost never mentioned.
 - Analysis software is reported inconsistently. R is the most common tool when specified, but over half of studies don't say what software was used at all.
 
@@ -34,7 +34,7 @@ What **statistical methods** were used to test hypotheses?
 ```{r}
 #| label: fig-statistical-test
 #| fig-cap: "Mixed-effects regression is now more common than traditional ANOVA"
-make_perc_gg_barplot(clean, "statistical_test")
+make_perc_gg_barplot(clean, "statistical_test", base_size = 12)
 ```
 
 ### Software
@@ -44,7 +44,8 @@ What **software tools** were used for analysis?
 ```{r}
 #| label: fig-software
 #| fig-cap: "R is the most common analysis software when reported, but reporting is inconsistent"
-make_perc_gg_barplot(clean, "software")
+#| fig-height: 3.5
+make_perc_gg_barplot(clean, "software", base_size = 12)
 ```
 
 ### Bayesian methods
@@ -78,20 +79,24 @@ Many studies use separate by-subject and by-item ANOVAs, and we include those he
 ```{r}
 #| label: fig-random-effects
 #| fig-cap: "Random effect structure used in mixed-effects models, where reported"
+#| fig-height: 3.5
 make_split_perc_gg_barplot(clean, "random_effects")
 ```
 
-### Rating scale treatment
+### Scale treatment
 
 Was the response analysed as a **continuous scale, an ordinal factor, or dichotomous value**?
 
 ```{r}
 #| label: fig-stat-scale
 #| fig-cap: "How the response variable was treated in the statistical model"
-make_perc_gg_barplot(clean, "stat_scale")
+#| fig-height: 4
+clean |> 
+  filter(stat_scale != "") |> 
+  make_perc_gg_barplot("stat_scale")
 ```
 
-This choice matters for which models are appropriate, and doesn't always match how the scale was presented to participants (see [Task](task.qmd)). A substantial percentage of studies analyzed Likert-scale ratings as continuous data. 
+This choice matters for which models are appropriate, and doesn't always match how the scale was presented to participants (see [Judgment Task](task.qmd)). A substantial percentage of studies analyzed Likert-scale ratings as continuous data. 
 
 ```{r}
 #| label: tbl-response-stat-scale
@@ -125,7 +130,7 @@ make_perc_barplot(clean, "preprocessing")
 
 :::
 
-## Reporting rigor: Effect size, power, correction, and thresholds
+## Reporting rigor: Effect size, power, correction, and thresholds {#sec-power}
 
 Effect sizes are usually reported as regression coefficients. Statistical significance (*p*-value) is almost always reported, but the threshold for "significance" used by the authors is almost never explicitly declared.
 

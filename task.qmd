@@ -38,7 +38,7 @@ What was the **scale** of participants' responses?
 make_perc_gg_barplot(clean, "response_scale", base_size = 12)
 ```
 
-### Scale length
+### Scale levels
 
 How many **levels of acceptability** were used (2, 7, 100, …)?
 
@@ -56,9 +56,7 @@ plot_rating_levels_gg(clean)
 
 What **terminology** did the authors use to refer to their judgment task with participants (e.g. "rate how acceptable / natural /… each sentence is")? 
 
-The label used matters. "Acceptability," "grammaticality," and "naturalness" are not interchangeable constructs, yet a suprising number of studies (N = `r nrow(filter(clean, rating_terminology == "Not Reported"))`) don't specify which one they're measuring (need to check this).
-
-An important note is that **most studies do not provide the exact instructions given to participants**, and only offer paraphrases. In at least one case [@francis_grammatical_2010a], the authors' paraphrase in the text was inconsistent with the actual instructions seen by participants. 
+An important note is that **most articles do not provide the exact instructions given to participants**, and only offer paraphrases. In at least one case [@francis_grammatical_2010a], the authors' paraphrase in the text was inconsistent with the actual instructions seen by participants. 
 
 ```{r}
 #| label: fig-rating-terminology
@@ -67,6 +65,9 @@ An important note is that **most studies do not provide the exact instructions g
 #| fig-height: 4.5
 make_split_perc_gg_barplot(clean, "rating_terminology", base_size = 12)
 ```
+
+The label used matters. "Acceptability," "grammaticality," and "naturalness" are not interchangeable constructs, yet a suprising number of studies (N = `r nrow(filter(clean, rating_terminology == "Not Reported"))`) don't specify which one they're measuring [we need to check this].
+
 
 :::
 
@@ -78,6 +79,8 @@ make_split_perc_gg_barplot(clean, "rating_terminology", base_size = 12)
 
 What **modality** was the judgment task delivered in?
 
+Again, this is often not reported explicitly, but it can be reasonably inferred from the text.
+
 ```{r}
 #| label: fig-presentation-modality
 #| fig-cap: "Written presentation dominates; auditory AJTs remain relatively rare"
@@ -88,7 +91,9 @@ make_perc_gg_barplot(clean, "presentation_modality")
 
 ### Delivery format
 
-Was the **task duration** recorded?
+How were participant **responses** recorded?
+
+Any studies using software tools and online delivery were automatically coded as "Computer-based". In many other cases it's not clear how participants entered responses.
 
 ```{r}
 #| label: fig-delivery-format
@@ -110,6 +115,9 @@ Beyond the response format itself, details of *how* the task was administered �
 
 Was the **task duration** recorded?
 
+
+Many studies do report average performance time, and most experimental software and platforms record time automatically. But yet again---say it with me now---this is not often explicitly reported in the text.
+
 ```{r}
 #| label: fig-task-duration
 #| fig-cap: "Did the study mention how long participants took (usually as an average)?"
@@ -121,7 +129,9 @@ make_perc_gg_barplot(clean, "task_duration")
 
 ### Timing
 
-Were items presented in a **fixed or variable amount of time**, or was the presentation **self-paced** (participants proceded at their own pace)? Some studies may use speeded judgment tasks. Most are self-paced but this is not always explicitly stated.
+Were items presented in a **fixed or variable amount of time**, or was the presentation **self-paced** (participants proceded at their own pace)? 
+
+Some studies may use speeded judgment tasks. Most allow participants to proceed at their own pace but this is rarely explicitly stated.
 
 ```{r}
 #| label: fig-task-timing
@@ -147,7 +157,7 @@ make_perc_gg_barplot(clean, "task_supervision")
 
 ### Other details
 
-Details about participant breaks or management are rare, as are the use of comprehension checks or pilot testing of the task.  
+Details about participant breaks or management are rare, as are the use of comprehension checks, confidence scoring or pilot testing of the task.  
 
 
 ```{r}

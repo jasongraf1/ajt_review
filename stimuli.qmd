@@ -18,14 +18,17 @@ source(here("R", "plots.R"))
 
 ## Key takeaways
 
-- **Explicit reporting of item numbers is not very consistent**. The number of items per condition is rarely explicitly mentioned, nor is the number of participants who see a given item. The choice of the number of items used is almost never explained or justified, e.g. via power analysis.
-- Detailed information about **fillers** is very rare. Studies often report the number of fillers, and some general descriptions, but almost none report *why they chose that number* (same goes for target items). Also, when item sets are provided, filler items are almost never included.
+- **Explicit reporting of item numbers is not very consistent**. The number of **items per condition** is rarely explicitly mentioned, nor is the number of participants who see a given item. Reconstruction suggests that for many studies the number of judgments per item varies across items. 
+- The choice of **the number of items used is almost never explained or justified**, e.g. via power analysis.
+- Detailed **information about fillers is limited**. Studies often report the number of fillers, and some general descriptions, but as with critical items almost no studies report *why they chose that number*. Also, when item sets are provided, filler items are almost never included.
 
 ## Item Reporting
 
-Exact numbers of stimulus items can often be reconstructed / deduced from information in the article, with varying degrees of effort and certainty. But readers ideally should never be required to do this for themselves.
+:::{.panel-tabset}
 
-A surprising number of articles do not accurately report item numbers.
+### Explicit reporting
+
+Was the **total number of items explicitly reported**?
 
 ```{r}
 #| label: tbl-items-reported
@@ -44,17 +47,13 @@ clean |>
   knitr::kable()
 ```
 
-<br>
-
-:::{.panel-tabset}
+A surprising number of articles do not accurately report item numbers. Exact numbers of stimulus items can often be reconstructed / deduced from information in the article, with varying degrees of effort and certainty. But readers ideally should never be required to do this for themselves.
 
 ### Total items
 
-What was the total number of **target items** created for the study *not* including fillers or distractors?
+What was the total number of **critical items** created for the study *not* including fillers or distractors?
 
-There are `r length(is.na(clean$N_items))` studies where the total number of items is not clear. Additionally we have `r length(which(clean$N_items >= 200))` studies with 200 or more items. These need to be re-checked (the largest is `r max(clean$N_items, na.rm = T)`!). 
-
-On the lower end, there are some studies that report semi-formal surveys of small sets of items, or even just one item, as in @boas_coercion_2011a. These are often reported in footnotes with minimal details.
+There are `r length(is.na(clean$N_items))` studies where the total number of items is not clear. Additionally we have `r length(which(clean$N_items >= 200))` studies with 200 or more items. These need to be re-checked (the largest is `r max(clean$N_items, na.rm = T)`!).
 
 ```{r}
 #| label: fig-item-boxplot
@@ -64,6 +63,8 @@ On the lower end, there are some studies that report semi-formal surveys of smal
 clean |> 
   make_boxplot("N_items", xlab = "Critical items", xrange = c(0, 420))
 ```
+
+On the lower end, there are some studies that report semi-formal surveys of small sets of items, or even just one item, as in @boas_coercion_2011a. These are often reported in footnotes with minimal details.
 
 ### Items per condition
 
@@ -92,6 +93,8 @@ clean |>
 
 What was the number of **filler or distractor** items?
 
+We find that `r nrow(filter(clean, N_fillers %in% c("0", "Not Reported")))` do not mention including filler items.
+
 ```{r}
 #| label: fig-fillers
 #| fig-cap: "Distribution of critical item counts per condition across studies"
@@ -117,6 +120,8 @@ clean |>
 
 Were the **items constructed by the researchers** or based on authentic materials?
 
+This is not always explicitly mentioned, but it usually can be inferred from the text.
+
 ```{r}
 #| label: fig-item-construciton
 #| fig-cap: "Most items are constructed by researchers, but this is also not always reported clearly"
@@ -140,6 +145,8 @@ make_split_perc_gg_barplot(clean, "item_balance")
 ### Context
 
 Were items presented with **additional context**?
+
+The "Other" category here may involve any kind of phenomenon or language specific factors related to lexical items, pragmatics, etc. This code probably could be more fine-grained. 
 
 ```{r}
 #| label: fig-item-context

@@ -43,6 +43,17 @@ make_perc_gg_barplot(clean, "data_avail")
 ```
 
 
+## Changes over time
+
+```{r}
+#| label: fig-avail-trend
+#| fig-cap: "Provision of materials has increased in recent years"
+#| fig-width: 8
+#| fig-height: 4
+plot_avail_by_year(clean)
+```
+
+
 ## Preregistration
 
 ```{r}
