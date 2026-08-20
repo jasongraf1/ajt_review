@@ -1,0 +1,225 @@
+# Glossary of terms for reporting Acceptability Judgment studies {#sec-glossary}
+
+This is a working glossary of key terms for reporting Acceptability
+Judgment Task (AJT) studies in theoretical linguistics. The aim is to
+provide a common vocabulary that authors and reviewers can refer to when
+reporting/reviewing work involving AJT experiments.
+
+This glossary is by no means exhaustive. We focus on those terms and
+concepts that are often used in varying ways in the theoretical
+linguistics literature, with the hope of encouraging clarity and
+consistency in research reporting.
+
+## Experimental Design
+
+- **Judgment**: a participant's evaluation of a linguistic expression.
+    This may take many forms, but most commonly as an indication of an
+    item's position on a preset scale or as an indication of the
+    relative quality of or preference for an item compared to a common
+    baseline or alternative expression (as in Magnitude Estimation or
+    Forced Choice tasks, respectively). This is the *dependent
+    variable*.
+- **Factor:** a property that is systematically varied across items or
+    participants to test a hypothesis, i.e. *an independent variable*
+    (e.g., island context vs non-island context). Factors may be
+    **categorical** or **continuous**.
+    - **Categorical factor:** A factor whose possible values are
+        **discrete categories** (e.g., island vs non-island, presence vs
+        absence of negation). Each category is a **level**, and
+        combinations of levels define **experimental conditions**
+    - **Continuous factor (covariate):** A factor whose values vary
+        along a **numeric scale** (e.g., memory-test score, lexical
+        frequency, proficiency). Continuous factors do *not* have levels
+        unless they are **explicitly binned** for design purposes.[^1]
+- **Condition**: a unique *level*, or combination of levels, of a one
+    or more **manipulated factors.** Each condition corresponds to **a
+    systematic difference in some property or combination properties
+    under investigation** (e.g., word order, agreement, structural
+    configuration). Conditions are defined independently of individual
+    stimulus items; items *instantiate* conditions. Conditions usually
+    contrast within-participants but may also contrast between
+    participants if assignment to levels is experimental.
+- **Group:** a contrast, or combination of contrasts, arising from
+    **fixed participant characteristics** (e.g., age group, gender,
+    native vs non-native speaker); groups are levels of factors that are
+    *not manipulated* by the researcher.
+- **Within-participants/subjects:** a design in which each participant
+    contributes responses in more than one condition. Differences
+    between conditions are therefore estimated within the same
+    participant.[^2]
+- **Between-participants/subjects:** a design in which different sets
+    of participants are assigned to different conditions or belong to
+    different groups. Differences are therefore estimated across
+    different sets of participants.
+- **Mixed design:** a design involving a combination of within- and
+    between-participants comparisons. For example, a study comparing
+    island contexts vs non-island contexts (within-participants) across
+    participant education levels (between-subjects).
+- **Counterbalancing:** a design strategy in which items, or subsets
+    of items, are distributed across participants in a systematic way.
+    Balancing is often done in such a way that (i) no participant sees
+    an excessive number of highly similar items, (ii) each condition is
+    represented equally across the participants, and (iii) order and
+    fatigue effects are not confounded with any particular condition. In
+    many AJT studies, this is implemented by assigning items from
+    matched sets to different lists, so that each participant sees only
+    a subset of items from each condition, while the full participant
+    sample provides data for all conditions and items.
+
+## Items and Trials
+
+- **Item**: a *unique stimulus token* that a participant is intended
+    to respond to.
+    - **Critical/Target item**: an item exhibiting a manipulated
+        feature (or set of features) of specific interest to the
+        researchers. A unique, concrete instantiation of one
+        experimental condition.
+    - **Filler item**: an item NOT of specific interest to the
+        researchers, usually presented as a distractor to mask the
+        purpose of the study.
+    - **Check item:** an item NOT of specific interest to the
+        researcher but included as a check that participants are doing
+        the task as intended, e.g. intermittent comprehension questions.
+        Responses to check items are often used to filter participants
+        post hoc.
+- **(Item) Set:** two or more items constructed to be comparable
+    across conditions (e.g. involving the same lexical words but
+    differing in structure). Each item in the set instantiates a
+    different experimental condition.
+- **(Item) List:** a subset of items assigned to one or more
+    participants; common in counterbalanced designs.
+- **Trial**: a single, unique instance in which a participant must
+    respond to a stimulus.[^3]
+    - **Pre-test trial:** a trial given to participants prior to the
+        test trials; often included to familiarise participants with the
+        task or to help calibrate the instrument (i.e. *practice*
+        trials); NOT included as part of the data analysis
+    - **Test trial:** a trial forming part of the core data to be
+        analysed; this includes critical items and filler items, which
+        often involve the same task.
+    - **Check trial:** a trial involving response to an attention
+        check item (which often involves a different task from that of
+        the test trials)
+    - **Post-test trial:** a trial given to participants after test
+        trials have been completed; NOT included as part of the data
+        analysis
+
+## Task Features and Task Types
+
+- **Task:** the specific activity participants are instructed to
+    perform in response to an item (e.g., rate on a scale, choose an
+    option, repeat aloud, paraphrase).
+- **Acceptability judgment task (AJT):** A task in which participants
+    indicate how natural, acceptable, or well-formed a linguistic
+    expression is, according to their linguistic knowledge or
+    intuitions. Common types include:
+    - **Rating task (scalar judgements):** Participants provide a
+        response on a fixed numerical or ordinal scale
+        - **Likert-type scale:** a rating task using labelled,
+            discrete categories (ordinal scale). Labels may be included
+            for all or only a subset of categories such as the
+            endpoints.
+        - **Visual analogue scale (VAS**): a rating task involving
+            moving a continuous slider or making marks on a fixed line
+    - **Magnitude Estimation task (ME):** a rating task in which
+        participants assign numerical values to items relative to a
+        common reference item (**modulus**), allowing for proportional
+        judgments rather than fixed-scale ratings (ratio scale).
+    - **Binary judgment task:** a task involving the evaluation of an
+        expression by choosing between two response options (e.g.,
+        *acceptable* vs. *unacceptable*, *yes* vs. *no*, *grammatical*
+        vs. *ungrammatical*).
+    - **Forced-choice task:** a task in which participants must
+        identify the better/more acceptable option from two or more
+        alternative expressions presented as a set (ordinal scale).
+    - **Scalar forced-choice task:** a task in which participants must
+        distribute numerical values among options from two or more
+        alternative expressions presented as a set (continuous scale,
+        anchored at both ends). Similar to visual analogue scale
+        ratings, but the scale represents preference for one alternative
+        rather than degree of acceptability.
+- **Timed / speeded task:** A task in which responses must be made
+    under time constraints (e.g., limited viewing time or response
+    deadline).
+- **Self-paced presentation:** items are revealed incrementally (e.g.,
+    word-by-word, region-by-region), with participants controlling the
+    pace.
+
+
+## Common points of confusion:
+
+**Condition--set--item relation:**
+
+Conditions are defined by manipulated properties (factor levels).
+Items instantiate conditions; each item belongs to exactly one
+condition. Items may be constructed as matching sets in which different
+conditions are instantiated using "the same" (or similar) forms. For
+example, the following two sets contain items instantiating six
+conditions crossing 3 structures (Sentential subject, Extraposition,
+Island) with 2 polarity (positive/negative) values.
+
+1.  Set 1
+    a.  That she knew Bob bothered John. \[Sentential subject,
+        positive\]
+    b.  It bothered John that she knew Bob. \[Extraposition, positive\]
+    c.  Who did that she knew bother John? \[Island, positive\]
+    d.  That she knew Bob didn't bother John. \[Sentential subject,
+        negative\]
+    e.  It didn't bother John that she knew Bob. \[Extraposition,
+        negative\]
+    f.  Who did that she knew not bother John? \[Island, negative\]
+2.  Set 2
+    a.  That Mary bought a new chainsaw surprised Alex. \[Sentential
+        subject, positive\]
+    b.  It surprised Alex that Mary bought a new chainsaw.
+        \[Extraposition, positive\]
+    c.  What did that Mary bought surprise Alex? \[Island, positive\]
+    d.  That Mary bought a new chainsaw didn't surprise Alex.
+        \[Sentential subject, negative\]
+    e.  It didn't surprise Alex that Mary bought a new chainsaw.
+        \[Extraposition, negative\]
+    f.  What did that Mary bought not surprise Alex? \[Island,
+        negative\]
+
+When a condition is represented by multiple unique instantiations, these
+are treated as distinct items, which may be distributed across
+participants using counterbalancing. In the above case there are six
+conditions each represented by two items, for a total of 12 items
+altogether.
+
+A model description of items and procedures, where exact numbers and
+design are explicitly reported might look like so:
+
+> "We created 12 sets of stimulus items where each set consisted of 6
+items instantiating one of the six experimental conditions. This
+resulted in a total of 72 unique critical items, with 12 items per
+condition. These items were distributed across six counterbalanced lists
+such that only one item from each set was included in a given list. The
+critical items in each list were intermixed amongst an additional set of
+24 filler items, and all participants saw the same set of 24 fillers.
+Fillers were constructed such that \[...\] Each participant saw only one
+list, and item order was randomized for each participant. Each
+participant thus responded to a total of 36 (12 critical + 24 filler)
+judgment trials.
+
+> The experiment was delivered using the Qualtrics software. Items were
+presented in writing on an otherwise blank page, with one item per page
+without additional context and with no time limit. Participants could
+proceed at their own pace through the experiment, pausing or taking
+breaks as needed. Response times were recorded but not used for
+analysis. The average total time for completion was 15 minutes."
+
+[^1]: Continuous factors may influence responses and may be included in
+    the analysis, but they do not by themselves constitute distinct
+    experimental conditions unless the values are discretized by design
+    (e.g., "high memory vs low memory" groups).
+
+[^2]: Participants do not necessarily see every item in every condition;
+    they may see a subset of items per condition in a counterbalanced
+    list, but their responses still span multiple conditions.
+
+[^3]: 'Item' and 'trial' are not equivalent. For instance, a study may
+    involve 10 items (unique sentences) each presented to participants
+    for judgment three separate times, for a total of (10 x 3) = 30
+    trials. Likewise, a single participant may only see a subset of the
+    total items used across a complete study.
