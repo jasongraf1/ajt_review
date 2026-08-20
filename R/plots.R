@@ -760,11 +760,11 @@ plot_rating_levels_gg <- function(data, base_size = 14){
   ymax <- max(y_vals) + 10
   
   ggplot(d, aes(x = response_levels, y = n)) +
-  geom_col(width = 0.7, fill = "steelblue") +
+  geom_col(width = 0.7, fill = "steelblue4") +
   geom_text(
     aes(label = n),
     hjust = 0.5,
-    color = "steelblue",
+    color = "steelblue4",
     nudge_y = 4,
     size = base_size / .pt   # match textfont size ~16
   ) +
@@ -797,104 +797,61 @@ plot_rating_levels_gg <- function(data, base_size = 14){
 # Analysis --------------------------------------------
 
 
+
+
 # Reproducibility -------------------------------------
 
-plot_item_avail_by_year <- function(data){
+plot_avail_by_year <- function(data, base_size = 14){
+  
   data |> 
     mutate(
-      year = as.numeric(year),
-      item_avail = ifelse(item_avail == "Not Reported", "No", "Yes")
-      ) |> 
-    count(year, item_avail) |> 
-    pivot_wider(names_from = item_avail, values_from = n) |> 
-    clean_names() |>
-    mutate(
-      across(2:3, ~ifelse(is.na(.x), 0, .x))
-    ) |>
-    plot_ly(
-      x = ~year, y = ~yes,
-      type = "bar",
-      # orientation = "h",
-      hovertemplate = "%{hovertext}<extra></extra>",
-      hovertext = ~paste(yes, "studies"),
-      name = "Items Provided",
-      color = I("steelblue4")
+      item_provided = ifelse(item_avail == "Not Reported", 0, 1),
+      data_provided = ifelse(data_avail == "Not Reported", 0, 1),
     ) |> 
-    add_trace(
-      x = ~year, y = ~no,
-      hovertext = ~paste(no, "studies"),
-      # orientation = "h",
-      name = "Items Not Provided",
-      color = I("grey80")
-    ) |> 
-    layout(
-      barmode = 'stack', 
-      font = font,
-      xaxis = list(
-        title = '# of total studies', 
-        range = list(1993, 2024), 
-        tickfont = list(size = 16)
-      ),
-      yaxis = list(
-        title = '', 
-        showgrid = F, 
-        showline = T, 
-        tickfont = list(size = 14),
-        zeroline = FALSE, 
-        ticks="outside"
-      ),
-      legend = list(x = 0.1, y = 0.9, font = list(size = 16),
-                    title = list(text= "Full item list"))
-    ) |>
-    plotly::config(displayModeBar = F)
+    select(year, item_provided, data_provided) |> 
+    pivot_longer(2:3, names_to = "type", values_to = "avail") |>
+    ggplot(aes(year, avail, color = type, fill = type)) +
+    geom_jitter(height = 0.03, width = 0.02, alpha = 0.5) +
+    geom_smooth(
+      method = "glm", 
+      formula = y ~ x, SE = F,
+      method.args = list(family = "binomial")
+      ) +
+    scale_color_manual(
+      name = "",
+      labels = c("Data", "Items"),
+      values = c("#1f5be0", "#e0a41f")
+    ) +
+    scale_fill_manual(
+      name = "",
+      labels = c("Data", "Items"),
+      values = c("#1f5be0", "#e0a41f")
+    ) +
+    scale_y_continuous(
+      name = "Provided?",
+      breaks = c(0, .5, 1),
+      labels = c("No", "50%", "Yes"),
+      expand = expansion(mult = c(0, 0.02)),
+    ) +
+    scale_x_continuous(
+      name = "Year",
+      expand = expansion(mult = c(0.02, 0.02)),
+    ) +
+    theme_minimal(base_size = base_size) +
+    theme(
+      text = element_text(family = "Roboto"),
+      axis.text.y = element_text(size = base_size),
+      axis.text.x = element_text(size = base_size),
+      axis.title.x = element_text(size = base_size),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "inside",
+      legend.position.inside = c(.1, .7),
+      axis.line.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.line.y = element_line(color = "black"),
+      axis.ticks.y = element_line(color = "black")
+    )
+  
 }
 
-plot_data_avail_by_year <- function(data){
-  data |> 
-    mutate(
-      year = as.numeric(year),
-      data_avail = ifelse(data_avail == "Not Reported", "No", "Yes")
-    ) |> 
-    count(year, data_avail) |> 
-    pivot_wider(names_from = data_avail, values_from = n) |> 
-    clean_names() |>
-    mutate(
-      across(2:3, ~ifelse(is.na(.x), 0, .x))
-    ) |>
-    plot_ly(
-      x = ~year, y = ~yes,
-      type = "bar",
-      # orientation = "h",
-      hovertemplate = "%{hovertext}<extra></extra>",
-      hovertext = ~paste(yes, "studies"),
-      name = "Provided",
-      color = I("orchid4")
-    ) |> 
-    add_trace(
-      x = ~year, y = ~no,
-      hovertext = ~paste(no, "studies"),
-      # orientation = "h",
-      name = "Not Provided",
-      color = I("grey80")
-    ) |> 
-    layout(
-      barmode = 'stack', 
-      font = font,
-      xaxis = list(
-        title = '# of total studies', 
-        range = list(1993, 2024), 
-        tickfont = list(size = 16)
-      ),
-      yaxis = list(
-        title = '', 
-        showgrid = F, 
-        showline = T, 
-        tickfont = list(size = 14),
-        zeroline = FALSE, 
-        ticks="outside"
-      ),
-      legend = list(x = 0.1, y = 0.9, font = list(size = 16),
-                    title = list(text= "Full data and/or code"))
-    ) |>
-    plotly::config(displayModeBar = F)
-}
