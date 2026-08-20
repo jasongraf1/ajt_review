@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Transparency – AJT Systematic Review</title>
+<title>Transparency – Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -77,6 +97,35 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;1,8..144,100;1,8..144,200&amp;family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="custom_bib.css">
 </head>
@@ -105,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AJT Systematic Review</a> 
+      <a href="./">Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/jasongraf1/ajt_review" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -208,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./analysis.html">Rigor</a></li><li class="breadcrumb-item"><a href="./transparency.html"><span class="chapter-title">Transparency</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Transparency</span></h1>
+<h1 class="title"><span id="sec-transparency" class="quarto-section-identifier"><span class="chapter-title">Transparency</span></span></h1>
 </div>
 
 
@@ -299,6 +348,941 @@ Table&nbsp;7.1: Preregistration is almost never reported in this literature
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-abeille_voice_2023" class="csl-entry" role="listitem">
+Abeillé, Anne, Aoi Shiraishi &amp; Barbara Hemforth. 2023. Voice mismatch and contrast in french right-node raising. <em>Journal of Linguistics</em> 59(2). 361–388. doi:<a href="https://doi.org/10.1017/s002222672200055x">10.1017/s002222672200055x</a>.
+</div>
+<div id="ref-ackerman_resumptive_2018a" class="csl-entry" role="listitem">
+Ackerman, Lauren, Michael Frazier &amp; Masaya Yoshida. 2018. Resumptive pronouns can ameliorate illicit island extractions. <em>Linguistic Inquiry</em> 49(4). 847–859. doi:<a href="https://doi.org/10.1162/ling_a_00291">10.1162/ling_a_00291</a>.
+</div>
+<div id="ref-adamou_experimental_2020" class="csl-entry" role="listitem">
+Adamou, Evangelia &amp; Yair Haendler. 2020. An experimental approach to nominal tense: <span>Evidence</span> from <span>Pomak</span> (<span>Slavic</span>). <em>Language</em> 96(3). 507–550. doi:<a href="https://doi.org/10.1353/lan.2020.0040">10.1353/lan.2020.0040</a>.
+</div>
+<div id="ref-adli_syntactic_2013" class="csl-entry" role="listitem">
+Adli, Aria. 2013. Syntactic variation in <span class="nocase">French Wh-questions</span>: <span>A</span> quantitative study from the angle of <span>Bourdieu</span>’s sociocultural theory. <em>Linguistics</em> 51(3). doi:<a href="https://doi.org/10.1515/ling-2013-0018">10.1515/ling-2013-0018</a>.
+</div>
+<div id="ref-ahn_nonconservativity_2022" class="csl-entry" role="listitem">
+Ahn, Dorothy &amp; Heejeong Ko. 2022. On non-conservativity of <span>Korean</span> floating quantifiers. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.5776">10.16995/glossa.5776</a>.
+</div>
+<div id="ref-alkhalaf_furthest_2021" class="csl-entry" role="listitem">
+Al Khalaf, Eman. 2021. Furthest conjunct agreement in jordanian arabic: <span>Evidence</span> for multiple (non)simultaneous agree. <em>Natural Language &amp;amp; Linguistic Theory</em> 40(2). 345–391. doi:<a href="https://doi.org/10.1007/s11049-021-09515-0">10.1007/s11049-021-09515-0</a>.
+</div>
+<div id="ref-alkhalaf_semantic_2023" class="csl-entry" role="listitem">
+Al Khalaf, Eman &amp; Bassil Mashaqba. 2023. Semantic scope in <span class="nocase">Q-float</span> constructions: <span>An</span> experimental investigation. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 282. 103457. doi:<a href="https://doi.org/10.1016/j.lingua.2022.103457">10.1016/j.lingua.2022.103457</a>.
+</div>
+<div id="ref-al-aqarbeh_island_2023" class="csl-entry" role="listitem">
+Al-Aqarbeh, Rania &amp; Jon Sprouse. 2023. Island effects and amelioration by resumption in <span>Jordanian Arabic</span>: <span>An</span> auditory acceptability-judgment study. <em>Syntax (Oxford, England)</em>. doi:<a href="https://doi.org/10.1111/synt.12262">10.1111/synt.12262</a>.
+</div>
+<div id="ref-albright_islands_2002" class="csl-entry" role="listitem">
+Albright, Adam. 2002. Islands of reliability for regular morphology: <span>Evidence</span> from italian. <em>Language</em> 78(4). 684–709. doi:<a href="https://doi.org/10.1353/lan.2003.0002">10.1353/lan.2003.0002</a>.
+</div>
+<div id="ref-alexopoulou_locality_2007" class="csl-entry" role="listitem">
+Alexopoulou, Theodora &amp; Frank Keller. 2007. Locality, cyclicity, and resumption: <span>At</span> the interface between the grammar and the human sentence processor. <em>Language</em> 83(1). 110–160. doi:<a href="https://doi.org/10.1353/lan.2007.0001">10.1353/lan.2007.0001</a>.
+</div>
+<div id="ref-alonso-ovalle_concessive_2023" class="csl-entry" role="listitem">
+Alonso-Ovalle, Luis &amp; Elizabeth Heredia Murillo. 2023. Concessive scalar particles: <span>Symmetric</span> vs. Non-symmetric alternatives. <span>The</span> case of <span>Spanish</span> &amp;lt;em&amp;gt;siquiera&amp;lt;/em&amp;gt; <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.8574">10.16995/glossa.8574</a>.
+</div>
+<div id="ref-alshaalan_resumption_2020" class="csl-entry" role="listitem">
+Alshaalan, Yara &amp; Klaus Abels. 2020. Resumption as a sluicing source in <span>Saudi Arabic</span>: <span>Evidence</span> from sluicing with prepositional phrases. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.841">10.5334/gjgl.841</a>.
+</div>
+<div id="ref-al-shawashreh_prosodic_2019" class="csl-entry" role="listitem">
+Al-Shawashreh, Ekab, Marwan Jarrah, Moh’d Al-Omari &amp; Mutasim Al-Deaibes. 2019. A prosodic account of wh-formation in <span>Jordanian Arabic</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 231. 102741. doi:<a href="https://doi.org/10.1016/j.lingua.2019.102741">10.1016/j.lingua.2019.102741</a>.
+</div>
+<div id="ref-ambridge_island_2008" class="csl-entry" role="listitem">
+Ambridge, Ben &amp; Adele E. Goldberg. 2008. The island status of clausal complements: <span>Evidence</span> in favor of an information structure explanation. <em>Cognitive Linguistics</em> 19(3). doi:<a href="https://doi.org/10.1515/cogl.2008.014">10.1515/cogl.2008.014</a>.
+</div>
+<div id="ref-ambridge_roles_2012" class="csl-entry" role="listitem">
+Ambridge, Ben, Julian M. Pine, Caroline F. Rowland &amp; Franklin Chang. 2012. The roles of verb semantics, entrenchment, and morphophonology in the retreat from dative argument-structure overgeneralization errors. <em>Language</em> 88(1). 45–81. doi:<a href="https://doi.org/10.1353/lan.2012.0000">10.1353/lan.2012.0000</a>.
+</div>
+<div id="ref-aoshima_incremental_2009" class="csl-entry" role="listitem">
+Aoshima, Sachiko, Masaya Yoshida &amp; Colin Phillips. 2009. Incremental processing of coreference and binding in japanese. <em>Syntax</em> 12(2). 93–134. doi:<a href="https://doi.org/10.1111/j.1467-9612.2009.00123.x">10.1111/j.1467-9612.2009.00123.x</a>.
+</div>
+<div id="ref-arsenijevic_agreement_2016" class="csl-entry" role="listitem">
+Arsenijević, Boban &amp; Martina Gračanin-Yuksek. 2016. Agreement and the structure of relative clauses. <em>Glossa: a journal of general linguistics</em> 1(1). doi:<a href="https://doi.org/10.5334/gjgl.12">10.5334/gjgl.12</a>.
+</div>
+<div id="ref-bader_interpretation_2005" class="csl-entry" role="listitem">
+Bader, Markus &amp; Lyn Frazier. 2005. Interpretation of leftward-moved constituents: <span>Processing</span> topicalizations in german. <em>Linguistics</em> 43(1). doi:<a href="https://doi.org/10.1515/ling.2005.43.1.49">10.1515/ling.2005.43.1.49</a>.
+</div>
+<div id="ref-bader_model_2009" class="csl-entry" role="listitem">
+Bader, Markus &amp; Jana Häussler. 2009. Toward a model of grammaticality judgments. <em>Journal of Linguistics</em> 46(2). 273–330. doi:<a href="https://doi.org/10.1017/s0022226709990260">10.1017/s0022226709990260</a>.
+</div>
+<div id="ref-bagriacik_raising_2021" class="csl-entry" role="listitem">
+Bagriacik, Metin &amp; Lieven Danckaert. 2021. Raising and matching in <span>Pharasiot Greek</span> relative clauses: <span>A</span> diachronic reconstruction. <em>Journal of Linguistics</em> 58(3). 495–533. doi:<a href="https://doi.org/10.1017/s0022226721000335">10.1017/s0022226721000335</a>.
+</div>
+<div id="ref-bamyaci_interaction_2014" class="csl-entry" role="listitem">
+Bamyacı, Elif, Jana Häussler &amp; Barış Kabak. 2014. The interaction of animacy and number agreement: <span>An</span> experimental investigation. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 148. 254–277. doi:<a href="https://doi.org/10.1016/j.lingua.2014.06.005">10.1016/j.lingua.2014.06.005</a>.
+</div>
+<div id="ref-barbosa_intervention_2019" class="csl-entry" role="listitem">
+Barbosa, Pilar &amp; Cecile De Cat. 2019. Intervention effects in wh-chains: The combined effect of syntax and processing. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.1005">10.5334/gjgl.1005</a>.
+</div>
+<div id="ref-barddal_constructionspecific_2006" class="csl-entry" role="listitem">
+Bardal, Jóhanna. 2006. Construction-specific properties of syntactic subjects in <span>Icelandic</span> and <span>German</span>. <em>Cognitive Linguistics</em> 17(1). doi:<a href="https://doi.org/10.1515/cog.2006.002">10.1515/cog.2006.002</a>.
+</div>
+<div id="ref-barking_individual_2022" class="csl-entry" role="listitem">
+Barking, Marie, Ad Backus &amp; Maria Mos. 2022. Individual corpus data predict variation in judgments: Testing the usage-based nature of mental representations in a language transfer setting. <em>Cognitive Linguistics</em> 33(3). 481–519. doi:<a href="https://doi.org/10.1515/cog-2021-0105">10.1515/cog-2021-0105</a>.
+</div>
+<div id="ref-bayer_new_2016a" class="csl-entry" role="listitem">
+Bayer, Josef, Jana Häussler &amp; Markus Bader. 2016. A new diagnostic for cyclic<span></span>i<span></span>wh<span></span>/i<span></span>-movement: <span>Discourse</span> particles in german questions. <em>Linguistic Inquiry</em> 47(4). 591–629. doi:<a href="https://doi.org/10.1162/ling_a_00224">10.1162/ling_a_00224</a>.
+</div>
+<div id="ref-belova_subjectobject_2020" class="csl-entry" role="listitem">
+Belova, Daria. 2020. Subject-object subextraction asymmetry in <span>Russian</span>. <em>Linguistic Proceedings Series</em> 11. 49–52. doi:<a href="https://doi.org/10.36505/exling-2020/11/0012/000427">10.36505/exling-2020/11/0012/000427</a>.
+</div>
+<div id="ref-beltrama_unacceptable_2016a" class="csl-entry" role="listitem">
+Beltrama, Andrea &amp; Ming Xiang. 2016. Unacceptable but comprehensible: The facilitation effect of resumptive pronouns. <em>Glossa: a journal of general linguistics</em> 1(1). doi:<a href="https://doi.org/10.5334/gjgl.24">10.5334/gjgl.24</a>.
+</div>
+<div id="ref-berent_cooccurrence_2003" class="csl-entry" role="listitem">
+Berent, Iris &amp; Joseph Shimron. 2003. Co-occurrence restrictions on identical consonants in the <span>Hebrew</span> lexicon: Are they due to similarity? <em>Journal of Linguistics</em> 39(1). 31–55. doi:<a href="https://doi.org/10.1017/s0022226702001949">10.1017/s0022226702001949</a>.
+</div>
+<div id="ref-bernstein_bare_1999a" class="csl-entry" role="listitem">
+Bernstein, Judy B., Wayne Cowart &amp; Dana McDaniel. 1999. Bare singular effects in genitive constructions. <em>Linguistic Inquiry</em> 30(3). 493–502. doi:<a href="https://doi.org/10.1162/002438999554174">10.1162/002438999554174</a>.
+</div>
+<div id="ref-bhatt_codeswitching_1997" class="csl-entry" role="listitem">
+Bhatt, Rakesh Mohan. 1997. Code-switching, constraints, and optimal grammars. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 102(4). 223–251. doi:<a href="https://doi.org/10.1016/s0024-3841(97)00007-7">10.1016/s0024-3841(97)00007-7</a>.
+</div>
+<div id="ref-bianchi_subject_2014a" class="csl-entry" role="listitem">
+Bianchi, Valentina &amp; Cristiano Chesi. 2014. Subject islands, reconstruction, and the flow of the computation. <em>Linguistic Inquiry</em> 45(4). 525–569. doi:<a href="https://doi.org/10.1162/ling_a_00166">10.1162/ling_a_00166</a>.
+</div>
+<div id="ref-bidese_adjective_2019" class="csl-entry" role="listitem">
+Bidese, Ermenegildo, Andrea Padovan &amp; Claudia Turolla. 2019. Adjective orders in cimbrian dps. <em>Linguistics</em> 57(2). 373–394. doi:<a href="https://doi.org/10.1515/ling-2019-0004">10.1515/ling-2019-0004</a>.
+</div>
+<div id="ref-bilbiie_can_2019" class="csl-entry" role="listitem">
+Bîlbîie, Gabriela &amp; Israel de la Fuente. 2019. Can gapping be embedded? <span>Experimental</span> evidence from <span>Spanish</span>. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.782">10.5334/gjgl.782</a>.
+</div>
+<div id="ref-bilbiie_factivity_2022" class="csl-entry" role="listitem">
+Bîlbîie, Gabriela, Israel De La Fuente &amp; Anne Abeillé. 2022. Factivity and complementizer omission in <span>English</span> embedded gapping. <em>Journal of Linguistics</em> 59(2). 389–426. doi:<a href="https://doi.org/10.1017/s0022226722000445">10.1017/s0022226722000445</a>.
+</div>
+<div id="ref-blanchette_prosody_2018" class="csl-entry" role="listitem">
+Blanchette, Frances &amp; Marianna Nadeu. 2018. Prosody and the meanings of <span>English</span> negative indefinites. <em>Journal of Pragmatics</em> 129. 123–139. doi:<a href="https://doi.org/10.1016/j.pragma.2018.03.020">10.1016/j.pragma.2018.03.020</a>.
+</div>
+<div id="ref-boas_coercion_2011a" class="csl-entry" role="listitem">
+Boas, Hans C. 2011. Coercion and leaking argument structures in <span>Construction Grammar</span>. <em>Linguistics</em> 49(6). doi:<a href="https://doi.org/10.1515/ling.2011.036">10.1515/ling.2011.036</a>.
+</div>
+<div id="ref-bondevik_extraction_2023" class="csl-entry" role="listitem">
+Bondevik, Ingrid &amp; Terje Lohndal. 2023. Extraction from finite adjunct clauses: An investigation of relative clause dependencies in <span>Norwegian</span>. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.9033">10.16995/glossa.9033</a>.
+</div>
+<div id="ref-bresnan_predicting_2010c" class="csl-entry" role="listitem">
+Bresnan, Joan &amp; Marilyn Ford. 2010. Predicting syntax: <span>Processing</span> dative constructions in american and australian varieties of english. <em>Language</em> 86(1). 168–213. doi:<a href="https://doi.org/10.1353/lan.0.0189">10.1353/lan.0.0189</a>.
+</div>
+<div id="ref-bruening_defects_2014a" class="csl-entry" role="listitem">
+Bruening, Benjamin. 2014. Defects of defective intervention. <em>Linguistic Inquiry</em> 45(4). 707–719. doi:<a href="https://doi.org/10.1162/ling_a_00171">10.1162/ling_a_00171</a>.
+</div>
+<div id="ref-bruening_passive_2018" class="csl-entry" role="listitem">
+Bruening, Benjamin. 2018. Passive do so. <em>Natural Language &amp;amp; Linguistic Theory</em> 37(1). 1–49. doi:<a href="https://doi.org/10.1007/s11049-018-9408-1">10.1007/s11049-018-9408-1</a>.
+</div>
+<div id="ref-bruening_locative_2021" class="csl-entry" role="listitem">
+Bruening, Benjamin. 2021. Locative inversion, <span>PP</span> topicalization, and weak crossover in english. <em>Journal of Linguistics</em> 58(4). 739–757. doi:<a href="https://doi.org/10.1017/s0022226721000414">10.1017/s0022226721000414</a>.
+</div>
+<div id="ref-bruening_no_2018" class="csl-entry" role="listitem">
+Bruening, Benjamin &amp; Eman Al Khalaf. 2018. No argument–adjunct asymmetry in reconstruction for <span>Binding Condition C</span>. <em>Journal of Linguistics</em> 55(2). 247–276. doi:<a href="https://doi.org/10.1017/s0022226718000324">10.1017/s0022226718000324</a>.
+</div>
+<div id="ref-bybee_usagebased_2006" class="csl-entry" role="listitem">
+Bybee, Joan L &amp; David Eddington. 2006. A usage-based approach to spanish verbs of <span>“becoming.”</span> <em>Language</em> 82(2). 323–355. doi:<a href="https://doi.org/10.1353/lan.2006.0081">10.1353/lan.2006.0081</a>.
+</div>
+<div id="ref-bybee_usagebased_2006a" class="csl-entry" role="listitem">
+Bybee, Joan &amp; David Eddington. 2006. A <span>Usage-Based Approach</span> to <span>Spanish Verbs</span> of ‘<span>Becoming</span>‘. <em>Language</em> 82(2). 323–355. doi:<a href="https://doi.org/10.1353/lan.2006.0081">10.1353/lan.2006.0081</a>.
+</div>
+<div id="ref-cable_implicatures_2016" class="csl-entry" role="listitem">
+Cable, Seth. 2016. The implicatures of optional past tense in <span>Tlingit</span> and the implications for <span>“discontinuous past.”</span> <em>Natural Language &amp;amp; Linguistic Theory</em> 35(3). 635–681. doi:<a href="https://doi.org/10.1007/s11049-016-9355-7">10.1007/s11049-016-9355-7</a>.
+</div>
+<div id="ref-calhoun_exclusives_2017" class="csl-entry" role="listitem">
+Calhoun, Sasha. 2017. Exclusives, equatives and prosodic phrases in <span>Samoan</span>. <em>Glossa: a journal of general linguistics</em> 2(1). doi:<a href="https://doi.org/10.5334/gjgl.196">10.5334/gjgl.196</a>.
+</div>
+<div id="ref-chaves_frequency_2018" class="csl-entry" role="listitem">
+Chaves, Rui P. &amp; Jeruen E. Dery. 2018. Frequency effects in subject islands. <em>Journal of Linguistics</em> 55(3). 475–521. doi:<a href="https://doi.org/10.1017/s0022226718000294">10.1017/s0022226718000294</a>.
+</div>
+<div id="ref-chaves_usagebased_2019" class="csl-entry" role="listitem">
+Chaves, Rui P. &amp; Adriana King. 2019. A usage-based account of subextraction effects. <em>Cognitive Linguistics</em> 30(4). 719–750. doi:<a href="https://doi.org/10.1515/cog-2018-0135">10.1515/cog-2018-0135</a>.
+</div>
+<div id="ref-clifton_amnestying_2006a" class="csl-entry" role="listitem">
+Clifton, Charles, Gisbert Fanselow &amp; Lyn Frazier. 2006. Amnestying superiority violations: <span>Processing</span> multiple questions. <em>Linguistic Inquiry</em> 37(1). 51–68. doi:<a href="https://doi.org/10.1162/002438906775321139">10.1162/002438906775321139</a>.
+</div>
+<div id="ref-clifton_when_2010a" class="csl-entry" role="listitem">
+Clifton, Charles &amp; Lyn Frazier. 2010. When are downward-entailing contexts identified? <span>The</span> case of the domain widener <span></span>i<span></span>ever<span></span>/i<span></span>. <em>Linguistic Inquiry</em> 41(4). 681–689. doi:<a href="https://doi.org/10.1162/ling_a_00017">10.1162/ling_a_00017</a>.
+</div>
+<div id="ref-clifton.jr._imperfect_2010" class="csl-entry" role="listitem">
+Clifton. Jr., Charles E. &amp; Lyn Frazier. 2010. Imperfect ellipsis: <span>Antecedents</span> beyond syntax? <em>Syntax (Oxford, England)</em> 13(4). 279–297. doi:<a href="https://doi.org/10.1111/j.1467-9612.2010.00142.x">10.1111/j.1467-9612.2010.00142.x</a>.
+</div>
+<div id="ref-coetzee_grammatical_2014" class="csl-entry" role="listitem">
+Coetzee, Andries W. 2014. Grammatical change through lexical accumulation: <span>Voicing</span> cooccurrence restrictions in <span>Afrikaans</span>. <em>Language</em> 90(3). 693–721. doi:<a href="https://doi.org/10.1353/lan.2014.0066">10.1353/lan.2014.0066</a>.
+</div>
+<div id="ref-colasanti_functional_2023" class="csl-entry" role="listitem">
+Colasanti, Valentina. 2023. Functional gestures as morphemes: <span>Some</span> evidence from the languages of <span>Southern Italy</span>. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.9743">10.16995/glossa.9743</a>.
+</div>
+<div id="ref-collins_scalar_2022" class="csl-entry" role="listitem">
+Collins, Chris. 2022. Scalar modifiers of quantifier phrases. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.6162">10.16995/glossa.6162</a>.
+</div>
+<div id="ref-colonna_when_2022" class="csl-entry" role="listitem">
+Colonna, Saveria, Brenda Laca, Leticia López &amp; Eduardo Correa Soares. 2022. When the present lies in the past: [<span>Present</span> under <span>Past</span>] in subjunctive clauses in <span>Uruguayan Spanish</span>. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.7904">10.16995/glossa.7904</a>.
+</div>
+<div id="ref-culbertson_convergent_2010" class="csl-entry" role="listitem">
+Culbertson, Jennifer. 2010. Convergent evidence for categorial change in <span>French</span>: <span>From</span> subject clitic to agreement marker. <em>Language</em> 86(1). 85–132. doi:<a href="https://doi.org/10.1353/lan.0.0183">10.1353/lan.0.0183</a>.
+</div>
+<div id="ref-czypionka_questionsensitive_2021" class="csl-entry" role="listitem">
+Czypionka, Anna, Maribel Romero &amp; Josef Bayer. 2021. Question-sensitive discourse particles at the interfaces of syntax, semantics and pragmatics – an experimental approach. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1203">10.5334/gjgl.1203</a>.
+</div>
+<div id="ref-czypionka_interplay_2017" class="csl-entry" role="listitem">
+Czypionka, Anna, Katharina Spalek, Isabell Wartenburger &amp; Manfred Krifka. 2017. On the interplay of object animacy and verb type during sentence comprehension in <span>German</span>: <span>ERP</span> evidence from the processing of transitive dative and accusative constructions. <em>Linguistics</em> 55(6). doi:<a href="https://doi.org/10.1515/ling-2017-0031">10.1515/ling-2017-0031</a>.
+</div>
+<div id="ref-dabrowska_lad_1997" class="csl-entry" role="listitem">
+Dąbrowska, Ewa. 1997. The <span>LAD</span> goes to school: A cautionary tale for nativists. <em>Linguistics</em> 35(4). doi:<a href="https://doi.org/10.1515/ling.1997.35.4.735">10.1515/ling.1997.35.4.735</a>.
+</div>
+<div id="ref-dabrowska_questions_2008a" class="csl-entry" role="listitem">
+Dąbrowska, Ewa. 2008. Questions with long-distance dependencies: <span>A</span> usage-based perspective. <em>Cognitive Linguistics</em> 19(3). doi:<a href="https://doi.org/10.1515/cogl.2008.015">10.1515/cogl.2008.015</a>.
+</div>
+<div id="ref-dabrowska_functional_2013a" class="csl-entry" role="listitem">
+Dąbrowska, Ewa. 2013. Functional constraints, usage, and mental grammars: <span>A</span> study of speakers’ intuitions about questions with long-distance dependencies. <em>Cognitive Linguistics</em> 24(4). 633–665. doi:<a href="https://doi.org/10.1515/cog-2013-0022">10.1515/cog-2013-0022</a>.
+</div>
+<div id="ref-decat_french_2007" class="csl-entry" role="listitem">
+De Cat, Cécile. 2007. French dislocation without movement. <em>Natural Language &amp;amp; Linguistic Theory</em> 25(3). 485–534. doi:<a href="https://doi.org/10.1007/s11049-007-9023-z">10.1007/s11049-007-9023-z</a>.
+</div>
+<div id="ref-derocafiguera_impact_2021" class="csl-entry" role="listitem">
+de Rocafiguera, Núria &amp; Aurora Bel. 2021. On the impact of clause order on pronoun resolution: Evidence from <span>Spanish</span>. <em>Folia Linguistica</em> 56(1). 1–24. doi:<a href="https://doi.org/10.1515/flin-2021-2002">10.1515/flin-2021-2002</a>.
+</div>
+<div id="ref-deen_condition_2018" class="csl-entry" role="listitem">
+Deen, Kamil Ud &amp; Napasri Timyam. 2018. Condition <span>C</span> in adult and child <span>Thai</span>. <em>Language</em> 94(1). 157–190. doi:<a href="https://doi.org/10.1353/lan.2018.0004">10.1353/lan.2018.0004</a>.
+</div>
+<div id="ref-destruel_pragmatics_2017" class="csl-entry" role="listitem">
+Destruel, Emilie. 2017. The pragmatics of <span>French</span> (non-)prototypical clefts: <span>Influence</span> of the type of question on naturalness and interpretation. <em>Journal of Pragmatics</em> 121. 58–75. doi:<a href="https://doi.org/10.1016/j.pragma.2017.08.014">10.1016/j.pragma.2017.08.014</a>.
+</div>
+<div id="ref-diesing_getting_2017" class="csl-entry" role="listitem">
+Diesing, Molly &amp; Draga Zec. 2017. Getting in the first word: <span>Prosody</span> and predicate initial sentences in <span>Serbian</span>. <em>Glossa: a journal of general linguistics</em> 2(1). doi:<a href="https://doi.org/10.5334/gjgl.204">10.5334/gjgl.204</a>.
+</div>
+<div id="ref-dillon_which_2017" class="csl-entry" role="listitem">
+Dillon, Brian, Adrian Staub, Joshua Levy &amp; Charles Clifton. 2017. Which noun phrases is the verb supposed to agree with?: <span>Object</span> agreement in <span>American English</span>. <em>Language</em> 93(1). 65–96. doi:<a href="https://doi.org/10.1353/lan.2017.0003">10.1353/lan.2017.0003</a>.
+</div>
+<div id="ref-divjak_machine_2016c" class="csl-entry" role="listitem">
+Divjak, Dagmar, Ewa Dąbrowska &amp; Antti Arppe. 2016. Machine meets man: <span>Evaluating</span> the psychological reality of corpus-based probabilistic models. <em>Cognitive Linguistics</em> 27(1). 1–33. doi:<a href="https://doi.org/10.1515/cog-2015-0101">10.1515/cog-2015-0101</a>.
+</div>
+<div id="ref-doliana_proxy_2021" class="csl-entry" role="listitem">
+Doliana, Aaron &amp; Sandhya Sundaresan. 2021. Proxy control: <span>A</span> new species of control in grammar. <em>Natural Language &amp;amp; Linguistic Theory</em> 40(1). 43–101. doi:<a href="https://doi.org/10.1007/s11049-020-09501-y">10.1007/s11049-020-09501-y</a>.
+</div>
+<div id="ref-doliana_proxy_2022" class="csl-entry" role="listitem">
+Doliana, Aaron &amp; Sandhya Sundaresan. 2022. Proxy control: <span>A</span> new species of control in grammar. <em>Natural Language &amp; Linguistic Theory</em> 40(1). 43–101. doi:<a href="https://doi.org/10.1007/s11049-020-09501-y">10.1007/s11049-020-09501-y</a>.
+</div>
+<div id="ref-dor_semantic_2005" class="csl-entry" role="listitem">
+Dor, Daniel. 2005. Toward a semantic account of that-<span>Deletion</span> in english. <em>Linguistics</em> 43(2). doi:<a href="https://doi.org/10.1515/ling.2005.43.2.345">10.1515/ling.2005.43.2.345</a>.
+</div>
+<div id="ref-dotlacil_representation_2021" class="csl-entry" role="listitem">
+Dotlačil, Jakub &amp; Adrian Brasoveanu. 2021. The representation and processing of distributivity and collectivity: Ambiguity vs. underspecification. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1131">10.5334/gjgl.1131</a>.
+</div>
+<div id="ref-dubenion-smith_questionnaire_2013" class="csl-entry" role="listitem">
+Dubenion-Smith, Shannon A. 2013. A questionnaire study of two-verb clusters in <span>West Central German</span>. <em>Folia Linguistica</em> 47(1). 1–34. doi:<a href="https://doi.org/10.1515/flin.2013.002">10.1515/flin.2013.002</a>.
+</div>
+<div id="ref-duncan_high_2022" class="csl-entry" role="listitem">
+Duncan, Daniel. 2022. High aspect in the <span>English</span> &amp;lt;em&amp;gt;be going to&amp;lt;/em&amp;gt; construction: <span>Syntactic</span> evidence. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.5850">10.16995/glossa.5850</a>.
+</div>
+<div id="ref-eberhardt_focus_2019" class="csl-entry" role="listitem">
+Eberhardt, Ira &amp; Sam Featherston. 2019. Focus particles and negative scope: <span>Both</span> evidence for syntactic integration? <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.613">10.5334/gjgl.613</a>.
+</div>
+<div id="ref-ellsiepen_constraints_2018" class="csl-entry" role="listitem">
+Ellsiepen, Emilia &amp; Markus Bader. 2018. Constraints on argument linearization in german. <em>Glossa: a journal of general linguistics</em> 3(1). doi:<a href="https://doi.org/10.5334/gjgl.258">10.5334/gjgl.258</a>.
+</div>
+<div id="ref-engel_assessing_2022b" class="csl-entry" role="listitem">
+Engel, Alexandra, Jason Grafmiller, Laura Rosseel &amp; Benedikt Szmrecsanyi. 2022. Assessing the complexity of lectal competence: The register-specificity of the dative alternation aftergive. <em>Cognitive Linguistics</em> 33(4). 727–766. doi:<a href="https://doi.org/10.1515/cog-2021-0107">10.1515/cog-2021-0107</a>.
+</div>
+<div id="ref-erbach_object_2022" class="csl-entry" role="listitem">
+Erbach, Kurt &amp; Aviv Schoenfeld. 2022. Object mass nouns and subkind countability. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.5788">10.16995/glossa.5788</a>.
+</div>
+<div id="ref-etxeberria_polarity_2021" class="csl-entry" role="listitem">
+Etxeberria, Urtzi, Susagna Tubau, Joan Borràs-Comes &amp; M. Teresa Espinal. 2021. Polarity <span>Items</span> in <span>Basque</span>: <span>Experimental</span> evidence for their existential reading. <em>Natural Language &amp;amp; Linguistic Theory</em> 40(2). 485–504. doi:<a href="https://doi.org/10.1007/s11049-021-09513-2">10.1007/s11049-021-09513-2</a>.
+</div>
+<div id="ref-eythorsson._oblique_2005" class="csl-entry" role="listitem">
+Eythorsson., Thorhallur &amp; Johanna Baredal. 2005. Oblique subjects: A common germanic inheritance. <em>Language</em> 81(4). 824–881. doi:<a href="https://doi.org/10.1353/lan.2005.0173">10.1353/lan.2005.0173</a>.
+</div>
+<div id="ref-fanselow_animacy_2011" class="csl-entry" role="listitem">
+Fanselow, Gisbert, Matthias Schlesewsky, Ralf Vogel &amp; Thomas Weskott. 2011. Animacy effects on crossing wh-movement in <span>German</span>. <em>Linguistics</em> 49(4). doi:<a href="https://doi.org/10.1515/ling.2011.021">10.1515/ling.2011.021</a>.
+</div>
+<div id="ref-featherston_universals_2005a" class="csl-entry" role="listitem">
+Featherston, Sam. 2005a. Universals and grammaticality: Wh-constraints in <span>German</span> and <span>English</span>. <em>Linguistics</em> 43(4). doi:<a href="https://doi.org/10.1515/ling.2005.43.4.667">10.1515/ling.2005.43.4.667</a>.
+</div>
+<div id="ref-featherston_thattrace_2005" class="csl-entry" role="listitem">
+Featherston, Sam. 2005b. That-trace in german. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 115(9). 1277–1302. doi:<a href="https://doi.org/10.1016/j.lingua.2004.04.001">10.1016/j.lingua.2004.04.001</a>.
+</div>
+<div id="ref-featherston_magnitude_2005c" class="csl-entry" role="listitem">
+Featherston, Sam. 2005c. Magnitude estimation and what it can do for your syntax: Some wh-constraints in <span>German</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 115(11). 1525–1550. doi:<a href="https://doi.org/10.1016/j.lingua.2004.07.003">10.1016/j.lingua.2004.07.003</a>.
+</div>
+<div id="ref-fedorenko_adding_2010" class="csl-entry" role="listitem">
+Fedorenko, Evelina &amp; Edward Gibson. 2010. Adding a third wh-phrase does not increase the acceptability of object-initial multiple-wh-questions: <span class="nocase">Multiple-wh-questions</span> with three wh-phrases. <em>Syntax (Oxford, England)</em> 13(3). 183–195. doi:<a href="https://doi.org/10.1111/j.1467-9612.2010.00138.x">10.1111/j.1467-9612.2010.00138.x</a>.
+</div>
+<div id="ref-feldhausen_revisiting_2021" class="csl-entry" role="listitem">
+Feldhausen, Ingo &amp; Sebastian Buchczyk. 2021. Revisiting subjunctive obviation in <span>French</span>: A formal acceptability judgment study. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1219">10.5334/gjgl.1219</a>.
+</div>
+<div id="ref-fishman_english_2020" class="csl-entry" role="listitem">
+Fishman, Alon. 2020. English similarity predicates construe particular dimensions of similarity. <em>Cognitive Linguistics</em> 31(3). 453–484. doi:<a href="https://doi.org/10.1515/cog-2018-0086">10.1515/cog-2018-0086</a>.
+</div>
+<div id="ref-flach_schemas_2020a" class="csl-entry" role="listitem">
+Flach, Susanne. 2020. Schemas and the frequency/acceptability mismatch: <span>Corpus</span> distribution predicts sentence judgments. <em>Cognitive Linguistics</em> 31(4). 609–645. doi:<a href="https://doi.org/10.1515/cog-2020-2040">10.1515/cog-2020-2040</a>.
+</div>
+<div id="ref-flecken_what_2011a" class="csl-entry" role="listitem">
+Flecken, Monique. 2011. What native speaker judgments tell us about the grammaticalization of a progressive aspectual marker in <span>Dutch</span>. <em>Linguistics</em> 49(3). doi:<a href="https://doi.org/10.1515/ling.2011.015">10.1515/ling.2011.015</a>.
+</div>
+<div id="ref-fleisher_rare_2015a" class="csl-entry" role="listitem">
+Fleisher, Nicholas. 2015. <span><em>Rare</em></span> -class adjectives in the <span><em>Tough</em></span> -construction. <em>Language</em> 91(1). 73–108. doi:<a href="https://doi.org/10.1353/lan.2015.0012">10.1353/lan.2015.0012</a>.
+</div>
+<div id="ref-francis_grammatical_2010a" class="csl-entry" role="listitem">
+Francis, Elaine J. 2010. Grammatical weight and relative clause extraposition in <span>English</span>. <em>cogl</em> 21(1). 35–74. doi:<a href="https://doi.org/10.1515/cogl.2010.002">10.1515/cogl.2010.002</a>.
+</div>
+<div id="ref-francis_resumptive_2015" class="csl-entry" role="listitem">
+Francis, Elaine J., Charles Lam, Carol Chun Zheng, John Hitz &amp; Stephen Matthews. 2015. Resumptive pronouns, structural complexity, and the elusive distinction between grammar and performance: <span>Evidence</span> from <span>Cantonese</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 162. 56–81. doi:<a href="https://doi.org/10.1016/j.lingua.2015.04.006">10.1016/j.lingua.2015.04.006</a>.
+</div>
+<div id="ref-francis_categoriality_2006b" class="csl-entry" role="listitem">
+Francis, Elaine J. &amp; Stephen Matthews. 2006. Categoriality and object extraction in <span>Cantonese</span> serial verb constructions. <em>Natural Language &amp;amp; Linguistic Theory</em> 24(3). 751–801. doi:<a href="https://doi.org/10.1007/s11049-006-0005-3">10.1007/s11049-006-0005-3</a>.
+</div>
+<div id="ref-frascarelli_understanding_2019" class="csl-entry" role="listitem">
+Frascarelli, Mara &amp; Ángel L. Jiménez-Fernández. 2019. Understanding partiality in pro-drop languages: <span>An</span> information-structure approach. <em>Syntax (Oxford, England)</em> 22(2–3). 162–198. doi:<a href="https://doi.org/10.1111/synt.12184">10.1111/synt.12184</a>.
+</div>
+<div id="ref-frazier_syntaxdiscourse_2005" class="csl-entry" role="listitem">
+Frazier, Lyn &amp; Charles Clifton. 2005. The syntax-discourse divide: Processing ellipsis. <em>Syntax (Oxford, England)</em> 8(2). 121–174. doi:<a href="https://doi.org/10.1111/j.1467-9612.2005.00077.x">10.1111/j.1467-9612.2005.00077.x</a>.
+</div>
+<div id="ref-frazier_quantifiers_2011" class="csl-entry" role="listitem">
+Frazier, Lyn &amp; Charles Clifton. 2011. Quantifiers undone: <span>Reversing</span> predictable speech errors in comprehension. <em>Language</em> 87(1). 158–171. doi:<a href="https://doi.org/10.1353/lan.2011.0024">10.1353/lan.2011.0024</a>.
+</div>
+<div id="ref-frazier_anticipating_2018" class="csl-entry" role="listitem">
+Frazier, Lyn, Charles Clifton, Stephanie Rich &amp; John Duff. 2018. Anticipating negation: <span>The</span> dos and don’ts of neg raising. <em>Syntax (Oxford, England)</em> 21(2). 160–194. doi:<a href="https://doi.org/10.1111/synt.12151">10.1111/synt.12151</a>.
+</div>
+<div id="ref-frazier_repair_2019" class="csl-entry" role="listitem">
+Frazier, Lyn &amp; John Duff. 2019. Repair or accommodation? <span>Split</span> antecedent ellipsis and the limits of repair. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.728">10.5334/gjgl.728</a>.
+</div>
+<div id="ref-frisch_psychological_2001" class="csl-entry" role="listitem">
+Frisch, Stefan A &amp; Bushra Adnan Zawaydeh. 2001. The psychological reality of <span class="nocase">OCP-place</span> in arabic. <em>Language</em> 77(1). 91–106. doi:<a href="https://doi.org/10.1353/lan.2001.0014">10.1353/lan.2001.0014</a>.
+</div>
+<div id="ref-fritz-huechante_agentivity_2020" class="csl-entry" role="listitem">
+Fritz-Huechante, Paola, Elisabeth Verhoeven &amp; Julian A. Rott. 2020. Agentivity and non-culminating causation in the psych domain: <span class="nocase">Cross-linguistic</span> evidence from <span>Spanish</span> and <span>Korean</span>. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.896">10.5334/gjgl.896</a>.
+</div>
+<div id="ref-fukuda_syntax_2019" class="csl-entry" role="listitem">
+Fukuda, Shin. 2019. The syntax of variable behavior verbs: <span>Experimental</span> evidence from the accusative–oblique alternations in <span>Japanese</span>. <em>Journal of Linguistics</em> 56(2). 269–314. doi:<a href="https://doi.org/10.1017/s0022226719000136">10.1017/s0022226719000136</a>.
+</div>
+<div id="ref-fukuda_experimental_2022" class="csl-entry" role="listitem">
+Fukuda, Shin, Nozomi Tanaka, Hajime Ono &amp; Jon Sprouse. 2022. An experimental reassessment of complex <span>NP</span> islands with <span class="nocase">NP-scrambling</span> in <span>Japanese</span>. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.5737">10.16995/glossa.5737</a>.
+</div>
+<div id="ref-gafter_distribution_2014a" class="csl-entry" role="listitem">
+Gafter, Roey J. 2014. The distribution of the hebrew possessive dative construction: <span>Guided</span> by unaccusativity or prominence? <em>Linguistic Inquiry</em> 45(3). 482–500. doi:<a href="https://doi.org/10.1162/ling_a_00164">10.1162/ling_a_00164</a>.
+</div>
+<div id="ref-gehrke_word_2023" class="csl-entry" role="listitem">
+Gehrke, Berit &amp; Marcin Wągiel. 2023. On word order and non-conservative percentage quantification in <span>Slavic</span> and <span>German</span>. <em>Glossa: a journal of general linguistics</em> 43(1). doi:<a href="https://doi.org/10.16995/glossa.5803">10.16995/glossa.5803</a>.
+</div>
+<div id="ref-giancaspro_ltigtme_2021" class="csl-entry" role="listitem">
+Giancaspro, David &amp; Liliana Sánchez. 2021. &amp;Lt;i&amp;gt;<span>Me</span>, mi, my&amp;lt;/i&amp;gt;: <span>Innovation</span> and variability in heritage speakers’ knowledge of inalienable possession. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1240">10.5334/gjgl.1240</a>.
+</div>
+<div id="ref-goldwater_constructional_2009" class="csl-entry" role="listitem">
+Goldwater, Micah B. &amp; Arthur B. Markman. 2009. Constructional sources of implicit agents in sentence comprehension. <em>Cognitive Linguistics</em> 20(4). doi:<a href="https://doi.org/10.1515/cogl.2009.029">10.1515/cogl.2009.029</a>.
+</div>
+<div id="ref-gondra_head_2016" class="csl-entry" role="listitem">
+Gondra, Ager. 2016. Head external analysis, head raising analysis or matching analysis? <span>Let</span>’s ask experimental syntax. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 179. 57–75. doi:<a href="https://doi.org/10.1016/j.lingua.2016.03.003">10.1016/j.lingua.2016.03.003</a>.
+</div>
+<div id="ref-gonzalezalonso_gender_2021" class="csl-entry" role="listitem">
+González Alonso, Jorge, Ian Cunnings, Hiroki Fujita, David Miller &amp; Jason Rothman. 2021. Gender attraction in sentence comprehension. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1300">10.5334/gjgl.1300</a>.
+</div>
+<div id="ref-gonzalez-vilbazo_properties_2011" class="csl-entry" role="listitem">
+González-Vilbazo, Kay &amp; Luis López. 2011a. Some properties of light verbs in code-switching. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 121(5). 832–850. doi:<a href="https://doi.org/10.1016/j.lingua.2010.11.011">10.1016/j.lingua.2010.11.011</a>.
+</div>
+<div id="ref-gonzalez-vilbazo_little_2011" class="csl-entry" role="listitem">
+González-Vilbazo, Kay &amp; Luis López. 2011b. Little v and parametric variation. <em>Natural Language &amp;amp; Linguistic Theory</em> 30(1). 33–77. doi:<a href="https://doi.org/10.1007/s11049-011-9141-5">10.1007/s11049-011-9141-5</a>.
+</div>
+<div id="ref-gonzalvez-garcia_metaphor_2011" class="csl-entry" role="listitem">
+Gonzálvez-García, Francisco. 2011. Metaphor and metonymy do not render coercion superfluous: <span>Evidence</span> from the subjective-transitive construction. <em>Linguistics</em> 49(6). doi:<a href="https://doi.org/10.1515/ling.2011.037">10.1515/ling.2011.037</a>.
+</div>
+<div id="ref-goodall_syntactic_2011" class="csl-entry" role="listitem">
+Goodall, Grant. 2011. Syntactic satiation and the inversion effect in english and <span>SpanishWh</span>-questions. <em>Syntax (Oxford, England)</em> 14(1). 29–47. doi:<a href="https://doi.org/10.1111/j.1467-9612.2010.00148.x">10.1111/j.1467-9612.2010.00148.x</a>.
+</div>
+<div id="ref-graf_interaction_2017" class="csl-entry" role="listitem">
+Graf, Tim, Markus Philipp, Xiaonan Xu, Franziska Kretzschmar &amp; Beatrice Primus. 2017. The interaction between telicity and agentivity: <span>Experimental</span> evidence from intransitive verbs in <span>German</span> and <span>Chinese</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 200. 84–106. doi:<a href="https://doi.org/10.1016/j.lingua.2017.08.006">10.1016/j.lingua.2017.08.006</a>.
+</div>
+<div id="ref-grano_how_2018a" class="csl-entry" role="listitem">
+Grano, Thomas &amp; Howard Lasnik. 2018. How to neutralize a finite clause boundary: <span>Phase</span> theory and the grammar of bound pronouns. <em>Linguistic Inquiry</em> 49(3). 465–499. doi:<a href="https://doi.org/10.1162/ling_a_00279">10.1162/ling_a_00279</a>.
+</div>
+<div id="ref-greco_asymmetries_2020" class="csl-entry" role="listitem">
+Greco, Matteo, Paolo Lorusso, Cristiano Chesi &amp; Andrea Moro. 2020. Asymmetries in nominal copular sentences: <span>Psycholinguistic</span> evidence in favor of the raising analysis. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 245. 102926. doi:<a href="https://doi.org/10.1016/j.lingua.2020.102926">10.1016/j.lingua.2020.102926</a>.
+</div>
+<div id="ref-gribanova_verbstranding_2012" class="csl-entry" role="listitem">
+Gribanova, Vera. 2012. Verb-stranding verb phrase ellipsis and the structure of the <span>Russian</span> verbal complex. <em>Natural Language &amp;amp; Linguistic Theory</em> 31(1). 91–136. doi:<a href="https://doi.org/10.1007/s11049-012-9183-3">10.1007/s11049-012-9183-3</a>.
+</div>
+<div id="ref-gries_particle_1999b" class="csl-entry" role="listitem">
+Gries, Stefan T. 1999. Particle movement: <span>A</span> cognitive and functional approach. <em>Cognitiive Linguistics</em> 10(2). 105–145. doi:<a href="https://doi.org/10.1515/cogl.1999.005">10.1515/cogl.1999.005</a>.
+</div>
+<div id="ref-griffiths_reprise_2023" class="csl-entry" role="listitem">
+Griffiths, James, Güliz Güneş &amp; Anikó Lipták. 2023. Reprise fragments in <span>English</span> and <span>Hungarian</span>: <span>Further</span> support for an in-situ <span class="nocase">Q-equivalence</span> approach to clausal ellipsis. <em>Language</em> 99(1). 154–191. doi:<a href="https://doi.org/10.1353/lan.2023.0000">10.1353/lan.2023.0000</a>.
+</div>
+<div id="ref-guajardo_status_2019" class="csl-entry" role="listitem">
+Guajardo, Gustavo &amp; Grant Goodall. 2019. On the status of &amp;lt;i&amp;gt;<span>Concordantia Temporum</span>&amp;lt;/i&amp;gt; in <span>Spanish</span>: <span>An</span> experimental approach. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.749">10.5334/gjgl.749</a>.
+</div>
+<div id="ref-gunes_nuclear_2020" class="csl-entry" role="listitem">
+Güneş, Güli̇Z &amp; Anikó Lipták. 2020. Nuclear prominence in ellipsis: <span>Evidence</span> from aggressively non-<span class="nocase">D-linked</span> phrases. <em>Journal of Linguistics</em> 57(1). 83–121. doi:<a href="https://doi.org/10.1017/s0022226720000134">10.1017/s0022226720000134</a>.
+</div>
+<div id="ref-gurer_karachay_2020" class="csl-entry" role="listitem">
+Gürer, Aslı. 2020. Karachay–<span>Balkar</span> relative clauses: <span>Implications</span> for a special type of genitive/nominative alternation. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 243. 102875. doi:<a href="https://doi.org/10.1016/j.lingua.2020.102875">10.1016/j.lingua.2020.102875</a>.
+</div>
+<div id="ref-hacohen_differential_2021" class="csl-entry" role="listitem">
+Hacohen, Aviya, Olga Kagan &amp; Dana Plaut. 2021. Differential object marking in modern hebrew: <span>Definiteness</span> and partitivity. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.16995/glossa.5729">10.16995/glossa.5729</a>.
+</div>
+<div id="ref-haddican_object_2018" class="csl-entry" role="listitem">
+Haddican, Bill &amp; Anders Holmberg. 2018. Object symmetry effects in <span>Germanic</span>: <span>Evidence</span> for the role of case. <em>Natural Language &amp;amp; Linguistic Theory</em> 37(1). 91–122. doi:<a href="https://doi.org/10.1007/s11049-018-9404-5">10.1007/s11049-018-9404-5</a>.
+</div>
+<div id="ref-han_null_2020a" class="csl-entry" role="listitem">
+Han, Chung-hye, Kyeong-min Kim, Keir Moulton &amp; Jeffrey Lidz. 2020. Null <span>Objects</span> in <span>Korean</span>: <span>Experimental Evidence</span> for the <span>Argument Ellipsis Analysis</span>. <em>Linguistic Inquiry</em> 51(2). 319–340.
+</div>
+<div id="ref-han_vraising_2007a" class="csl-entry" role="listitem">
+Han, Chung-hye, Jeffrey Lidz &amp; Julien Musolino. 2007. V-<span>Raising</span> and <span>Grammar Competition</span> in <span>Korean</span>: <span>Evidence</span> from <span>Negation</span> and <span>Quantifier Scope</span>. <em>Linguistic Inquiry</em> 38(1). 1–47. <a href="https://www.jstor.org/stable/4179396">https://www.jstor.org/stable/4179396</a>.
+</div>
+<div id="ref-hartl_well_2021" class="csl-entry" role="listitem">
+Härtl, Holden &amp; Tatjana Bürger. 2021. <span>“<span>Well</span>, that’s just great!”</span>: An empirically based analysis of non-literal and attitudinal content of ironic utterances. <em>Folia Linguistica</em> 55(2). 361–387. doi:<a href="https://doi.org/10.1515/flin-2021-2020">10.1515/flin-2021-2020</a>.
+</div>
+<div id="ref-hartmann_remark_2018" class="csl-entry" role="listitem">
+Hartmann, Jutta M. &amp; Caroline Heycock. 2018. A remark on <span class="nocase">B<span class="nocase">é</span>jar</span> &amp;amp; <span>Kahnemuyipour</span> 2017: <span>Specificational</span> subjects do have phi-features. <em>Journal of Linguistics</em> 54(3). 611–627. doi:<a href="https://doi.org/10.1017/s0022226718000117">10.1017/s0022226718000117</a>.
+</div>
+<div id="ref-hartmann_person_2022" class="csl-entry" role="listitem">
+Hartmann, Jutta M. &amp; Caroline Heycock. 2022. Person effects in agreement with <span>Icelandic</span> low nominatives: <span>An</span> experimental investigation. <em>Natural Language &amp;amp; Linguistic Theory</em> 41(3). 1029–1090. doi:<a href="https://doi.org/10.1007/s11049-022-09564-z">10.1007/s11049-022-09564-z</a>.
+</div>
+<div id="ref-haussler_superiority_2015" class="csl-entry" role="listitem">
+Häussler, Jana, Margaret Grant, Gisbert Fanselow &amp; Lyn Frazier. 2015. Superiority in english and german: <span>Cross</span>-language grammatical differences? <em>Syntax (Oxford, England)</em> 18(3). 235–265. doi:<a href="https://doi.org/10.1111/synt.12030">10.1111/synt.12030</a>.
+</div>
+<div id="ref-hayes_natural_2009" class="csl-entry" role="listitem">
+Hayes, Bruce, Kie Zuraw, Péter Siptár &amp; Zsuzsa Londe. 2009. Natural and unnatural constraints in hungarian vowel harmony. <em>Language</em> 85(4). 822–863. doi:<a href="https://doi.org/10.1353/lan.0.0169">10.1353/lan.0.0169</a>.
+</div>
+<div id="ref-hayriyan_deverbal_2020" class="csl-entry" role="listitem">
+Hayriyan, Arayik. 2020. Deverbal nominals possess no internal <span>VP</span> structure. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 248. 102927. doi:<a href="https://doi.org/10.1016/j.lingua.2020.102927">10.1016/j.lingua.2020.102927</a>.
+</div>
+<div id="ref-heestand_resumption_2011a" class="csl-entry" role="listitem">
+Heestand, Dustin, Ming Xiang &amp; Maria Polinsky. 2011. Resumption still does not rescue islands. <em>Linguistic Inquiry</em> 42(1). 138–152. doi:<a href="https://doi.org/10.1162/ling_a_00032">10.1162/ling_a_00032</a>.
+</div>
+<div id="ref-hermas_lexical_2020" class="csl-entry" role="listitem">
+Hermas, Abdelkader. 2020. Lexical semantics in advanced second language <span>French</span>: <span>The</span> acquisition of genericity. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 234. 102761. doi:<a href="https://doi.org/10.1016/j.lingua.2019.102761">10.1016/j.lingua.2019.102761</a>.
+</div>
+<div id="ref-heycock_detecting_2012" class="csl-entry" role="listitem">
+Heycock, Caroline, Antonella Sorace, Zakaris Svabo Hansen, Frances Wilson &amp; Sten Vikner. 2012. Detecting the late stages of syntactic change: <span>The</span> loss of v-to-t in faroese. <em>Language</em> 88(3). 558–600. doi:<a href="https://doi.org/10.1353/lan.2012.0053">10.1353/lan.2012.0053</a>.
+</div>
+<div id="ref-himmelreich_agreement_2023" class="csl-entry" role="listitem">
+Himmelreich, Anke &amp; Katharina Hartmann. 2023. Agreement with disjoined subjects in <span>German</span>. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.8504">10.16995/glossa.8504</a>.
+</div>
+<div id="ref-hinterwimmer_interpretative_2022" class="csl-entry" role="listitem">
+Hinterwimmer, Stefan &amp; Umesh Patil. 2022. The interpretative options of anaphoric complex demonstratives. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.5700">10.16995/glossa.5700</a>.
+</div>
+<div id="ref-hirayama_revisiting_2018" class="csl-entry" role="listitem">
+Hirayama, Hitomi. 2018. Revisiting a null pronominal account for parasitic gaps in <span>Japanese</span>. <em>Glossa: a journal of general linguistics</em> 3(1). doi:<a href="https://doi.org/10.5334/gjgl.522">10.5334/gjgl.522</a>.
+</div>
+<div id="ref-hitz_usefulness_2016" class="csl-entry" role="listitem">
+Hitz, John &amp; Elaine J. Francis. 2016. On the usefulness of formal judgment tasks in syntax and in second-language research: <span>The</span> case of resumptive pronouns in <span>English</span>, <span>Turkish</span>, and <span>Mandarin Chinese</span>. <em>Linguistics</em> 54(6). 1241–1280. doi:<a href="https://doi.org/10.1515/ling-2016-0033">10.1515/ling-2016-0033</a>.
+</div>
+<div id="ref-hofmeister_linearization_2010a" class="csl-entry" role="listitem">
+Hofmeister, Philip. 2010. A linearization account of either <span>…</span> or constructions. <em>Natural Language &amp;amp; Linguistic Theory</em> 28(2). 275–314. doi:<a href="https://doi.org/10.1007/s11049-010-9090-4">10.1007/s11049-010-9090-4</a>.
+</div>
+<div id="ref-hofmeister_effects_2015" class="csl-entry" role="listitem">
+Hofmeister, Philip, Peter Culicover &amp; Susanne Winkler. 2015. Effects of processing on the acceptability of <span>“frozen”</span> extraposed constituents. <em>Syntax (Oxford, England)</em> 18(4). 464–483. doi:<a href="https://doi.org/10.1111/synt.12036">10.1111/synt.12036</a>.
+</div>
+<div id="ref-holliday_its_2021" class="csl-entry" role="listitem">
+Holliday, Nicole &amp; Marie Tano. 2021. <span>“<span>It</span>’s a <span>Whole Vibe</span>”</span>: Testing evaluations of grammatical and ungrammatical <span>AAE</span> on <span>Twitter</span>. <em>Linguistics Vanguard</em> 7(1). doi:<a href="https://doi.org/10.1515/lingvan-2020-0095">10.1515/lingvan-2020-0095</a>.
+</div>
+<div id="ref-hoot_position_2021" class="csl-entry" role="listitem">
+Hoot, Bradley &amp; Shane Ebert. 2021. On the position of subjects in <span>Spanish</span>: <span>Evidence</span> from code-switching. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1449">10.5334/gjgl.1449</a>.
+</div>
+<div id="ref-huang_when_2021" class="csl-entry" role="listitem">
+Huang, Nick &amp; Colin Phillips. 2021. When missing <span>NPs</span> make double center-embedding sentences acceptable. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1292">10.5334/gjgl.1292</a>.
+</div>
+<div id="ref-husic_accusative_2022a" class="csl-entry" role="listitem">
+Husić, Halima &amp; Agata Marie Renans. 2022. The accusative/genitive alternation in <span>Bosnian</span>/ <span>Croatian</span>/<span>Serbian</span>. <em>Glossa: a journal of general linguistics</em> 36(1). doi:<a href="https://doi.org/10.16995/glossa.5701">10.16995/glossa.5701</a>.
+</div>
+<div id="ref-huumo_why_2019" class="csl-entry" role="listitem">
+Huumo, Tuomas. 2019. Why <span>Monday</span> is notin front <span class="nocase">ofTuesday</span>: <span>On</span> the uses of <span>English</span> and <span>Finnish</span> front adpositions in sequence metaphors of time. <em>Linguistics</em> 57(3). 607–652. doi:<a href="https://doi.org/10.1515/ling-2019-0010">10.1515/ling-2019-0010</a>.
+</div>
+<div id="ref-ionin_another_2018" class="csl-entry" role="listitem">
+Ionin, Tania, Elaine Grolla &amp; Hélade Santos. 2018. Another look at the acceptability of bare singular <span></span>scp<span></span><span>NP</span><span></span>/scp<span></span>s in episodic sentences in brazilian portuguese. <em>Syntax (Oxford, England)</em> 21(4). 402–421. doi:<a href="https://doi.org/10.1111/synt.12163">10.1111/synt.12163</a>.
+</div>
+<div id="ref-ionin_focus_2018b" class="csl-entry" role="listitem">
+Ionin, Tania &amp; Tatiana Luchkina. 2018. Focus on russian scope: <span>An</span> experimental investigation of the relationship between quantifier scope, prosody, and information structure. <em>Linguistic Inquiry</em> 49(4). 741–779. doi:<a href="https://doi.org/10.1162/ling_a_00288">10.1162/ling_a_00288</a>.
+</div>
+<div id="ref-ionin_experimental_2011" class="csl-entry" role="listitem">
+Ionin, Tania, Silvina Montrul &amp; Hélade Santos. 2011. An experimental investigation of the expression of genericity in <span>English</span>, <span>Spanish</span> and <span>Brazilian Portuguese</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 121(5). 963–985. doi:<a href="https://doi.org/10.1016/j.lingua.2010.12.008">10.1016/j.lingua.2010.12.008</a>.
+</div>
+<div id="ref-jamieson_viewing_2020" class="csl-entry" role="listitem">
+Jamieson, E. 2020. Viewing dialect change through acceptability judgments: <span>A</span> case study in <span>Shetland</span> dialect. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.979">10.5334/gjgl.979</a>.
+</div>
+<div id="ref-janda_construal_2019" class="csl-entry" role="listitem">
+Janda, Laura A. &amp; Robert J. Reynolds. 2019. Construal vs. Redundancy: <span>Russian</span> aspect in context. <em>Cognitive Linguistics</em> 30(3). 467–497. doi:<a href="https://doi.org/10.1515/cog-2017-0084">10.1515/cog-2017-0084</a>.
+</div>
+<div id="ref-janosi_long_2014" class="csl-entry" role="listitem">
+Jánosi, Adrienn, Jeroen van Craenenbroeck &amp; Guido Vanden Wyngaerd. 2014. Long split focalization in <span>Hungarian</span> and the typology of <span>A</span><span><span class="math inline">\(\prime\)</span></span>-dependencies. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 150. 117–136. doi:<a href="https://doi.org/10.1016/j.lingua.2014.07.009">10.1016/j.lingua.2014.07.009</a>.
+</div>
+<div id="ref-jarrah_passive_2023" class="csl-entry" role="listitem">
+Jarrah, Marwan. 2023. Passive vs. Unaccusative predicates: <span>A</span> phase-based account. <em>Natural Language &amp;amp; Linguistic Theory</em> 41(4). 1397–1424. doi:<a href="https://doi.org/10.1007/s11049-023-09568-3">10.1007/s11049-023-09568-3</a>.
+</div>
+<div id="ref-jeffrey_experimental_2015a" class="csl-entry" role="listitem">
+Jeffrey, Meghan I., Chung-hye Han &amp; Panayiotis A. Pappas. 2015. Experimental evidence of variation and gradience in the syntax and semantics of transitive subject control. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 164. 100–131. doi:<a href="https://doi.org/10.1016/j.lingua.2015.06.011">10.1016/j.lingua.2015.06.011</a>.
+</div>
+<div id="ref-jung_filler_2022" class="csl-entry" role="listitem">
+Jung, Duk-Ho &amp; Grant Goodall. 2022. Filler–gap dependencies and the remnant–correlate dependency in backward sprouting: <span>Sensitivity</span> to distance and islands. <em>Journal of Linguistics</em> 59(2). 235–255. doi:<a href="https://doi.org/10.1017/s0022226722000366">10.1017/s0022226722000366</a>.
+</div>
+<div id="ref-jurgec_postalveolar_2019" class="csl-entry" role="listitem">
+Jurgec, Peter &amp; Jessamyn Schertz. 2019. Postalveolar co-occurrence restrictions in <span>Slovenian</span>. <em>Natural Language &amp;amp; Linguistic Theory</em> 38(2). 499–537. doi:<a href="https://doi.org/10.1007/s11049-019-09452-z">10.1007/s11049-019-09452-z</a>.
+</div>
+<div id="ref-kaiser_perspectivesensitive_2022" class="csl-entry" role="listitem">
+Kaiser, Elsi. 2022. Do perspective-sensitive anaphors and subjective adjectives exhibit perspectival uniformity? <span>An</span> experimental investigation. <em>Glossa: a journal of general linguistics</em> 42(1). doi:<a href="https://doi.org/10.16995/glossa.5768">10.16995/glossa.5768</a>.
+</div>
+<div id="ref-kamoen_absolutely_2011" class="csl-entry" role="listitem">
+Kamoen, Naomi, Bregje Holleman, Rick Nouwen, Ted Sanders &amp; Huub van den Bergh. 2011. Absolutely relative or relatively absolute? <span>The</span> linguistic behavior of gradable adjectives and degree modifiers. <em>Journal of Pragmatics</em> 43(13). 3139–3151. doi:<a href="https://doi.org/10.1016/j.pragma.2011.05.017">10.1016/j.pragma.2011.05.017</a>.
+</div>
+<div id="ref-kapia_clitic_2012" class="csl-entry" role="listitem">
+Kapia, Enkeleida. 2012. Clitic doubling and information structure in <span>Albanian</span>. <em>Linguistics</em> 50(5). doi:<a href="https://doi.org/10.1515/ling-2012-0028">10.1515/ling-2012-0028</a>.
+</div>
+<div id="ref-kasher_star_2023" class="csl-entry" role="listitem">
+Kasher, Natasha &amp; Aviya Hacohen. 2023. A star is drawn: <span>Testing</span> the culmination inferences of <span>Russian</span> perfective accomplishments. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.9680">10.16995/glossa.9680</a>.
+</div>
+<div id="ref-katsika_exploring_2009" class="csl-entry" role="listitem">
+Katsika, Kalliopi. 2009. Exploring the minimal structure in prepositional phrase attachment ambiguities: <span>Evidence</span> from <span>Greek</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 119(10). 1482–1500. doi:<a href="https://doi.org/10.1016/j.lingua.2008.04.006">10.1016/j.lingua.2008.04.006</a>.
+</div>
+<div id="ref-kaufmann_embedded_2013" class="csl-entry" role="listitem">
+Kaufmann, Magdalena &amp; Claudia Poschmann. 2013. Embedded imperatives: <span>Empirical</span> evidence from colloquial german. <em>Language</em> 89(3). 619–637. doi:<a href="https://doi.org/10.1353/lan.2013.0050">10.1353/lan.2013.0050</a>.
+</div>
+<div id="ref-kawahara_lymans_2012" class="csl-entry" role="listitem">
+Kawahara, Shigeto. 2012. Lyman’s <span>Law</span> is active in loanwords and nonce words: <span>Evidence</span> from naturalness judgment studies. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 122(11). 1193–1206. doi:<a href="https://doi.org/10.1016/j.lingua.2012.05.008">10.1016/j.lingua.2012.05.008</a>.
+</div>
+<div id="ref-kawahara_testing_2013" class="csl-entry" role="listitem">
+Kawahara, Shigeto. 2013. Testing <span>Japanese</span> loanword devoicing: <span>Addressing</span> task effects. <em>Linguistics</em> 51(6). doi:<a href="https://doi.org/10.1515/ling-2013-0050">10.1515/ling-2013-0050</a>.
+</div>
+<div id="ref-keine_interpreting_2016a" class="csl-entry" role="listitem">
+Keine, Stefan &amp; Rajesh Bhatt. 2016. Interpreting verb clusters. <em>Natural Language &amp;amp; Linguistic Theory</em> 34(4). 1445–1492. doi:<a href="https://doi.org/10.1007/s11049-015-9326-4">10.1007/s11049-015-9326-4</a>.
+</div>
+<div id="ref-keller_gradient_2003a" class="csl-entry" role="listitem">
+Keller, Frank &amp; Antonella Sorace. 2003. Gradient auxiliary selection and impersonal passivization in <span>German</span>: An experimental investigation. <em>Journal of Linguistics</em> 39(1). 57–108. doi:<a href="https://doi.org/10.1017/s0022226702001676">10.1017/s0022226702001676</a>.
+</div>
+<div id="ref-kertz_verb_2013a" class="csl-entry" role="listitem">
+Kertz, Laura. 2013. Verb phrase ellipsis: <span>The</span> view from information structure. <em>Language</em> 89(3). 390–428. doi:<a href="https://doi.org/10.1353/lan.2013.0051">10.1353/lan.2013.0051</a>.
+</div>
+<div id="ref-keshet_imperatives_2018" class="csl-entry" role="listitem">
+Keshet, Ezra &amp; David J. Medeiros. 2018. Imperatives under coordination. <em>Natural Language &amp;amp; Linguistic Theory</em> 37(3). 869–914. doi:<a href="https://doi.org/10.1007/s11049-018-9427-y">10.1007/s11049-018-9427-y</a>.
+</div>
+<div id="ref-keshev_active_2017" class="csl-entry" role="listitem">
+Keshev, Maayan &amp; Aya Meltzer-Asscher. 2017. Active dependency formation in islands: <span>How</span> grammatical resumption affects sentence processing. <em>Language</em> 93(3). 549–568. doi:<a href="https://doi.org/10.1353/lan.2017.0036">10.1353/lan.2017.0036</a>.
+</div>
+<div id="ref-keshev_processingbased_2018" class="csl-entry" role="listitem">
+Keshev, Maayan &amp; Aya Meltzer-Asscher. 2018. A processing-based account of subliminal wh-island effects. <em>Natural Language &amp;amp; Linguistic Theory</em> 37(2). 621–657. doi:<a href="https://doi.org/10.1007/s11049-018-9416-1">10.1007/s11049-018-9416-1</a>.
+</div>
+<div id="ref-kim_island_2022" class="csl-entry" role="listitem">
+Kim, Boyoung &amp; Grant Goodall. 2022. The island/non-island distinction in long-distance extraction: <span>Evidence</span> from <span>L2</span> acceptability. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.5857">10.16995/glossa.5857</a>.
+</div>
+<div id="ref-kim_dative_2020a" class="csl-entry" role="listitem">
+Kim, Dganit Jenia &amp; Tal Siloni. 2020a. The dative dispositional construction in <span>Russian</span>. <em>Linguistic Inquiry</em> 51(2). 237–279.
+</div>
+<div id="ref-kim_dative_2020b" class="csl-entry" role="listitem">
+Kim, Dganit Jenia &amp; Tal Siloni. 2020b. The dative dispositional construction in russian. <em>Linguistic Inquiry</em> 51(2). 237–279. doi:<a href="https://doi.org/10.1162/ling_a_00341">10.1162/ling_a_00341</a>.
+</div>
+<div id="ref-kim_longdistance_2009" class="csl-entry" role="listitem">
+Kim, Ji-Hye &amp; James H. Yoon. 2009. Long-distance bound local anaphors in <span>Korean</span>—<span>An</span> empirical study of the <span>Korean</span> anaphor caki-casin. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 119(5). 733–755. doi:<a href="https://doi.org/10.1016/j.lingua.2008.10.002">10.1016/j.lingua.2008.10.002</a>.
+</div>
+<div id="ref-klavan_cognitive_2016b" class="csl-entry" role="listitem">
+Klavan, Jane &amp; Dagmar Divjak. 2016. The cognitive plausibility of statistical classification models: <span>Comparing</span> textual and behavioral evidence. <em>Folia Linguistica</em> 50(2). doi:<a href="https://doi.org/10.1515/flin-2016-0014">10.1515/flin-2016-0014</a>.
+</div>
+<div id="ref-konietzko_contrastive_2010" class="csl-entry" role="listitem">
+Konietzko, Andreas &amp; Susanne Winkler. 2010. Contrastive ellipsis: <span>Mapping</span> between syntax and information structure. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 120(6). 1436–1457. doi:<a href="https://doi.org/10.1016/j.lingua.2008.08.009">10.1016/j.lingua.2008.08.009</a>.
+</div>
+<div id="ref-konrad_avoiding_2021" class="csl-entry" role="listitem">
+Konrad, Ingrid, Massimo Burattin, Carlo Cecchetto, Francesca Foppolo, Adrian Staub &amp; Caterina Donati. 2021. Avoiding gaps in romance: <span>Evidence</span> from italian and french for a structural parsing principle. <em>Syntax (Oxford, England)</em> 24(2). 191–223. doi:<a href="https://doi.org/10.1111/synt.12209">10.1111/synt.12209</a>.
+</div>
+<div id="ref-kretzschmar_zooming_2020" class="csl-entry" role="listitem">
+Kretzschmar, Franziska &amp; Ingmar Brilmayer. 2020. Zooming in on agentivity: <span>Experimental</span> studies of <span class="nocase">DO-clefts</span> in german. <em>Linguistics Vanguard</em> 6(1). doi:<a href="https://doi.org/10.1515/lingvan-2019-0069">10.1515/lingvan-2019-0069</a>.
+</div>
+<div id="ref-kretzschmar_semanticrole_2022" class="csl-entry" role="listitem">
+Kretzschmar, Franziska, Maria Katarzyna Prenner, Beatrice Primus &amp; Daniel Bunčić. 2022. Semantic-role prominence is contingent on referent prominence in discourse: <span>Experimental</span> evidence from impersonals and passives in <span>Polish</span>. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.5697">10.16995/glossa.5697</a>.
+</div>
+<div id="ref-kunduraci_paradigmatic_2018" class="csl-entry" role="listitem">
+Kunduraci, Aysun. 2018. The paradigmatic aspect of compounding and derivation. <em>Journal of Linguistics</em> 55(3). 563–609. doi:<a href="https://doi.org/10.1017/s0022226718000518">10.1017/s0022226718000518</a>.
+</div>
+<div id="ref-kunduraci_bound_2023" class="csl-entry" role="listitem">
+Kunduracı, Aysun. 2023. Bound productivity in stem-formation and categorial separation. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 294. 103597. doi:<a href="https://doi.org/10.1016/j.lingua.2023.103597">10.1016/j.lingua.2023.103597</a>.
+</div>
+<div id="ref-kush_investigating_2017" class="csl-entry" role="listitem">
+Kush, Dave, Terje Lohndal &amp; Jon Sprouse. 2017. Investigating variation in island effects: <span>A</span> case study of <span>Norwegian</span> wh-extraction. <em>Natural Language &amp;amp; Linguistic Theory</em> 36(3). 743–779. doi:<a href="https://doi.org/10.1007/s11049-017-9390-z">10.1007/s11049-017-9390-z</a>.
+</div>
+<div id="ref-kush_island_2019" class="csl-entry" role="listitem">
+Kush, Dave, Terje Lohndal &amp; Jon Sprouse. 2019. On the island sensitivity of topicalization in <span>Norwegian</span>: <span>An</span> experimental investigation. <em>Language</em> 95(3). 393–420. doi:<a href="https://doi.org/10.1353/lan.2019.0051">10.1353/lan.2019.0051</a>.
+</div>
+<div id="ref-lealmendez_discoursesensitive_2015" class="csl-entry" role="listitem">
+Leal Méndez, Tania, Jason Rothman &amp; Roumyana Slabakova. 2015. Discourse-sensitive clitic-doubled dislocations in heritage <span>Spanish</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 155. 85–97. doi:<a href="https://doi.org/10.1016/j.lingua.2014.01.002">10.1016/j.lingua.2014.01.002</a>.
+</div>
+<div id="ref-lee_gradients_2011" class="csl-entry" role="listitem">
+Lee, Hanjung. 2011. Gradients in <span>Korean</span> case ellipsis: <span>An</span> experimental investigation. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 121(1). 20–34. doi:<a href="https://doi.org/10.1016/j.lingua.2010.07.002">10.1016/j.lingua.2010.07.002</a>.
+</div>
+<div id="ref-lee_usage_2015" class="csl-entry" role="listitem">
+Lee, Hanjung. 2015. Usage probability and subject–object asymmetries in <span>Korean</span> case ellipsis: <span>Experiments</span> with subject case ellipsis. <em>Journal of Linguistics</em> 52(1). 70–110. doi:<a href="https://doi.org/10.1017/s0022226715000079">10.1017/s0022226715000079</a>.
+</div>
+<div id="ref-letuchiy_tense_2017" class="csl-entry" role="listitem">
+Letuchiy, Alexander. 2017. On tense and irrealis marking in triclausal constructions (and what distinguishes them from biclausal constructions). <em>Linguistics</em> 56(1). 163–206. doi:<a href="https://doi.org/10.1515/ling-2017-0034">10.1515/ling-2017-0034</a>.
+</div>
+<div id="ref-lewandowski_motion_2020" class="csl-entry" role="listitem">
+Lewandowski, Wojciech &amp; Jaume Mateu. 2020. Motion events again: <span>Delimiting</span> constructional patterns. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 247. 102956. doi:<a href="https://doi.org/10.1016/j.lingua.2020.102956">10.1016/j.lingua.2020.102956</a>.
+</div>
+<div id="ref-li_will_2020" class="csl-entry" role="listitem">
+Li, Heng. 2020. Will it really happen? <span>Disambiguating</span> of the hypothetical and real <span>“<span>Next Wednesday</span>’s meeting”</span> question in <span>Mandarin</span> speakers. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 237. 102806. doi:<a href="https://doi.org/10.1016/j.lingua.2020.102806">10.1016/j.lingua.2020.102806</a>.
+</div>
+<div id="ref-lin_subject_2018" class="csl-entry" role="listitem">
+Lin, Chien-Jer Charles. 2018. Subject prominence and processing dependencies in prenominal relative clauses: <span>The</span> comprehension of possessive relative clauses and adjunct relative clauses in <span>Mandarin Chinese</span>. <em>Language</em> 94(4). 758–797. doi:<a href="https://doi.org/10.1353/lan.2018.0053">10.1353/lan.2018.0053</a>.
+</div>
+<div id="ref-linzen_reliability_2018a" class="csl-entry" role="listitem">
+Linzen, Tal &amp; Yohei Oseki. 2018. The reliability of acceptability judgments across languages. <em>Glossa: a journal of general linguistics</em> 3(1). doi:<a href="https://doi.org/10.5334/gjgl.528">10.5334/gjgl.528</a>.
+</div>
+<div id="ref-liptak_fragments_2020" class="csl-entry" role="listitem">
+Lipták, Anikó. 2020. Fragments with <span>Correction</span>. <em>Linguistic Inquiry</em> 51(1). 154–167.
+</div>
+<div id="ref-liu_salience_2013" class="csl-entry" role="listitem">
+Liu, Dilin. 2013. Salience and construal in the use of synonymy: <span>A</span> study of two sets of near-synonymous nouns. <em>Cognitive Linguistics</em> 24(1). 67–113. doi:<a href="https://doi.org/10.1515/cog-2013-0003">10.1515/cog-2013-0003</a>.
+</div>
+<div id="ref-liu_balancing_2021" class="csl-entry" role="listitem">
+Liu, Li &amp; Ben Ambridge. 2021. Balancing information-structure and semantic constraints on construction choice: Building a computational model of passive and passive-like constructions in <span>Mandarin Chinese</span>. <em>Cognitive Linguistics</em> 32(3). 349–388. doi:<a href="https://doi.org/10.1515/cog-2019-0100">10.1515/cog-2019-0100</a>.
+</div>
+<div id="ref-liu_verum_2022" class="csl-entry" role="listitem">
+Liu, Ying &amp; Wenlei Shi. 2022. Verum shi, sentence-final de and the emphatic effects in <span>Mandarin</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 267. 103186. doi:<a href="https://doi.org/10.1016/j.lingua.2021.103186">10.1016/j.lingua.2021.103186</a>.
+</div>
+<div id="ref-lopez_case_2018" class="csl-entry" role="listitem">
+López, Luis. 2018. Case and the event structure of nominalizations. <em>Linguistic Inquiry</em> 49(1). 85–121. doi:<a href="https://doi.org/10.1162/ling_a_00267">10.1162/ling_a_00267</a>.
+</div>
+<div id="ref-lu_chinese_2020a" class="csl-entry" role="listitem">
+Lu, Jiayi, Cynthia K. Thompson &amp; Masaya Yoshida. 2020a. Chinese <span class="nocase">Wh-in-Situ</span> and <span>Islands</span>: <span>A Formal Judgment Study</span>. <em>Linguistic Inquiry</em> 51(3). 611–623.
+</div>
+<div id="ref-lu_chineseiwh_2020" class="csl-entry" role="listitem">
+Lu, Jiayi, Cynthia K. Thompson &amp; Masaya Yoshida. 2020b. <span>Chinese</span><span></span>i<span></span>wh<span></span>/i<span></span>-in-<span>Situ</span> and islands: A formal judgment study. <em>Linguistic Inquiry</em> 51(3). 611–623. doi:<a href="https://doi.org/10.1162/ling_a_00343">10.1162/ling_a_00343</a>.
+</div>
+<div id="ref-magistro_mica_2022" class="csl-entry" role="listitem">
+Magistro, Giuseppe. 2022. Mica preposing as focus fronting. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.8494">10.16995/glossa.8494</a>.
+</div>
+<div id="ref-mahowald_snap_2016a" class="csl-entry" role="listitem">
+Mahowald, Kyle, Peter Graff, Jeremy Hartman &amp; Edward Gibson. 2016. <span>SNAP</span> judgments: <span>A</span> small <span>N</span> acceptability paradigm (<span>SNAP</span>) for linguistic acceptability judgments. <em>Language</em> 92(3). 619–635. doi:<a href="https://doi.org/10.1353/lan.2016.0052">10.1353/lan.2016.0052</a>.
+</div>
+<div id="ref-martens_frozen_2021" class="csl-entry" role="listitem">
+Martens, Gouming. 2021. Frozen by context: <span>Pragmatic</span> factors of syntactic freezing. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.16995/glossa.5870">10.16995/glossa.5870</a>.
+</div>
+<div id="ref-marti_wide_2019" class="csl-entry" role="listitem">
+Martí, Luisa &amp; Tania Ionin. 2019. Wide scope indefinites in <span>Russian</span>: An experimental investigation. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.612">10.5334/gjgl.612</a>.
+</div>
+<div id="ref-matsuo_reciprocity_1999a" class="csl-entry" role="listitem">
+Matsuo, Ayumi. 1999. Reciprocity and binding in early child grammar. <em>Linguistic Inquiry</em> 30(2). 310–317. doi:<a href="https://doi.org/10.1162/002438999554084">10.1162/002438999554084</a>.
+</div>
+<div id="ref-mattiello_dualism_2022" class="csl-entry" role="listitem">
+Mattiello, Elisa &amp; Wolfgang U. Dressler. 2022. Dualism and superposition in the analysis of <span>English</span> synthetic compounds ending in-er. <em>Linguistics</em> 60(2). 395–461. doi:<a href="https://doi.org/10.1515/ling-2021-0235">10.1515/ling-2021-0235</a>.
+</div>
+<div id="ref-mayol_nonintegrated_2013" class="csl-entry" role="listitem">
+Mayol, Laia &amp; Elena Castroviejo. 2013. (<span>Non</span>)integrated evaluative adverbs in questions: <span>A</span> cross-<span>Romance</span> study. <em>Language</em> 89(2). 195–230. doi:<a href="https://doi.org/10.1353/lan.2013.0030">10.1353/lan.2013.0030</a>.
+</div>
+<div id="ref-medeiros_ceiling_2021b" class="csl-entry" role="listitem">
+Medeiros, David J., Paul Mains &amp; Kevin B. McGowan. 2021. Ceiling effects on weight in heavy <span>NP</span> shift. <em>Linguistic Inquiry</em> 52(2). 426–440. doi:<a href="https://doi.org/10.1162/ling_a_00382">10.1162/ling_a_00382</a>.
+</div>
+<div id="ref-meltzer-asscher_direct_2015" class="csl-entry" role="listitem">
+Meltzer-Asscher, Aya, Julie Fadlon, Kayla Goldstein &amp; Ariel Holan. 2015. Direct object resumption in <span>Hebrew</span>: <span>How</span> modality of presentation and relative clause position affect acceptability. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 166. 65–79. doi:<a href="https://doi.org/10.1016/j.lingua.2015.08.011">10.1016/j.lingua.2015.08.011</a>.
+</div>
+<div id="ref-mendezvallejo_tpinternal_2019" class="csl-entry" role="listitem">
+Mendez Vallejo, Dunia Catalina. 2019. <span class="nocase">TP-internal</span> focus and dialectal variation: The case of the <span>Focalizing Ser</span>. <em>Linguistics Vanguard</em> 5(1). doi:<a href="https://doi.org/10.1515/lingvan-2018-0001">10.1515/lingvan-2018-0001</a>.
+</div>
+<div id="ref-mikkelsen_prosody_2011" class="csl-entry" role="listitem">
+Mikkelsen, Line. 2011. On prosody and focus in object shift. <em>Syntax (Oxford, England)</em> 14(3). 230–264. doi:<a href="https://doi.org/10.1111/j.1467-9612.2011.00152.x">10.1111/j.1467-9612.2011.00152.x</a>.
+</div>
+<div id="ref-modarresi_pseudo_2021" class="csl-entry" role="listitem">
+Modarresi, Fereshteh &amp; Manfred Krifka. 2021. Pseudo incorporation and anaphoricity: <span>Evidence</span> from <span>Persian</span>. <em>Glossa: a journal of general linguistics</em> 36(1). doi:<a href="https://doi.org/10.16995/glossa.5875">10.16995/glossa.5875</a>.
+</div>
+<div id="ref-montrul_differential_2015" class="csl-entry" role="listitem">
+Montrul, Silvina, Rakesh Bhatt &amp; Roxana Girju. 2015. Differential object marking in <span>Spanish</span>, <span>Hindi</span>, and <span>Romanian</span> as heritage languages. <em>Language</em> 91(3). 564–610. doi:<a href="https://doi.org/10.1353/lan.2015.0035">10.1353/lan.2015.0035</a>.
+</div>
+<div id="ref-morgan_english_2018a" class="csl-entry" role="listitem">
+Morgan, Adam &amp; Matthew Wagers. 2018. English resumptive pronouns are more common where gaps are less acceptable. doi:<a href="https://doi.org/10.31219/osf.io/8mtsz">10.31219/osf.io/8mtsz</a>.
+</div>
+<div id="ref-moulton_focus_2018a" class="csl-entry" role="listitem">
+Moulton, Keir, Queenie Chan, Tanie Cheng, Chung-hye Han, Kyeong-min Kim &amp; Sophie Nickel-Thompson. 2018. Focus on cataphora: <span>Experiments</span> in context. <em>Linguistic Inquiry</em> 49(1). 151–168. doi:<a href="https://doi.org/10.1162/ling_a_00269">10.1162/ling_a_00269</a>.
+</div>
+<div id="ref-moulton_singular_2020" class="csl-entry" role="listitem">
+Moulton, Keir, Chung-hye Han, Trevor Block, Holly Gendron &amp; Sander Nederveen. 2020. Singular <span><em>They</em></span> in context. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.1012">10.5334/gjgl.1012</a>.
+</div>
+<div id="ref-mucha_sequence_2022" class="csl-entry" role="listitem">
+Mucha, Anne, Agata Renans &amp; Jacopo Romoli. 2022. Sequence of tense and cessation implicatures: Evidence from <span>Polish</span>. <em>Natural Language &amp;amp; Linguistic Theory</em> 41(1). 267–346. doi:<a href="https://doi.org/10.1007/s11049-022-09545-2">10.1007/s11049-022-09545-2</a>.
+</div>
+<div id="ref-munson_implicit_2017" class="csl-entry" role="listitem">
+Munson, Benjamin, Kayleigh Ryherd &amp; Sara Kemper. 2017. Implicit and explicit gender priming in <span>English</span> lingual sibilant fricative perception. <em>Linguistics</em> 55(5). doi:<a href="https://doi.org/10.1515/ling-2017-0021">10.1515/ling-2017-0021</a>.
+</div>
+<div id="ref-nambu_experimental_2023" class="csl-entry" role="listitem">
+Nambu, Satoshi &amp; Kentaro Nakatani. 2023. An experimental study of the adjacency constraint on the genitive subject in <span>Japanese</span>. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.9509">10.16995/glossa.9509</a>.
+</div>
+<div id="ref-neeleman_ppextraposition_2020b" class="csl-entry" role="listitem">
+Neeleman, Ad &amp; Amanda Payne. 2020. <span class="nocase">PP-extraposition</span> and the order of adverbials in <span>English</span>. <em>Linguistic Inquiry</em> 51(3). 471–520. doi:<a href="https://doi.org/10.1162/ling_a_00352">10.1162/ling_a_00352</a>.
+</div>
+<div id="ref-nikolaev_explaining_2022" class="csl-entry" role="listitem">
+Nikolaev, Alexandre &amp; Neil Bermel. 2022. Explaining uncertainty and defectivity of inflectional paradigms. <em>Cognitive Linguistics</em> 33(3). 585–621. doi:<a href="https://doi.org/10.1515/cog-2021-0041">10.1515/cog-2021-0041</a>.
+</div>
+<div id="ref-nykiel_clefts_2013" class="csl-entry" role="listitem">
+Nykiel, Joanna. 2013. Clefts and preposition omission under sluicing. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 123. 74–117. doi:<a href="https://doi.org/10.1016/j.lingua.2012.10.011">10.1016/j.lingua.2012.10.011</a>.
+</div>
+<div id="ref-nykiel_grammaticality_2021" class="csl-entry" role="listitem">
+Nykiel, Joanna &amp; Jong-Bok Kim. 2021. On the grammaticality of morphosyntactically reduced remnants in <span>Polish</span> sluicing. <em>Linguistics</em> 60(1). 177–213. doi:<a href="https://doi.org/10.1515/ling-2021-0071">10.1515/ling-2021-0071</a>.
+</div>
+<div id="ref-nykiel_casematching_2022" class="csl-entry" role="listitem">
+Nykiel, Joanna, Jong-Bok Kim &amp; Rok Sim. 2022. Case-matching effects under clausal ellipsis and the cue-based theory of sentence processing. <em>Journal of Linguistics</em> 59(2). 327–360. doi:<a href="https://doi.org/10.1017/s0022226722000068">10.1017/s0022226722000068</a>.
+</div>
+<div id="ref-oikonomou_clitic_2022" class="csl-entry" role="listitem">
+Oikonomou, Despina, Felix Golcher &amp; Artemis Alexiadou. 2022. Clitic left dislocation and inverse scope: <span>Plain</span> indefinites versus numerals. <em>Journal of Linguistics</em> 58(4). 847–886. doi:<a href="https://doi.org/10.1017/s0022226722000135">10.1017/s0022226722000135</a>.
+</div>
+<div id="ref-oshima_gradability_2019" class="csl-entry" role="listitem">
+Oshima, David Y., Kimi Akita &amp; Shin–ichiro Sano. 2019. Gradability, scale structure, and the division of labor between nouns and adjectives: <span>The</span> case of <span>Japanese</span>. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.737">10.5334/gjgl.737</a>.
+</div>
+<div id="ref-overfelt_unbounded_2015" class="csl-entry" role="listitem">
+Overfelt, Jason. 2015a. Unbounded successive-cyclic rightward <span class="nocase">DP-movement</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 162. 1–31. doi:<a href="https://doi.org/10.1016/j.lingua.2015.04.002">10.1016/j.lingua.2015.04.002</a>.
+</div>
+<div id="ref-overfelt_extraposition_2015" class="csl-entry" role="listitem">
+Overfelt, Jason. 2015b. Extraposition of npis from <span>NP</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 164. 25–44. doi:<a href="https://doi.org/10.1016/j.lingua.2015.06.006">10.1016/j.lingua.2015.06.006</a>.
+</div>
+<div id="ref-paneda_spanish_2021" class="csl-entry" role="listitem">
+Pañeda, Claudia &amp; Dave Kush. 2021. Spanish embedded question island effects revisited: An experimental study. <em>Linguistics</em> 60(2). 463–504. doi:<a href="https://doi.org/10.1515/ling-2020-0110">10.1515/ling-2020-0110</a>.
+</div>
+<div id="ref-parker_memorybased_2018" class="csl-entry" role="listitem">
+Parker, Dan. 2018. A memory-based explanation of antecedent-ellipsis mismatches: <span>New</span> insights from computational modeling. <em>Glossa: a journal of general linguistics</em> 3(1). doi:<a href="https://doi.org/10.5334/gjgl.621">10.5334/gjgl.621</a>.
+</div>
+<div id="ref-pasquereau_quantification_2023" class="csl-entry" role="listitem">
+Pasquereau, Jérémy, Brian Dillon &amp; Lyn Frazier. 2023. Quantification at a distance and grammatical illusions in <span>French</span>. <em>Syntax (Oxford, England)</em>. doi:<a href="https://doi.org/10.1111/synt.12260">10.1111/synt.12260</a>.
+</div>
+<div id="ref-patil_effect_2023" class="csl-entry" role="listitem">
+Patil, Umesh, Stefan Hinterwimmer &amp; Petra B. Schumacher. 2023. Effect of evaluative expressions on two types of demonstrative pronouns in <span>German</span>. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.9577">10.16995/glossa.9577</a>.
+</div>
+<div id="ref-pertsova_transderivational_2016" class="csl-entry" role="listitem">
+Pertsova, Katya. 2016. Transderivational relations and paradigm gaps in <span>Russian</span> verbs. <em>Glossa: a journal of general linguistics</em> 1(1). doi:<a href="https://doi.org/10.5334/gjgl.59">10.5334/gjgl.59</a>.
+</div>
+<div id="ref-pham_investigating_2020" class="csl-entry" role="listitem">
+Pham, Catherine, Lauren Covey, Alison Gabriele, Saad Aldosari &amp; Robert Fiorentino. 2020. Investigating the relationship between individual differences and island sensitivity. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.1199">10.5334/gjgl.1199</a>.
+</div>
+<div id="ref-phillips_realtime_2006a" class="csl-entry" role="listitem">
+Phillips, Colin. 2006. The real-time status of island phenomena. <em>Language</em> 82(4). 795–823. doi:<a href="https://doi.org/10.1353/lan.2006.0217">10.1353/lan.2006.0217</a>.
+</div>
+<div id="ref-popp_no_2019" class="csl-entry" role="listitem">
+Popp, Marie-Luise &amp; Sören Eggert Tebay. 2019. No possessor inversion in german pps. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.697">10.5334/gjgl.697</a>.
+</div>
+<div id="ref-poppels_reconsidering_2019" class="csl-entry" role="listitem">
+Poppels, Till &amp; Andrew Kehler. 2019. Reconsidering asymmetries in voice-mismatched <span class="nocase">VP-ellipsis</span>. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.738">10.5334/gjgl.738</a>.
+</div>
+<div id="ref-poppels_remnant_2022" class="csl-entry" role="listitem">
+Poppels, Till &amp; Philip Miller. 2022. Remnant connectivity in pseudogapping: <span>Experimental</span> evidence for a direct generation approach. <em>Journal of Linguistics</em> 59(2). 293–325. doi:<a href="https://doi.org/10.1017/s0022226722000354">10.1017/s0022226722000354</a>.
+</div>
+<div id="ref-portele_strong_2023" class="csl-entry" role="listitem">
+Portele, Yvonne &amp; Markus Bader. 2023. Strong semantic biases make demonstrative pronouns act like personal pronouns. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.8832">10.16995/glossa.8832</a>.
+</div>
+<div id="ref-poschmann_relative_2016a" class="csl-entry" role="listitem">
+Poschmann, Claudia &amp; Michael Wagner. 2016. Relative clause extraposition and prosody in <span>German</span>. <em>Natural Language &amp; Linguistic Theory</em> 34(3). 1021–1066. <a href="https://www.jstor.org/stable/24772133">https://www.jstor.org/stable/24772133</a>.
+</div>
+<div id="ref-primus_relating_2022" class="csl-entry" role="listitem">
+Primus, Beatrice, Franziska Kretzschmar, Klaus von Heusinger &amp; Nikolaus P. Himmelmann. 2022. Relating agent prominence to discourse prominence: <span class="nocase">DO-clefts</span> in <span>German</span>. <em>Linguistics</em> 60(6). 1811–1853. doi:<a href="https://doi.org/10.1515/ling-2020-0276">10.1515/ling-2020-0276</a>.
+</div>
+<div id="ref-qin_judgment_2017" class="csl-entry" role="listitem">
+Qin, Zuxuan &amp; San Duanmu. 2017. A judgment study of word-length preferences in <span>Chinese NN</span> compounds. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 198. 1–21. doi:<a href="https://doi.org/10.1016/j.lingua.2017.06.012">10.1016/j.lingua.2017.06.012</a>.
+</div>
+<div id="ref-qin_acceptability_2019" class="csl-entry" role="listitem">
+Qin, Zuxuan &amp; San Duanmu. 2019. An acceptability judgment study of 1+1 <span>NN</span> compounds in <span>Chinese</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 222. 26–38. doi:<a href="https://doi.org/10.1016/j.lingua.2019.02.004">10.1016/j.lingua.2019.02.004</a>.
+</div>
+<div id="ref-ramirez-cruz_expressing_2020" class="csl-entry" role="listitem">
+Ramírez-Cruz, Héctor. 2020. Expressing uncontrolledness in narratives of accidental events: <span>A</span> comparison between native and non-native speakers of <span>Spanish</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 241. 102848. doi:<a href="https://doi.org/10.1016/j.lingua.2020.102848">10.1016/j.lingua.2020.102848</a>.
+</div>
+<div id="ref-rauth_adverbial_2021" class="csl-entry" role="listitem">
+Rauth, Philipp &amp; Augustin Speyer. 2021. Adverbial reinforcement of demonstratives in dialectal <span>German</span>. <em>Glossa: a journal of general linguistics</em> 6(1). doi:<a href="https://doi.org/10.5334/gjgl.1166">10.5334/gjgl.1166</a>.
+</div>
+<div id="ref-richter_aspectual_2018" class="csl-entry" role="listitem">
+Richter, Michael &amp; Roeland van Hout. 2018. Aspectual coercion of telic verbs and atelic adverbials in <span>German</span>: <span>Acceptability</span> judgments on sentences with conflicting aspectual information by native speakers. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 214. 59–73. doi:<a href="https://doi.org/10.1016/j.lingua.2018.08.004">10.1016/j.lingua.2018.08.004</a>.
+</div>
+<div id="ref-robenalt_judgment_2015" class="csl-entry" role="listitem">
+Robenalt, Clarice &amp; Adele E. Goldberg. 2015. Judgment evidence for statistical preemption: <span>It</span> is relatively better to vanish than to disappear a rabbit, but a lifeguard can equally well backstroke or swim children to shore. <em>Cognitive Linguistics</em> 26(3). 467–503. doi:<a href="https://doi.org/10.1515/cog-2015-0004">10.1515/cog-2015-0004</a>.
+</div>
+<div id="ref-rullmann_why_2022" class="csl-entry" role="listitem">
+Rullmann, Hotze, Marianne Huijsmans, Lisa Matthewson &amp; Neda Todorović. 2022. Why plain futurates are different. <em>Linguistic Inquiry</em> 54(1). 197–208. doi:<a href="https://doi.org/10.1162/ling_a_00435">10.1162/ling_a_00435</a>.
+</div>
+<div id="ref-rutkowski_prepositional_2007" class="csl-entry" role="listitem">
+Rutkowski, Paweł &amp; Hanna Maliszewska. 2007. On prepositional phrases inside numeral expressions in polish. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 117(5). 784–813. doi:<a href="https://doi.org/10.1016/j.lingua.2006.03.004">10.1016/j.lingua.2006.03.004</a>.
+</div>
+<div id="ref-sagarra_role_2010" class="csl-entry" role="listitem">
+Sagarra, Nuria &amp; Julia Herschensohn. 2010. The role of proficiency and working memory in gender and number agreement processing in <span>L1</span> and <span>L2 Spanish</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 120(8). 2022–2039. doi:<a href="https://doi.org/10.1016/j.lingua.2010.02.004">10.1016/j.lingua.2010.02.004</a>.
+</div>
+<div id="ref-salzmann_condition_2022" class="csl-entry" role="listitem">
+Salzmann, Martin, Marta Wierzba &amp; Doreen Georgi. 2022. Condition <span>C</span> in <span>German A</span><span><span class="math inline">\(\prime\)</span></span>-movement: <span>Tackling</span> challenges in experimental research on reconstruction. <em>Journal of Linguistics</em> 59(3). 577–622. doi:<a href="https://doi.org/10.1017/s0022226722000214">10.1017/s0022226722000214</a>.
+</div>
+<div id="ref-satik_source_2023" class="csl-entry" role="listitem">
+Satık, Deniz. 2023. The source of the &amp;lt;em&amp;gt;de re&amp;lt;/em&amp;gt; blocking effect. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.6549">10.16995/glossa.6549</a>.
+</div>
+<div id="ref-schlenker_supplements_2023a" class="csl-entry" role="listitem">
+Schlenker, Philippe. 2023. Supplements without <span>Bidimensionalism</span>. <em>Linguistic Inquiry</em> 54(2). 251–297.
+</div>
+<div id="ref-schoenmakers_linguistic_2023a" class="csl-entry" role="listitem">
+Schoenmakers, Gert-Jan. 2023. Linguistic judgments in <span>3D</span>: The aesthetic quality, linguistic acceptability, and surface probability of stigmatized and non-stigmatized variation. <em>Linguistics</em> 61(3). 779–824. doi:<a href="https://doi.org/10.1515/ling-2021-0179">10.1515/ling-2021-0179</a>.
+</div>
+<div id="ref-schumacher_reference_2010" class="csl-entry" role="listitem">
+Schumacher, Petra B., Maria M. Piñango, Esther Ruigendijk &amp; Sergey Avrutin. 2010. Reference assignment in <span>Dutch</span>: <span>Evidence</span> for the syntax–discourse divide. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 120(7). 1738–1763. doi:<a href="https://doi.org/10.1016/j.lingua.2009.12.003">10.1016/j.lingua.2009.12.003</a>.
+</div>
+<div id="ref-scontras_quantitative_2011" class="csl-entry" role="listitem">
+Scontras, Gregory &amp; Edward Gibson. 2011. A quantitative investigation of the imperative-and-declarative construction in <span>English</span>. <em>Language</em> 87(4). 817–829. doi:<a href="https://doi.org/10.1353/lan.2011.0079">10.1353/lan.2011.0079</a>.
+</div>
+<div id="ref-scontras_support_2018" class="csl-entry" role="listitem">
+Scontras, Gregory, Maria Polinsky &amp; Zuzanna Fuchs. 2018. In support of representational economy: <span>Agreement</span> in heritage <span>Spanish</span>. <em>Glossa: a journal of general linguistics</em> 3(1). doi:<a href="https://doi.org/10.5334/gjgl.164">10.5334/gjgl.164</a>.
+</div>
+<div id="ref-shaw_grammatical_2023" class="csl-entry" role="listitem">
+Shaw, James R. 2023. The grammatical investigation (<span>§</span><span>§</span>199–242). <em>Wittgenstein on rules</em>, 67–104. Oxford University PressNew York. doi:<a href="https://doi.org/10.1093/oso/9780197609989.003.0004">10.1093/oso/9780197609989.003.0004</a>.
+</div>
+<div id="ref-shen_conjunction_2023" class="csl-entry" role="listitem">
+Shen, Zheng. 2023. Conjunction agreement and the coordinate structure constraint. <em>Glossa: a journal of general linguistics</em> 46(1). doi:<a href="https://doi.org/10.16995/glossa.6382">10.16995/glossa.6382</a>.
+</div>
+<div id="ref-shimojo_role_1997" class="csl-entry" role="listitem">
+Shimojo, Mitsuaki. 1997. The role of the general category in the maintenance of numeral-classifier systems: The case of tsu and ko in <span>Japanese</span>. <em>Linguistics</em> 35(4). doi:<a href="https://doi.org/10.1515/ling.1997.35.4.705">10.1515/ling.1997.35.4.705</a>.
+</div>
+<div id="ref-shiraishi_verbal_2019" class="csl-entry" role="listitem">
+Shiraïshi, Aoi, Anne Abeillé, Barbara Hemforth &amp; Philip Miller. 2019. Verbal mismatch in right-node raising. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.843">10.5334/gjgl.843</a>.
+</div>
+<div id="ref-shlonsky_covert_2020" class="csl-entry" role="listitem">
+Shlonsky, Ur, Sandra Villata &amp; Julie Franck. 2020. Covert movement in multiple-<span>WhQuestions</span>: <span>Experimental</span> and theoretical investigations. <em>Syntax (Oxford, England)</em> 23(2). 185–202. doi:<a href="https://doi.org/10.1111/synt.12192">10.1111/synt.12192</a>.
+</div>
+<div id="ref-shyu_focus_2010" class="csl-entry" role="listitem">
+Shyu, Shu-Ing. 2010. Focus interpretation of zhi <span>“only”</span> associated arguments in <span>Mandarin</span> triadic constructions. <em>Linguistics</em> 48(3). doi:<a href="https://doi.org/10.1515/ling.2010.021">10.1515/ling.2010.021</a>.
+</div>
+<div id="ref-siewierska_typology_2011" class="csl-entry" role="listitem">
+Siewierska, Anna &amp; Maria Papastathi. 2011. Towards a typology of third person plural impersonals. <em>Linguistics</em> 49(3). doi:<a href="https://doi.org/10.1515/ling.2011.018">10.1515/ling.2011.018</a>.
+</div>
+<div id="ref-simik_expression_2017" class="csl-entry" role="listitem">
+Šimík, Radek &amp; Marta Wierzba. 2017. Expression of information structure in <span>West Slavic</span>: <span>Modeling</span> the impact of prosodic and word-order factors. <em>Language</em> 93(3). 671–709. doi:<a href="https://doi.org/10.1353/lan.2017.0040">10.1353/lan.2017.0040</a>.
+</div>
+<div id="ref-simonsen_exploring_2023" class="csl-entry" role="listitem">
+Simonsen, Russell. 2023. Exploring similarities in <span>“seem”</span> constructions with experiencers in <span>English</span> and <span>Spanish</span>. <em>Language</em> 99(1). e18–e34. doi:<a href="https://doi.org/10.1353/lan.2023.0002">10.1353/lan.2023.0002</a>.
+</div>
+<div id="ref-skilton_demonstratives_2021" class="csl-entry" role="listitem">
+Skilton, Amalia. 2021. Demonstratives and visibility: <span>Data</span> from <span>Ticuna</span> and implications for theories of deixis. <em>Language</em> 97(4). 793–824. doi:<a href="https://doi.org/10.1353/lan.2021.0065">10.1353/lan.2021.0065</a>.
+</div>
+<div id="ref-skopeteas_focus_2011" class="csl-entry" role="listitem">
+Skopeteas, Stavros &amp; Gisbert Fanselow. 2011. Focus and the exclusion of alternatives: <span>On</span> the interaction of syntactic structure with pragmatic inference. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 121(11). 1693–1706. doi:<a href="https://doi.org/10.1016/j.lingua.2011.05.005">10.1016/j.lingua.2011.05.005</a>.
+</div>
+<div id="ref-skopeteas_word_2009" class="csl-entry" role="listitem">
+Skopeteas, Stavros, Caroline Féry &amp; Rusudan Asatiani. 2009. Word order and intonation in <span>Georgian</span>. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 119(1). 102–127. doi:<a href="https://doi.org/10.1016/j.lingua.2008.09.001">10.1016/j.lingua.2008.09.001</a>.
+</div>
+<div id="ref-sleeman_convergence_2020" class="csl-entry" role="listitem">
+Sleeman, Petra &amp; Tabea Ihsane. 2020. Convergence and divergence in the expression of partitivity in french, dutch, and german. <em>Linguistics</em> 58(3). 767–804. doi:<a href="https://doi.org/10.1515/ling-2020-0090">10.1515/ling-2020-0090</a>.
+</div>
+<div id="ref-slioussar_russian_2011" class="csl-entry" role="listitem">
+Slioussar, Natalia. 2011. Russian and the <span>EPP</span> requirement in the tense domain. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 121(14). 2048–2068. doi:<a href="https://doi.org/10.1016/j.lingua.2011.07.009">10.1016/j.lingua.2011.07.009</a>.
+</div>
+<div id="ref-smith_french_2020" class="csl-entry" role="listitem">
+Smith, Brian W. &amp; Joe Pater. 2020. French schwa and gradient cumulativity. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.583">10.5334/gjgl.583</a>.
+</div>
+<div id="ref-snyder_experimental_2000a" class="csl-entry" role="listitem">
+Snyder, William. 2000. An experimental investigation of syntactic satiation effects. <em>Linguistic Inquiry</em> 31(3). 575–582. doi:<a href="https://doi.org/10.1162/002438900554479">10.1162/002438900554479</a>.
+</div>
+<div id="ref-sobin_comptrace_2002a" class="csl-entry" role="listitem">
+SOBIN, NICHOLAS. 2002. The <span class="nocase">Comp-trace</span> effect, the adverb effect and minimal <span>CP</span>. <em>Journal of Linguistics</em> 38(3). 527–560. doi:<a href="https://doi.org/10.1017/s0022226702001652">10.1017/s0022226702001652</a>.
+</div>
+<div id="ref-solt_numerals_2019" class="csl-entry" role="listitem">
+Solt, Stephanie &amp; Brandon Waldon. 2019. Numerals under negation: <span>Empirical</span> findings. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.736">10.5334/gjgl.736</a>.
+</div>
+<div id="ref-sportiche_french_2011a" class="csl-entry" role="listitem">
+Sportiche, Dominique. 2011. French relative <span></span>i<span></span>qui<span></span>/i<span></span>. <em>Linguistic Inquiry</em> 42(1). 83–124. doi:<a href="https://doi.org/10.1162/ling_a_00029">10.1162/ling_a_00029</a>.
+</div>
+<div id="ref-sprouse_revisiting_2009a" class="csl-entry" role="listitem">
+Sprouse, Jon. 2009. Revisiting satiation: <span>Evidence</span> for an equalization response strategy. <em>Linguistic Inquiry</em> 40(2). 329–341. doi:<a href="https://doi.org/10.1162/ling.2009.40.2.329">10.1162/ling.2009.40.2.329</a>.
+</div>
+<div id="ref-sprouse_test_2011d" class="csl-entry" role="listitem">
+Sprouse, Jon. 2011. A test of the cognitive assumptions of magnitude estimation: <span>Commutativity</span> does not hold for acceptability judgments. <em>Language</em> 87(2). 274–288. doi:<a href="https://doi.org/10.1353/lan.2011.0028">10.1353/lan.2011.0028</a>.
+</div>
+<div id="ref-sprouse_assessing_2012a" class="csl-entry" role="listitem">
+Sprouse, Jon &amp; Diogo Almeida. 2012. Assessing the reliability of textbook data in syntax: <span>Adger</span>’s<span></span>i<span></span><span>Core Syntax</span><span></span>/i<span></span>. <em>Journal of Linguistics</em> 48(3). 609–652. doi:<a href="https://doi.org/10.1017/s0022226712000011">10.1017/s0022226712000011</a>.
+</div>
+<div id="ref-sprouse_experimental_2015" class="csl-entry" role="listitem">
+Sprouse, Jon, Ivano Caponigro, Ciro Greco &amp; Carlo Cecchetto. 2015. Experimental syntax and the variation of island effects in <span>English</span> and <span>Italian</span>. <em>Natural Language &amp;amp; Linguistic Theory</em> 34(1). 307–344. doi:<a href="https://doi.org/10.1007/s11049-015-9286-8">10.1007/s11049-015-9286-8</a>.
+</div>
+<div id="ref-sprouse_reverse_2011" class="csl-entry" role="listitem">
+Sprouse, Jon, Shin Fukuda, Hajime Ono &amp; Robert Kluender. 2011. Reverse island effects and the backward search for a licensor in multiple wh-questions. <em>Syntax (Oxford, England)</em> 14(2). 179–203. doi:<a href="https://doi.org/10.1111/j.1467-9612.2011.00153.x">10.1111/j.1467-9612.2011.00153.x</a>.
+</div>
+<div id="ref-sprouse_gender_2021" class="csl-entry" role="listitem">
+Sprouse, Jon, Troy Messick &amp; Jonathan David Bobaljik. 2021. Gender asymmetries in ellipsis: <span>An</span> experimental comparison of markedness and frequency accounts in <span>English</span>. <em>Journal of Linguistics</em> 58(2). 345–379. doi:<a href="https://doi.org/10.1017/s0022226721000323">10.1017/s0022226721000323</a>.
+</div>
+<div id="ref-sprouse_comparison_2013" class="csl-entry" role="listitem">
+Sprouse, Jon, Carson T. Schütze &amp; Diogo Almeida. 2013. A comparison of informal and formal acceptability judgments using a random sample from <span>Linguistic Inquiry</span> 2001–2010. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 134. 219–248. doi:<a href="https://doi.org/10.1016/j.lingua.2013.07.002">10.1016/j.lingua.2013.07.002</a>.
+</div>
+<div id="ref-sprouse_test_2012a" class="csl-entry" role="listitem">
+Sprouse, Jon, Matt Wagers &amp; Colin Phillips. 2012. A test of the relation between working-memory capacity and syntactic island effects. <em>Language</em> 88(1). 82–123. doi:<a href="https://doi.org/10.1353/lan.2012.0004">10.1353/lan.2012.0004</a>.
+</div>
+<div id="ref-stegovec_taking_2019" class="csl-entry" role="listitem">
+Stegovec, Adrian. 2019. Taking case out of the person-case constraint. <em>Natural Language &amp;amp; Linguistic Theory</em> 38(1). 261–311. doi:<a href="https://doi.org/10.1007/s11049-019-09443-0">10.1007/s11049-019-09443-0</a>.
+</div>
+<div id="ref-stepanov_two_2018" class="csl-entry" role="listitem">
+Stepanov, Arthur, Manca Mušič &amp; Penka Stateva. 2018. Two (non-) islands in slovenian: A study in experimental syntax. <em>Linguistics</em> 56(3). 435–476. doi:<a href="https://doi.org/10.1515/ling-2018-0002">10.1515/ling-2018-0002</a>.
+</div>
+<div id="ref-syrett_experimental_2015a" class="csl-entry" role="listitem">
+Syrett, Kristen. 2015. Experimental support for inverse scope readings of finite-clause-embedded antecedent-contained-deletion sentences. <em>Linguistic Inquiry</em> 46(3). 579–592. doi:<a href="https://doi.org/10.1162/ling_a_00194">10.1162/ling_a_00194</a>.
+</div>
+<div id="ref-szczesniak_you_2013" class="csl-entry" role="listitem">
+Szczesniak, Konrad. 2013. You can’t cry your way to candy: <span>Motion</span> events and paths in the x’s way construction. <em>Cognitive Linguistics</em> 24(1). 159–194. doi:<a href="https://doi.org/10.1515/cog-2013-0006">10.1515/cog-2013-0006</a>.
+</div>
+<div id="ref-thoms_syntactic_2019" class="csl-entry" role="listitem">
+Thoms, Gary, David Adger, Caroline Heycock &amp; Jennifer Smith. 2019. Syntactic variation and auxiliary contraction: <span>The</span> surprising case of <span>Scots</span>. <em>Language</em> 95(3). 421–455. doi:<a href="https://doi.org/10.1353/lan.2019.0052">10.1353/lan.2019.0052</a>.
+</div>
+<div id="ref-tonhauser_evaluative_2020" class="csl-entry" role="listitem">
+Tonhauser, Judith, Marie-Catherine de Marneffe &amp; Judith Degen. 2020. Evaluative adjective sentences: <span>A</span> question-based analysis of projection. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.701">10.5334/gjgl.701</a>.
+</div>
+<div id="ref-townsend_stage_2018" class="csl-entry" role="listitem">
+Townsend, David J. 2018. Stage salience and situational likelihood in the formation of situation models during sentence comprehension. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 206. 1–20. doi:<a href="https://doi.org/10.1016/j.lingua.2018.01.002">10.1016/j.lingua.2018.01.002</a>.
+</div>
+<div id="ref-tsiakmakis_greek_2022" class="csl-entry" role="listitem">
+Tsiakmakis, Evripidis, Joan Borràs-Comes &amp; M. Teresa Espinal. 2022. Greek non-negative min, epistemic modality, and positive bias. <em>Natural Language &amp;amp; Linguistic Theory</em> 41(3). 1257–1285. doi:<a href="https://doi.org/10.1007/s11049-022-09565-y">10.1007/s11049-022-09565-y</a>.
+</div>
+<div id="ref-ungerer_using_2021" class="csl-entry" role="listitem">
+Ungerer, Tobias. 2021. Using structural priming to test links between constructions: <span>English</span> caused-motion and resultative sentences inhibit each other. <em>Cognitive Linguistics</em> 32(3). 389–420. doi:<a href="https://doi.org/10.1515/cog-2020-0016">10.1515/cog-2020-0016</a>.
+</div>
+<div id="ref-vangsnes_nordic_2019" class="csl-entry" role="listitem">
+Vangsnes, Øystein Alexander &amp; Janne Bondi Johannessen. 2019. The <span>Nordic</span> research infrastructure for syntactic variation: <span>Possibilities</span>, limitations and achievements. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.708">10.5334/gjgl.708</a>.
+</div>
+<div id="ref-verhagen_stability_2016" class="csl-entry" role="listitem">
+Verhagen, Véronique &amp; Maria Mos. 2016. Stability of familiarity judgments: <span>Individual</span> variation and the invariant bigger picture. <em>Cognitive Linguistics</em> 27(3). 307–344. doi:<a href="https://doi.org/10.1515/cog-2015-0063">10.1515/cog-2015-0063</a>.
+</div>
+<div id="ref-verhagen_variation_2020a" class="csl-entry" role="listitem">
+Verhagen, Véronique, Maria Mos, Joost Schilperoord &amp; Ad Backus. 2020. Variation is information: <span>Analyses</span> of variation across items, participants, time, and methods in metalinguistic judgment data. <em>Linguistics</em> 58(1). 37–81. doi:<a href="https://doi.org/10.1515/ling-2018-0036">10.1515/ling-2018-0036</a>.
+</div>
+<div id="ref-villata_intervention_2016" class="csl-entry" role="listitem">
+Villata, Sandra, Luigi Rizzi &amp; Julie Franck. 2016. Intervention effects and <span>Relativized Minimality</span>: <span>New</span> experimental evidence from graded judgments. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 179. 76–96. doi:<a href="https://doi.org/10.1016/j.lingua.2016.03.004">10.1016/j.lingua.2016.03.004</a>.
+</div>
+<div id="ref-vlachos_reconstruction_2019" class="csl-entry" role="listitem">
+Vlachos, Christos, Nikoletta Christou &amp; Kleanthes K. Grohmann. 2019. On reconstruction effects in <span>English</span> &amp;lt;i&amp;gt;wh&amp;lt;/i&amp;gt;-slifting: <span>Theoretical</span> and experimental considerations. <em>Glossa: a journal of general linguistics</em> 4(1). doi:<a href="https://doi.org/10.5334/gjgl.717">10.5334/gjgl.717</a>.
+</div>
+<div id="ref-vonheusinger_partitivity_2017" class="csl-entry" role="listitem">
+von Heusinger, Klaus &amp; Jaklin Kornfilt. 2017. Partitivity and case marking in <span>Turkish</span> and related languages. <em>Glossa: a journal of general linguistics</em> 2(1). doi:<a href="https://doi.org/10.5334/gjgl.112">10.5334/gjgl.112</a>.
+</div>
+<div id="ref-wasow_intuitions_2005" class="csl-entry" role="listitem">
+Wasow, Thomas &amp; Jennifer Arnold. 2005. Intuitions in linguistic argumentation. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 115(11). 1481–1496. doi:<a href="https://doi.org/10.1016/j.lingua.2004.07.001">10.1016/j.lingua.2004.07.001</a>.
+</div>
+<div id="ref-weskott_informativity_2011d" class="csl-entry" role="listitem">
+Weskott, Thomas &amp; Gisbert Fanselow. 2011. On the informativity of different measures of linguistic acceptability. <em>Language</em> 87(2). 249–273. doi:<a href="https://doi.org/10.1353/lan.2011.0041">10.1353/lan.2011.0041</a>.
+</div>
+<div id="ref-wetzel_pragmatic_2023" class="csl-entry" role="listitem">
+Wetzel, Mathis, Ekaterina Tskhovrebova, Pascal M. Gygax &amp; Sandrine Zufferey. 2023. Pragmatic and syntactic constraints on <span>French</span> causal connectives: <span>An</span> evaluation of native and non-native speakers’ sensitivity. <em>Journal of Pragmatics</em> 209. 89–107. doi:<a href="https://doi.org/10.1016/j.pragma.2023.03.001">10.1016/j.pragma.2023.03.001</a>.
+</div>
+<div id="ref-white_frequency_2020" class="csl-entry" role="listitem">
+White, Aaron Steven &amp; Kyle Rawlins. 2020. Frequency, acceptability, and selection: <span>A</span> case study of clause-embedding. <em>Glossa: a journal of general linguistics</em> 5(1). doi:<a href="https://doi.org/10.5334/gjgl.1001">10.5334/gjgl.1001</a>.
+</div>
+<div id="ref-white_variability_2022" class="csl-entry" role="listitem">
+White, Yosiane &amp; Gareth Roberts. 2022. Variability in speaker expectations of morphosyntactic mutation in <span>Welsh</span>. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.8730">10.16995/glossa.8730</a>.
+</div>
+<div id="ref-wierzba_sources_2023" class="csl-entry" role="listitem">
+Wierzba, Marta, J. M. M. Brown &amp; Gisbert Fanselow (). 2023. Sources of variability in the syntactic flexibility of idioms. <em>Glossa: a journal of general linguistics</em> 8(1). doi:<a href="https://doi.org/10.16995/glossa.8502">10.16995/glossa.8502</a>.
+</div>
+<div id="ref-wood_quantifying_2019a" class="csl-entry" role="listitem">
+Wood, Jim. 2019. Quantifying geographical variation in acceptability judgments in regional <span>American English</span> dialect syntax. <em>Linguistics</em> 57(6). 1367–1402. doi:<a href="https://doi.org/10.1515/ling-2019-0031">10.1515/ling-2019-0031</a>.
+</div>
+<div id="ref-wu_island_2022" class="csl-entry" role="listitem">
+Wu, Danfeng. 2022. Island violations in stripping constructions. <em>Glossa: a journal of general linguistics</em> 7(1). doi:<a href="https://doi.org/10.16995/glossa.7895">10.16995/glossa.7895</a>.
+</div>
+<div id="ref-xiang_when_2023" class="csl-entry" role="listitem">
+Xiang, Ming, Zhewei Dai &amp; Suiping Wang. 2023. When parsing and interpretation misalign: <span>A</span> case of <span class="nocase">WH-scope</span> ambiguity in <span>Mandarin</span>. <em>Language</em> 99(1). 1–37. doi:<a href="https://doi.org/10.1353/lan.2023.0004">10.1353/lan.2023.0004</a>.
+</div>
+<div id="ref-xiang_processing_2011" class="csl-entry" role="listitem">
+Xiang, Ming, Boris Harizanov, Maria Polinsky &amp; Ekaterina Kravtchenko. 2011. Processing morphological ambiguity: <span>An</span> experimental investigation of <span>Russian</span> numerical phrases. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 121(3). 548–560. doi:<a href="https://doi.org/10.1016/j.lingua.2010.10.016">10.1016/j.lingua.2010.10.016</a>.
+</div>
+<div id="ref-yoon_structural_2011" class="csl-entry" role="listitem">
+Yoon, Suwon. 2011. A structural asymmetry in intervention effects. <em>Lingua. International review of general linguistics. Revue internationale de linguistique g<span>é</span>n<span>é</span>rale</em> 121(5). 942–962. doi:<a href="https://doi.org/10.1016/j.lingua.2010.12.006">10.1016/j.lingua.2010.12.006</a>.
+</div>
+<div id="ref-yoshida_condition_2018" class="csl-entry" role="listitem">
+Yoshida, Masaya, David Potter &amp; Tim Hunter. 2018. Condition <span>C</span> reconstruction, clausal ellipsis and island repair. <em>Natural Language &amp;amp; Linguistic Theory</em> 37(4). 1515–1544. doi:<a href="https://doi.org/10.1007/s11049-018-9433-0">10.1007/s11049-018-9433-0</a>.
+</div>
+<div id="ref-zanuttini_yale_2018" class="csl-entry" role="listitem">
+Zanuttini, Raffaella, Jim Wood, Jason Zentz &amp; Laurence Horn. 2018. The yale grammatical diversity project: <span>Morphosyntactic</span> variation in north american english. <em>Linguistics Vanguard</em> 4(1). doi:<a href="https://doi.org/10.1515/lingvan-2016-0070">10.1515/lingvan-2016-0070</a>.
+</div>
+<div id="ref-zhang_interpretational_2021" class="csl-entry" role="listitem">
+Zhang, Aili &amp; Nayoung Kwon. 2021. The interpretational preferences of null and overt pronouns in <span>Chinese</span>. <em>Journal of Linguistics</em> 58(3). 649–676. doi:<a href="https://doi.org/10.1017/s0022226721000402">10.1017/s0022226721000402</a>.
+</div>
+<div id="ref-zuraw_model_2010a" class="csl-entry" role="listitem">
+Zuraw, Kie. 2010. A model of lexical variation and the grammar with application to <span>Tagalog</span> nasal substitution. <em>Natural Language &amp;amp; Linguistic Theory</em> 28(2). 417–472. doi:<a href="https://doi.org/10.1007/s11049-010-9095-z">10.1007/s11049-010-9095-z</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
