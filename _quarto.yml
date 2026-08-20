@@ -5,18 +5,17 @@ project:
 
 book:
   title: "Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics"
-  author: "Jason Grafmiller<br>[j.grafmiller@bham.ac.uk](mailto:j.grafmiller@bham.ac.uk)"
-  date: "today"
-  date-format: "D MMMM, YYYY"
-  # cover-image: "_images/laptop_cat.jpg"
-  logo: "_images/laptop_cat.jpg"
+  author: ["[Jason Grafmiller](mailto:j.grafmiller@bham.ac.uk)", "Dagmar Divjak", "Laura Rosseel"]
+  # date: "today"
+  # date-format: "D MMMM, YYYY"
+  cover-image: "_images/laptop_cat.jpg"
   repo-url: https://github.com/jasongraf1/ajt_review
   repo-branch: main
   site-url: https://jasongraf1.github.io/ajt_review/
   
   page-footer:
     left: |
-      Written by Jason Grafmiller.
+      Website and annotation app Written by Jason Grafmiller.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 
@@ -40,6 +39,7 @@ format:
     mainfont: 'Roboto'
     fontsize: 100%
     number-sections: false
+    toc-title: "AJT review"
     theme: 
       light: 
         - flatly
