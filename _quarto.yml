@@ -33,6 +33,10 @@ book:
         - transparency.qmd
     - examples.qmd
     - references.qmd
+    - text: "Checklist for authors"
+      file: checklist.qmd
+    - text: "Glossary"
+      file: glossary.qmd
 
 format:
   html:
