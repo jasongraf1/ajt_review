@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analysis – Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics</title>
+<title>Data Analysis – Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -155,7 +155,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./analysis.html">Rigor</a></li><li class="breadcrumb-item"><a href="./analysis.html"><span class="chapter-title">Analysis</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./analysis.html">Rigor</a></li><li class="breadcrumb-item"><a href="./analysis.html"><span class="chapter-title">Data Analysis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -231,7 +231,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analysis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Analysis</span></a>
+  <a href="./analysis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -251,6 +251,16 @@ window.Quarto = {
   <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">List of articles</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./checklist.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Checklist for authors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -258,22 +268,22 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">AJT review</h2>
    
   <ul>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link active" data-scroll-target="#key-takeaways">Key takeaways</a></li>
   <li><a href="#statistical-approach" id="toc-statistical-approach" class="nav-link" data-scroll-target="#statistical-approach">Statistical approach</a></li>
   <li><a href="#model-specification" id="toc-model-specification" class="nav-link" data-scroll-target="#model-specification">Model specification</a></li>
-  <li><a href="#reporting-rigor-effect-size-power-correction-and-thresholds" id="toc-reporting-rigor-effect-size-power-correction-and-thresholds" class="nav-link" data-scroll-target="#reporting-rigor-effect-size-power-correction-and-thresholds">Reporting rigor: Effect size, power, correction, and thresholds</a></li>
+  <li><a href="#sec-power" id="toc-sec-power" class="nav-link" data-scroll-target="#sec-power">Reporting rigor: Effect size, power, correction, and thresholds</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./analysis.html">Rigor</a></li><li class="breadcrumb-item"><a href="./analysis.html"><span class="chapter-title">Analysis</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./analysis.html">Rigor</a></li><li class="breadcrumb-item"><a href="./analysis.html"><span class="chapter-title">Data Analysis</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-analysis" class="quarto-section-identifier"><span class="chapter-title">Analysis</span></span></h1>
+<h1 class="title"><span id="sec-analysis" class="quarto-section-identifier"><span class="chapter-title">Data Analysis</span></span></h1>
 </div>
 
 
@@ -295,7 +305,7 @@ window.Quarto = {
 <ul>
 <li><strong>Mixed-effects regression is now the dominant analysis approach</strong>, having overtaken ANOVA, which is consistent with the field’s broader shift toward models that can handle by-participant and by-item variability directly rather than aggregating it away. That said, random effect structure is inconsistently reported. Often it is simply reported as “random effects of subject and item”, without specifying the exact random effect structure.</li>
 <li><strong>Effect sizes are usually absent, except when reported as regression coefficients.</strong> Most studies not using regression (e.g.&nbsp;ANOVA or t-tests) report only significance tests and <em>F</em> or <em>t</em> scores, not a standardized measure of effect magnitude such as <span class="math inline">\(\eta^2\)</span> or Cohen’s <span class="math inline">\(d\)</span>.</li>
-<li><strong>Power analysis is almost never conducted</strong> (or at least almost never reported), despite sample and item sizes varying enormously across the field (see <a href="./design.html">Design</a> and <a href="./stimuli.html">Stimuli</a>).</li>
+<li><strong>Power analysis is almost never conducted</strong> (or at least never reported), despite sample and item sizes varying enormously across the field (see <a href="./design.html">Experimental Design</a> and <a href="./stimuli.html">Stimuli</a>).</li>
 <li><strong>Bayesian methods remain rare</strong>, and multiple-comparison corrections are almost never mentioned.</li>
 <li>Analysis software is reported inconsistently. R is the most common tool when specified, but over half of studies don’t say what software was used at all.</li>
 </ul>
@@ -375,7 +385,7 @@ Table&nbsp;6.1: Very few studies use Bayesian analysis methods
 <section id="model-specification" class="level2">
 <h2 class="anchored" data-anchor-id="model-specification">Model specification</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">By-item/subject effects</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Rating scale treatment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Preprocessing</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">By-item/subject effects</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Scale treatment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Preprocessing</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Were adjustments made for <strong>by-participant or by-item variation</strong> (e.g.&nbsp;as ‘random effects’ or F1 and F2 ANOVA)?</p>
@@ -411,7 +421,7 @@ Figure&nbsp;6.4: How the response variable was treated in the statistical model
 </div>
 </div>
 </div>
-<p>This choice matters for which models are appropriate, and doesn’t always match how the scale was presented to participants (see <a href="./task.html">Task</a>). A substantial percentage of studies analyzed Likert-scale ratings as continuous data.</p>
+<p>This choice matters for which models are appropriate, and doesn’t always match how the scale was presented to participants (see <a href="./task.html">Judgment Task</a>). A substantial percentage of studies analyzed Likert-scale ratings as continuous data.</p>
 <div class="cell">
 <div id="tbl-response-stat-scale" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -473,8 +483,8 @@ Table&nbsp;6.2: Statistical scales used to analyze response types
 <div id="fig-preprocessing" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-preprocessing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="htmlwidget-9a1a96f6a40a8b82dd49" style="width:100%;height:123px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9a1a96f6a40a8b82dd49">{"x":{"visdat":{"69443e4439af":["function () ","plotlyVisDat"]},"cur_data":"69443e4439af","attrs":{"69443e4439af":{"x":{},"y":["Centering","Log Transform","Not Reported","Other","Z-score"],"text":{},"customdata":{},"orientation":"h","textposition":"outside","hovertemplate":"N = %{customdata}<extra><\/extra>","color":{},"colors":["steelblue4","grey"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"height":400,"margin":{"b":100,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"font":[],"title":"","tickfont":{"size":16,"family":[]},"ticksuffix":" ","type":"category","categoryorder":"array","categoryarray":["Centering","Log Transform","Other","Z-score","Not Reported"]},"xaxis":{"domain":[0,1],"automargin":true,"title":"% of studies","showgrid":true,"showline":true,"range":[0,81.5],"zeroline":false,"ticks":"outside","tickfont":{"size":14,"family":[]},"ticksuffix":"%"},"uniformtext":{"minsize":16,"mode":"show"},"showlegend":false,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"data":[{"x":[1.5,1.7,4.4000000000000004,20.899999999999999],"y":["Centering","Log Transform","Other","Z-score"],"text":["1.5%","1.7%","4.4%","20.9%"],"customdata":[5,6,15,72],"orientation":"h","textposition":["outside","outside","outside","outside"],"hovertemplate":["N = %{customdata}<extra><\/extra>","N = %{customdata}<extra><\/extra>","N = %{customdata}<extra><\/extra>","N = %{customdata}<extra><\/extra>"],"type":"bar","name":"a","marker":{"color":"rgba(54,100,139,1)","line":{"color":"rgba(54,100,139,1)"}},"textfont":{"color":"rgba(54,100,139,1)"},"error_y":{"color":"rgba(54,100,139,1)"},"error_x":{"color":"rgba(54,100,139,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[71.5],"y":["Not Reported"],"text":"71.5%","customdata":[246],"orientation":"h","textposition":"outside","hovertemplate":"N = %{customdata}<extra><\/extra>","type":"bar","name":"b","marker":{"color":"rgba(190,190,190,1)","line":{"color":"rgba(190,190,190,1)"}},"textfont":{"color":"rgba(190,190,190,1)"},"error_y":{"color":"rgba(190,190,190,1)"},"error_x":{"color":"rgba(190,190,190,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a1efa97eb8f657682e91" style="width:100%;height:123px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a1efa97eb8f657682e91">{"x":{"visdat":{"75a84074e3b":["function () ","plotlyVisDat"]},"cur_data":"75a84074e3b","attrs":{"75a84074e3b":{"x":{},"y":["Centering","Log Transform","Not Reported","Other","Z-score"],"text":{},"customdata":{},"orientation":"h","textposition":"outside","hovertemplate":"N = %{customdata}<extra><\/extra>","color":{},"colors":["steelblue4","grey"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"height":400,"margin":{"b":100,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"font":[],"title":"","tickfont":{"size":16,"family":[]},"ticksuffix":" ","type":"category","categoryorder":"array","categoryarray":["Centering","Log Transform","Other","Z-score","Not Reported"]},"xaxis":{"domain":[0,1],"automargin":true,"title":"% of studies","showgrid":true,"showline":true,"range":[0,81.5],"zeroline":false,"ticks":"outside","tickfont":{"size":14,"family":[]},"ticksuffix":"%"},"uniformtext":{"minsize":16,"mode":"show"},"showlegend":false,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"data":[{"x":[1.5,1.7,4.4000000000000004,20.899999999999999],"y":["Centering","Log Transform","Other","Z-score"],"text":["1.5%","1.7%","4.4%","20.9%"],"customdata":[5,6,15,72],"orientation":"h","textposition":["outside","outside","outside","outside"],"hovertemplate":["N = %{customdata}<extra><\/extra>","N = %{customdata}<extra><\/extra>","N = %{customdata}<extra><\/extra>","N = %{customdata}<extra><\/extra>"],"type":"bar","name":"a","marker":{"color":"rgba(54,100,139,1)","line":{"color":"rgba(54,100,139,1)"}},"textfont":{"color":"rgba(54,100,139,1)"},"error_y":{"color":"rgba(54,100,139,1)"},"error_x":{"color":"rgba(54,100,139,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[71.5],"y":["Not Reported"],"text":"71.5%","customdata":[246],"orientation":"h","textposition":"outside","hovertemplate":"N = %{customdata}<extra><\/extra>","type":"bar","name":"b","marker":{"color":"rgba(190,190,190,1)","line":{"color":"rgba(190,190,190,1)"}},"textfont":{"color":"rgba(190,190,190,1)"},"error_y":{"color":"rgba(190,190,190,1)"},"error_x":{"color":"rgba(190,190,190,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-preprocessing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6.5: Most studies do not report any preprocessing or transformation of ratings
@@ -486,8 +496,8 @@ Figure&nbsp;6.5: Most studies do not report any preprocessing or transformation 
 </div>
 </div>
 </section>
-<section id="reporting-rigor-effect-size-power-correction-and-thresholds" class="level2">
-<h2 class="anchored" data-anchor-id="reporting-rigor-effect-size-power-correction-and-thresholds">Reporting rigor: Effect size, power, correction, and thresholds</h2>
+<section id="sec-power" class="level2">
+<h2 class="anchored" data-anchor-id="sec-power">Reporting rigor: Effect size, power, correction, and thresholds</h2>
 <p>Effect sizes are usually reported as regression coefficients. Statistical significance (<em>p</em>-value) is almost always reported, but the threshold for “significance” used by the authors is almost never explicitly declared.</p>
 <p>Power analysis and multiple comparison correction are very rare.</p>
 <div class="cell">
@@ -2062,7 +2072,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Written by Jason Grafmiller.</p>
+<p>Website and annotation app Written by Jason Grafmiller.</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
