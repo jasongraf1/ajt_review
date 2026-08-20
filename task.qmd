@@ -1,4 +1,4 @@
-# Judgment task {@sec-task}
+# Judgment task {#sec-task}
 
 ```{r}
 #| label: setup

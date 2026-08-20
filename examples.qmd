@@ -1,12 +1,12 @@
-# Examples {@sec-examples}
+# Examples {#sec-examples}
 
 Here I've listed excerpts from studies illustrating some examples of good practice and (sadly many more) examples of poor practice. 
-
-For some really good examples of how to report things clearly, I recommend @sprouse_gender_2021 and @francis_resumptive_2015.
 
 In all the examples below, all bold-face emphasis is my own.
 
 ## Some GOOD examples{#sec-good-exx}
+
+For some really good examples of how to report things clearly, I recommend @sprouse_gender_2021 and @francis_resumptive_2015.
 
 From @janda_construal_2019:
 

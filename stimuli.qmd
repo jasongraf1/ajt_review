@@ -1,4 +1,4 @@
-# Stimuli {@sec-stimuli}
+# Stimuli {#sec-stimuli}
 
 ```{r}
 #| label: setup

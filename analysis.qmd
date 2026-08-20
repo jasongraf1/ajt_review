@@ -1,4 +1,4 @@
-# Analysis {@sec-analysis}
+# Analysis {#sec-analysis}
 
 ```{r}
 #| label: setup

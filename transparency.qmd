@@ -1,4 +1,4 @@
-# Transparency {@sec-transparency}
+# Transparency {#sec-transparency}
 
 ```{r}
 #| label: setup

@@ -1,4 +1,4 @@
-# Experimental design {@sec-design}
+# Experimental design {#sec-design}
 
 ```{r}
 #| label: setup

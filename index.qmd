@@ -1,4 +1,7 @@
-# Overview {@sec-home}
+---
+title: "Overview"
+lightbox: false
+---
 
 ```{r}
 #| label: setup
@@ -37,9 +40,13 @@ n_excluded <- length(unique(raw$article_index)) - length(unique(filtered$article
 
 This is just a (not so) quick overview of where we stand with coding the articles, and some observations about what we've found so far. 
 
-Coding has been a slog to say the least...
+Coding has been a slog to say the least. There is a maddeningly high degree variability and (lack of) clarity with which experimental details are reported across the literature, and I'm sure even the detailed coding we've developed isn't capturing all of it. But we're doing our best!
 
-So far we've annotated **`r paste0(n_coded,"/",total_articles, " (", perc_coded, "%)")` articles**, containing a total of `r nrow(raw)` individual acceptability judgment task (AJT) studies. Some of these (N = `r n_excluded`) were exculded because they didn't actually include formal AJT experiments.
+I've included excerpts illustrating this in @sec-examples.
+
+## Where we are at so far
+
+The full list of articles is included in @sec-bib. So far we've annotated **`r paste0(n_coded,"/",total_articles, " (", perc_coded, "%)")` articles**, containing a total of `r nrow(raw)` individual acceptability judgment task (AJT) studies. Some of these (N = `r n_excluded`) were exculded because they didn't actually include formal AJT experiments.
 
 ::: {#fig-art-by-journal}
 ```{r}
@@ -59,9 +66,11 @@ We can see how the use of AJT studies has changed over time.
 make_stacked_perc_barplot(full, "year", sort = F, orientation = "v")
 ```
 
-## Languages investigated
+## Languages investigated {#sec-languages}
 
-We've identified `r n_languages` language varieties studied in our review thus far. We'll need to double check the "Not Reported" cases. I don't think we should be applying a strict version of the ["Bender Rule"](https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/) here, but we could do so at a later point. This will mostly apply to the English studies.
+We've identified `r n_languages` language varieties studied in our review thus far, and we'll need to double check the "Not Reported" cases. 
+
+One point to add is that I don't think we should be applying a strict version of the ["Bender Rule"](https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/) here, but we could do so at a later point. That is, even if the study does not explicitly state that it is on English, it should be clear from the article as a whole what the language of study is. This will mostly apply to the English studies.
 
 ```{r}
 #| label: fig-languages

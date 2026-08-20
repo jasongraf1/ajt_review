@@ -4,7 +4,7 @@ project:
   pre-render: R/data.R
 
 book:
-  title: "AJT Systematic Review"
+  title: "Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics"
   author: "Jason Grafmiller<br>[j.grafmiller@bham.ac.uk](mailto:j.grafmiller@bham.ac.uk)"
   date: "today"
   date-format: "D MMMM, YYYY"
