@@ -47,7 +47,9 @@ full <- full |>
 
 # remove irrelevant articles
 filtered <- raw |> 
-  filter(!str_detect(coder_comments, "[Ee]xclude|No judgments collected")) 
+  filter(!str_detect(coder_comments, "[Ee]xclude|No judgments collected")) |> 
+  mutate(across(where(is.character), ~str_trim(.x))) |> 
+  mutate(across(where(is.character), ~str_replace_all(.x, "[nN]ot [rR]eported", "Not Reported")))
 
 # functions
 extract_surname <- function(name) {
@@ -91,6 +93,8 @@ clean <- filtered |>
     N_parts = str_extract(N_participants_recruited, "(\\d{1,}$|^\\d{1,} )") |> 
       str_trim() |> 
       as.numeric(),
+    N_parts_filtered = as.numeric(N_participants_after_filtering),
+    N_parts_filtered_bin = ifelse(is.na(N_parts_filtered) | N_parts_filtered == N_parts, FALSE, TRUE),
     language = str_replace(language, "French as spoken.*", "French"),
     language = str_trim(language),
     journal = str_replace_all(journal, "^Linguistic.* ", "Ling. ") |>
