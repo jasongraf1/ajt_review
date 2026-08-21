@@ -263,8 +263,6 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
     )
 }
 
-
-
 make_split_perc_barplot <- function(data, y, xmax = NULL, font = NULL,
                                     colors = c("steelblue4", "grey")){
   
