@@ -91,6 +91,29 @@ Nonetheless, many studies continue to fail to report how participants were recru
 make_perc_gg_barplot(clean, "part_recruitment")
 ```
 
+### Filtering
+
+Did study report how many participants were included in the **final analysis after filtering**?
+
+Most studies do not explicitly report whether they removed data from any participants after initial recruitment
+
+```{r}
+#| label: tbl-filter
+#| tbl-cap: "Numbers of study reporting whether participants were removed"
+clean |> 
+  mutate(N_parts_filtered_bin = ifelse(is.na(N_parts_filtered_bin), FALSE, N_parts_filtered_bin)) |> 
+  count(N_parts_filtered_bin) |> 
+  mutate(
+    perc = round(100*n/sum(n), 1),
+    labels = paste0(n, " (", perc, "%)")
+    ) |> 
+  select(c(1,4)) |> 
+  pivot_wider(values_from = labels, names_from = N_parts_filtered_bin) |> 
+  rename("Not Reported" = "FALSE", "Reported" = "TRUE") |> 
+  knitr::kable()
+```
+
+
 ### Compensation
 
 How were participants **compensated**?
