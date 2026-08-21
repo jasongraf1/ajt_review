@@ -134,20 +134,22 @@ make_perc_barplot(clean, "preprocessing")
 
 Effect sizes are usually reported as regression coefficients. Statistical significance (*p*-value) is almost always reported, but the threshold for "significance" used by the authors is almost never explicitly declared.
 
-Power analysis and multiple comparison correction are very rare.
+Power analysis and multiple comparison correction are very rare. Further evaluation such as order/sequential-dependency checks, satiation checks, or fatigue/trial-position checks are essentially non-existant.
 
 ```{r}
 #| label: tbl-rigor-details
 #| tbl-cap: "Reporting rates for power analysis, multiple-comparison correction, and significance thresholds"
 clean |>
-  select(effect_sizes, power_analysis, mult_comp_correction, sig_threshold) |>
+  select(effect_sizes, power_analysis, mult_comp_correction, sig_threshold, autocorr, propensity) |>
   pivot_longer(everything(), names_to = "Detail", values_to = "value") |>
   mutate(
     Detail = case_when(
       Detail == "effect_sizes" ~ "Effect size reported",
       Detail == "power_analysis" ~ "Power analysis conducted",
       Detail == "mult_comp_correction" ~ "Multiple-comparison correction applied",
-      Detail == "sig_threshold" ~ "Significance threshold specified"
+      Detail == "sig_threshold" ~ "Significance threshold specified",
+      Detail == "autocorr" ~ "Order effects examined",
+      Detail == "propensity" ~ "Satiation effects examined"
     ),
     value = ifelse(value %in% c("Not Reported", ""), "Not Reported", "Reported")
   ) |>
