@@ -236,7 +236,7 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
     geom_col(width = 0.7) +
     geom_text(
       aes(label = labels, color = color),
-      hjust = -0.2,
+      hjust = -0.1,
       size = base_size / .pt
     ) +
     scale_fill_manual(values = setNames(colors, c("a", "b")), guide = "none") +
@@ -413,13 +413,14 @@ make_boxplot <- function(data, x, xlab, xrange = NULL,
       marker = list(size = 6, opacity = 0.6)
     ) |>
     layout(
+      title = paste('Number of', xlab),
       yaxis = list(
         title = '',
         showticklabels = FALSE,
         zeroline = FALSE
       ),
       xaxis = list(
-        title = paste('Number of', xlab),
+        title = '',
         showgrid = TRUE,
         showline = TRUE,
         zeroline = FALSE,
@@ -428,7 +429,7 @@ make_boxplot <- function(data, x, xlab, xrange = NULL,
       ),
       uniformtext = list(minsize = 16, mode = 'show'),
       font = font,
-      margin = list(t = 10),
+      margin = list(t = 40),
       showlegend = FALSE,          
       autosize = TRUE
     ) |>
