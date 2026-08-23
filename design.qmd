@@ -19,7 +19,7 @@ source(here("R", "plots.R"))
 
 - **Most studies focus on syntax**, not surprisingly. In many cases, the line between morphology and syntax or syntax and semantics is a bit blurry, but this is not really a main focus.
 - **Explicit reporting of design features**, such as exact numbers of conditions, **is not very consistent**. 
-- **Studiues vary widely in the numbers of conditions** they include, and many studies, especially earlier ones, report overly complex designs. 
+- **Studies vary widely in the numbers of conditions** they include, and many studies, especially earlier ones, report overly complex designs. 
 
 ## Linguistic levels in focus
 
@@ -40,7 +40,7 @@ make_split_perc_gg_barplot(clean, "linguistic_phenomenon")
 
 Was the **total number of conditions explicitly reported**?
 
-The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure (e.g. "We used a 2x3 design crossing factor A with factor B") but then leave the reader to compute the final total. 
+The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure (e.g. "We used a 2x3 design crossing factor A with factor B") but then leave the reader to compute the final tally of experimental conditions. 
 
 ```{r}
 #| label: tbl-des-perc-rep
@@ -57,7 +57,7 @@ clean |>
   knitr::kable()
 ```
 
-In many instances certain contrasts are not considered part of the experimental conditions, thus under-representing the complexity of the design.
+In some instances certain contrasts are not considered part of the experimental conditions, thus under-representing the complexity of the design.
 
 
 ### Conditions
@@ -66,20 +66,20 @@ How many **experimental conditions** are there?
 
 There are `r length(is.na(clean$N_conds))` studies where the total number of conditions is not clear. Those with larger numbers (>10) should probably be re-examined. There are even a few studies (N = `r length(which(clean$N_conds >= 50))`) with very large (>50) numbers of conditions, which should certain be checked and confirmed.
 
-Again, many of these numbers are deducted / inferred from incomplete descriptions of designs. We've included some examples of vague descriptions in @sec-complicated below.
+Again, many of these numbers are deducted / inferred from incomplete descriptions of designs. We've included some examples of unclear descriptions in the [Examples](examples.qmd) page. 
 
 ```{r}
 #| label: fig-cond-boxplot
 #| fig-cap: "There is a surprisingly wide range of experimental conditions included in AJ studies"
 #| lightbox: false
-make_boxplot(clean, "N_conds", xlab = "Conditions", xrange = c(0, 50))
+make_boxplot(clean, "N_conds", xlab = "Experimental Conditions", xrange = c(0, 50))
 ```
 
 ### Design structure
 
 Did the study use a **within-subjects** or **between-subjects** design?
 
-Most studies are not interested in between groups patterns.
+Most studies are not interested in between-groups patterns.
 
 ```{r}
 #| label: fig-design-type

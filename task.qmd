@@ -122,7 +122,7 @@ Many studies do report average performance time, and most experimental software 
 #| label: fig-task-duration
 #| fig-cap: "Did the study mention how long participants took (usually as an average)?"
 #| fig-width: 8
-#| fig-height: 3
+#| fig-height: 2.5
 make_perc_gg_barplot(clean, "task_duration")
 ```
 

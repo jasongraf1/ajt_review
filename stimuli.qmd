@@ -163,24 +163,11 @@ Were **items pilot-tested or normed** in any way?
 A handful of studied explicitly report piloting or norming items, but no studies explicitly report NOT doing so.
 
 ```{r}
-#| label: tbl-items-pilot
+#| label: fig-items-pilot
 #| fig-cap: "Studies rarely report running any kind of **norming or pilot testing** of critical items"
-clean |> 
-  count(item_plausibility) |> 
-  # mutate(
-  #   item_plausibility = ifelse(item_plausibility == "No", "No", "Not Reported"),
-  #   # perc = round(100*n/sum(n), 1),
-  #   # text = glue("{n} ({perc}%)")
-  # ) |>
-  # select(N_items_reported, text) |> 
-  pivot_wider(names_from = "item_plausibility", values_from = "n") |> 
-  mutate(
-    No = 0,
-    perc = round(100*`Not Reported`/(Yes + `Not Reported`), 1),
-    ) |> 
-  select(Yes, No, `Not Reported`, perc) |> 
-  rename(`% NOT Reported` = perc) |> 
-  knitr::kable()
+#| fig-height: 2.5
+#| fig-width: 8
+make_perc_gg_barplot(clean, "item_plausibility")
 ```
 
 :::

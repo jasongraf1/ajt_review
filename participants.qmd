@@ -34,7 +34,7 @@ We've had several studies (N = `r sum(is.na(as.numeric(clean$N_participants_recr
 #| label: fig-part-num
 #| fig-cap: "Numbers of participants vary, but usually are less than 100"
 #| lightbox: false
-make_boxplot(clean, "N_parts", xlab = "Participants", xrange = c(0, 410))
+make_boxplot(clean, "N_parts", xlab = "Participants Recruited", xrange = c(0, 410))
 ```
 
 
@@ -46,7 +46,7 @@ make_boxplot(clean, "N_parts", xlab = "Participants", xrange = c(0, 410))
 
 What was the **population** that participants were sampled from? 
 
-The population from which participants are sampled is not always clearly reported. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses. Populations from these platforms are coded as "Mixed".
+The population from which participants are sampled is not always clear. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses to certain countries. Populations from these platforms are coded as "Mixed".
 
 ```{r}
 #| label: fig-part-pop
@@ -60,7 +60,7 @@ make_perc_gg_barplot(clean, "part_profile", base_size = 14)
 
 Which participant **demographics** were reported?
 
-Not all studies report demographics, but usually at least being a native speaker is specified. Any mention of average age or sex proportions counted as reporting for our purposes.  
+Not all studies report demographics, but usually at least being a native speaker ("Language Background") is specified. Any mention of average age or sex proportions counted as reporting for our purposes.  
 
 ```{r}
 #| label: fig-part-demo
