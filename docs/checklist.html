@@ -272,7 +272,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">A Minimal Checklist for Reporting Experimental Studies in Linguistics</span></h1>
+<h1 class="title"><span id="sec-checklist" class="quarto-section-identifier"><span class="chapter-title">A Minimal Checklist for Reporting Experimental Studies in Linguistics</span></span></h1>
 </div>
 
 
@@ -289,7 +289,7 @@ window.Quarto = {
 </header>
 
 
-<p>The following checklist sets out key information specifications for reporting experimental Acceptability Judgment Task (AJT) studies in theoretical linguistics. It is designed to <strong>encourage</strong> <strong>clarity and precision</strong> without prescribing specific theoretical commitments or statistical frameworks. Our goal is to provide <strong>a minimal shared vocabulary</strong> for authors, readers and reviewers to draw from. This checklist represents <strong>a guide for authors</strong> to ensure that their work can be understood, evaluated, and reused by fellow scholars, as well as <strong>a diagnostic tool for reviewers</strong> to notice when key design commitments are underspecified in study reporting. The checklist is also intended to align with open science practices without insisting on preregistration or complex infrastructure.</p>
+<p>The following checklist sets out key information specifications for reporting experimental Acceptability Judgment Task (AJT) studies in theoretical linguistics. It is designed to <strong>encourage</strong> <strong>clarity and precision</strong> without prescribing specific theoretical commitments or statistical frameworks. Our goal is to provide <strong>a minimal shared vocabulary</strong> for authors, readers and reviewers to draw from (see also our <a href="./glossary.html">Glossary</a>). This checklist represents <strong>a guide for authors</strong> to ensure that their work can be understood, evaluated, and reused by fellow scholars, as well as <strong>a diagnostic tool for reviewers</strong> to notice when key design commitments are underspecified in study reporting. The checklist is also intended to align with open science practices without insisting on preregistration or complex infrastructure.</p>
 <p>Much of the information in these recommendations is already commonly reported in modern studies, however, <strong>there remains a surprising lack of consistency</strong> across authors, journals and publishers in both the terminology used as well as the amount of detail provided. Each item on the list corresponds to a potential confusion/failure point in the reporting of experimental studies, many of which we commonly observed in our review.</p>
 <section id="the-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="the-checklist">The Checklist</h2>
@@ -311,7 +311,7 @@ window.Quarto = {
 <li>the number of levels for each manipulated factor</li>
 <li>the total number of experimental conditions, i.e.&nbsp;the total number of unique combinations of factor levels</li>
 <li>whether each factor is within- or between-participants</li>
-<li>all planned contrasts or comparisons between participant groups (i.e., non-manipulated factors such as age levels, gender, native vs non-native)</li>
+<li>all planned contrasts or comparisons between participant groups (i.e., non-manipulated factors such as age levels, gender, native vs.&nbsp;non-native)</li>
 </ul>
 <p>Conditions should be described independently of specific stimuli, so that the full design space is recoverable.</p>
 <p><em>Note:</em> Some continuous factors function as predictors in analysis rather than as design manipulations. These should be described explicitly (e.g., “memory score was included as a continuous predictor”), but they are not part of the experiment’s condition structure unless discretized.</p>
@@ -319,7 +319,7 @@ window.Quarto = {
 <section id="definition-of-item" class="level3">
 <h3 class="anchored" data-anchor-id="definition-of-item">3. Definition of “item”</h3>
 <p>Authors should explicitly define what counts as a critical item in the study, e.g.&nbsp;a sentence token, a minimally contrasted sentence pair, a lexical root instantiated across frames.</p>
-<p>We strongly recommend that <strong>the term ‘<em>item</em>’ should be exclusively used to refer to a single unique stimulus that a participant is intended to respond to</strong> (see Glossary). If multiple sets of stimulus items or item types are involved (e.g.&nbsp;constructional frames with matched lexical fillers), their relationship should be described.</p>
+<p>We strongly recommend that <strong>the term ‘<em>item</em>’ should be exclusively used to refer to a single unique stimulus that a participant is intended to respond to</strong> (see <a href="@ssec-item-definition">Glossary</a>). If multiple sets of stimulus items or item types are involved (e.g.&nbsp;constructional frames with matched lexical fillers), their relationship should be described.</p>
 </section>
 <section id="items-and-stimulus-construction" class="level3">
 <h3 class="anchored" data-anchor-id="items-and-stimulus-construction">4. Items and stimulus construction</h3>
@@ -341,12 +341,12 @@ window.Quarto = {
 <li>how items were organised for presentation, including any blocking and/or randomization procedures</li>
 <li>the number of critical items seen by each participant</li>
 </ul>
-<p>If different (counterbalanced) item lists were presented to participants, authors should describe and report the counterbalancing scheme:</p>
+<p>If different (counterbalanced) item lists were presented to participants, authors should describe and report the counterbalancing scheme, including:</p>
 <ul>
 <li>the number of lists and procedures for assigning items and participants to lists</li>
 <li>how lists were presented to participants</li>
 </ul>
-<p><em>If no counterbalancing is used, i.e.&nbsp;all participants saw all items, this should be stated explicitly.</em></p>
+<p><em>Note:</em> If no counterbalancing is used, i.e.&nbsp;all participants saw all items, this should be stated explicitly.</p>
 </section>
 <section id="participants" class="level3">
 <h3 class="anchored" data-anchor-id="participants">6. Participants</h3>
@@ -356,8 +356,8 @@ window.Quarto = {
 <li>the population from which participants were sampled, including key inclusion criteria such as region, language background, training in linguistics, age<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 <li>how participants were recruited (if university students were used, it should be explained how students were notified and brought into the study)</li>
 <li>post-sampling exclusion criteria and number of exclusions, if any</li>
-<li><em>the final number of participants</em> (after exclusion) whose data were included in the analysis</li>
-<li>how participants were compensated (If no compensation was provided, this should be stated explicitly)</li>
+<li><em>the final number of participants</em> (after any filtering) whose data were included in the analysis</li>
+<li>how participants were compensated. If no compensation was provided, this should be stated explicitly.</li>
 <li>how informed consent was obtained from participants</li>
 </ul>
 </section>
@@ -366,28 +366,28 @@ window.Quarto = {
 <p>Authors should explicitly describe and report:</p>
 <ul>
 <li>the task participants performed</li>
-<li>the <em>exact instructions</em> provided to participants (e.g.&nbsp;as the verbatim text in an appendix)</li>
+<li>the <strong>exact instructions</strong> provided to participants (e.g.&nbsp;as the verbatim instruction text or screen capture in an appendix)</li>
 <li>the construct the task is intended to tap (acceptability, grammaticality, felicity, plausibility, etc.)</li>
 <li>the response measure(s) collected (e.g.&nbsp;ratings, choices, reaction times)</li>
 <li>the exact number of experimental trials each participant saw/heard (this is not the same as the number of critical items)</li>
 <li>the modality in which the stimuli were delivered (e.g., written, auditory, signed)</li>
 <li>the means by which participants gave their responses (e.g., computer-based, hand-written, spoken, signed)</li>
 <li>the setting of the task, including whether it was done under supervision of the researcher (e.g.&nbsp;in a lab or a classroom)</li>
-<li>whether any timing constraints were placed on performance (if response time was unlimited and/or participants could proceed at their own pace, this should be stated explicitly)</li>
+<li>whether any timing constraints were placed on performance. If response time was unlimited and/or participants could proceed at their own pace, this should be stated explicitly.</li>
 <li>whether participants were able to review or change their responses</li>
 <li>whether participants were able to take breaks during the study</li>
-<li>any and all software tools used for delivery of the task (e.g., Ibex, Qualtrics)</li>
+<li>any and all software tools used for delivery of the task (e.g.&nbsp;Ibex, Qualtrics)</li>
 </ul>
-<p>Any additional aspects of the procedure relevant to inference (e.g., inclusion of practice or calibration trials, inclusion of comprehension questions, pilot-testing) should also be noted.</p>
+<p>Any additional aspects of the procedure relevant to inference (e.g.&nbsp;inclusion of practice or calibration trials, inclusion of comprehension questions, pilot-testing) should also be noted.</p>
 </section>
 <section id="analysis-and-inferential-structure" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-inferential-structure">8. Analysis and inferential structure</h3>
 <p>Authors should explicitly report:</p>
 <ul>
 <li>the dependent variable(s)</li>
-<li>any statistical manipulations to the dependent variable, e.g. log-transform, z-score normalization</li>
-<li>the statistical model(s) or test(s) used, including the test statistics, measures of effect size, and where relevant, the threshold of statistical significance (usually <em>α</em> &lt; 0.05)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
-<li>whether participants and/or items are treated as sources of variability (e.g., by grouping or as random factors). If not done, <em>authors should justify why this is not necessary</em>.</li>
+<li>any statistical manipulations to the dependent variable, e.g.&nbsp;log-transform, z-score normalization</li>
+<li>the statistical model(s) or test(s) used, including the test statistics, measures of effect size<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, and where relevant, the threshold of statistical significance (usually <em>α</em> &lt; 0.05)<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+<li>whether participants and/or items are treated as sources of variability (e.g.&nbsp;by grouping or as random factors). If not done, <em>authors should justify why this is not necessary</em>.</li>
 <li>how experimental conditions enter the analysis, e.g.&nbsp;as main effects or interactions in a regression model</li>
 <li>the software tool(s) used for analysis (e.g., R, Python, SPSS)</li>
 <li>where the data and software code used for the analysis can be obtained</li>
@@ -400,9 +400,10 @@ window.Quarto = {
 <ul>
 <li>a <strong>complete list of all experimental items</strong> used in the study, including both critical <em>and</em> filler items (and any check items or comprehension questions)</li>
 <li>the <strong>exact instructions</strong> provided to participants</li>
-<li>the <strong>complete dataset and software code</strong> used for analysis<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+<li>the <strong>complete dataset and software code</strong> used for analysis<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
 <li>indication of whether the study was <strong>preregistered</strong>, and if so, where</li>
 <li>where the above can be accessed (or why they cannot be shared)</li>
+<li>how ethical review was sought, conducted and approved</li>
 </ul>
 <p>This information can be included as appendices in the original paper, or better as supplementary materials published with the article or in an online repository. Where to find these materials should be clearly described in a brief data availability statement, or as a link to a public repository.</p>
 
@@ -1347,10 +1348,11 @@ Zuraw, Kie. 2010. A model of lexical variation and the grammar with application 
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>There is<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>to our knowledge there is currently no clear consensus on how many fillers should be used, but authors could at least make an effort to explain motivations for their choice.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>It’s common to report basic demographic information about participants, but this information is often considered only incidental to the primary research questions, so it is not always reported.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The <em>p</em> &lt; 0.05 standard is so ubiquitous that it is never mentioned, but we feel it’s good practice to encourage more reflection on data analysis assumptions.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>This must include the <em>complete raw data</em> from the study, not merely tables of averages or other summary statistics.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Test statistics such as <span class="math inline">\(F\)</span>, <span class="math inline">\(t\)</span>, or <span class="math inline">\(\chi^2\)</span> are <em>not</em> measures of effect size, although regression model coefficients (<span class="math inline">\(b\)</span> or <span class="math inline">\(\beta\)</span>) are considered effect size measures. Common effect size measures for ANOVA are (partial) <span class="math inline">\(\eta^2\)</span> or <span class="math inline">\(\omega^2\)</span>, and Cohen’s <span class="math inline">\(d\)</span> is often used with <em>t</em> tests.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The <em>p</em> &lt; 0.05 standard is so ubiquitous that it is almost never mentioned, but we feel it’s good practice to encourage more reflection on data analysis assumptions.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>This is not merely tables of averages or other summary statistics. Authors should provide the (anonymized) <em>complete raw data</em> from the study, including <em>every response from every participant</em> along with all metadata (e.g.&nbsp;demographic information) collected.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

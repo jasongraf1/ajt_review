@@ -252,7 +252,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#experimental-design" id="toc-experimental-design" class="nav-link active" data-scroll-target="#experimental-design">Experimental Design</a></li>
-  <li><a href="#items-and-trials" id="toc-items-and-trials" class="nav-link" data-scroll-target="#items-and-trials">Items and Trials</a></li>
+  <li><a href="#ssec-item-definition" id="toc-ssec-item-definition" class="nav-link" data-scroll-target="#ssec-item-definition">Items and Trials</a></li>
   <li><a href="#task-features-and-task-types" id="toc-task-features-and-task-types" class="nav-link" data-scroll-target="#task-features-and-task-types">Task Features and Task Types</a></li>
   <li><a href="#common-points-of-confusion" id="toc-common-points-of-confusion" class="nav-link" data-scroll-target="#common-points-of-confusion">Common points of confusion:</a></li>
   </ul>
@@ -292,15 +292,15 @@ window.Quarto = {
 <li><strong>Continuous factor (covariate):</strong> A factor whose values vary along a <strong>numeric scale</strong> (e.g., memory-test score, lexical frequency, proficiency). Continuous factors do <em>not</em> have levels unless they are <strong>explicitly binned</strong> for design purposes.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 </ul></li>
 <li><strong>Condition</strong>: a unique <em>level</em>, or combination of levels, of a one or more <strong>manipulated factors.</strong> Each condition corresponds to <strong>a systematic difference in some property or combination properties under investigation</strong> (e.g., word order, agreement, structural configuration). Conditions are defined independently of individual stimulus items; items <em>instantiate</em> conditions. Conditions usually contrast within-participants but may also contrast between participants if assignment to levels is experimental.</li>
-<li><strong>Group:</strong> a contrast, or combination of contrasts, arising from <strong>fixed participant characteristics</strong> (e.g., age group, gender, native vs non-native speaker); groups are levels of factors that are <em>not manipulated</em> by the researcher.</li>
+<li><strong>Group:</strong> a contrast, or combination of contrasts, arising from<strong>fixed participant characteristics</strong> (e.g., age group, gender, native vs non-native speaker); groups are levels of factors that are <em>not manipulated</em> by the researcher.</li>
 <li><strong>Within-participants/subjects:</strong> a design in which each participant contributes responses in more than one condition. Differences between conditions are therefore estimated within the same participant.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 <li><strong>Between-participants/subjects:</strong> a design in which different sets of participants are assigned to different conditions or belong to different groups. Differences are therefore estimated across different sets of participants.</li>
 <li><strong>Mixed design:</strong> a design involving a combination of within- and between-participants comparisons. For example, a study comparing island contexts vs non-island contexts (within-participants) across participant education levels (between-subjects).</li>
 <li><strong>Counterbalancing:</strong> a design strategy in which items, or subsets of items, are distributed across participants in a systematic way. Balancing is often done in such a way that (i) no participant sees an excessive number of highly similar items, (ii) each condition is represented equally across the participants, and (iii) order and fatigue effects are not confounded with any particular condition. In many AJT studies, this is implemented by assigning items from matched sets to different lists, so that each participant sees only a subset of items from each condition, while the full participant sample provides data for all conditions and items.</li>
 </ul>
 </section>
-<section id="items-and-trials" class="level2">
-<h2 class="anchored" data-anchor-id="items-and-trials">Items and Trials</h2>
+<section id="ssec-item-definition" class="level2">
+<h2 class="anchored" data-anchor-id="ssec-item-definition">Items and Trials</h2>
 <ul>
 <li><strong>Item</strong>: a <em>unique stimulus token</em> that a participant is intended to respond to.
 <ul>
@@ -336,7 +336,7 @@ window.Quarto = {
 <li><strong>Scalar forced-choice task:</strong> a task in which participants must distribute numerical values among options from two or more alternative expressions presented as a set (continuous scale, anchored at both ends). Similar to visual analogue scale ratings, but the scale represents preference for one alternative rather than degree of acceptability.</li>
 </ul></li>
 <li><strong>Timed / speeded task:</strong> A task in which responses must be made under time constraints (e.g., limited viewing time or response deadline).</li>
-<li><strong>Self-paced presentation:</strong> items are revealed incrementally (e.g., word-by-word, region-by-region), with participants controlling the pace.</li>
+<li><strong>Self-paced presentation:</strong> items are revealed incrementally (e.g.&nbsp;word-by-word, region-by-region), with participants controlling the pace.</li>
 </ul>
 </section>
 <section id="common-points-of-confusion" class="level2">
@@ -366,10 +366,10 @@ window.Quarto = {
 <p>When a condition is represented by multiple unique instantiations, these are treated as distinct items, which may be distributed across participants using counterbalancing. In the above case there are six conditions each represented by two items, for a total of 12 items altogether.</p>
 <p>A model description of items and procedures, where exact numbers and design are explicitly reported might look like so:</p>
 <blockquote class="blockquote">
-<p>“We created 12 sets of stimulus items where each set consisted of 6 items instantiating one of the six experimental conditions. This resulted in a total of 72 unique critical items, with 12 items per condition. These items were distributed across six counterbalanced lists such that only one item from each set was included in a given list. The critical items in each list were intermixed amongst an additional set of 24 filler items, and all participants saw the same set of 24 fillers. Fillers were constructed such that […] Each participant saw only one list, and item order was randomized for each participant. Each participant thus responded to a total of 36 (12 critical + 24 filler) judgment trials.</p>
+<p>“We created 12 sets of stimulus items where each set consisted of 6 items instantiating one of the six experimental conditions. This resulted in a total of 72 unique critical items, with 12 items per condition. These items were distributed across six counterbalanced lists (12 sentences per list) such that only one item from each set was included in a given list. The critical items in each list were intermixed amongst an additional set of 24 filler items, and all participants saw the same 24 fillers. Fillers were constructed such that […] Each participant saw only one list, and item order was randomized for each participant. Each participant thus responded to a total of 36 (12 critical + 24 filler) judgment trials.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>The experiment was delivered using the Qualtrics software. Items were presented in writing on an otherwise blank page, with one item per page without additional context and with no time limit. Participants could proceed at their own pace through the experiment, pausing or taking breaks as needed. Response times were recorded but not used for analysis. The average total time for completion was 15 minutes.”</p>
+<p>The experiment was delivered using Qualtrics software. Items were presented in writing on an otherwise blank page, with one item per page without additional context and with no time limit. Participants could proceed at their own pace through the experiment, pausing or taking breaks as needed. Response times were recorded but not used for analysis. The average total time for completion was 15 minutes.”</p>
 </blockquote>
 
 
