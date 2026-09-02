@@ -76,7 +76,7 @@ knitr:
     tidy: styler
     dev: "svglite"
 
-bibliography: [articles_selected_final.bib]
+bibliography: [articles_selected_final.bib, references.bib]
 nocite: |
   @*
 link-citations: true
