@@ -1,9 +1,8 @@
 # A Minimal Checklist for Reporting Experimental Studies in Linguistics {#sec-checklist}
 
-The following checklist sets out key information specifications for reporting experimental Acceptability Judgment Task (AJT) studies in theoretical linguistics. It is designed to **encourage** **clarity and precision** without prescribing specific theoretical commitments or statistical frameworks. Our goal is to provide **a minimal shared vocabulary** for authors, readers and reviewers to draw from (see also our [Glossary](glossary.qmd)). This checklist represents **a guide for authors** to ensure that their work can be understood, evaluated, and reused by fellow scholars, as well as **a diagnostic tool for reviewers** to notice when key design
-commitments are underspecified in study reporting. The checklist is also intended to align with open science practices without insisting on preregistration or complex infrastructure.
+The following checklist sets out key information specifications for reporting experimental Acceptability Judgment Task (AJT) studies in theoretical linguistics. It is designed to **encourage** **clarity and precision** without prescribing specific theoretical commitments or statistical frameworks. Our goal is to provide **a minimal shared vocabulary** for authors, readers and reviewers to draw from (see also our [Glossary](glossary.qmd)). This checklist represents **a guide for authors** to ensure that their work can be understood, evaluated, and reused by fellow scholars, as well as **a diagnostic tool for reviewers** to notice when key design commitments are underspecified in study reporting. The checklist is also intended to align with open science practices without insisting on preregistration or complex infrastructure.
 
-Much of the information in these recommendations is already commonly reported in modern studies, however, **there remains a surprising lack of consistency** across authors, journals and publishers in both the terminology used as well as the amount of detail provided. Each item on the list corresponds to a potential confusion/failure point in the reporting of experimental studies, many of which we commonly observed in our review.
+There are good overviews of how to carefully design AJTs readily available [e.g. @schutze_judgment_2013; @goodall_sentence_2021; @haussler_variation_2021], and much of the information in these recommendations is already commonly reported in modern studies. However, **there remains a surprising lack of consistency** across authors, journals and publishers in both the terminology used as well as the amount of detail provided when writing up these studies. Each item on this checklist corresponds to a potential confusion/failure point in the reporting of experimental studies, many of which we commonly observed in our review.
 
 ## The Checklist
 
@@ -122,7 +121,7 @@ At minimum, authors should provide:
 
 This information can be included as appendices in the original paper, or better as supplementary materials published with the article or in an online repository. Where to find these materials should be clearly described in a brief data availability statement, or as a link to a public repository.
 
-[^1]: to our knowledge there is currently no clear consensus on how many fillers should be used, but authors could at least make an effort to explain motivations for their choice.
+[^1]: To our knowledge there is currently no clear consensus on how many fillers should be used, and commonly cited sources give conflicting suggestions for critical-to-filler item ratios ranging from 1:1 [@goodall_sentence_2021] to 1:2 or 1:3 [@cowart_experimental_1997]. This variability is also found in related fields where there is recent evidence that filler items can impact certain kinds of tasks [@arehalli_experimental_2021].   
 
 [^2]: It's common to report basic demographic information about participants, but this information is often considered only incidental to the primary research questions, so it is not always reported.
 
