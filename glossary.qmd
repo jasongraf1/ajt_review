@@ -1,20 +1,12 @@
 # Glossary of terms for reporting Acceptability Judgment studies {#sec-glossary}
 
-This is a working glossary of key terms for reporting Acceptability
-Judgment Task (AJT) studies in theoretical linguistics. The aim is to
-provide a common vocabulary that authors and reviewers can refer to when
-reporting/reviewing work involving AJT experiments.
+This is a working glossary of key terms for reporting Acceptability Judgment Task (AJT) studies in theoretical linguistics. The aim is to provide a common vocabulary that authors and reviewers can refer to when reporting/reviewing work involving AJT experiments.
 
-This glossary is by no means exhaustive. We focus on those terms and
-concepts that are often used in varying ways in the theoretical
-linguistics literature, with the hope of encouraging clarity and
-consistency in research reporting.
+This glossary is by no means exhaustive. We focus on those terms and concepts that are often used in varying ways in the theoretical linguistics literature, with the hope of encouraging clarity and consistency in research reporting.
 
 ## Experimental Design
 
-- **Judgment**: a participant's evaluation of a linguistic expression.
-    This may take many forms, but most commonly as an indication of an
-    item's position on a preset scale or as an indication of the
+- **Judgment**: a participant's evaluation of a linguistic expression.     This may take many forms, but most commonly as an indication of an item's position on a preset scale or as an indication of the
     relative quality of or preference for an item compared to a common
     baseline or alternative expression (as in Magnitude Estimation or
     Forced Choice tasks, respectively). This is the *dependent
@@ -66,7 +58,7 @@ consistency in research reporting.
     a subset of items from each condition, while the full participant
     sample provides data for all conditions and items.
 
-## Items and Trials
+## Items and Trials {#ssec-item-definition}
 
 - **Item**: a *unique stimulus token* that a participant is intended
     to respond to.
@@ -150,13 +142,7 @@ consistency in research reporting.
 
 **Condition--set--item relation:**
 
-Conditions are defined by manipulated properties (factor levels).
-Items instantiate conditions; each item belongs to exactly one
-condition. Items may be constructed as matching sets in which different
-conditions are instantiated using "the same" (or similar) forms. For
-example, the following two sets contain items instantiating six
-conditions crossing 3 structures (Sentential subject, Extraposition,
-Island) with 2 polarity (positive/negative) values.
+Conditions are defined by manipulated properties (factor levels). Items instantiate conditions; each item belongs to exactly one condition. Items may be constructed as matching sets in which different conditions are instantiated using "the same" (or similar) forms. For example, the following two sets contain items instantiating six conditions crossing 3 structures (Sentential subject, Extraposition, Island) with 2 polarity (positive/negative) values.
 
 1.  Set 1
     a.  That she knew Bob bothered John. \[Sentential subject,
