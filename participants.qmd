@@ -53,7 +53,8 @@ The population from which participants are sampled is not always clear. Universi
 #| fig-cap: "Proportions of populations reported across studies"
 #| fig-width: 8
 #| fig-height: 4
-make_perc_gg_barplot(clean, "part_profile", base_size = 14)
+make_perc_gg_barplot(clean, "part_profile", base_size = 14,
+                     title = "by participant population")
 ```
 
 ### Demographics
@@ -67,7 +68,8 @@ Not all studies report demographics, but usually at least being a native speaker
 #| fig-cap: "Proportions of demographics reported across studies"
 #| fig-width: 8
 #| fig-height: 4
-make_split_perc_gg_barplot(clean, "demographics_reported", base_size = 14)
+make_split_perc_gg_barplot(clean, "demographics_reported", base_size = 14,
+                           title = "by demographic information reported")
 ```
 
 :::
@@ -85,10 +87,10 @@ University affiliation (students and/or staff) is the most common way to get par
 Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe *how* involvement from students was solicited (e.g. via fliers, social media, classrooms, word-of-mouth). 
 ```{r}
 #| label: fig-part-rec
-#| fig-cap: "Proportions of recruitment methods reported across studies"
+#| fig-cap: "Universities are the most common ways to recruit participants, but many studies fail to report any recruitment methods."
 #| fig-width: 8
 #| fig-height: 4.5
-make_perc_gg_barplot(clean, "part_recruitment")
+make_perc_gg_barplot(clean, "part_recruitment", title = "by recruitment method")
 ```
 
 ### Filtering

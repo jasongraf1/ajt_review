@@ -28,11 +28,12 @@ source(here("R", "plots.R"))
 #| fig-cap: "Proportions of studies focusing of levels of linguistic structure"
 #| fig-width: 8
 #| fig-height: 4
-make_split_perc_gg_barplot(clean, "linguistic_phenomenon")
+make_split_perc_gg_barplot(clean, "linguistic_phenomenon",
+                           title = "by level of linguistic focus")
 ```
 
 
-## Design structure
+## Condition specification
 
 :::{.panel-tabset}
 
@@ -43,18 +44,13 @@ Was the **total number of conditions explicitly reported**?
 The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure (e.g. "We used a 2x3 design crossing factor A with factor B") but then leave the reader to compute the final tally of experimental conditions. 
 
 ```{r}
-#| label: tbl-des-perc-rep
-#| tbl-cap: "Studies do not report the exact numbers of **experimental conditions** clearly enough."
+#| label: fig-des-perc-rep
+#| fig-cap: "Studies do not report the exact numbers of **experimental conditions** clearly enough."
+#| fig-height: 2.5
+#| fig-width: 8
 clean |> 
-  count(N_conditions_reported) |> 
-  mutate(
-    N_conditions_reported = ifelse(N_conditions_reported == "Yes", "Reported", "Not Reported"),
-    perc = round(100*n/sum(n),1),
-    text = glue("{n} ({perc}%)")
-  ) |> 
-  select(N_conditions_reported, text) |> 
-  pivot_wider(names_from = "N_conditions_reported", values_from = "text") |> 
-  knitr::kable()
+  mutate(N_conditions_reported = str_replace_all(N_conditions_reported, "No", "Not Reported")) |> 
+  make_perc_gg_barplot("N_conditions_reported", title = "reporting exact condition numbers")
 ```
 
 In some instances certain contrasts are not considered part of the experimental conditions, thus under-representing the complexity of the design.
@@ -86,7 +82,7 @@ Most studies are not interested in between-groups patterns.
 #| fig-cap: "Most studies use within-subjects designs"
 #| fig-height: 3.5
 #| fig-width: 8
-make_perc_gg_barplot(clean, "design_type")
+make_perc_gg_barplot(clean, "design_type", title = "using within- or between-subjects design")
 ```
 
 :::
@@ -110,7 +106,7 @@ Surprisingly this is not clearly reported in the texts. It's possible the "Not R
 #| fig-cap: "A surprising number of studies fail to report how items were ordered"
 #| fig-width: 8
 #| fig-height: 3.5
-make_perc_gg_barplot(clean, "randomization")
+make_perc_gg_barplot(clean, "randomization", title = "reporting of presentation order")
 ```
 
 ### Presentation
@@ -127,8 +123,7 @@ Here "intermixed" involves items of different conditions being intermixed withou
 #| fig-cap: "Most studies intermix items without blocking"
 #| fig-width: 8
 #| fig-height: 3
-
-make_perc_gg_barplot(clean, "exp_blocking")
+make_perc_gg_barplot(clean, "exp_blocking", title = "reporting of item organization")
 ```
 
 
