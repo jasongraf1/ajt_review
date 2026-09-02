@@ -218,7 +218,8 @@ make_perc_barplot <- function(data, y, xmax = NULL, font = NULL,
 }
 
 make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
-                              colors = c("steelblue4", "grey")) {
+                              colors = c("steelblue4", "grey"),
+                              title = NULL) {
   
   d <- data |> 
     count(.data[[y]]) |> 
@@ -232,6 +233,12 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
   
   if (is.null(xmax)) {xmax <- max(d$perc) + 12}
   
+  if (is.null(title)) {
+    title <- ""
+  } else {
+      title <- paste("Studies", title)
+    }
+  
   ggplot(d, aes(x = .data[[y]], y = perc, fill = color)) +
     geom_col(width = 0.7) +
     geom_text(
@@ -242,13 +249,15 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
     scale_fill_manual(values = setNames(colors, c("a", "b")), guide = "none") +
     scale_color_manual(values = setNames(colors, c("a", "b")), guide = "none") +
     scale_y_continuous(
-      name = "% of studies",
       limits = c(0, xmax),
       expand = expansion(mult = c(0, 0.02)),
       labels = function(x) paste0(x, "%")
     ) +
     coord_flip(clip = "off") +
-    labs(x = NULL) +
+    labs(
+      x = NULL, y = NULL,
+      title = title
+      ) +
     theme_minimal(base_size = base_size) +
     theme(
       axis.text.y = element_text(size = base_size),
@@ -317,8 +326,10 @@ make_split_perc_barplot <- function(data, y, xmax = NULL, font = NULL,
     config(displayModeBar = FALSE)
 }
 
-make_split_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
-                                  colors = c("steelblue4", "grey")){
+make_split_perc_gg_barplot <- function(data, y, xmax = NULL, 
+                                       base_size = 14,
+                                  colors = c("steelblue4", "grey"),
+                                  title = NULL){
   
   d <- data |> 
     rowid_to_column("row_id") |> 
@@ -336,6 +347,12 @@ make_split_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
   
   if (is.null(xmax)) {xmax <- max(d$perc) + 10}
   
+  if (is.null(title)) {
+    title <- ""
+  } else {
+    title <- paste("Studies", title)
+  }
+  
   ggplot(d, aes(x = .data[[y]], y = perc, fill = color)) +
     geom_col(width = 0.7) +
     geom_text(
@@ -346,13 +363,12 @@ make_split_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
     scale_fill_manual(values = setNames(colors, c("a", "b")), guide = "none") +
     scale_color_manual(values = setNames(colors, c("a", "b")), guide = "none") +
     scale_y_continuous(
-      name = "% of studies",
       limits = c(0, xmax),
       expand = expansion(mult = c(0, 0.02)),
       labels = function(x) paste0(x, "%")
     ) +
     coord_flip(clip = "off") +
-    labs(x = NULL) +
+    labs(x = NULL, y = NULL, title = title) +
     theme_minimal(base_size = base_size) +
     theme(
       text = element_text(family = "Roboto"),
@@ -524,52 +540,6 @@ make_stacked_perc_barplot <- function(
         plotly::config(displayModeBar = F, responsive = T)
     }
   
-}
-
-make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
-                                 colors = c("steelblue4", "grey")) {
-  
-  d <- data |> 
-    count(.data[[y]]) |> 
-    mutate(
-      perc = round(100 * n / sum(n), 1),
-      "{y}" := fct_reorder(.data[[y]], perc),
-      color = ifelse(.data[[y]] == "Not Reported", "b", "a") |> 
-        as.factor(),
-      labels = paste0(n, " (",perc, "%)")
-    )
-  
-  if (is.null(xmax)) {xmax <- max(d$perc) + 12}
-  
-  ggplot(d, aes(x = .data[[y]], y = perc, fill = color)) +
-    geom_col(width = 0.7) +
-    geom_text(
-      aes(label = labels, color = color),
-      hjust = -0.2,
-      size = base_size / .pt
-    ) +
-    scale_fill_manual(values = setNames(colors, c("a", "b")), guide = "none") +
-    scale_color_manual(values = setNames(colors, c("a", "b")), guide = "none") +
-    scale_y_continuous(
-      name = "% of studies",
-      limits = c(0, xmax),
-      expand = expansion(mult = c(0, 0.02)),
-      labels = function(x) paste0(x, "%")
-    ) +
-    coord_flip(clip = "off") +
-    labs(x = NULL) +
-    theme_minimal(base_size = base_size) +
-    theme(
-      axis.text.y = element_text(size = base_size),
-      axis.text.x = element_text(size = base_size),
-      axis.title.x = element_text(size = base_size),
-      panel.grid.major.y = element_blank(),
-      panel.grid.minor = element_blank(),
-      legend.position = "none",
-      axis.line.x = element_line(color = "black"),
-      axis.ticks.x = element_line(color = "black"),
-      plot.margin = margin(t = 5.5, r = 20, b = 20, l = 5.5)
-    )
 }
 
 
