@@ -29,7 +29,15 @@ From @francis_resumptive_2015
 
 > "60 filler sentences were also included, for a total of 120 sentences. The filler sentences, which did not contain any RCs, were distributed into three categories, according to their pre-determined acceptability (Bad, Medium, and Good). The Medium fillers contained minor anomalies (for example, a quantified noun preceded by the incorrect numeral classifier), while the Bad fillers had more severe grammatical errors (for example, a quantified noun with classifier omitted)." (p.64)
 
+From @villata_intervention_2016:
 
+> "We manipulated two variables in a 2 × 4 design: (1) Intervention (Intervention vs. No Intervention), and (2) Structure (Bare Identity, Inverse Inclusion, Inclusion, Complex Identity). The four levels of Structure were obtained by manipulating the lexical restriction of the extracted wh-object and the intervening wh-subject. The two variables were part of a fully crossed design with 8 experimental conditions and were manipulated within participants. Stimuli consisted of 4 groups of sentences distributed across the 8 experimental conditions. All participants saw all stimuli." (p.83)
+
+- This explicitly describes conditions and item groups, as well as how many items each participants saw and how many participants rated a given item.
+
+> "The experiment was programmed with E-prime. Each sentence was presented on a computer screen one at a time. Participants were tested individually in experimental booths and asked to judge for the acceptability of the sentences on a 7-point Likert scale [...] by pressing one of the seven numbered buttons on the keyboard. Participants were first shown 3 examples of sentences (one corresponding to a totally unacceptable sentence, one to a nearly acceptable sentence and one to a perfectly acceptable sentence) and their respective ratings (1, 4 and 7), none of which involved islands. They were then presented with 10 training items in order to familiarize themselves with the Likert scale. There was no time constraint on responses. Three pauses were administered during the task. The whole session lasted about 30 min." (p.84)
+
+- Also very clear. Note the inclusion of information regarding participant environment and time constraints.
 
 ## Examples of over-complicated design{#sec-complicated}
 
