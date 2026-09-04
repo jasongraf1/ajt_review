@@ -2,6 +2,7 @@
 
 ```{r}
 #| label: setup
+#| warning: false
 suppressMessages(library(here)) # for pathing to/from project directory
 suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
 suppressMessages(library(janitor)) # for cleaning data

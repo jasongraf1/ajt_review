@@ -62,8 +62,9 @@ plot_avail_by_year(clean)
 clean |>
   count(preregistration) |>
   mutate(perc = round(100 * n / sum(n), 1),
-         text = glue("{n} ({perc}%)")) |>
+         text = paste0(n, " (", perc, "%)")) |>
   select(preregistration, text) |>
   pivot_wider(names_from = preregistration, values_from = text) |>
+  rename("Preregistered" = Yes) |> 
   knitr::kable()
 ```
