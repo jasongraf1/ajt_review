@@ -42,11 +42,11 @@ make_split_perc_gg_barplot(clean, "linguistic_phenomenon",
 
 Was the **total number of conditions explicitly reported**?
 
-The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure (e.g. "We used a 2x3 design crossing factor A with factor B") but then leave the reader to compute the final tally of experimental conditions. 
+The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure, e.g. "We used a 2x3 design crossing factor A with factor B", but then leave the reader to compute the final tally of experimental conditions (6 in this example). We coded any case where the *exact number is not strictly stated* as "Not Reported", thus the data here are more conservative than one might expect. 
 
 ```{r}
 #| label: fig-des-perc-rep
-#| fig-cap: "Studies do not report the exact numbers of **experimental conditions** clearly enough."
+#| fig-cap: "Proportions of studies reporting the exact numbers of experimental conditions"
 #| fig-height: 2.5
 #| fig-width: 8
 clean |> 
@@ -149,7 +149,7 @@ clean |>
       Detail == "balanced_items" ~ "Stimuli balanced across conditions?",
       Detail == "n_pre" ~ "Included pre-test trials?",
       Detail == "n_post" ~ "Included post-test trials?",
-      Detail == "multiple_tasks" ~ "Items used in multiple tasks?"
+      Detail == "multiple_tasks" ~ "Same items used across multiple judgment tasks?"
     ),
     value = ifelse(value %in% c("Not Reported", "", "No"), "No", "Yes")
   ) |>
@@ -158,7 +158,7 @@ clean |>
   mutate(
     perc_reported = round(100 * Yes / (Yes + No), 1)
     ) |>
-  rename(`% Yes` = perc_reported) |>
+  rename("No / Not Reported" = "No", `% Yes` = perc_reported) |>
   knitr::kable()
 ```
 

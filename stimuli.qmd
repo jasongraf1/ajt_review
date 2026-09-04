@@ -30,30 +30,37 @@ source(here("R", "plots.R"))
 
 Was the **total number of items explicitly reported**?
 
+A surprising number of articles do not accurately report item numbers, where we use the term "item" to refer to a single unique stimulus token that a participant is intended to respond to (see [Glossary](@ssec-item-definition)). Similar to the number of experimental conditions, exact numbers can often be reconstructed / deduced from information in the article, with varying degrees of effort and certainty. So again, the data here are conservative counts.
+
+The primary issue is that use of the term "item" is not consistent across studies. Many authors use it to denote sets of sentences that are balanced across experimental conditions. For instance, @frazier_anticipating_2018 describe their experiment like so:
+
+> "Sixteen items like the one illustrated in (6) were constructed. **Each item had four versions**, defined by the factorial combination of +NR versus −NR and the use of a verb that permitted Neg Raising versus one that did not [...]" (emphasis added)
+ 
+In our coding this *should* be reported as 16 x 4 = 64 unique test sentences, hence 64 "items". This final number is not explicitly reported, hence we code this as "No" (total item number NOT reported).
+
 ```{r}
-#| label: tbl-items-reported
-#| tbl-cap: "Studies explicitly reporting the exact numbers of critical experimental **items**"
+#| label: fig-items-reported
+#| fig-cap: "Proportion of studies reporting the exact numbers of stimulus items"
+#| fig-width: 8
+#| fig-height: 2
 clean |> 
   count(N_items_reported) |> 
   mutate(
-    N_items_reported = ifelse(N_items_reported == "Yes", "Reported", "Not Reported"),
-    # perc = round(100*n/sum(n), 1),
-    # text = glue("{n} ({perc}%)")
+    N_items_reported = ifelse(N_items_reported == "Yes", "Reported", "Not Reported")
   ) |> 
-  # select(N_items_reported, text) |> 
-  pivot_wider(names_from = "N_items_reported", values_from = "n") |> 
-  mutate(perc = round(100*Reported/(Reported + `Not Reported`), 1)) |> 
-  rename(`% Reported` = perc) |> 
-  knitr::kable()
+  make_perc_gg_barplot("N_items_reported", title = "reporting exact numbers of items")
 ```
 
-A surprising number of articles do not accurately report item numbers. Exact numbers of stimulus items can often be reconstructed / deduced from information in the article, with varying degrees of effort and certainty. But readers ideally should never be required to do this for themselves.
+
+
+
+to refer to a single unique stimulus that a participant is intended to respond to
 
 ### Total items
 
 What was the total number of **critical items** created for the study *not* including fillers or distractors?
 
-There are `r length(is.na(clean$N_items))` studies where the total number of items is not clear. Additionally we have `r length(which(clean$N_items >= 200))` studies with 200 or more items. These need to be re-checked (the largest is `r max(clean$N_items, na.rm = T)`!).
+There are `r length(is.na(clean$N_items))` studies where the total number of items is not clear. Additionally we have `r length(which(clean$N_items >= 200))` studies with 200 or more items. most of these very large studies are replication studies or comparisons with frequency data, e.g. @white_frequency_2020 who included 50000 items!
 
 ```{r}
 #| label: fig-item-boxplot
@@ -152,7 +159,7 @@ The "Other" category here may involve any kind of phenomenon or language specifi
 #| label: fig-item-context
 #| fig-cap: "Most items are constructed by researchers, but this is also not always reported clearly"
 #| fig-width: 8
-#| fig-height: 3.5
+#| fig-height: 3
 make_perc_gg_barplot(clean, "contextualization")
 ```
 

@@ -85,9 +85,10 @@ How were participants **recruited**?
 University affiliation (students and/or staff) is the most common way to get participants, but online platforms have become much more common as we annotate more recent studies. 
 
 Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe *how* involvement from students was solicited (e.g. via fliers, social media, classrooms, word-of-mouth). 
+
 ```{r}
 #| label: fig-part-rec
-#| fig-cap: "Universities are the most common ways to recruit participants, but many studies fail to report any recruitment methods."
+#| fig-cap: "Proportions of recruitment methods reported across studies"
 #| fig-width: 8
 #| fig-height: 4.5
 make_perc_gg_barplot(clean, "part_recruitment", title = "by recruitment method")
@@ -97,22 +98,19 @@ make_perc_gg_barplot(clean, "part_recruitment", title = "by recruitment method")
 
 Did study report how many participants were included in the **final analysis after filtering**?
 
-Most studies do not explicitly report whether they removed data from any participants after initial recruitment
+Most studies do not explicitly report whether they removed data from any participants after initial recruitment.
 
 ```{r}
-#| label: tbl-filter
-#| tbl-cap: "Numbers of study reporting whether participants were removed"
+#| label: fig-filter
+#| fig-cap: "Proportions of studies reporting whether participants were filtered/excluded from final analysis"
+#| fig-height: 2
+#| fig-width: 8
 clean |> 
-  mutate(N_parts_filtered_bin = ifelse(is.na(N_parts_filtered_bin), FALSE, N_parts_filtered_bin)) |> 
-  count(N_parts_filtered_bin) |> 
   mutate(
-    perc = round(100*n/sum(n), 1),
-    labels = paste0(n, " (", perc, "%)")
+    N_parts_filtered_bin = ifelse(is.na(N_parts_filtered_bin), FALSE, N_parts_filtered_bin),
+    N_parts_filtered_bin = ifelse(N_parts_filtered_bin, "Reported", "Not Reported")
     ) |> 
-  select(c(1,4)) |> 
-  pivot_wider(values_from = labels, names_from = N_parts_filtered_bin) |> 
-  rename("Not Reported" = "FALSE", "Reported" = "TRUE") |> 
-  knitr::kable()
+  make_perc_gg_barplot("N_parts_filtered_bin", title = "reporting participant filtering")
 ```
 
 
@@ -127,7 +125,7 @@ Compensation is not often reported, particularly when off-line recruitment metho
 #| fig-cap: "Proportions of compensation methods reported across studies"
 #| fig-width: 8
 #| fig-height: 4
-make_perc_gg_barplot(clean, "compensation")
+make_perc_gg_barplot(clean, "compensation", title = "by participant compensation")
 ```
 
 

@@ -134,7 +134,7 @@ make_perc_barplot(clean, "preprocessing")
 
 Effect sizes are usually reported as regression coefficients. Statistical significance (*p*-value) is almost always reported, but the threshold for "significance" used by the authors is almost never explicitly declared.
 
-Power analysis and multiple comparison correction are very rare. Further evaluation such as order/sequential-dependency checks, satiation checks, or fatigue/trial-position checks are essentially non-existant.
+Power analysis and multiple comparison correction are very rare. Further evaluation such as order/sequential-dependency checks, intraclass correlations, satiation checks, or fatigue/trial-position checks are essentially non-existant.
 
 ```{r}
 #| label: tbl-rigor-details
