@@ -10,6 +10,9 @@ suppressMessages(library(here)) # for pathing to/from project directory
 suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
 suppressMessages(library(janitor)) # for cleaning data
 
+# hide coercion warnings
+as_numeric <- function(x){suppressWarnings(as.numeric(x))}
+
 # load the most recent version of the spreadsheet
 current_file <- here("data") |> 
   list.files(
@@ -93,7 +96,7 @@ clean <- filtered |>
     N_parts = str_extract(N_participants_recruited, "(\\d{1,}$|^\\d{1,} )") |> 
       str_trim() |> 
       as.numeric(),
-    N_parts_filtered = as.numeric(N_participants_after_filtering),
+    N_parts_filtered = as_numeric(N_participants_after_filtering),
     N_parts_filtered_bin = ifelse(is.na(N_parts_filtered) | N_parts_filtered == N_parts, FALSE, TRUE),
     language = str_replace(language, "French as spoken.*", "French"),
     language = str_trim(language),
