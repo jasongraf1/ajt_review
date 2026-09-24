@@ -34,8 +34,18 @@ What was the **scale** of participants' responses?
 #| label: fig-response-scale
 #| fig-cap: "Ordinal (Likert) scales are by far the most common response format."
 #| fig-width: 8
-#| fig-height: 4
-make_perc_gg_barplot(clean, "response_scale", base_size = 12)
+#| fig-height: 4.5
+
+clean |> 
+  mutate(
+    scale_fine = case_when(
+      response_comparison == "Magnitude Estimation" ~ "Magnitude Est.",
+      response_levels == "TH" ~ "Thermometer",
+      response_comparison == "Variant Comparison" & response_levels %in% paste(2:10) ~ "Forced Choice",
+      TRUE ~ response_scale
+     )
+  ) |> 
+  make_perc_gg_barplot("scale_fine", base_size = 12)
 ```
 
 ### Scale levels
