@@ -231,7 +231,7 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
       labels = paste0(n, " (",perc, "%)")
     )
   
-  if (is.null(xmax)) {xmax <- max(d$perc) + 12}
+  if (is.null(xmax)) {xmax <- max(d$perc) + 15}
   
   if (is.null(title)) {
     title <- ""
@@ -250,9 +250,11 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
     scale_color_manual(values = setNames(colors, c("a", "b")), guide = "none") +
     scale_y_continuous(
       limits = c(0, xmax),
-      expand = expansion(mult = c(0, 0.02)),
+      breaks = seq(0, 100, 25),
+      expand = expansion(mult = c(0, 0)),
       labels = function(x) paste0(x, "%")
     ) +
+    guides(x = guide_axis(cap = "upper")) +
     coord_flip(clip = "off") +
     labs(
       x = NULL, y = NULL,
@@ -333,7 +335,7 @@ make_split_perc_gg_barplot <- function(data, y, xmax = NULL,
   
   d <- data |> 
     rowid_to_column("row_id") |> 
-    separate_rows(.data[[y]], sep = ";") |>
+    separate_rows(all_of(y), sep = ";") |>
     mutate("{y}" := str_trim(.data[[y]])) |>
     distinct(row_id, .data[[y]]) |>
     count(.data[[y]]) |>
