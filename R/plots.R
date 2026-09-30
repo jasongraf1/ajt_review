@@ -97,7 +97,7 @@ make_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
     scale_y_continuous(
       name = "Number of studies",
       limits = c(0, xmax),
-      expand = expansion(mult = c(0, 0.02)),
+      expand = expansion(mult = c(0, 0.03)),
     ) +
     coord_flip(clip = "off") +
     labs(x = NULL) +
@@ -233,6 +233,12 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
   
   if (is.null(xmax)) {xmax <- max(d$perc) + 15}
   
+  if (xmax > 80) {
+    cap = "upper"
+  } else {
+      cap = "none"
+    }
+  
   if (is.null(title)) {
     title <- ""
   } else {
@@ -254,7 +260,7 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
       expand = expansion(mult = c(0, 0)),
       labels = function(x) paste0(x, "%")
     ) +
-    guides(x = guide_axis(cap = "upper")) +
+    guides(x = guide_axis(cap = cap)) +
     coord_flip(clip = "off") +
     labs(
       x = NULL, y = NULL,
