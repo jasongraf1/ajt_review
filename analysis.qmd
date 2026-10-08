@@ -53,15 +53,12 @@ make_perc_gg_barplot(clean, "software", base_size = 12)
 Did the analysis use **Bayesian** methods?
 
 ```{r}
-#| label: tbl-bayesian
-#| tbl-cap: "Very few studies use Bayesian analysis methods"
-clean |>
-  count(bayesian) |>
-  mutate(perc = round(100 * n / sum(n), 1),
-         text = glue("{n} ({perc}%)")) |>
-  select(bayesian, text) |>
-  pivot_wider(names_from = bayesian, values_from = text) |>
-  knitr::kable()
+#| label: fig-bayesian
+#| fig-cap: "Very few studies use Bayesian analysis methods"
+#| fig-height: 2
+clean |> 
+  mutate(bayesian = ifelse(bayesian == "No", "Not Reported", "Yes")) |> 
+  make_perc_gg_barplot("bayesian", base_size = 12)
 ```
 
 :::
@@ -90,7 +87,7 @@ Was the response analysed as a **continuous scale, an ordinal factor, or dichoto
 ```{r}
 #| label: fig-stat-scale
 #| fig-cap: "How the response variable was treated in the statistical model"
-#| fig-height: 4
+#| fig-height: 3.5
 clean |> 
   filter(stat_scale != "") |> 
   make_perc_gg_barplot("stat_scale")
@@ -125,7 +122,8 @@ clean |>
 ```{r}
 #| label: fig-preprocessing
 #| fig-cap: "Most studies do not report any preprocessing or transformation of ratings"
-make_perc_barplot(clean, "preprocessing")
+#| fig-height: 3.5
+make_perc_gg_barplot(clean, "preprocessing")
 ```
 
 :::

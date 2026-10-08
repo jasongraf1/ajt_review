@@ -38,12 +38,14 @@ make_perc_gg_barplot(clean, "item_avail")
 #| label: fig-data-avail
 #| fig-cap: "How (or whether) raw data and/or analysis code were made available"
 #| fig-width: 8
-#| fig-height: 4
+#| fig-height: 3.5
 make_perc_gg_barplot(clean, "data_avail")
 ```
 
 
 ## Changes over time
+
+There is an encouraging increase in recent years in the provision of materials and data. The latter has especially gone up in the last in the last 5-10 years. But the overall proportions are still not much better than 50%.  
 
 ```{r}
 #| label: fig-avail-trend
@@ -56,9 +58,11 @@ plot_avail_by_year(clean)
 
 ## Preregistration
 
+Preregistration is almost never conducted (or at least reported) in this literature. 
+
 ```{r}
 #| label: tbl-prereg
-#| tbl-cap: "Preregistration is almost never reported in this literature"
+#| tbl-cap: "Was the study **preregistered**?"
 clean |>
   count(preregistration) |>
   mutate(perc = round(100 * n / sum(n), 1),

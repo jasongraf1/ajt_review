@@ -80,7 +80,8 @@ One point to add is that I don't think we should be applying a strict version of
 clean |> 
   mutate(
     language = str_replace_all(language, "(/| and )", "; "),
-    language = str_remove_all(language, " -.*")
+    language = str_remove_all(language, " -.*"),
+    language = ifelse(str_detect(language, "English"), "English", language)
   ) |> 
   make_split_gg_barplot("language", base_size = 12)
 ```

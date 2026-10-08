@@ -42,7 +42,7 @@ make_split_perc_gg_barplot(clean, "linguistic_phenomenon",
 
 Was the **total number of conditions explicitly reported**?
 
-The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies often report individual factors and/or design structure, e.g. "We used a 2x3 design crossing factor A with factor B", but then leave the reader to compute the final tally of experimental conditions (6 in this example). We coded any case where the *exact number is not strictly stated* as "Not Reported", thus the data here are more conservative than one might expect. 
+The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies *do* often report individual factors and/or design structure, e.g. "We used a 2x3 design crossing factor A with factor B", but then leave the reader to compute the final tally of experimental conditions (6 in this example). We coded any case where the *exact number of unique conditions is not strictly stated* as "Not Reported", thus the numbers here are more conservative than one might expect. 
 
 ```{r}
 #| label: fig-des-perc-rep
@@ -61,7 +61,9 @@ In some instances certain contrasts are not considered part of the experimental 
 
 How many **experimental conditions** are there?
 
-There are `r length(is.na(clean$N_conds))` studies where the total number of conditions is not clear. Those with larger numbers (>10) should probably be re-examined. There are even a few studies (N = `r length(which(clean$N_conds >= 50))`) with very large (>50) numbers of conditions, which should certain be checked and confirmed.
+The median number of experimental conditions in a given study was `r round(median(clean$N_conds, na.rm = T))` (min = `r min(clean$N_conds, na.rm = T)`, Q1 = `r quantile(clean$N_conds, .25, na.rm = T)`, Q3 = `r quantile(clean$N_conds, .75, na.rm = T)`, max = `r max(clean$N_conds, na.rm = T)`).
+
+There are `r length(clean$N_conds[is.na(clean$N_conds)])` studies where the total number of conditions is not clear. Those with larger numbers (>20) should probably be re-examined. There are even a few studies (N = `r length(which(clean$N_conds >= 50))`) with very large (>50) numbers of conditions, which should certain be checked and confirmed.
 
 Again, many of these numbers are deducted / inferred from incomplete descriptions of designs. We've included some examples of unclear descriptions in the [Examples](examples.qmd) page. 
 
@@ -97,10 +99,10 @@ make_perc_gg_barplot(clean, "design_type", title = "using within- or between-sub
 Were items presented in a **fixed or (semi-)random order** across participants?
 
 - *Random*: fully random for each participant
-- *Semi-random* ('psuedo-random): order is largely random, but with some prescribed conditions on order (e.g. no adjacent items of the same condition)
+- *Semi-random* ('psuedo-random'): order is largely random, but with some imposed constraints (e.g. no adjacent items of the same condition)
 - *Fixed*: order is the same across (sets of) participants. Fixed orders are probably more common, as paper questionnaires do not allow for participant-specific re-ordering, but this is not always reported explicitly.
 
-Surprisingly this is not clearly reported in the texts. It's possible the "Not Reported" numbers are inflated due to inconsistent description (randomization is often mentioned cursorily in unexpected places in texts). 
+Surprisingly this is not always clearly reported in the texts. It's possible the "Not Reported" numbers are inflated due to inconsistent description (randomization is often mentioned cursorily in unexpected places in texts). 
 
 ```{r}
 #| label: fig-randomization
@@ -131,7 +133,7 @@ make_perc_gg_barplot(clean, "exp_blocking", title = "reporting of item organizat
 ### Other features
 
 - Some studies (N = `r nrow(filter(clean, N_pre.test != "0"))`) include **pre-test trials**, typically as practice trials for the task. This is common with Magnitude Estimation studies. Very few (N = `r nrow(filter(clean, N_post.test != "0"))`) include **post-test trials**.
-- Many studies balanced items across (predicted) conditions, but again this is not always reported clearly.
+- Many studies balanced items across (predicted) acceptability conditions, but again this is not always reported clearly.
 - A small percentage of studies involve the same items in multiple tasks.
 
 ```{r}

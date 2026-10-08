@@ -39,7 +39,7 @@ From @villata_intervention_2016:
 
 - Also very clear. Note the inclusion of information regarding participant environment and time constraints.
 
-## Examples of over-complicated design{#sec-complicated}
+## Examples of over-complicated design {#sec-complicated}
 
 From @dabrowska_questions_2008a:
 
@@ -130,7 +130,7 @@ From @ellsiepen_constraints_2018:
 
 From @frazier_anticipating_2018, a rather complicated trail of design breadcrumbs:
 
-> **Sixteen items** like the one illustrated in (6) were constructed. **Each item had four versions**, defined by the factorial combination of +NR versus −NR and the use of a verb that permitted Neg Raising versus one that did not[...]" 
+> **Sixteen items** like the one illustrated in (6) were constructed. **Each item had four versions**, defined by the factorial combination of +NR versus −NR and the use of a verb that permitted Neg Raising versus one that did not [...]" 
 
 - So this should be 16 x 4 = 64 test sentences...
 
@@ -164,4 +164,8 @@ From @francis_grammatical_2010a:
 
 > "Please read each of the sentences listed below. For each sentence, we would like you to indicate your reaction to the sentence. Mark your response sheet by circling a number from (1) to (9). Use (9) for sentences that seem fully **normal**, and **understandable** to you. Use (1) for sentences that seem very **odd, awkward, or difficult for you to understand**. If your feelings about the sentence are somewhere between these extremes, use one of the middle responses from (2) to (8). Please try to use the entire scale, not just the end points of the scale."
 
+From @eberhardt_focus_2019
 
+> "The 16 experimental conditions and eight items were presented in four versions in a counterbalanced design, so that each person saw each item four times, and each condition twice. They were mixed with 15 filler sentences in a pseudo-random order [...]"
+
+- So what exactly constitutes an "item" in this set up? How many unique sentences were constructed? How many judgment trials did each participant see?  
