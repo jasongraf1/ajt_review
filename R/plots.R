@@ -23,6 +23,8 @@ font <- list(
 font_add_google("Roboto", family = "Roboto")
 showtext_auto()
 
+base_font_size <- 12
+
 # Plot functions --------------------------------------
 
 make_barplot <- function(data, y, xmax = NULL, font = NULL,
@@ -73,7 +75,7 @@ make_barplot <- function(data, y, xmax = NULL, font = NULL,
     config(displayModeBar = FALSE)
 }
 
-make_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
+make_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_size,
                          colors = c("steelblue4", "grey")){
   d <- data |> 
     count(.data[[y]]) |> 
@@ -115,7 +117,7 @@ make_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
     )
 }
 
-make_split_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
+make_split_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_size,
                                     colors = c("steelblue4", "grey")){
   
   d <- data |> 
@@ -217,7 +219,7 @@ make_perc_barplot <- function(data, y, xmax = NULL, font = NULL,
     config(displayModeBar = FALSE)
 }
 
-make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = 14,
+make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_size,
                               colors = c("steelblue4", "grey"),
                               title = NULL) {
   
@@ -335,7 +337,7 @@ make_split_perc_barplot <- function(data, y, xmax = NULL, font = NULL,
 }
 
 make_split_perc_gg_barplot <- function(data, y, xmax = NULL, 
-                                       base_size = 14,
+                                       base_size = base_font_size,
                                   colors = c("steelblue4", "grey"),
                                   title = NULL){
   
@@ -726,7 +728,7 @@ plot_rating_levels <- function(data){
   
 }
 
-plot_rating_levels_gg <- function(data, base_size = 14){
+plot_rating_levels_gg <- function(data, base_size = base_font_size){
   d <- data |> 
     filter(response_scale %in% c("Ordinal (Likert)")) |> 
     mutate(response_levels = as.numeric(response_levels)) |> 
@@ -778,7 +780,7 @@ plot_rating_levels_gg <- function(data, base_size = 14){
 
 # Reproducibility -------------------------------------
 
-plot_avail_by_year <- function(data, base_size = 14){
+plot_avail_by_year <- function(data, base_size = base_font_size){
   
   data |> 
     mutate(
