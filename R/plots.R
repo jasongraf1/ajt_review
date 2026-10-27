@@ -23,7 +23,7 @@ font <- list(
 font_add_google("Roboto", family = "Roboto")
 showtext_auto()
 
-base_font_size <- 12
+base_font_size <- 10
 
 # Plot functions --------------------------------------
 
