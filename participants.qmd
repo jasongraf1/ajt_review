@@ -26,13 +26,13 @@ source(here("R", "plots.R"))
 - University affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies. 
 - **Compensation is not reported very often**, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).
 - Not all studies report demographics, but usually at least L1 is specified.
-- **Power analysis is almost never reported / conducted**, see [here](@sec-power).
+- **Power analysis is almost never reported / conducted**.
 
 ## Numbers
 
 How many **total participants** were recruited?
 
-The mean number of participants in a given study was `r round(mean(as.numeric(clean$N_parts)))` (median = `r median(as.numeric(clean$N_parts), na.rm = T)`, min = `r min(clean$N_parts, na.rm = T)`, Q1 = `round(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1]`, Q3 = `r round(quantile(as.numeric(clean$N_parts), .75, na.rm = T))[1]`, max = `r max(clean$N_parts, na.rm = T)`).
+The mean number of participants in a given study was `r round(mean(as.numeric(clean$N_parts), na.rm = T))` (median = `r median(as.numeric(clean$N_parts), na.rm = T)`, min = `r min(clean$N_parts, na.rm = T)`, Q1 = `r `round(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1]`, Q3 = `r round(quantile(as.numeric(clean$N_parts), .75, na.rm = T))[1]`, max = `r max(clean$N_parts, na.rm = T)`).
 
 We've had several studies (N = `r sum(is.na(as.numeric(clean$N_participants_recruited)))`) for which the number of participants was not fully clear. These should be double-checked.
 
@@ -52,7 +52,7 @@ make_boxplot(clean, "N_parts", xlab = "Participants Recruited", xrange = c(0, 41
 
 What was the **population** that participants were sampled from? 
 
-The population from which participants are sampled is not always clear. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses to certain countries. Populations from these platforms are coded as "Mixed".
+Details of the participant population are not always described clearly. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses to certain countries. Populations from these platforms are coded as "Mixed".
 
 ```{r}
 #| label: fig-part-pop
@@ -102,9 +102,9 @@ make_perc_gg_barplot(clean, "part_recruitment", title = "by recruitment method")
 
 ### Filtering
 
-Did study report how many participants were included in the **final analysis after filtering**?
+Did the study report how many participants were included in the **final analysis after filtering**?
 
-Most studies do not explicitly report whether they removed data from any participants after initial recruitment. 
+Most studies do not explicitly report whether they removed data from any participants after initial recruitment. We may assume that many of these simply included data from all participants, however, this should be stated explicitly. 
 
 ```{r}
 #| label: fig-filter

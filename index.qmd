@@ -46,7 +46,7 @@ This is just a (not so) quick overview of where we stand with coding the article
 
 Coding has been a slog to say the least. There is a maddeningly high degree variability and (lack of) clarity with which experimental details are reported across the literature, and I'm sure even the detailed coding we've developed isn't capturing all of it. But we're doing our best!
 
-[Got to Annotation App](https://jasongraf1-annotation-app.hf.space){.btn .btn-secondary role="button"}
+[Go to Annotation App](https://jasongraf1-annotation-app.hf.space){.btn .btn-secondary role="button"}
 
 I've included excerpts illustrating this in [Examples](examples.qmd). I've also created a [checklist for authors and reviewers](checklist.qmd) as well as a [glossary](glossary.qmd) for keeping terminology consistent. 
 
