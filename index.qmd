@@ -1,6 +1,10 @@
 ---
-title: "Overview"
-lightbox: false
+title: "Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics"
+author:
+  - name: Jason Grafmiller
+    email: j.grafmiller@bham.ac.uk
+  - Dagmar Divjak
+  - Laura Rosseel
 ---
 
 ```{r}
@@ -13,7 +17,7 @@ suppressMessages(library(janitor)) # for cleaning data
 raw <- readRDS(here("data", "raw.rds"))
 clean <- readRDS(here("data", "clean.rds"))
 full <- readRDS(here("data", "full.rds"))
-
+# 
 source(here("R", "helpers.R"))
 source(here("R", "plots.R"))
 
@@ -42,11 +46,13 @@ This is just a (not so) quick overview of where we stand with coding the article
 
 Coding has been a slog to say the least. There is a maddeningly high degree variability and (lack of) clarity with which experimental details are reported across the literature, and I'm sure even the detailed coding we've developed isn't capturing all of it. But we're doing our best!
 
+[Got to Annotation App](https://jasongraf1-annotation-app.hf.space){.btn .btn-secondary role="button"}
+
 I've included excerpts illustrating this in [Examples](examples.qmd). I've also created a [checklist for authors and reviewers](checklist.qmd) as well as a [glossary](glossary.qmd) for keeping terminology consistent. 
 
 ## Where we are at so far
 
-The full list of articles is included in @sec-bib. So far we've annotated **`r paste0(n_coded,"/",total_articles, " (", perc_coded, "%)")` articles**, containing a total of `r nrow(raw)` individual acceptability judgment task (AJT) studies. Some of these (N = `r n_excluded`) were exculded because they didn't actually include formal AJT experiments.
+The full list of articles is included [here](references.qmd). So far we've annotated **`r paste0(n_coded,"/",total_articles, " (", perc_coded, "%)")` articles**, containing a total of `r nrow(raw)` individual acceptability judgment task (AJT) studies. Some of these (N = `r n_excluded`) were exculded because they didn't actually include formal AJT experiments.
 
 ::: {#fig-art-by-journal}
 ```{r}

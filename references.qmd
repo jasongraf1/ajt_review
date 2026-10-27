@@ -1,5 +1,8 @@
-# List of articles {#sec-bib}
+---
+title: "List of Articles"
+nocite: |
+  @*
+---
 
 ::: {#refs}
-
 :::

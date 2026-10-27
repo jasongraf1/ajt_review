@@ -1,4 +1,8 @@
-# Participants {#sec-participants}
+---
+title: Participants
+toc-title: Participants
+---
+
 
 ```{r}
 #| label: setup

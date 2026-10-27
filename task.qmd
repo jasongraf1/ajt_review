@@ -17,7 +17,7 @@ source(here("R", "plots.R"))
 
 ## Key takeaways
 
-- **Likert-type scales dominate**: about 7 in 10 studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
+- **Likert-type scales dominate**: about 70% studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
 - **The construct being rated is often unclear**. "Acceptability" is the most common term used to describe the judgment by the authors, but "Not Reported" is the *second* most common category â€” meaning readers often have to guess whether participants were rating grammaticality, naturalness, or something else entirely.
 - **Task administration details are rarely reported**: timing (self-paced vs. fixed), whether sessions were supervised, whether there were practice/pilot trials, breaks, or comprehension checks are almost never mentioned.
 - Delivery format has shifted toward computer-based administration, but a substantial share of studies still don't report much detail on how the task was delivered.
@@ -126,7 +126,7 @@ Beyond the response format itself, details of *how* the task was administered â€
 Was the **task duration** recorded?
 
 
-Many studies do report average performance time, and most experimental software and platforms record time automatically. But yet again---say it with me now---this is not often explicitly reported in the text.
+Many studies do report average performance time, and most experimental software and platforms record time automatically. But yet again this is not often explicitly reported in the text.
 
 ```{r}
 #| label: fig-task-duration
@@ -141,7 +141,7 @@ make_perc_gg_barplot(clean, "task_duration")
 
 Were items presented in a **fixed or variable amount of time**, or was the presentation **self-paced** (participants proceded at their own pace)? 
 
-Some studies may use speeded judgment tasks. Most allow participants to proceed at their own pace but this is rarely explicitly stated.
+Some studies may use speeded judgment tasks. Most allow participants to proceed at their own pace but this is rarely explicitly stated. Unless the article explicitly mentioned using a self-paced presentation, the study was coded as "Not Reported", however we suspect that most tasks, especially online ones, did in fact allow 
 
 ```{r}
 #| label: fig-task-timing

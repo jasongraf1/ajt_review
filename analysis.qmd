@@ -1,4 +1,7 @@
-# Data Analysis {#sec-analysis}
+---
+title: "Data analysis"
+toc-title: "Data analysis"
+---
 
 ```{r}
 #| label: setup

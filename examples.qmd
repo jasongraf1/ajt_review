@@ -169,3 +169,9 @@ From @eberhardt_focus_2019
 > "The 16 experimental conditions and eight items were presented in four versions in a counterbalanced design, so that each person saw each item four times, and each condition twice. They were mixed with 15 filler sentences in a pseudo-random order [...]"
 
 - So what exactly constitutes an "item" in this set up? How many unique sentences were constructed? How many judgment trials did each participant see?  
+
+From @modarresi_pseudo_2021
+
+> "We constructed 36 test items with two conditions and no obvious bias to singular or plural interpretation, including 8 fillers. There were 153 native Persian speakers that voluntarily participated in this experiment using an online survey platform, **answering an average of 16 questions**. The stimuli were presented in six different lists (participants also participated in Experiment 4, but it was made sure that no participant saw the same sentence twice). Each list included both conditions, with an average of four fillers; the items were randomized using Latin square design. (p.22)"
+
+- Here it's not clear why participants would see varying numbers of questions (trials), nor why the number of fillers would vary. 

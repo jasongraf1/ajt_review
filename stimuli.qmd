@@ -62,7 +62,7 @@ What was the total number of **critical items** created for the study *not* incl
 
 The median number of critical items in a given study was `r round(median(clean$N_items, na.rm = T))` (min = `r min(clean$N_items, na.rm = T)`, Q1 = `r quantile(clean$N_items, .25, na.rm = T)`, Q3 = `r quantile(clean$N_items, .75, na.rm = T)`, max = `r max(clean$N_items, na.rm = T)`).
 
-There are `r length(is.na(clean$N_items[clean$N_items)])` studies where the total number of items is not clear. Additionally we have `r length(which(clean$N_items >= 200))` studies with 200 or more items. most of these very large studies are replication studies or comparisons with frequency data, e.g. @white_frequency_2020 who included 50000 items!
+There are `r length(clean$N_items[is.na(clean$N_items)])` studies where the total number of items is not clear. Additionally we have `r length(which(clean$N_items >= 200))` studies with 200 or more items. most of these very large studies are replication studies or comparisons with frequency data, e.g. @white_frequency_2020 who included 50000 items!
 
 ```{r}
 #| label: fig-item-boxplot
