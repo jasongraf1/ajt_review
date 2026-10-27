@@ -114,7 +114,7 @@
     "href": "participants.html",
     "title": "Participants",
     "section": "",
-    "text": "We find that half of our studies involve between 31 and 80 participants, but there are some with huge numbers, for example Sprouse, Messick & Bobaljik (2021).\nThe population that participants are assumed to be sampled from is rarely explicitly stated.\nUniversity affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies.\nCompensation is not reported very often, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).\nNot all studies report demographics, but usually at least L1 is specified.\nPower analysis is almost never reported / conducted, see here.",
+    "text": "We find that half of our studies involve between 31 and 80 participants, but there are some with huge numbers, for example Sprouse, Messick & Bobaljik (2021).\nThe population that participants are assumed to be sampled from is rarely explicitly stated.\nUniversity affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies.\nCompensation is not reported very often, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).\nNot all studies report demographics, but usually at least L1 is specified.\nPower analysis is almost never reported / conducted.",
     "crumbs": [
       "Participants"
     ]
@@ -124,7 +124,7 @@
     "href": "participants.html#key-takeaways",
     "title": "Participants",
     "section": "",
-    "text": "We find that half of our studies involve between 31 and 80 participants, but there are some with huge numbers, for example Sprouse, Messick & Bobaljik (2021).\nThe population that participants are assumed to be sampled from is rarely explicitly stated.\nUniversity affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies.\nCompensation is not reported very often, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).\nNot all studies report demographics, but usually at least L1 is specified.\nPower analysis is almost never reported / conducted, see here.",
+    "text": "We find that half of our studies involve between 31 and 80 participants, but there are some with huge numbers, for example Sprouse, Messick & Bobaljik (2021).\nThe population that participants are assumed to be sampled from is rarely explicitly stated.\nUniversity affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies.\nCompensation is not reported very often, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).\nNot all studies report demographics, but usually at least L1 is specified.\nPower analysis is almost never reported / conducted.",
     "crumbs": [
       "Participants"
     ]
@@ -134,7 +134,7 @@
     "href": "participants.html#numbers",
     "title": "Participants",
     "section": "Numbers",
-    "text": "Numbers\nHow many total participants were recruited?\nThe mean number of participants in a given study was NA (median = 49, min = 8, Q1 = round(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1], Q3 = 80, max = 3072).\nWe’ve had several studies (N = 20) for which the number of participants was not fully clear. These should be double-checked.\n\n\n\n\n\n\n\n\nFigure 1: Numbers of participants vary, but usually are less than 100",
+    "text": "Numbers\nHow many total participants were recruited?\nThe mean number of participants in a given study was 75 (median = 49, min = 8, Q1 = rround(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1]`, Q3 = 80, max = 3072).\nWe’ve had several studies (N = 20) for which the number of participants was not fully clear. These should be double-checked.\n\n\n\n\n\n\n\n\nFigure 1: Numbers of participants vary, but usually are less than 100",
     "crumbs": [
       "Participants"
     ]
@@ -144,7 +144,7 @@
     "href": "participants.html#participant-characteristics",
     "title": "Participants",
     "section": "Participant characteristics",
-    "text": "Participant characteristics\n\nPopulationDemographics\n\n\nWhat was the population that participants were sampled from?\nThe population from which participants are sampled is not always clear. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses to certain countries. Populations from these platforms are coded as “Mixed”.\n\n\n\n\n\n\n\n\nFigure 2: Proportions of populations reported across studies\n\n\n\n\n\n\n\nWhich participant demographics were reported?\nNot all studies report demographics, but usually at least being a native speaker (“Language Background”) is specified. Any mention of average age or sex proportions counted as reporting for our purposes.\n\n\n\n\n\n\n\n\nFigure 3: Proportions of demographics reported across studies",
+    "text": "Participant characteristics\n\nPopulationDemographics\n\n\nWhat was the population that participants were sampled from?\nDetails of the participant population are not always described clearly. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses to certain countries. Populations from these platforms are coded as “Mixed”.\n\n\n\n\n\n\n\n\nFigure 2: Proportions of populations reported across studies\n\n\n\n\n\n\n\nWhich participant demographics were reported?\nNot all studies report demographics, but usually at least being a native speaker (“Language Background”) is specified. Any mention of average age or sex proportions counted as reporting for our purposes.\n\n\n\n\n\n\n\n\nFigure 3: Proportions of demographics reported across studies",
     "crumbs": [
       "Participants"
     ]
@@ -154,7 +154,7 @@
     "href": "participants.html#recruitment-and-compensation",
     "title": "Participants",
     "section": "Recruitment and compensation",
-    "text": "Recruitment and compensation\n\nRecruitmentFilteringCompensation\n\n\nHow were participants recruited?\nUniversity affiliation (students and/or staff) is the most common way to get participants, but online platforms have become much more common as we annotate more recent studies.\nNonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe how involvement from students was solicited (e.g. via fliers, social media, classrooms, word-of-mouth).\n\n\n\n\n\n\n\n\nFigure 4: Proportions of recruitment methods reported across studies\n\n\n\n\n\n\n\nDid study report how many participants were included in the final analysis after filtering?\nMost studies do not explicitly report whether they removed data from any participants after initial recruitment.\n\n\n\n\n\n\n\n\nFigure 5: Proportions of studies reporting whether participants were filtered/excluded from final analysis\n\n\n\n\n\n\n\nHow were participants compensated?\nCompensation is not often reported, particularly when off-line recruitment methods are used. Online platforms such as AMT and Prolific pay participants directly, so this may be assumed by authors. Many do report payments, but how much they were paid is not always given. Studies occasionally do explicitly report not compensating participants.\n\n\n\n\n\n\n\n\nFigure 6: Proportions of compensation methods reported across studies",
+    "text": "Recruitment and compensation\n\nRecruitmentFilteringCompensation\n\n\nHow were participants recruited?\nUniversity affiliation (students and/or staff) is the most common way to get participants, but online platforms have become much more common as we annotate more recent studies.\nNonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe how involvement from students was solicited (e.g. via fliers, social media, classrooms, word-of-mouth).\n\n\n\n\n\n\n\n\nFigure 4: Proportions of recruitment methods reported across studies\n\n\n\n\n\n\n\nDid the study report how many participants were included in the final analysis after filtering?\nMost studies do not explicitly report whether they removed data from any participants after initial recruitment. We may assume that many of these simply included data from all participants, however, this should be stated explicitly.\n\n\n\n\n\n\n\n\nFigure 5: Proportions of studies reporting whether participants were filtered/excluded from final analysis\n\n\n\n\n\n\n\nHow were participants compensated?\nCompensation is not often reported, particularly when off-line recruitment methods are used. Online platforms such as AMT and Prolific pay participants directly, so this may be assumed by authors. Many do report payments, but how much they were paid is not always given. Studies occasionally do explicitly report not compensating participants.\n\n\n\n\n\n\n\n\nFigure 6: Proportions of compensation methods reported across studies",
     "crumbs": [
       "Participants"
     ]
@@ -334,7 +334,7 @@
     "href": "checklist.html",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
     "section": "",
-    "text": "The following checklist sets out key information specifications for reporting experimental Acceptability Judgment Task (AJT) studies in theoretical linguistics. It is designed to encourage clarity and precision without prescribing specific theoretical commitments or statistical frameworks. Our goal is to provide a minimal shared vocabulary for authors, readers and reviewers to draw from (see also our Glossary). This checklist represents a guide for authors to ensure that their work can be understood, evaluated, and reused by fellow scholars, as well as a diagnostic tool for reviewers to notice when key design commitments are underspecified in study reporting. The checklist is also intended to align with open science practices without insisting on preregistration or complex infrastructure.\nThere are good overviews of how to carefully design AJTs readily available (e.g. Schütze & Sprouse 2013; Goodall 2021; Häussler & Juzek 2021), and much of the information in these recommendations is already commonly reported in modern studies. However, there remains a surprising lack of consistency across authors, journals and publishers in both the terminology used as well as the amount of detail provided when writing up these studies. Each item on this checklist corresponds to a potential confusion/failure point in the reporting of experimental studies, many of which we commonly observed in our review.",
+    "text": "The following checklist sets out key information specifications for reporting experimental Acceptability Judgment Task (AJT) studies in theoretical linguistics. It is designed to encourage clarity and precision without prescribing specific theoretical commitments or statistical frameworks. Our goal is to provide a minimal shared vocabulary for authors, readers and reviewers to draw from (see also our Glossary). This checklist represents a guide for authors to ensure that their work can be understood, evaluated, and reused by fellow scholars, as well as a diagnostic tool for reviewers to notice when key design commitments are underspecified in study reporting. The checklist is also intended to align with open science practices without insisting on preregistration or complex infrastructure.\nThere are good overviews of how to carefully design AJTs readily available (e.g. Schütze & Sprouse 2013; Goodall 2021; Häussler & Juzek 2021), and much of the information in these recommendations is already commonly reported in modern studies. However, there remains a surprising lack of consistency across authors, journals and publishers in both the terminology used as well as the amount of detail provided when writing up AJT studies.\nEach item on this checklist corresponds to a potential confusion/failure point in the reporting of experimental studies, many of which we commonly observed in our review.",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -344,7 +344,7 @@
     "href": "checklist.html#research-questions-and-aims",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
     "section": "1. Research question(s) and aim(s)",
-    "text": "1. Research question(s) and aim(s)\nAuthors should explicitly report:\n\nThe language or language variety being studied\nthe phenomenon under investigation\nthe specific hypotheses that the study is aiming to test, including which contrasts are hypothesised a priori (predicted comparisons) and which are exploratory",
+    "text": "1. Research question(s) and aim(s)\nAuthors should explicitly report:\n\nthe language or language variety being studied\nthe phenomenon under investigation\nthe specific hypotheses that the study is aiming to test, including which contrasts are hypothesized a priori (predicted comparisons) and which are exploratory",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -360,21 +360,11 @@
     ]
   },
   {
-    "objectID": "checklist.html#definition-of-item",
-    "href": "checklist.html#definition-of-item",
-    "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
-    "section": "3. Definition of “item”",
-    "text": "3. Definition of “item”\nAuthors should explicitly define what counts as a critical item in the study, e.g. a sentence token, a minimally contrasted sentence pair, a lexical root instantiated across frames.\nWe strongly recommend that the term ‘item’ should be exclusively used to refer to a single unique stimulus that a participant is intended to respond to (see Glossary). If multiple sets of stimulus items or item types are involved (e.g. constructional frames with matched lexical fillers), their relationship should be described.",
-    "crumbs": [
-      "Checklist for authors"
-    ]
-  },
-  {
     "objectID": "checklist.html#items-and-stimulus-construction",
     "href": "checklist.html#items-and-stimulus-construction",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
-    "section": "4. Items and stimulus construction",
-    "text": "4. Items and stimulus construction\nAuthors should explicitly report:\n\nthe total number of unique items (tokens), including both the number of critical items and filler items, if used\nhow critical items were constructed or selected\nhow filler items were constructed or selected, including proportions of acceptability levels as well as justification for the number of filler items used1\nwhether the same items appear in multiple conditions or whether conditions use disjoint item sets\nthe number of items (tokens) per experimental condition\nwhere the complete list of items, including all filler items, can be found\n\nAny controls or constraints on items’ construction or selection (lexical frequency, length, plausibility, animacy, etc.) should be briefly noted.",
+    "section": "3. Items and stimulus construction",
+    "text": "3. Items and stimulus construction\nWe strongly recommend that the term ‘item’ should be exclusively used to refer to a single unique stimulus that a participant is intended to respond to (see Glossary). If multiple sets of stimulus items or item types are involved (e.g. constructional frames with matched lexical fillers), their relationship should be described. Authors should explicitly define what counts as a critical item in the study, e.g. a sentence token, a minimally contrasted sentence pair, a lexical root instantiated across frames.\nAuthors should explicitly report:\n\nthe total number of unique items (tokens), including both the number of critical items and filler items, if used\nhow critical items were constructed or selected\nhow filler items were constructed or selected, including proportions of acceptability levels as well as justification for the number of filler items used1\nwhether the same items appear in multiple conditions or whether conditions use disjoint item sets\nthe number of items (tokens) per experimental condition\nwhere the complete list of items, including all filler items, can be found\n\nAny controls or constraints on items’ construction or selection (lexical frequency, length, plausibility, animacy, etc.) should be briefly noted.",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -383,8 +373,8 @@
     "objectID": "checklist.html#counterbalancing-and-presentation",
     "href": "checklist.html#counterbalancing-and-presentation",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
-    "section": "5. Counterbalancing and presentation",
-    "text": "5. Counterbalancing and presentation\nAuthors should explicitly report:\n\nhow items were organised for presentation, including any blocking and/or randomization procedures\nthe number of critical items seen by each participant\n\nIf different (counterbalanced) item lists were presented to participants, authors should describe and report the counterbalancing scheme, including:\n\nthe number of lists and procedures for assigning items and participants to lists\nhow lists were presented to participants\n\nNote: If no counterbalancing is used, i.e. all participants saw all items, this should be stated explicitly.",
+    "section": "4. Counterbalancing and presentation",
+    "text": "4. Counterbalancing and presentation\nAuthors should explicitly report:\n\nhow items were organised for presentation, including any blocking and/or randomization procedures\nthe number of critical items seen by each participant\n\nIf different (counterbalanced) item lists were presented to participants, authors should describe and report the counterbalancing scheme, including:\n\nthe number of lists and procedures for assigning items and participants to lists\nhow lists were presented to participants\n\nNote: If no counterbalancing is used, i.e. all participants saw all items, this should be stated explicitly.",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -393,8 +383,8 @@
     "objectID": "checklist.html#participants",
     "href": "checklist.html#participants",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
-    "section": "6. Participants",
-    "text": "6. Participants\nAuthors should explicitly report:\n\nthe total number of participants initially recruited\nthe population from which participants were sampled, including key inclusion criteria such as region, language background, training in linguistics, age2\nhow participants were recruited (if university students were used, it should be explained how students were notified and brought into the study)\npost-sampling exclusion criteria and number of exclusions, if any\nthe final number of participants (after any filtering) whose data were included in the analysis\nhow participants were compensated. If no compensation was provided, this should be stated explicitly.\nhow informed consent was obtained from participants",
+    "section": "5. Participants",
+    "text": "5. Participants\nAuthors should explicitly report:\n\nthe total number of participants initially recruited\nthe population from which participants were sampled, including key inclusion criteria such as region, language background, training in linguistics, age2\nhow participants were recruited (if university students were used, it should be explained how students were notified and brought into the study)\npost-sampling exclusion criteria and number of exclusions, if any\nthe final number of participants (after any filtering) whose data were included in the analysis\nhow participants were compensated. If no compensation was provided, this should be stated explicitly.\nhow informed consent was obtained from participants",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -403,8 +393,8 @@
     "objectID": "checklist.html#procedure-and-task",
     "href": "checklist.html#procedure-and-task",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
-    "section": "7. Procedure and task",
-    "text": "7. Procedure and task\nAuthors should explicitly describe and report:\n\nthe task participants performed\nthe exact instructions provided to participants (e.g. as the verbatim instruction text or screen capture in an appendix)\nthe construct the task is intended to tap (acceptability, grammaticality, felicity, plausibility, etc.)\nthe response measure(s) collected (e.g. ratings, choices, reaction times)\nthe exact number of experimental trials each participant saw/heard (this is not the same as the number of critical items)\nthe modality in which the stimuli were delivered (e.g., written, auditory, signed)\nthe means by which participants gave their responses (e.g., computer-based, hand-written, spoken, signed)\nthe setting of the task, including whether it was done under supervision of the researcher (e.g. in a lab or a classroom)\nwhether any timing constraints were placed on performance. If response time was unlimited and/or participants could proceed at their own pace, this should be stated explicitly.\nwhether participants were able to review or change their responses\nwhether participants were able to take breaks during the study\nany and all software tools used for delivery of the task (e.g. Ibex, Qualtrics)\n\nAny additional aspects of the procedure relevant to inference (e.g. inclusion of practice or calibration trials, inclusion of comprehension questions, pilot-testing) should also be noted.",
+    "section": "6. Procedure and task",
+    "text": "6. Procedure and task\nAuthors should explicitly describe and report:\n\nthe task participants performed\nthe exact instructions provided to participants (e.g. as the verbatim instruction text or screen capture in an appendix)\nthe construct the task is intended to tap (acceptability, grammaticality, felicity, plausibility, etc.)\nthe response measure(s) collected (e.g. ratings, choices, reaction times)\nthe exact number of experimental trials each participant saw/heard (this is not the same as the number of critical items)\nthe modality in which the stimuli were delivered (e.g., written, auditory, signed)\nthe means by which participants gave their responses (e.g., computer-based, hand-written, spoken, signed)\nthe setting of the task, including whether it was done under supervision of the researcher (e.g. in a lab or a classroom)\nwhether any timing constraints were placed on performance. If response time was unlimited and/or participants could proceed at their own pace, this should be stated explicitly.\nwhether participants were able to review or change their responses\nwhether participants were able to take breaks during the study\nany and all software tools used for delivery of the task (e.g. Ibex, Qualtrics)\n\nAny additional aspects of the procedure relevant to inference (e.g. inclusion of practice or calibration trials, inclusion of comprehension questions, pilot-testing) should also be noted.",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -413,8 +403,8 @@
     "objectID": "checklist.html#analysis-and-inferential-structure",
     "href": "checklist.html#analysis-and-inferential-structure",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
-    "section": "8. Analysis and inferential structure",
-    "text": "8. Analysis and inferential structure\nAuthors should explicitly report:\n\nthe dependent variable(s)\nany statistical manipulations to the dependent variable, e.g. log-transform, z-score normalization\nthe statistical model(s) or test(s) used, including the test statistics, measures of effect size3, and where relevant, the threshold of statistical significance (usually α &lt; 0.05)4\nwhether participants and/or items are treated as sources of variability (e.g. by grouping or as random factors). If not done, authors should justify why this is not necessary.\nhow experimental conditions enter the analysis, e.g. as main effects or interactions in a regression model\nthe software tool(s) used for analysis (e.g., R, Python, SPSS)\nwhere the data and software code used for the analysis can be obtained\n\nAny additional statistical analyses (e.g., satiation analysis, power analysis or autocorrelation analysis) should be briefly noted and data and code for these should also be made available.",
+    "section": "7. Analysis and inferential structure",
+    "text": "7. Analysis and inferential structure\nAuthors should explicitly report:\n\nthe dependent variable(s)\nany statistical manipulations to the dependent variable, e.g. log-transform, z-score normalization\nthe statistical model(s) or test(s) used, including the test statistics, measures of effect size3, and where relevant, the threshold of statistical significance (usually α &lt; 0.05)4\nwhether participants and/or items are treated as sources of variability (e.g. by grouping or as random factors). If not done, authors should justify why this is not necessary.\nhow experimental conditions enter the analysis, e.g. as main effects or interactions in a regression model\nthe software tool(s) used for analysis (e.g., R, Python, SPSS)\nwhere the data and software code used for the analysis can be obtained\n\nAny additional statistical analyses (e.g., satiation analysis, power analysis or autocorrelation analysis) should be briefly noted and data and code for these should also be made available.",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -423,8 +413,8 @@
     "objectID": "checklist.html#transparency-and-availability",
     "href": "checklist.html#transparency-and-availability",
     "title": "A Minimal Checklist for Reporting Experimental Studies in Linguistics",
-    "section": "9. Transparency and availability",
-    "text": "9. Transparency and availability\nAt minimum, authors should provide:\n\na complete list of all experimental items used in the study, including both critical and filler items (and any check items or comprehension questions)\nthe exact instructions provided to participants\nthe complete dataset and software code used for analysis5\nindication of whether the study was preregistered, and if so, where\nwhere the above can be accessed (or why they cannot be shared)\nhow ethical review was sought, conducted and approved\n\nThis information can be included as appendices in the original paper, or better as supplementary materials published with the article or in an online repository. Where to find these materials should be clearly described in a brief data availability statement, or as a link to a public repository.",
+    "section": "8. Transparency and availability",
+    "text": "8. Transparency and availability\nAt minimum, authors should provide:\n\na complete list of all experimental items used in the study, including both critical and filler items (and any check items or comprehension questions)\nthe exact instructions provided to participants\nthe complete dataset and software code used for analysis5\nindication of whether the study was preregistered, and if so, where\nwhere the above can be accessed (or why they cannot be shared)\nhow ethical review was sought, conducted and approved\n\nThis information can be included as appendices in the original paper, or better as supplementary materials published with the article or in an online repository. Where to find these materials should be clearly described in a brief data availability statement, or as a link to a public repository.",
     "crumbs": [
       "Checklist for authors"
     ]
@@ -484,7 +474,7 @@
     "href": "index.html",
     "title": "Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics",
     "section": "",
-    "text": "This is just a (not so) quick overview of where we stand with coding the articles, and some observations about what we’ve found so far.\nCoding has been a slog to say the least. There is a maddeningly high degree variability and (lack of) clarity with which experimental details are reported across the literature, and I’m sure even the detailed coding we’ve developed isn’t capturing all of it. But we’re doing our best!\nGot to Annotation App\nI’ve included excerpts illustrating this in Examples. I’ve also created a checklist for authors and reviewers as well as a glossary for keeping terminology consistent.",
+    "text": "This is just a (not so) quick overview of where we stand with coding the articles, and some observations about what we’ve found so far.\nCoding has been a slog to say the least. There is a maddeningly high degree variability and (lack of) clarity with which experimental details are reported across the literature, and I’m sure even the detailed coding we’ve developed isn’t capturing all of it. But we’re doing our best!\nGo to Annotation App\nI’ve included excerpts illustrating this in Examples. I’ve also created a checklist for authors and reviewers as well as a glossary for keeping terminology consistent.",
     "crumbs": [
       "Home"
     ]
