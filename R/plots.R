@@ -237,6 +237,7 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_siz
   
   if (xmax > 80) {
     cap = "upper"
+    xmax <- 100
   } else {
       cap = "none"
     }
@@ -753,10 +754,11 @@ plot_rating_levels_gg <- function(data, base_size = base_font_size){
     expand = expansion(mult = c(0, 0.02)),
   ) +
   scale_x_continuous(
-    name = "Number of values on response scale",
+    # name = "Number of values on response scale",
     breaks = seq(min(d$response_levels), max(d$response_levels)),
     expand = expansion(mult = c(0.02, 0.02)),
   ) +
+  ggtitle("Number of values on Likert scale") + 
   theme_minimal(base_size = base_size) +
   theme(
     text = element_text(family = "Roboto"),
