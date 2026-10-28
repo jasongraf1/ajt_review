@@ -13,11 +13,16 @@ full <- readRDS(here("data", "full.rds"))
 
 source(here("R", "helpers.R"))
 source(here("R", "plots.R"))
+
+scale_perc <- clean |> 
+  # count(response_scale) |> 
+  filter(response_scale == "Ordinal (Likert)") |> 
+  nrow()/nrow(clean)*100 
 ```
 
 ## Key takeaways
 
-- **Likert-type scales dominate**: about 70% studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
+- **Likert-type scales dominate**: about `r round(scale_perc)` studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
 - **The construct being rated is often unclear**. "Acceptability" is the most common term used to describe the judgment by the authors, but "Not Reported" is the *second* most common category — meaning readers often have to guess whether participants were rating grammaticality, naturalness, or something else entirely.
 - **Task administration details are rarely reported**: timing (self-paced vs. fixed), whether sessions were supervised, whether there were practice/pilot trials, breaks, or comprehension checks are almost never mentioned.
 - Delivery format has shifted toward computer-based administration, but a substantial share of studies still don't report much detail on how the task was delivered.
@@ -45,14 +50,14 @@ clean |>
       TRUE ~ response_scale
      )
   ) |> 
-  make_perc_gg_barplot("scale_fine", base_size = 12)
+  make_perc_gg_barplot("scale_fine", base_size = 10, title = "by response scale used")
 ```
 
 ### Scale levels
 
 How many **levels of acceptability** were used (2, 7, 100, …)?
 
-For studies using an ordinal scale of 3 or more levels, the number of response levels is fairly concentrated around 7 and 5 points.
+For studies using an ordinal scale of 3 or more levels, the number of response levels is fairly concentrated around those using either 5 or 7 points.
 
 ```{r}
 #| label: fig-response-levels
@@ -73,7 +78,7 @@ An important note is that **most articles do not provide the exact instructions 
 #| fig-cap: "Terminology used to describe the judgment being elicited"
 #| fig-width: 8
 #| fig-height: 4.5
-make_split_perc_gg_barplot(clean, "rating_terminology", base_size = 12)
+make_split_perc_gg_barplot(clean, "rating_terminology", base_size = 10, title = "by label terminology")
 ```
 
 The label used matters. "Acceptability," "grammaticality," and "naturalness" are not interchangeable constructs, yet a suprising number of studies (N = `r nrow(filter(clean, rating_terminology == "Not Reported"))`) don't specify which one they're measuring [we need to check this].
@@ -96,10 +101,10 @@ Again, this is often not reported explicitly, but it can be reasonably inferred 
 #| fig-cap: "Written presentation dominates; auditory AJTs remain relatively rare"
 #| fig-width: 8
 #| fig-height: 3.5
-make_perc_gg_barplot(clean, "presentation_modality")
+make_perc_gg_barplot(clean, "presentation_modality", title = "by presentation modality")
 ```
 
-### Delivery format
+### Entry format
 
 How were participant **responses** recorded?
 
@@ -110,7 +115,7 @@ Any studies using software tools and online delivery were automatically coded as
 #| fig-cap: "Computer-based delivery is now the most common format, though paper surveys persist"
 #| fig-width: 8
 #| fig-height: 3.5
-make_perc_gg_barplot(clean, "delivery_format")
+make_perc_gg_barplot(clean, "delivery_format", title = "by response entry format")
 ```
 
 :::
@@ -133,7 +138,7 @@ Many studies do report average performance time, and most experimental software 
 #| fig-cap: "Did the study mention how long participants took (usually as an average)?"
 #| fig-width: 8
 #| fig-height: 2.5
-make_perc_gg_barplot(clean, "task_duration")
+make_perc_gg_barplot(clean, "task_duration", title = "reporting recording of total duration")
 ```
 
 
@@ -141,28 +146,28 @@ make_perc_gg_barplot(clean, "task_duration")
 
 Were items presented in a **fixed or variable amount of time**, or was the presentation **self-paced** (participants proceded at their own pace)? 
 
-Some studies may use speeded judgment tasks. Most allow participants to proceed at their own pace but this is rarely explicitly stated. Unless the article explicitly mentioned using a self-paced presentation, the study was coded as "Not Reported", however we suspect that most tasks, especially online ones, did in fact allow 
+Some studies may use speeded judgment tasks, which we code as "Fixed". Most allow participants to proceed at their own pace but this is rarely explicitly stated. Unless the article explicitly mentioned using a self-paced presentation, the study was coded as "Not Reported". However we suspect that most tasks, especially online ones, did in fact allow participants to proceed at their own pace. So again, these are conservative estimates.
 
 ```{r}
 #| label: fig-task-timing
 #| fig-cap: "Whether the task was self-paced or had a fixed presentation time is rarely reported"
 #| fig-width: 8
 #| fig-height: 3
-make_perc_gg_barplot(clean, "task_timing")
+make_perc_gg_barplot(clean, "task_timing", title = "by presentation timing")
 ```
 
 ### Supervision
 
 Was the study conducted under **supervision of the researcher** (e.g. in a lab or classroom with researcher present)?
 
-Any study administered in a lab or classroom was coded as "Yes". Studies using online crowd-sourcing platforms (AMT, Prolific) we automatically coded as "No". In many other cases though it's unclear whether the task was performed under any kind of supervision.  
+Any study administered in a lab or classroom was coded as "Yes". Studies using online crowd-sourcing platforms (AMT, Prolific) we automatically coded as "No". In many other cases it's unclear whether the task was performed under any kind of supervision.  
 
 ```{r}
 #| label: fig-task-supervision
 #| fig-cap: "Whether sessions were supervised (e.g. in-lab vs. unsupervised online)"
 #| fig-width: 8
 #| fig-height: 3
-make_perc_gg_barplot(clean, "task_supervision")
+make_perc_gg_barplot(clean, "task_supervision", title = "by task setting (supervision)")
 ```
 
 ### Other details

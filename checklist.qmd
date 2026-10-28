@@ -59,7 +59,7 @@ If different (counterbalanced) item lists were presented to participants, author
 - the number of lists and procedures for assigning items and participants to lists
 - how lists were presented to participants
 
-*Note:* If no counterbalancing is used, i.e. all participants saw all items, this should be stated explicitly.
+*Note:* If no counterbalancing was used, i.e. every participant saw every item, this should be stated explicitly.
 
 ## 5. Participants
 
@@ -68,8 +68,8 @@ Authors should explicitly report:
 - the total number of participants *initially recruited*
 - the population from which participants were sampled, including key inclusion criteria such as region, language background, training in linguistics, age[^2]
 - how participants were recruited (if university students were used, it should be explained how students were notified and brought into the study)
-- post-sampling exclusion criteria and number of exclusions, if any
-- *the final number of participants* (after any filtering) whose data were included in the analysis
+- post-sampling exclusion criteria and number of exclusions, if any. If no filtering was done, this should be stated explicitly.
+- the final number of participants (after any filtering) whose data were included in the analysis
 - how participants were compensated. If no compensation was provided, this should be stated explicitly.
 - how informed consent was obtained from participants
 
@@ -78,18 +78,18 @@ Authors should explicitly report:
 
 Authors should explicitly describe and report:
 
-- the task participants performed
-- the **exact instructions** provided to participants (e.g. as the verbatim instruction text or screen capture in an appendix)
-- the construct the task is intended to tap (acceptability, grammaticality, felicity, plausibility, etc.)
-- the response measure(s) collected (e.g. ratings, choices, reaction times)
+- the **exact instructions** provided to participants, e.g. as the verbatim instruction text or screen capture in an appendix
+- the label used to describe what is being evaluated (acceptability, grammaticality, felicity, plausibility, etc.)
+- task participants performed, including the response measure(s) collected (e.g. ratings, choices, reaction times)
+- the number of response levels
 - the exact number of experimental trials each participant saw/heard (this is not the same as the number of critical items)
-- the modality in which the stimuli were delivered (e.g., written, auditory, signed)
-- the means by which participants gave their responses (e.g., computer-based, hand-written, spoken, signed)
-- the setting of the task, including whether it was done under supervision of the researcher (e.g. in a lab or a classroom)
+- the modality in which the stimuli were delivered (written, auditory, signed, mixed,...)
+- the means by which participants indicated their responses (computer-based, hand-written, spoken, signed,...)
+- the setting of the task, including whether it was done under supervision of the researcher, e.g., in a lab or a classroom
 - whether any timing constraints were placed on performance. If response time was unlimited and/or participants could proceed at their own pace, this should be stated explicitly.
-- whether participants were able to review or change their responses
+- whether participants were able to back-track, review or change their responses
 - whether participants were able to take breaks during the study
-- any and all software tools used for delivery of the task (e.g. Ibex, Qualtrics)
+- any and all software tools used for delivery of the task (Ibex, Qualtrics,...)
 
 Any additional aspects of the procedure relevant to inference (e.g. inclusion of practice or calibration trials, inclusion of comprehension questions, pilot-testing) should also be noted.
 
@@ -97,12 +97,12 @@ Any additional aspects of the procedure relevant to inference (e.g. inclusion of
 
 Authors should explicitly report:
 
-- the dependent variable(s)
-- any statistical manipulations to the dependent variable, e.g. log-transform, z-score normalization
+- the dependent variable(s) being analysed 
+- any pre-processing or statistical manipulations applied to the dependent variable (log-transform, z-score normalization,...)
 - the statistical model(s) or test(s) used, including the test statistics, measures of effect size[^eff], and where relevant, the threshold of statistical significance (usually *α* \< 0.05)[^3]
 - whether participants and/or items are treated as sources of variability (e.g. by grouping or as random factors). If not done, *authors should justify why this is not necessary*.
 - how experimental conditions enter the analysis, e.g. as main effects or interactions in a regression model
-- the software tool(s) used for analysis (e.g., R, Python, SPSS) 
+- the software tool(s) used for analysis (R, Python, SPSS,...) 
 - where the data and software code used for the analysis can be obtained
 
 Any additional statistical analyses (e.g., satiation analysis, power analysis or autocorrelation analysis) should be briefly noted and data and code for these should also be made available.
@@ -111,10 +111,10 @@ Any additional statistical analyses (e.g., satiation analysis, power analysis or
 
 At minimum, authors should provide:
 
-- a **complete list of all experimental items** used in the study, including both critical *and* filler items (and any check items or comprehension questions)
-- the **exact instructions** provided to participants
-- the **complete dataset and software code** used for analysis[^4]
-- indication of whether the study was **preregistered**, and if so, where
+- a complete list of all experimental items used in the study, including both critical *and* filler items (and any check items or comprehension questions)
+- the exact instructions provided to participants
+- the complete dataset and all software code used for analysis[^4]
+- indication of whether the study was preregistered, and if so, where
 - where the above can be accessed (or why they cannot be shared)
 - how ethical review was sought, conducted and approved
 
@@ -122,10 +122,10 @@ This information can be included as appendices in the original paper, or better 
 
 [^1]: To our knowledge there is currently no clear consensus on how many fillers should be used, and commonly cited sources give conflicting suggestions for critical-to-filler item ratios ranging from 1:1 [@goodall_sentence_2021] to 1:2 or 1:3 [@cowart_experimental_1997]. This variability is also found in related fields where there is recent evidence that filler items can impact certain kinds of tasks [@arehalli_experimental_2021].   
 
-[^2]: It's common to report basic demographic information about participants, but this information is often considered only incidental to the primary research questions, so it is not always reported.
+[^2]: It's common to mention basic demographic information about participants, but this information is often considered only incidental to the primary research questions, so it is not always included.
 
 [^eff]: Test statistics such as $F$, $t$, or $\chi^2$ are *not* measures of effect size, although regression model coefficients ($b$ or $\beta$) are considered effect size measures. Common effect size measures for ANOVA are (partial) $\eta^2$ or $\omega^2$, and Cohen's $d$ is often used with *t* tests.      
 
 [^3]: The *p* \< 0.05 standard is so ubiquitous that it is almost never mentioned, but we feel it's good practice to encourage more reflection on data analysis assumptions.
 
-[^4]: This is not merely tables of averages or other summary statistics. Authors should provide the (anonymized) *complete raw data* from the study, including *every response from every participant* along with all metadata (e.g. demographic information) collected.
+[^4]: This is not merely tables of averages or other summary statistics. Authors should provide the *complete raw (anonymized) data* from the study, including *every response from every participant* along with all metadata (e.g. demographic information) collected.

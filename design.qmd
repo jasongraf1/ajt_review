@@ -78,7 +78,7 @@ make_boxplot(clean, "N_conds", xlab = "Experimental Conditions", xrange = c(0, 5
 
 Did the study use a **within-subjects** or **between-subjects** design?
 
-Most studies are not interested in between-groups patterns.
+Most studies are not interested in between-groups patterns, and within-subjects is the default. In most cases this is not reported explicitly, but for this feature we coded "Within-subjects" where it was clear from the discussion.
 
 ```{r}
 #| label: fig-design-type

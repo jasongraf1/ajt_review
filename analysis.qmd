@@ -20,11 +20,11 @@ source(here("R", "plots.R"))
 
 ## Key takeaways
 
-- **Mixed-effects regression is now the dominant analysis approach**, having overtaken ANOVA, which is consistent with the field's broader shift toward models that can handle by-participant and by-item variability directly rather than aggregating it away. That said, random effect structure is inconsistently reported. Often it is simply reported as "random effects of subject and item", without specifying the exact random effect structure. 
-- **Effect sizes are usually absent, except when reported as regression coefficients.** Most studies not using regression (e.g. ANOVA or t-tests) report only significance tests and *F* or *t* scores, not a standardized measure of effect magnitude such as $\eta^2$ or Cohen's $d$. 
+- **Mixed-effects regression is now the dominant analysis approach**, having overtaken ANOVA, but random effect structure is inconsistently reported.  
+- **Effect sizes are usually absent, except when reported as regression coefficients.** Most studies not using regression (e.g. ANOVA or t-tests) report only significance tests and *F* or *t* scores, not a standardized measure of effect magnitude such as $\eta^2$ or Cohen's *d*.
 - **Power analysis is almost never conducted** (or at least never reported), despite sample and item sizes varying enormously across the field (see [Experimental Design](design.qmd) and [Stimuli](stimuli.qmd)).
-- **Bayesian methods remain rare**, and multiple-comparison corrections are almost never mentioned.
-- Analysis software is reported inconsistently. R is the most common tool when specified, but over half of studies don't say what software was used at all.
+- Bayesian methods remain rare, and multiple-comparison corrections are almost never mentioned.
+- R is the most common tool when specified, but over half of studies don't say what software was used at all.
 
 ## Statistical approach
 
@@ -37,7 +37,7 @@ What **statistical methods** were used to test hypotheses?
 ```{r}
 #| label: fig-statistical-test
 #| fig-cap: "Mixed-effects regression is now more common than traditional ANOVA"
-make_perc_gg_barplot(clean, "statistical_test", base_size = 12)
+make_perc_gg_barplot(clean, "statistical_test", title = "by statistical methods")
 ```
 
 ### Software
@@ -48,7 +48,7 @@ What **software tools** were used for analysis?
 #| label: fig-software
 #| fig-cap: "R is the most common analysis software when reported, but reporting is inconsistent"
 #| fig-height: 3.5
-make_perc_gg_barplot(clean, "software", base_size = 12)
+make_perc_gg_barplot(clean, "software", title = "by analysis software used")
 ```
 
 ### Bayesian methods
@@ -61,7 +61,7 @@ Did the analysis use **Bayesian** methods?
 #| fig-height: 2
 clean |> 
   mutate(bayesian = ifelse(bayesian == "No", "Not Reported", "Yes")) |> 
-  make_perc_gg_barplot("bayesian", base_size = 12)
+  make_perc_gg_barplot("bayesian", title = "using Bayesian methods")
 ```
 
 :::
@@ -80,7 +80,7 @@ Many studies use separate by-subject and by-item ANOVAs, and we include those he
 #| label: fig-random-effects
 #| fig-cap: "Random effect structure used in mixed-effects models, where reported"
 #| fig-height: 3.5
-make_split_perc_gg_barplot(clean, "random_effects")
+make_split_perc_gg_barplot(clean, "random_effects", title = "examining participant / item variation")
 ```
 
 ### Scale treatment

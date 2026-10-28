@@ -1,4 +1,7 @@
-# Examples {#sec-examples}
+---
+title: Examples from the literature
+toc-title: Examples
+---
 
 Here I've listed excerpts from studies illustrating some examples of good practice and (sadly many more) examples of poor practice. The point isn't to call out any individuals for their mistakes, but rather to illustrate how pervasive the imprecision and inconsistency in reporting is across the literature. Even the most well-known and experienced researchers are guilty of this, and we find the same issues with our own  writing.
 
@@ -39,37 +42,36 @@ From @villata_intervention_2016:
 
 - Also very clear. Note the inclusion of information regarding participant environment and time constraints.
 
+
 ## Examples of over-complicated design {#sec-complicated}
 
 From @dabrowska_questions_2008a:
 
 > "The experiment described in this paper was designed to investigate how each of these three factors [subject, verb, auxiliary] individually contributes to speakers' judgment. It will also examine two additional grammatical factors: the presence or absence of a complementizer and the number of clauses intervening between the WH word and the gap, as well as the effects of plausibility and syntactic complexity."
 
-- There were seven experimental conditions included according to the paper.
+- There were seven experimental conditions included according to the paper, and this seems to fit the description. But whether were these crossed, and how many levels of "plausibility" and complexity there were is not clear.
 
 From @mikkelsen_prosody_2011:
 
 > "Five factors went into the construction of the critical stimuli in experiment 1 (values in parentheses after each factor): clause type (specificational, nonspecificational), pronoun (*mig* ‘me’/ *det* ‘it’, *ham* ‘him’), adverbial (*ikke* ‘not’, *jo≈* ‘you know’, *sikkert* ‘probably’), context (reason, contrast), and pronoun position (unshifted, shifted). ***By hypothesis, clause type and pronoun position were the only relevant factors for grammaticality***, and the other three were chosen as the most likely alternative factors to affect grammaticality: lexical identity of pronoun, lexical identity of the adverbial element that the pronoun shifts over, and the discourse context of the clause containing the candidate for object shift." (p.242-3)
 
-- If those are all crossed that is 48 unique conditions. Why not fix the non-relevant factors, and what is the relation of these control factors to the critical factors? 
+- If the factors mentioned are all crossed that is 48 unique conditions. Why not fix the non-relevant factors, and what is the relation of these control factors to the critical factors? 
 
 From @kim_longdistance_2009:
 
-> The sentences with TSC and SSC violations were constructed to reflect various combinations of the factors (i.e., logophoric role (cf. see (15)–(18); subject vs. non-subject antecedent; c-commanding vs. non-c-commanding antecedent; and varying case-marking/grammatical function of the anaphor)).
+> The sentences with TSC and SSC violations were constructed to reflect **various combinations of the factors** (i.e., logophoric role (cf. see (15)–(18); subject vs. non-subject antecedent; c-commanding vs. non-c-commanding antecedent; and varying case-marking/grammatical function of the anaphor)).
 
-- What are these "various combinations"?
+- What exactly were these "various combinations"?
 
-
-From @letuchiy_tense_2017:
-
-> "I carried out several surveys on the social network vk.com. In each of the surveys, I asked native speakers which of several sentences they considered to be (un)grammatical. I only invited answers like “grammatical” and “ungrammatical”; no scale of acceptability was employed. The average number of speakers involved was around 20–30; for some surveys, though, this rose to 50 respondents."
 
 
 ## Examples of vague or confusing descriptions {#sec-vague}
 
+Even relatively simple designs are often not described very clearly. This is especially true when describing stimuli construction and organisation.
+
 From @bhatt_codeswitching_1997:
 
-> "There were 40 items designed to cover most of the syntactic constraints proposed in the literature, such as, the Government constraint (Di Sciullo et al., 1986), the Functional Head constraint (Belazi et al., 1994), the Equivalence constraint (Poplack, 1980), and the System Morpheme and the Island constraints (Myers-Scotton, 1993a)."
+> "There were 40 items designed to cover **most of the syntactic constraints proposed in the literature**, such as, the Government constraint (Di Sciullo et al., 1986), the Functional Head constraint (Belazi et al., 1994), the Equivalence constraint (Poplack, 1980), and the System Morpheme and the Island constraints (Myers-Scotton, 1993a)."
 
 - The paper does not list how many constraints (conditions) there were. 
 
@@ -77,7 +79,7 @@ From @featherston_thattrace_2005:
 
 > "Subjects thus saw thirty-two experimental sentences in total (2 extraction types x 2 complement clause types x 8 matrix verbs). These experimental materials were implemented in eight different lexicalizations, so that each subject saw a version of the materials such that each experimental condition appeared once and each lexicalization appeared four times."
 
-- so how many unique stimulus token sentences were there: 32 or (8 x 32) = 256?
+- So how many unique stimulus token sentences were actually constructed: 32 or (8 x 32) = 256? How many sentences did a given participant see? How many participants saw a given sentence?
 
 From @featherston_universals_2005a:
 
@@ -95,6 +97,24 @@ From @frazier_syntaxdiscourse_2005:
 
 - So how many filler items did each participant see: 114 or 114/6 = 19?
 
+From @kim_longdistance_2009:
+
+> "The **test materials consisted of 100 items---62 target items and 38 non-target items**. The target items were composed of 2 types of Korean sentences violating TSC [...] with 5 tokens in each type, 9 types of Korean sentences attesting both TSC and SSC violations, again with 5 tokens in each type. Sentences with only TSC violation (10 tokens) exemplify core binding, while the remaining 52 tokens that violate both TSC and SSC were meant to exemplify various types of exempt binding."
+
+- So there are 2 x 5 = 10 tokens violating TSC; 9 x 5 = 45 tokens attesting both TSC and SSC violations, 10 tokens with only TSC violation; and 52 tokens that violate both TSC and SSC. That's 10 + 45 + 10 + 52 = 117 target tokens...
+
+
+From @francis_grammatical_2010a:
+
+- Information reported in the text is inconsistent with what was actually done. In the body it says,
+
+> "The survey consisted of a series of sentences for which participants were asked to rate each sentence on 9-point scale, where 9 means **'completely acceptable' and 1 means ‘completely unacceptable’** (see Appendix B for exact instructions)." (p.20)
+
+- But in the Appendix, the verbatim instructions do not mention acceptability:  
+
+> "Please read each of the sentences listed below. For each sentence, we would like you to indicate your reaction to the sentence. Mark your response sheet by circling a number from (1) to (9). Use (9) for sentences that seem fully **normal**, and **understandable** to you. Use (1) for sentences that seem very **odd, awkward, or difficult for you to understand**. If your feelings about the sentence are somewhere between these extremes, use one of the middle responses from (2) to (8). Please try to use the entire scale, not just the end points of the scale."
+
+
 From @clifton_when_2010a:
 
 > "Twenty-four sentences like those in (14) were constructed with three versions of each (all appear in Appendix B). [...] Each person saw a total of 108 sentences, including the 24 sentences used in experiment 2 and filler sentences plus sentences from several unrelated experiments." 
@@ -107,13 +127,13 @@ From @sprouse_reverse_2011:
 
 - So do the current items count as fillers for the first experiment? No mention of this is made in description in Section 3: "The 48 target tokens (4 islands × 6 conditions × 2 tokens) in each list were combined with 48 unrelated filler items. The filler items were chosen such that the composition of each survey was 50% acceptable and 50% unacceptable (by hypothesis), as well as 50% interrogative and 50% declarative." Where do the 10 items from Experiment 2 fit in here?
 - Do *all* the other items in Experiment 1 now count as fillers for Experiment 2?
-- This is a common example of people interleaving item sets from multiple experiments, but this is rarely described clearly. 
+- This is a common example of researchers interleaving item sets from multiple experiments, but this is rarely described clearly. 
 
 From @sprouse_experimental_2016a:
 
 > "The four Italian experiments were conducted as part of a large undergraduate class at the University of Milano-Bicocca. 195 participants were recruited during a single class session. Because Italian educational policies prevent payment for participation in research experiments, all participants were volunteers. Two participants were excluded from the analysis for being non-native speakers of Italian. The distribution of participants across the four experiments is: 50, 49, 47, and 47." (p.325)
 
-- So 2 participants were removed from one of the four experiments, but which one was it?
+- So two participants were removed from one of the four experiments, but which one was it?
 
 From @letuchiy_tense_2017:
 
@@ -147,22 +167,6 @@ From @frazier_anticipating_2018, a rather complicated trail of design breadcrumb
 - How do we get to 58 trials ('items') per participant? Are there really 26 + 16 fillers? What is going on here?
 
 
-From @kim_longdistance_2009:
-
-> "The **test materials consisted of 100 items---62 target items and 38 non-target items**. The target items were composed of 2 types of Korean sentences violating TSC [...] with 5 tokens in each type, 9 types of Korean sentences attesting both TSC and SSC violations, again with 5 tokens in each type. Sentences with only TSC violation (10 tokens) exemplify core binding, while the remaining 52 tokens that violate both TSC and SSC were meant to exemplify various types of exempt binding."
-
-- So there are 2 x 5 = 10 tokens violating TSC; 9 x 5 = 45 tokens attesting both TSC and SSC violations, 10 tokens with only TSC violation; and 52 tokens that violate both TSC and SSC. That's 10 + 45 + 10 + 52 = 117 target tokens...
-
-
-From @francis_grammatical_2010a:
-
-- Information reported in the text is inconsistent with what was actually done. In the body it says,
-
-> "The survey consisted of a series of sentences for which participants were asked to rate each sentence on 9-point scale, where 9 means **'completely acceptable' and 1 means ‘completely unacceptable’** (see Appendix B for exact instructions)." (p.20)
-
-- But in the Appendix, the verbatim instructions do not mention acceptability:  
-
-> "Please read each of the sentences listed below. For each sentence, we would like you to indicate your reaction to the sentence. Mark your response sheet by circling a number from (1) to (9). Use (9) for sentences that seem fully **normal**, and **understandable** to you. Use (1) for sentences that seem very **odd, awkward, or difficult for you to understand**. If your feelings about the sentence are somewhere between these extremes, use one of the middle responses from (2) to (8). Please try to use the entire scale, not just the end points of the scale."
 
 From @eberhardt_focus_2019
 

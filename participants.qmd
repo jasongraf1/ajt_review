@@ -22,17 +22,16 @@ source(here("R", "plots.R"))
 ## Key takeaways
 
 - We find that **half of our studies involve between `r round(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1]` and `r round(quantile(as.numeric(clean$N_parts), .75, na.rm = T))[1]` participants**, but there are some with huge numbers, for example @sprouse_gender_2021. 
-- The **population that participants are assumed to be sampled from is rarely explicitly stated**.
 - University affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies. 
-- **Compensation is not reported very often**, although online platforms often pay participants directly, so this may be assumed by authors. But it should be explicitly reported (and often is).
-- Not all studies report demographics, but usually at least L1 is specified.
-- **Power analysis is almost never reported / conducted**.
+- Compensation is not reported very often. Online platforms like AMT or Prolific pay participants directly, and this is often reported, but not fully consistently.
+- The population that participants are assumed to be sampled from is rarely explicitly stated or described. Not all studies report demographics, but usually at least L1 is specified.
+- Power analysis is almost never reported / conducted.
 
 ## Numbers
 
 How many **total participants** were recruited?
 
-The mean number of participants in a given study was `r round(mean(as.numeric(clean$N_parts), na.rm = T))` (median = `r median(as.numeric(clean$N_parts), na.rm = T)`, min = `r min(clean$N_parts, na.rm = T)`, Q1 = `r `round(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1]`, Q3 = `r round(quantile(as.numeric(clean$N_parts), .75, na.rm = T))[1]`, max = `r max(clean$N_parts, na.rm = T)`).
+The mean number of participants in a given study was `r round(mean(as.numeric(clean$N_parts), na.rm = T))` (median = `r median(as.numeric(clean$N_parts), na.rm = T)`, min = `r min(clean$N_parts, na.rm = T)`, Q1 = `r round(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1]`, Q3 = `r round(quantile(as.numeric(clean$N_parts), .75, na.rm = T))[1]`, max = `r max(clean$N_parts, na.rm = T)`).
 
 We've had several studies (N = `r sum(is.na(as.numeric(clean$N_participants_recruited)))`) for which the number of participants was not fully clear. These should be double-checked.
 
@@ -52,15 +51,14 @@ make_boxplot(clean, "N_parts", xlab = "Participants Recruited", xrange = c(0, 41
 
 What was the **population** that participants were sampled from? 
 
-Details of the participant population are not always described clearly. University students are common sources of participants, but details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses to certain countries. Populations from these platforms are coded as "Mixed".
+Details of the participant population are not always described clearly. University students are common sources of participants, but further details are often minimal. Populations of online platforms like AMT are not well known, although many studies do report controls used for narrowing recruitment, such as limiting IP addresses to certain countries. Populations from these platforms are coded as "Mixed".
 
 ```{r}
 #| label: fig-part-pop
 #| fig-cap: "Proportions of populations reported across studies"
 #| fig-width: 8
 #| fig-height: 4
-make_perc_gg_barplot(clean, "part_profile", base_size = 14,
-                     title = "by participant population")
+make_perc_gg_barplot(clean, "part_profile", base_size = 10, title = "by participant population")
 ```
 
 ### Demographics
@@ -74,8 +72,7 @@ Not all studies report demographics, but usually at least being a native speaker
 #| fig-cap: "Proportions of demographics reported across studies"
 #| fig-width: 8
 #| fig-height: 4
-make_split_perc_gg_barplot(clean, "demographics_reported", base_size = 14,
-                           title = "by demographic information reported")
+make_split_perc_gg_barplot(clean, "demographics_reported", title = "by demographic information reported")
 ```
 
 :::
@@ -88,9 +85,9 @@ make_split_perc_gg_barplot(clean, "demographics_reported", base_size = 14,
 
 How were participants **recruited**?
 
-University affiliation (students and/or staff) is the most common way to get participants, but online platforms have become much more common as we annotate more recent studies. 
+University affiliation (students and/or staff) and online platforms have been the most common methods. 
 
-Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe *how* involvement from students was solicited (e.g. via fliers, social media, classrooms, word-of-mouth). 
+Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe *how* involvement from students was solicited (e.g., via dedicated participant pools, fliers, social media, classrooms, word-of-mouth). 
 
 ```{r}
 #| label: fig-part-rec
