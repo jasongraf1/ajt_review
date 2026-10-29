@@ -81,7 +81,7 @@ make_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_size,
     count(.data[[y]]) |> 
     mutate(
       "{y}" := fct_reorder(.data[[y]], n),
-      color = ifelse(.data[[y]] == "Not Reported", "b", "a") |> 
+      color = ifelse(.data[[y]] %in% c("Not Reported", "Not Provided"), "b", "a") |> 
         as.factor(),
       labels = n
     )
@@ -128,7 +128,7 @@ make_split_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_si
     count(.data[[y]]) |>
     mutate(
       "{y}" := fct_reorder(.data[[y]], n),
-      color = ifelse(.data[[y]] == "Not Reported", "b", "a") |> 
+      color = ifelse(.data[[y]] %in% c("Not Reported", "Not Provided"), "b", "a") |> 
         as.factor(),
       labels = n
     )
@@ -228,7 +228,7 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_siz
     mutate(
       perc = round(100 * n / sum(n), 1),
       "{y}" := fct_reorder(.data[[y]], perc),
-      color = ifelse(.data[[y]] == "Not Reported", "b", "a") |> 
+      color = ifelse(.data[[y]] %in% c("Not Reported", "Not Provided"), "b", "a") |> 
         as.factor(),
       labels = paste0(n, " (",perc, "%)")
     )
@@ -597,7 +597,7 @@ plot_recruitment_trends <- function(data){
     mutate(
       perc = round(100*n/sum(n),1),
       part_recruitment = fct_reorder(part_recruitment, perc),
-      color = ifelse(part_recruitment == "Not Reported", "b", "a") |> 
+      color = ifelse(.data[[y]] %in% c("Not Reported", "Not Provided"), "b", "a") |> 
         as.factor(),
       labels = paste0(perc,"%")
     )
@@ -644,6 +644,60 @@ plot_recruitment_trends <- function(data){
     ) |> 
     config(displayModeBar = FALSE)
 }
+
+make_recruit_time_plot <- function(data, base_size = base_font_size){
+  
+  colors <- c("#332288", "#117733", "#44AA99", "#88CCEE", "#DDCC77", "grey")
+  
+  d <- data |> 
+    mutate(part_recruitment = as.factor(part_recruitment)) |> 
+    group_by(year, part_recruitment, .drop = F) |> 
+    count() |> 
+    mutate(
+      part_recruitment = str_remove_all(
+        part_recruitment, " (/ Word.*|affiliation)"
+      ),
+      part_recruitment = str_replace_all(part_recruitment, 
+                                         "Personal / professional network", "Pers/Prof network"),
+      part_recruitment = factor(
+        part_recruitment,
+        levels = rev(c("Online platform", "University", 
+                       "Mixed", "Advertisement",
+                       "Pers/Prof network", "Not Reported"))
+      )
+    )
+  
+  ggplot(d, aes(x = year, y = n, fill = part_recruitment)) +
+    geom_col(width = 0.7) +
+    scale_fill_manual(
+      name = "",
+      values = rev(colors)
+      ) +
+    scale_y_continuous(
+      name = "Number of studies",
+      expand = expansion(mult = c(0, 0.02)),
+    ) +
+    scale_x_continuous(
+      name = "",
+      expand = expansion(mult = c(0.02, 0.02)),
+    ) +
+    ggtitle("Recruitment methods over time") + 
+    theme_minimal(base_size = base_size) +
+    theme(
+      text = element_text(family = "Roboto"),
+      axis.text.y = element_text(size = base_size),
+      axis.text.x = element_text(size = base_size),
+      axis.title.x = element_text(size = base_size),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "bottom",
+      axis.line.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.line.y = element_line(color = "black"),
+      axis.ticks.y = element_line(color = "black")
+    )
+}
+
 
 
 # Design feature plots --------------------------------

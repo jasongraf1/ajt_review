@@ -13,6 +13,8 @@ suppressMessages(library(janitor)) # for cleaning data
 # hide coercion warnings
 as_numeric <- function(x){suppressWarnings(as.numeric(x))}
 
+cat("=== Loading and cleaning data ===\n")
+
 # load the most recent version of the spreadsheet
 current_file <- here("data") |> 
   list.files(
@@ -129,10 +131,10 @@ clean <- clean |>
   mutate(across(c(demographics_reported, rating_terminology, linguistic_phenomenon, random_effects), remove_nr))
 
 # Save to file -----------------------------------------
-
+cat("=== Saving to .rds files ===\n")
 saveRDS(raw, here("data", "raw.rds"))
 saveRDS(full, here("data", "full.rds"))
 saveRDS(clean, here("data", "clean.rds"))
 
-
+cat("=== FINISHED! ===")
 

@@ -1,55 +1,64 @@
 project:
-  type: book
+  type: website                      # was: book
   output-dir: docs
   pre-render: R/data.R
 
-book:
+website:
   title: "Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics"
-  author: ["[Jason Grafmiller](mailto:j.grafmiller@bham.ac.uk)", "Dagmar Divjak", "Laura Rosseel"]
-  # date: "today"
-  # date-format: "D MMMM, YYYY"
-  cover-image: "_images/laptop_cat.jpg"
-  cover-image-alt: "Are we done yet?"
+  site-url: https://jasongraf1.github.io/ajt_review/
   repo-url: https://github.com/jasongraf1/ajt_review
   repo-branch: main
-  site-url: https://jasongraf1.github.io/ajt_review/
-  
+  # repo-actions: [source, issue]    # optional: "View source" / "Report an issue" links
+  page-navigation: true              # keeps the prev/next links you had in the book
+  search: true
+  # image: "_images/laptop_cat.jpg"  # optional: site-wide social-preview image
+  # open-graph: true
+
+  sidebar:
+    style: docked
+    title: "AJT Review"              # shorter label for the sidebar header; delete to use the full title
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/jasongraf1/ajt_review
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - participants.qmd
+      - section: "Design"
+        contents:
+          - design.qmd
+          - stimuli.qmd
+          - task.qmd
+      - section: "Rigor"
+        contents:
+          - analysis.qmd
+          - transparency.qmd
+      - examples.qmd
+      - references.qmd
+      - text: "Checklist for authors"
+        href: checklist.qmd
+      - text: "Glossary"
+        href: glossary.qmd
+
   page-footer:
     left: |
-      Website and annotation app Written by Jason Grafmiller.
+      Website and annotation app written by Jason Grafmiller.
     right: |
-      This book was built with <a href="https://quarto.org/">Quarto</a>.
-
-  chapters:
-    - index.qmd
-    - participants.qmd
-    - part: "Design"
-      chapters:
-      - design.qmd
-      - stimuli.qmd
-      - task.qmd
-    - part: "Rigor"
-      chapters:
-        - analysis.qmd
-        - transparency.qmd
-    - examples.qmd
-    - references.qmd
-    - text: "Checklist for authors"
-      file: checklist.qmd
-    - text: "Glossary"
-      file: glossary.qmd
+      This site was built with <a href="https://quarto.org/">Quarto</a>.
 
 format:
   html:
     mainfont: 'Roboto'
     fontsize: 100%
     number-sections: false
+    toc: true                        # books turn this on by default; websites don't
     toc-title: "AJT review"
-    theme: 
-      light: 
+    theme:
+      light:
         - flatly
         - custom.scss
-      dark: 
+      dark:
         - darkly
         - custom_dark.scss
     css: custom_bib.css
@@ -72,13 +81,13 @@ filters:
 lightbox: auto
 
 knitr:
-  opts_chunk: 
+  opts_chunk:
     tidy: styler
     dev: "svglite"
 
 bibliography: [articles_selected_final.bib, references.bib]
-nocite: |
-  @*
 link-citations: true
-csl: unified-style-linguistics.csl  # optional
+csl: unified-style-linguistics.csl
 
+# NOTE: `nocite: @*` has been removed from here and should go in the
+# front matter of references.qmd only (see notes).

@@ -29,7 +29,10 @@ source(here("R", "plots.R"))
 #| fig-cap: "How (or whether) experimental items were made available"
 #| fig-width: 8
 #| fig-height: 4
-make_perc_gg_barplot(clean, "item_avail")
+
+clean |> 
+  mutate(item_avail = str_replace_all(item_avail, "Not Reported", "Not Provided")) |> 
+  make_perc_gg_barplot("item_avail", title = "providing complete stimulus materials")
 ```
 
 ## Data and code availability
@@ -39,17 +42,20 @@ make_perc_gg_barplot(clean, "item_avail")
 #| fig-cap: "How (or whether) raw data and/or analysis code were made available"
 #| fig-width: 8
 #| fig-height: 3.5
-make_perc_gg_barplot(clean, "data_avail")
+
+clean |> 
+  mutate(data_avail = str_replace_all(data_avail, "Not Reported", "Not Provided")) |> 
+  make_perc_gg_barplot("data_avail", title = "providing full data or code")
 ```
 
 
 ## Changes over time
 
-There is an encouraging increase in recent years in the provision of materials and data. The latter has especially gone up in the last in the last 5-10 years. But the overall proportions are still not much better than 50%.  
+There is an encouraging increase in recent years in the provision of materials and data/code. The latter has especially gone up in the last in the last 5-10 years. But the overall proportions are still not much better than 50%.  
 
 ```{r}
 #| label: fig-avail-trend
-#| fig-cap: "Provision of materials has increased in recent years"
+#| fig-cap: "Provision of materials has increased in recent years. Each dot represents one study with logistic smooths."
 #| fig-width: 8
 #| fig-height: 4
 plot_avail_by_year(clean)

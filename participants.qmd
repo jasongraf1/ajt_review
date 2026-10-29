@@ -75,6 +75,25 @@ Not all studies report demographics, but usually at least being a native speaker
 make_split_perc_gg_barplot(clean, "demographics_reported", title = "by demographic information reported")
 ```
 
+### Filtering
+
+Did the study report how many participants were included in the **final analysis after filtering**?
+
+Most studies do not explicitly report whether they removed data from any participants after initial recruitment. We may assume that many of these simply included data from all participants, however, this should be stated explicitly. 
+
+```{r}
+#| label: fig-filter
+#| fig-cap: "Proportions of studies reporting whether participants were filtered/excluded from final analysis"
+#| fig-height: 2
+#| fig-width: 8
+clean |> 
+  mutate(
+    N_parts_filtered_bin = ifelse(is.na(N_parts_filtered_bin), FALSE, N_parts_filtered_bin),
+    N_parts_filtered_bin = ifelse(N_parts_filtered_bin, "Reported", "Not Reported")
+    ) |> 
+  make_perc_gg_barplot("N_parts_filtered_bin", title = "reporting participant filtering")
+```
+
 :::
 
 ## Recruitment and compensation
@@ -97,24 +116,18 @@ Nonetheless, many studies continue to fail to report how participants were recru
 make_perc_gg_barplot(clean, "part_recruitment", title = "by recruitment method")
 ```
 
-### Filtering
+### Recruitment over time
 
-Did the study report how many participants were included in the **final analysis after filtering**?
-
-Most studies do not explicitly report whether they removed data from any participants after initial recruitment. We may assume that many of these simply included data from all participants, however, this should be stated explicitly. 
+Looking at recruitment trends over time, it's clear that online platforms are increasingly the preferred choice for recruiting participants.
 
 ```{r}
-#| label: fig-filter
-#| fig-cap: "Proportions of studies reporting whether participants were filtered/excluded from final analysis"
-#| fig-height: 2
+#| label: fig-part-rec-time
+#| fig-cap: "Recruitment methods over time"
 #| fig-width: 8
-clean |> 
-  mutate(
-    N_parts_filtered_bin = ifelse(is.na(N_parts_filtered_bin), FALSE, N_parts_filtered_bin),
-    N_parts_filtered_bin = ifelse(N_parts_filtered_bin, "Reported", "Not Reported")
-    ) |> 
-  make_perc_gg_barplot("N_parts_filtered_bin", title = "reporting participant filtering")
+#| fig-height: 4
+make_recruit_time_plot(clean)
 ```
+
 
 
 ### Compensation

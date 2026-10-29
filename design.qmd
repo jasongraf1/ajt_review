@@ -50,7 +50,8 @@ The exact number of experimental conditions is not consistently reported, althou
 #| fig-height: 2.5
 #| fig-width: 8
 clean |> 
-  mutate(N_conditions_reported = str_replace_all(N_conditions_reported, "No", "Not Reported")) |> 
+  mutate(
+    N_conditions_reported = fct_recode(N_conditions_reported, Reported = "Yes", "Not Reported" = "No")) |> 
   make_perc_gg_barplot("N_conditions_reported", title = "reporting exact condition numbers")
 ```
 
