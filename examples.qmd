@@ -63,6 +63,29 @@ From @kim_longdistance_2009:
 
 - What exactly were these "various combinations"?
 
+## Examples of inconsistent reporting
+
+From @francis_grammatical_2010a:
+
+- Information reported in the text is inconsistent with what was actually done. In the body it says,
+
+> "The survey consisted of a series of sentences for which participants were asked to rate each sentence on 9-point scale, where 9 means **'completely acceptable' and 1 means ‘completely unacceptable’** (see Appendix B for exact instructions)." (p.20)
+
+- But in the Appendix, the verbatim instructions do not mention acceptability:  
+
+> "Please read each of the sentences listed below. For each sentence, we would like you to indicate your reaction to the sentence. Mark your response sheet by circling a number from (1) to (9). Use (9) for sentences that seem fully **normal**, and **understandable** to you. Use (1) for sentences that seem very **odd, awkward, or difficult for you to understand**. If your feelings about the sentence are somewhere between these extremes, use one of the middle responses from (2) to (8). Please try to use the entire scale, not just the end points of the scale."
+
+From @giancaspro_me_2021:
+
+- "Goodness" is conflated with "naturalness" here. In the body it says, 
+
+> "Participants evaluated the naturalness of each follow-up sentence using a 1 (‘sounds very odd’) to 4 (‘sounds very good’) naturalness scale."
+
+- The instructions included in Appendix II say this,
+
+> "Your job is to read the follow-up sentences and then **rate how good** it sounds to you.
+
+
 
 
 ## Examples of vague or confusing descriptions {#sec-vague}
@@ -102,17 +125,6 @@ From @kim_longdistance_2009:
 > "The **test materials consisted of 100 items---62 target items and 38 non-target items**. The target items were composed of 2 types of Korean sentences violating TSC [...] with 5 tokens in each type, 9 types of Korean sentences attesting both TSC and SSC violations, again with 5 tokens in each type. Sentences with only TSC violation (10 tokens) exemplify core binding, while the remaining 52 tokens that violate both TSC and SSC were meant to exemplify various types of exempt binding."
 
 - So there are 2 x 5 = 10 tokens violating TSC; 9 x 5 = 45 tokens attesting both TSC and SSC violations, 10 tokens with only TSC violation; and 52 tokens that violate both TSC and SSC. That's 10 + 45 + 10 + 52 = 117 target tokens...
-
-
-From @francis_grammatical_2010a:
-
-- Information reported in the text is inconsistent with what was actually done. In the body it says,
-
-> "The survey consisted of a series of sentences for which participants were asked to rate each sentence on 9-point scale, where 9 means **'completely acceptable' and 1 means ‘completely unacceptable’** (see Appendix B for exact instructions)." (p.20)
-
-- But in the Appendix, the verbatim instructions do not mention acceptability:  
-
-> "Please read each of the sentences listed below. For each sentence, we would like you to indicate your reaction to the sentence. Mark your response sheet by circling a number from (1) to (9). Use (9) for sentences that seem fully **normal**, and **understandable** to you. Use (1) for sentences that seem very **odd, awkward, or difficult for you to understand**. If your feelings about the sentence are somewhere between these extremes, use one of the middle responses from (2) to (8). Please try to use the entire scale, not just the end points of the scale."
 
 
 From @clifton_when_2010a:
