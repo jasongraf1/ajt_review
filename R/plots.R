@@ -647,7 +647,8 @@ plot_recruitment_trends <- function(data){
 
 make_recruit_time_plot <- function(data, base_size = base_font_size){
   
-  colors <- c("#332288", "#117733", "#44AA99", "#88CCEE", "#DDCC77", "grey")
+  # https://davidmathlogic.com/colorblind/#%23332288-%23117733-%2344AA99-%2388CCEE-%23DDCC77-%23CC6677-%23AA4499-%23882255
+  colors <- c("#332288", "#117733", "#44AA99", "#88CCEE", "#DDCC77", "grey80")
   
   d <- data |> 
     mutate(part_recruitment = as.factor(part_recruitment)) |> 
@@ -831,6 +832,62 @@ plot_rating_levels_gg <- function(data, base_size = base_font_size){
 
 # Analysis --------------------------------------------
 
+make_analysis_time_plot <- function(data, base_size = base_font_size){
+  
+  colors <- c("#332288", "#117733", "#44AA99", "#88CCEE", "grey80")
+  
+  d <- data |> 
+    mutate(
+      statistical_test = as.factor(statistical_test),
+      stat_test = fct_collapse(
+        statistical_test,
+        `Mixed models` = "Mixed-Effects Regression",
+        ANOVA = "ANOVA",
+        `Paired tests` = c("Non-parametric test", "t-test"),
+        `Not Reported` = "Not Reported",
+        other_level = "Other"
+      )) |> 
+    group_by(year, stat_test, .drop = F) |> 
+    count() |> 
+    mutate(
+      stat_test = factor(
+        stat_test,
+        levels = rev(c("Mixed models", "ANOVA", 
+                       "Paired tests", "Other",
+                       "Not Reported"))
+      )
+    )
+  
+  ggplot(d, aes(x = year, y = n, fill = stat_test)) +
+    geom_col(width = 0.7) +
+    scale_fill_manual(
+      name = "",
+      values = rev(colors)
+    ) +
+    scale_y_continuous(
+      name = "Number of studies",
+      expand = expansion(mult = c(0, 0.02)),
+    ) +
+    scale_x_continuous(
+      name = "",
+      expand = expansion(mult = c(0.02, 0.02)),
+    ) +
+    ggtitle("Statistical methods over time") + 
+    theme_minimal(base_size = base_size) +
+    theme(
+      text = element_text(family = "Roboto"),
+      axis.text.y = element_text(size = base_size),
+      axis.text.x = element_text(size = base_size),
+      axis.title.x = element_text(size = base_size),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "bottom",
+      axis.line.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.line.y = element_line(color = "black"),
+      axis.ticks.y = element_line(color = "black")
+    )
+}
 
 
 
