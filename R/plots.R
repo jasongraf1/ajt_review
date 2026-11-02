@@ -841,7 +841,7 @@ make_analysis_time_plot <- function(data, base_size = base_font_size){
       statistical_test = as.factor(statistical_test),
       stat_test = fct_collapse(
         statistical_test,
-        `Mixed models` = "Mixed-Effects Regression",
+        `Mixed-Effects models` = "Mixed-Effects Regression",
         ANOVA = "ANOVA",
         `Paired tests` = c("Non-parametric test", "t-test"),
         `Not Reported` = "Not Reported",
@@ -852,7 +852,7 @@ make_analysis_time_plot <- function(data, base_size = base_font_size){
     mutate(
       stat_test = factor(
         stat_test,
-        levels = rev(c("Mixed models", "ANOVA", 
+        levels = rev(c("Mixed-Effects models", "ANOVA", 
                        "Paired tests", "Other",
                        "Not Reported"))
       )
@@ -892,6 +892,70 @@ make_analysis_time_plot <- function(data, base_size = base_font_size){
 
 
 # Reproducibility -------------------------------------
+
+make_avail_time_plot <- function(data, base_size = base_font_size){
+  
+  colors <- c("#332288", "#117733", "#44AA99", "#88CCEE", "grey90")
+  
+  d <- data |> 
+    select(year, item_avail, data_avail) |> 
+    group_by(year, item_avail, data_avail, .drop = F) |> 
+    count() |> 
+    pivot_longer(2:3, names_to = "type", values_to = "avail") |> 
+    mutate(
+      avail = as.factor(avail),
+      avail = fct_recode(
+        avail,
+        `Not Reported` = "Not Reported",
+        `In article` = "Published in article",
+        `In supplement` = "Published in supplement",
+        `Public repo` = "Public Repository",
+        `On request` = "On Request"
+      ),
+      avail = factor(
+        avail,
+        levels = c("Not Reported", "On request", "Public repo",
+                   "In supplement", "In article")
+        ),
+      type = as.factor(type),
+      type = fct_recode(type, `Data / Code` = "data_avail", Items = "item_avail")
+      )
+
+  d |> 
+    ggplot(aes(x = year, y = n, fill = avail)) +
+    geom_col(width = 0.7) +
+    facet_wrap(~type, ncol = 1) +
+    scale_fill_manual(
+      name = "",
+      values = rev(colors)
+    ) +
+    scale_y_continuous(
+      name = "Number of studies",
+      expand = expansion(mult = c(0, 0.02)),
+    ) +
+    scale_x_continuous(
+      name = "",
+      expand = expansion(mult = c(0.02, 0.02)),
+    ) +
+    ggtitle("Statistical methods over time") + 
+    theme_minimal(base_size = base_size) +
+    theme(
+      text = element_text(family = "Roboto"),
+      axis.text.y = element_text(size = base_size),
+      axis.text.x = element_text(size = base_size),
+      axis.title.x = element_text(size = base_size),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "bottom",
+      axis.line.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.line.y = element_line(color = "black"),
+      axis.ticks.y = element_line(color = "black"),
+      strip.text = element_text(size = base_size*1.1)
+    )
+}
+
+
 
 plot_avail_by_year <- function(data, base_size = base_font_size){
   
