@@ -27,54 +27,6 @@ base_font_size <- 10
 
 # Plot functions --------------------------------------
 
-make_barplot <- function(data, y, xmax = NULL, font = NULL,
-                         height = 400, colors = c("steelblue4", "grey")){
-  d <- data |> 
-    count(.data[[y]]) |> 
-    mutate(
-      # perc = round(100 * n / sum(n), 1),
-      "{y}" := fct_reorder(.data[[y]], n),
-      color = ifelse(.data[[y]] == "Not Reported", "b", "a") |> 
-        as.factor(),
-      labels = n
-    )
-  
-  if(is.null(xmax)) {xmax <- max(d$n) + 10}
-  y_vals <- d[[y]]
-  
-  plot_ly(
-    data = d,
-    x = ~n,
-    y = y_vals,
-    color = ~color,
-    text = ~labels,
-    customdata = ~n,
-    type = "bar",
-    orientation = "h",
-    textposition = 'outside',
-    hovertemplate = "N = %{customdata}<extra></extra>",
-    colors = setNames(colors, c("a", "b")),
-    height = height
-  ) |>
-    layout(
-      font = font,
-      yaxis = list(title = "", tickfont = list(size = 16), ticksuffix = " "),
-      xaxis = list(
-        title = "% of studies",
-        showgrid = TRUE,
-        showline = TRUE,
-        range = c(0, xmax),
-        zeroline = FALSE,
-        ticks = "outside",
-        tickfont = list(size = 14),
-        ticksuffix = "%"
-      ),
-      uniformtext = list(minsize = 16, mode = "show"),
-      showlegend = FALSE
-    ) |>
-    config(displayModeBar = FALSE)
-}
-
 make_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_size,
                          colors = c("steelblue4", "grey")){
   d <- data |> 
@@ -165,59 +117,6 @@ make_split_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_si
 }
 
 # Plot for making the horizontal bar plots of percentages
-make_perc_barplot <- function(data, y, xmax = NULL, font = NULL,
-                               colors = c("steelblue4", "grey")) {
-  
-  d <- data |> 
-    count(.data[[y]]) |> 
-    mutate(
-      perc = round(100 * n / sum(n), 1),
-      "{y}" := fct_reorder(.data[[y]], perc),
-      color = ifelse(.data[[y]] == "Not Reported", "b", "a") |> 
-        as.factor(),
-      labels = paste0(perc, "%")
-    )
-  
-  if(is.null(xmax)) {xmax <- max(d$perc) + 10}
-  y_vals <- d[[y]]
-  
-  plot_ly(
-    data = d,
-    x = ~perc,
-    y = y_vals,
-    color = ~color,
-    text = ~labels,
-    customdata = ~n,
-    type = "bar",
-    orientation = "h",
-    textposition = 'outside',
-    hovertemplate = "N = %{customdata}<extra></extra>",
-    colors = setNames(colors, c("a", "b")),
-    height = 400
-  ) |>
-    layout(
-      font = font,
-      yaxis = list(
-        font = font,
-        title = "", 
-        tickfont = list(size = 16, family = font), 
-        ticksuffix = " "),
-      xaxis = list(
-        title = "% of studies",
-        showgrid = TRUE,
-        showline = TRUE,
-        range = c(0, xmax),
-        zeroline = FALSE,
-        ticks = "outside",
-        tickfont = list(size = 14, family = font),
-        ticksuffix = "%"
-      ),
-      uniformtext = list(minsize = 16, mode = "show"),
-      margin = list(b = 100),
-      showlegend = FALSE
-    ) |>
-    config(displayModeBar = FALSE)
-}
 
 make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_size,
                               colors = c("steelblue4", "grey"),
@@ -281,60 +180,6 @@ make_perc_gg_barplot <- function(data, y, xmax = NULL, base_size = base_font_siz
       axis.ticks.x = element_line(color = "black"),
       plot.margin = margin(t = 5.5, r = 20, b = 20, l = 5.5)
     )
-}
-
-make_split_perc_barplot <- function(data, y, xmax = NULL, font = NULL,
-                                    colors = c("steelblue4", "grey")){
-  
-  d <- data |> 
-    mutate(row_id = row_number()) |>
-    separate_rows(.data[[y]], sep = ";") |>
-    mutate("{y}" := str_trim(.data[[y]])) |>
-    distinct(row_id, .data[[y]]) |>
-    count(.data[[y]]) |>
-    mutate(
-      perc = round(100 * n / nrow(data), 1),
-      labels = paste0(perc, "%"),
-      "{y}" := fct_reorder(.data[[y]], perc),
-      color = ifelse(.data[[y]] == "Not Reported", "b", "a") |> 
-        as.factor()
-    )
-  d
-  
-  if(is.null(xmax)) {xmax <- max(d$perc) + 10}
-  y_vals <- d[[y]]
-  
-  plot_ly(
-    data = d,
-    x = ~perc,
-    y = y_vals,
-    color = ~color,
-    text = ~labels,
-    customdata = ~n,
-    type = "bar",
-    orientation = "h",
-    textposition = 'outside',
-    hovertemplate = "N = %{customdata}<extra></extra>",
-    colors = setNames(colors, c("a", "b")),
-    height = 400
-  ) |>
-    layout(
-      font = font,
-      yaxis = list(title = "", tickfont = list(size = 16), ticksuffix = " "),
-      xaxis = list(
-        title = "% of studies",
-        showgrid = TRUE,
-        showline = TRUE,
-        range = c(0, xmax),
-        zeroline = FALSE,
-        ticks = "outside",
-        tickfont = list(size = 14),
-        ticksuffix = "%"
-      ),
-      uniformtext = list(minsize = 16, mode = "show"),
-      showlegend = FALSE
-    ) |>
-    config(displayModeBar = FALSE)
 }
 
 make_split_perc_gg_barplot <- function(data, y, xmax = NULL, 
@@ -583,8 +428,6 @@ make_histogram <- function(data, x, xlab, xrange = c(0, 400),
 }
 
 
-
-
 # Overview --------------------------------------------
 
 
@@ -726,64 +569,6 @@ plot_percent_reporting <- function(data){
 
 ## Items ----
 
-plot_rating_levels <- function(data){
-  d <- data |> 
-    filter(response_scale %in% c("Ordinal (Likert)")) |> 
-    mutate(response_levels = as.numeric(response_levels)) |> 
-    count(response_levels)
-
-  y_vals <- d$n
-  
-  ymax <- max(y_vals) + 10
-  
-  plot_ly(
-    data = d,
-    x = ~response_levels,
-    y = y_vals,
-    # color = ~color,
-    text = ~n,
-    customdata = ~n,
-    type = "bar",
-    orientation = "v",
-    textposition = 'outside',
-    hovertemplate = "N = %{customdata}<extra></extra>",
-    color = I("steelblue4"),
-    showlegend = FALSE
-  ) |>
-    # add_text(
-    #   x = rep(xmax, nrow(data)),
-    #   y = y_vals,
-    #   text = ~labels,
-    #   textposition = "middle left",
-    #   showlegend = FALSE,
-    #   inherit = FALSE,
-    #   textfont = list(color = "white")
-    # ) |>
-    layout(
-      font = font,
-      xaxis = list(
-        title = "Number of values on response scale", 
-        tickfont = list(size = 14), 
-        ticksuffix = "",
-        tickvals = list(2,3,4,5,6,7,8,9,10,11)
-        ),
-      yaxis = list(
-        title = "# of studies",
-        showgrid = TRUE,
-        showline = TRUE,
-        range = c(0, ymax),
-        zeroline = FALSE,
-        ticks = "outside",
-        tickfont = list(size = 14),
-        ticksuffix = ""
-      ),
-      uniformtext = list(minsize = 16, mode = "show"),
-      showlegend = FALSE
-    ) |>
-    config(displayModeBar = FALSE)
-  
-}
-
 plot_rating_levels_gg <- function(data, base_size = base_font_size){
   d <- data |> 
     filter(response_scale %in% c("Ordinal (Likert)")) |> 
@@ -890,7 +675,6 @@ make_analysis_time_plot <- function(data, base_size = base_font_size){
 }
 
 
-
 # Reproducibility -------------------------------------
 
 make_avail_time_plot <- function(data, base_size = base_font_size){
@@ -954,8 +738,6 @@ make_avail_time_plot <- function(data, base_size = base_font_size){
       strip.text = element_text(size = base_size*1.1)
     )
 }
-
-
 
 plot_avail_by_year <- function(data, base_size = base_font_size){
   
