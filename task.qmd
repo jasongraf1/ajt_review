@@ -22,9 +22,9 @@ scale_perc <- clean |>
 
 ## Key takeaways
 
-- **Likert-type scales dominate**: about `r round(scale_perc)`% of studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
-- **The construct being rated is often unclear**. "Acceptability" is the most common term used to describe the judgment by the authors, but "Not Reported" is the *second* most common category — meaning readers often have to guess whether participants were rating grammaticality, naturalness, or something else entirely.
-- **Task administration details are rarely reported**: timing (self-paced vs. fixed), whether sessions were supervised, whether there were practice/pilot trials, breaks, or comprehension checks are almost never mentioned.
+- **Likert-type scales dominate**: about `r round(scale_perc)`% of studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format [@fig-response-scale].
+- **The label of the construct being rated is often unclear** [@fig-rating-terminology]. "Acceptability" is the most common term used to describe the judgment by the authors, but "Not Reported" is the *second* most common category — meaning readers often have to guess whether participants were rating grammaticality, naturalness, or something else entirely.
+- **Task administration details are rarely reported**: timing (self-paced vs. fixed), whether sessions were supervised, whether there were practice/pilot trials, breaks, or comprehension checks are almost never mentioned [@sec-task-admin].
 - Delivery format has shifted toward computer-based administration, but a substantial share of studies still don't report much detail on how the task was delivered.
 
 ## Response format
@@ -90,7 +90,7 @@ The label used matters. "Acceptability," "grammaticality," and "naturalness" are
 
 :::
 
-## Presentation and delivery
+## Presentation and delivery {#sec-task-pres}
 
 ::: {.panel-tabset}
 
@@ -127,7 +127,7 @@ make_perc_gg_barplot(clean, "delivery_format", title = "by response entry format
 
 :::
 
-## Task administration
+## Task administration {#sec-task-admin}
 
 Beyond the response format itself, details of *how* the task was administered — timing, supervision, practice, and attention checks — matter for interpreting results, but are inconsistently reported.
 

@@ -20,11 +20,11 @@ source(here("R", "plots.R"))
 
 ## Key takeaways
 
-- **Mixed-effects regression is now the dominant analysis approach**, having overtaken ANOVA, but random effect structure is inconsistently reported.  
+- **Mixed-effects regression is now the dominant analysis approach**, having overtaken ANOVA, but random effect structure is inconsistently reported [@fig-statistical-test].  
 - **Effect sizes are usually absent, except when reported as regression coefficients.** Most studies not using regression (e.g. ANOVA or t-tests) report only significance tests and *F* or *t* scores, not a standardized measure of effect magnitude such as $\eta^2$ or Cohen's *d*.
 - **Power analysis is almost never conducted** (or at least never reported), despite sample and item sizes varying enormously across the field (see [Experimental Design](design.qmd) and [Stimuli](stimuli.qmd)).
-- Bayesian methods remain rare, and multiple-comparison corrections are almost never mentioned.
-- R is the most common tool when specified, but over half of studies don't say what software was used at all.
+- Bayesian methods remain rare [@fig-bayesian], and multiple-comparison corrections are almost never mentioned [@tbl-rigor-details].
+- R is the most common tool when specified, but over half of studies don't say what software was used at all ([@fig-software]).
 
 ## Statistical approach
 
@@ -49,8 +49,6 @@ It's clear that mixed-effects modeling has become the modern standard.
 #| fig-height: 4
 make_analysis_time_plot(clean)
 ```
-
-
 
 ### Software
 

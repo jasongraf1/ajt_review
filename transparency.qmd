@@ -17,9 +17,9 @@ source(here("R", "plots.R"))
 
 ## Key takeaways
 
-- **Materials are more often shared than data**, but still less than half the time. When items *are* made available, they're most often published directly in the article or its supplementary materials rather than deposited in a dedicated repository.
-- **Raw data and analysis code are rarely made available.** The large majority of studies say nothing about whether data or code can be accessed.
-- There's a visible upward trend in materials and data sharing in more recent years, likely reflecting the broader open-science movement, but it starts from a very low baseline.
+- **Materials are more often shared than data**, but only slightly more than half the time ([@fig-item-avail]). When items *are* made available, they're most often published directly in the article or its supplementary materials rather than deposited in a dedicated repository.
+- **Raw data and analysis code are rarely made available** ([@fig-data-avail]). The large majority of studies say nothing about whether data or code can be accessed.
+- There's a visible upward trend in materials and data sharing in more recent years ([@fig-avail-trend]), likely reflecting the broader open-science movement, but it starts from a very low baseline.
 - Preregistration is essentially absent from this literature---only `r nrow(clean[clean$preregistration == "Yes", ])` (`r round(100*nrow(clean[clean$preregistration == "Yes", ])/nrow(clean), 1)`%) studies report having preregistered their design or analysis.
 
 
@@ -35,7 +35,7 @@ Were the complete **stimulus materials** provided?
 
 clean |> 
   mutate(item_avail = str_replace_all(item_avail, "Not Reported", "Not Provided")) |> 
-  make_perc_gg_barplot("item_avail", title = "providing complete stimulus materials")
+  make_perc_gg_barplot("item_avail", title = "providing complete stimulus materials", base_size = 10)
 ```
 
 ## Data and code availability
@@ -44,7 +44,7 @@ Were the full **datasets and/or analysis code** provided?
 
 ```{r}
 #| label: fig-data-avail
-#| fig-cap: "How (or whether) raw data and/or analysis code were made available"
+#| fig-cap: "How (or whether) raw data and/or analysis code were made available. Note we did not record provision of data and code separately, e.g. some studies provide datasets without any accompanying R code."
 #| fig-width: 8
 #| fig-height: 3.5
 
@@ -57,6 +57,8 @@ clean |>
 ## Changes over time
 
 There is an encouraging increase in recent years in the provision of materials and data/code. The latter has especially gone up in the last in the last 5-10 years. But the overall proportions are still not much better than 50%.
+
+We find that there is also a trend away from appendices in the articles themselves, and towards providing materials in a supplemental file or public repository. Informally, the most common external platform seems to be Open Science Framework. When code is provided, it is usually supplied in OSF and is rarely on GitHub or similar version control systems.   
 
 ```{r}
 #| label: fig-avail-trend

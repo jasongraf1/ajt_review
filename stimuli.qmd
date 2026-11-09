@@ -18,9 +18,10 @@ source(here("R", "plots.R"))
 
 ## Key takeaways
 
-- **Explicit reporting of item numbers is not very consistent**. The number of **items per condition** is rarely explicitly mentioned, nor is the number of participants who see a given item. Reconstruction suggests that for many studies the number of judgments per item varies across items. 
+- **Explicit reporting of item numbers is not very consistent** ([@sec-items]). The number of **items per condition** is rarely explicitly mentioned, nor is the number of participants who see a given item. Reconstruction suggests that for many studies the number of judgments per item varies across items. 
 - The **number of items is almost never explained or justified**, e.g. via power analysis.
 - Detailed **information about fillers is limited**. Studies often report the number of fillers, and some general descriptions, but as with critical items almost no studies report *why they chose that number*. Also, when item sets are provided, filler items are almost never included.
+- Items are rarely presented with additional context, and are rarely normed or piloted before-hand ([@sec-other-items]).
 
 
 ## Explicit reporting of item numbers
@@ -49,7 +50,7 @@ The primary issue is that **the term "item" is not used consistently across stud
 In our coding scheme this *should* be reported as 16 x 4 = 64 unique test sentences, hence 64 "items". This final number is not explicitly reported, and so we code this as "No" (total item number NOT reported). As with the number of experimental conditions, this total number can often be deduced from information in the description, as above, but we only coded a study as "Yes" if that total was reported. Again, the counts in @fig-items-reported are therefore more conservative than one might expect.
 
 
-## Item Counts
+## Item Counts {#sec-items}
 
 :::{.panel-tabset}
 
@@ -121,7 +122,7 @@ clean |>
 
 :::
 
-## Additional stimuli characteristics
+## Additional stimuli characteristics {#sec-other-items}
 
 :::{.panel-tabset}
 

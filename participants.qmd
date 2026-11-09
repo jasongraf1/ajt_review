@@ -22,9 +22,9 @@ source(here("R", "plots.R"))
 ## Key takeaways
 
 - We find that **half of our studies involve between `r round(quantile(as.numeric(clean$N_parts), .25, na.rm = T))[1]` and `r round(quantile(as.numeric(clean$N_parts), .75, na.rm = T))[1]` participants**, but there are some with huge numbers, for example @sprouse_gender_2021. 
-- University affiliation (students and/or staff) has traditionally been the most common way to get participants, but online platforms have become more common in recent studies. 
-- Compensation is not reported very often. Online platforms like AMT or Prolific pay participants directly, and this is often reported, but not fully consistently.
-- The population that participants are assumed to be sampled from is rarely explicitly stated or described. Not all studies report demographics, but usually at least L1 is specified.
+- University affiliation (students and/or staff) has traditionally been the most common way to get participants ([@fig-part-rec]), but online platforms have become more common in recent studies ([@fig-part-rec-time]). 
+- Compensation is not reported very often ([@fig-part-comp]). Online platforms like AMT or Prolific pay participants directly, and this is often reported, but not fully consistently.
+- The population that participants are assumed to be sampled from is rarely explicitly stated or described. Not all studies report demographics, but usually at least L1 is specified ([@sec-population]).
 - Power analysis is almost never reported / conducted.
 
 ## Numbers
@@ -43,7 +43,57 @@ make_boxplot(clean, "N_parts", xlab = "Participants Recruited", xrange = c(0, 41
 ```
 
 
-## Participant characteristics
+
+
+## Recruitment and compensation
+
+:::{.panel-tabset}
+
+### Recruitment
+
+How were participants **recruited**?
+
+University affiliation (students and/or staff) and online platforms have been the most common methods. 
+
+Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe *how* involvement from students was solicited (e.g., via dedicated participant pools, fliers, social media, classrooms, word-of-mouth). 
+
+```{r}
+#| label: fig-part-rec
+#| fig-cap: "Proportions of recruitment methods reported across studies"
+#| fig-width: 8
+#| fig-height: 4.5
+make_perc_gg_barplot(clean, "part_recruitment", title = "by recruitment method")
+```
+
+### Recruitment over time
+
+Looking at recruitment trends over time, it's clear that online platforms are increasingly the preferred choice for recruiting participants.
+
+```{r}
+#| label: fig-part-rec-time
+#| fig-cap: "Recruitment methods over time"
+#| fig-width: 8
+#| fig-height: 4
+make_recruit_time_plot(clean)
+```
+
+### Compensation
+
+How were participants **compensated**?
+
+Compensation is not often reported, particularly when off-line recruitment methods are used. Online platforms such as AMT and Prolific pay participants directly, so this may be assumed by authors. Many do report payments, but *how much* they were paid is not always given. Studies occasionally do explicitly report *not* compensating participants.
+
+```{r}
+#| label: fig-part-comp
+#| fig-cap: "Proportions of compensation methods reported across studies"
+#| fig-width: 8
+#| fig-height: 4
+make_perc_gg_barplot(clean, "compensation", title = "by participant compensation")
+```
+
+:::
+
+## Participant characteristics {#sec-population}
 
 ::: {.panel-tabset}
 
@@ -93,57 +143,5 @@ clean |>
     ) |> 
   make_perc_gg_barplot("N_parts_filtered_bin", title = "reporting participant filtering")
 ```
-
-:::
-
-## Recruitment and compensation
-
-:::{.panel-tabset}
-
-### Recruitment
-
-How were participants **recruited**?
-
-University affiliation (students and/or staff) and online platforms have been the most common methods. 
-
-Nonetheless, many studies continue to fail to report how participants were recruited. Even those involving students do not consistently describe *how* involvement from students was solicited (e.g., via dedicated participant pools, fliers, social media, classrooms, word-of-mouth). 
-
-```{r}
-#| label: fig-part-rec
-#| fig-cap: "Proportions of recruitment methods reported across studies"
-#| fig-width: 8
-#| fig-height: 4.5
-make_perc_gg_barplot(clean, "part_recruitment", title = "by recruitment method")
-```
-
-### Recruitment over time
-
-Looking at recruitment trends over time, it's clear that online platforms are increasingly the preferred choice for recruiting participants.
-
-```{r}
-#| label: fig-part-rec-time
-#| fig-cap: "Recruitment methods over time"
-#| fig-width: 8
-#| fig-height: 4
-make_recruit_time_plot(clean)
-```
-
-
-
-### Compensation
-
-How were participants **compensated**?
-
-Compensation is not often reported, particularly when off-line recruitment methods are used. Online platforms such as AMT and Prolific pay participants directly, so this may be assumed by authors. Many do report payments, but *how much* they were paid is not always given. Studies occasionally do explicitly report *not* compensating participants.
-
-```{r}
-#| label: fig-part-comp
-#| fig-cap: "Proportions of compensation methods reported across studies"
-#| fig-width: 8
-#| fig-height: 4
-make_perc_gg_barplot(clean, "compensation", title = "by participant compensation")
-```
-
-
 
 :::
