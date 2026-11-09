@@ -7,27 +7,46 @@
 # ---------------------------------------------------------
 
 suppressMessages(library(here)) # for pathing to/from project directory
-suppressMessages(library(tidyverse)) # for dplyr, ggplot, etc.
+suppressMessages(library(httr2)) # for connecting to the internet
+suppressMessages(library(dplyr)) # for data wrangling
+suppressMessages(library(purrr)) # for data wrangling
+suppressMessages(library(readr)) # for data loading
+suppressMessages(library(stringr)) # for data wrangling
 suppressMessages(library(janitor)) # for cleaning data
+
 
 # hide coercion warnings
 as_numeric <- function(x){suppressWarnings(as.numeric(x))}
 
 cat("=== Loading and cleaning data ===\n")
 
-# load the most recent version of the spreadsheet
-current_file <- here("data") |> 
-  list.files(
-    pattern = "^annotations_from_articles_.*\\.csv", 
-    full.names = TRUE
-  ) |> 
-  sort() |> 
-  rev() |> 
-  first()
+# location of the data on Huggingface
+repo <- "jasongraf1/annotation_app_data"
 
-raw <- read.csv(current_file) |> 
-  as_tibble() |> 
-  filter(journal != "")
+# Commit hash of the current data, for provenance
+meta <- request(paste0("https://huggingface.co/api/datasets/", repo)) |>
+  req_perform() |>
+  resp_body_json()
+
+raw <- read_csv(
+  paste0("https://huggingface.co/datasets/", repo,
+         "/resolve/", meta$sha, "/annotations.csv"),
+  show_col_types = FALSE
+)
+
+# load the most recent version of the spreadsheet
+# current_file <- here("data") |> 
+#   list.files(
+#     pattern = "^annotations_from_articles_.*\\.csv", 
+#     full.names = TRUE
+#   ) |> 
+#   sort() |> 
+#   rev() |> 
+#   first()
+
+# raw <- read.csv(current_file) |> 
+#   as_tibble() |> 
+#   filter(journal != "")
 
 # load in the article list
 full <- here("data", "articles_selected_final.csv") |> 
@@ -54,7 +73,11 @@ full <- full |>
 filtered <- raw |> 
   filter(!str_detect(coder_comments, "[Ee]xclude|No judgments collected")) |> 
   mutate(across(where(is.character), ~str_trim(.x))) |> 
-  mutate(across(where(is.character), ~str_replace_all(.x, "[nN]ot [rR]eported", "Not Reported")))
+  mutate(across(where(is.character), ~str_replace_all(.x, "[nN]ot [rR]eported", "Not Reported"))) |> 
+  rename(
+    N_pre_test = "N_pre-test",
+    N_post_test = "N_post-test"
+  )
 
 # functions
 extract_surname <- function(name) {
