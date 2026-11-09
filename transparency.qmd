@@ -19,10 +19,13 @@ source(here("R", "plots.R"))
 
 - **Materials are more often shared than data**, but still less than half the time. When items *are* made available, they're most often published directly in the article or its supplementary materials rather than deposited in a dedicated repository.
 - **Raw data and analysis code are rarely made available.** The large majority of studies say nothing about whether data or code can be accessed.
-- **Preregistration is essentially absent** from this literature — only a handful of studies report having preregistered their design or analysis.
 - There's a visible upward trend in materials and data sharing in more recent years, likely reflecting the broader open-science movement, but it starts from a very low baseline.
+- Preregistration is essentially absent from this literature---only `r nrow(clean[clean$preregistration == "Yes", ])` (`r round(100*nrow(clean[clean$preregistration == "Yes", ])/nrow(clean), 1)`%) studies report having preregistered their design or analysis.
+
 
 ## Materials availability
+
+Were the complete **stimulus materials** provided?
 
 ```{r}
 #| label: fig-item-avail
@@ -36,6 +39,8 @@ clean |>
 ```
 
 ## Data and code availability
+
+Were the full **datasets and/or analysis code** provided?
 
 ```{r}
 #| label: fig-data-avail
@@ -51,14 +56,14 @@ clean |>
 
 ## Changes over time
 
-There is an encouraging increase in recent years in the provision of materials and data/code. The latter has especially gone up in the last in the last 5-10 years. But the overall proportions are still not much better than 50%.  
+There is an encouraging increase in recent years in the provision of materials and data/code. The latter has especially gone up in the last in the last 5-10 years. But the overall proportions are still not much better than 50%.
 
 ```{r}
 #| label: fig-avail-trend
 #| fig-cap: "Provision of materials has increased in recent years. Each dot represents one study with logistic smooths."
 #| fig-width: 8
-#| fig-height: 4
-plot_avail_by_year(clean)
+#| fig-height: 5
+make_avail_time_plot(clean)
 ```
 
 

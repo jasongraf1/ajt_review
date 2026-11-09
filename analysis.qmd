@@ -40,6 +40,18 @@ What **statistical methods** were used to test hypotheses?
 make_perc_gg_barplot(clean, "statistical_test", title = "by statistical methods")
 ```
 
+It's clear that mixed-effects modeling has become the modern standard. 
+
+```{r}
+#| label: fig-stats-time
+#| fig-cap: "Statistical method usage over time"
+#| fig-width: 8
+#| fig-height: 4
+make_analysis_time_plot(clean)
+```
+
+
+
 ### Software
 
 What **software tools** were used for analysis?

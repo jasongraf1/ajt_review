@@ -22,7 +22,7 @@ scale_perc <- clean |>
 
 ## Key takeaways
 
-- **Likert-type scales dominate**: about `r round(scale_perc)` studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
+- **Likert-type scales dominate**: about `r round(scale_perc)`% of studies use an ordinal (Likert) response scale, most often with 7 points or 5 points. Binary (yes/no, grammatical/ungrammatical) judgments are the next most common format.
 - **The construct being rated is often unclear**. "Acceptability" is the most common term used to describe the judgment by the authors, but "Not Reported" is the *second* most common category — meaning readers often have to guess whether participants were rating grammaticality, naturalness, or something else entirely.
 - **Task administration details are rarely reported**: timing (self-paced vs. fixed), whether sessions were supervised, whether there were practice/pilot trials, breaks, or comprehension checks are almost never mentioned.
 - Delivery format has shifted toward computer-based administration, but a substantial share of studies still don't report much detail on how the task was delivered.
@@ -31,9 +31,11 @@ scale_perc <- clean |>
 
 ::: {.panel-tabset}
 
-### Scale type
+### Task type
 
 What was the **scale** of participants' responses?
+
+Continuous rating tasks are typically those using visual analogue scales, slider bars or scalar forced choice tasks [such as @bresnan_predicting_2010c].
 
 ```{r}
 #| label: fig-response-scale
@@ -44,6 +46,8 @@ What was the **scale** of participants' responses?
 clean |> 
   mutate(
     scale_fine = case_when(
+      response_scale == "Ordinal (Likert)" ~ "Likert Scale",
+      response_scale == "Dichotomous (Binary)" ~ "Binary",
       response_comparison == "Magnitude Estimation" ~ "Magnitude Est.",
       response_levels == "TH" ~ "Thermometer",
       response_comparison == "Variant Comparison" & response_levels %in% paste(2:10) ~ "Forced Choice",
@@ -67,7 +71,7 @@ For studies using an ordinal scale of 3 or more levels, the number of response l
 plot_rating_levels_gg(clean)
 ```
 
-### Rating terminology
+### Task label
 
 What **terminology** did the authors use to refer to their judgment task with participants (e.g. "rate how acceptable / natural /… each sentence is")? 
 
@@ -78,7 +82,7 @@ An important note is that **most articles do not provide the exact instructions 
 #| fig-cap: "Terminology used to describe the judgment being elicited"
 #| fig-width: 8
 #| fig-height: 4.5
-make_split_perc_gg_barplot(clean, "rating_terminology", base_size = 10, title = "by label terminology")
+make_split_perc_gg_barplot(clean, "rating_terminology", base_size = 10, title = "by label used")
 ```
 
 The label used matters. "Acceptability," "grammaticality," and "naturalness" are not interchangeable constructs, yet a suprising number of studies (N = `r nrow(filter(clean, rating_terminology == "Not Reported"))`) don't specify which one they're measuring [we need to check this].
@@ -101,7 +105,10 @@ Again, this is often not reported explicitly, but it can be reasonably inferred 
 #| fig-cap: "Written presentation dominates; auditory AJTs remain relatively rare"
 #| fig-width: 8
 #| fig-height: 3.5
-make_perc_gg_barplot(clean, "presentation_modality", title = "by presentation modality")
+
+clean |> 
+  mutate(presentation_modality = str_replace_all(presentation_modality, "Audio", "Auditory")) |> 
+  make_perc_gg_barplot("presentation_modality", title = "by presentation modality")
 ```
 
 ### Entry format
@@ -142,18 +149,18 @@ make_perc_gg_barplot(clean, "task_duration", title = "reporting recording of tot
 ```
 
 
-### Timing
+### Pacing
 
 Were items presented in a **fixed or variable amount of time**, or was the presentation **self-paced** (participants proceded at their own pace)? 
 
-Some studies may use speeded judgment tasks, which we code as "Fixed". Most allow participants to proceed at their own pace but this is rarely explicitly stated. Unless the article explicitly mentioned using a self-paced presentation, the study was coded as "Not Reported". However we suspect that most tasks, especially online ones, did in fact allow participants to proceed at their own pace. So again, these are conservative estimates.
+Some studies may use speeded judgment tasks or place an upper limit on the amount owhich we code as "Fixed". Most allow participants to proceed at their own pace but this is rarely explicitly stated. Unless the article explicitly mentioned using a self-paced presentation, the study was coded as "Not Reported". However we suspect that most tasks, especially online ones, did in fact allow participants to proceed at their own pace. So again, these are conservative estimates.
 
 ```{r}
 #| label: fig-task-timing
 #| fig-cap: "Whether the task was self-paced or had a fixed presentation time is rarely reported"
 #| fig-width: 8
 #| fig-height: 3
-make_perc_gg_barplot(clean, "task_timing", title = "by presentation timing")
+make_perc_gg_barplot(clean, "task_timing", title = "by presentation pacing")
 ```
 
 ### Supervision

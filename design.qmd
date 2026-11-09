@@ -133,7 +133,7 @@ make_perc_gg_barplot(clean, "exp_blocking", title = "reporting of item organizat
 
 ### Other features
 
-- Some studies (N = `r nrow(filter(clean, N_pre.test != "0"))`) include **pre-test trials**, typically as practice trials for the task. This is common with Magnitude Estimation studies. Very few (N = `r nrow(filter(clean, N_post.test != "0"))`) include **post-test trials**.
+- Some studies (N = `r nrow(filter(clean, N_pre_test != "0"))`) include **pre-test trials**, typically as practice trials for the task. This is common with Magnitude Estimation studies. Very few (N = `r nrow(filter(clean, N_post_test != "0"))`) include **post-test trials**.
 - Many studies balanced items across (predicted) acceptability conditions, but again this is not always reported clearly.
 - A small percentage of studies involve the same items in multiple tasks.
 
@@ -142,8 +142,8 @@ make_perc_gg_barplot(clean, "exp_blocking", title = "reporting of item organizat
 #| tbl-cap: "Reporting rates for other design details"
 clean |>
   mutate(
-    n_pre = ifelse(`N_pre.test` > 0, "Yes", "No"),
-    n_post = ifelse(`N_post.test` > 0, "Yes", "No"),
+    n_pre = ifelse(`N_pre_test` > 0, "Yes", "No"),
+    n_post = ifelse(`N_post_test` > 0, "Yes", "No"),
   ) |> 
   select(balanced_items, n_pre, n_post, multiple_tasks) |>
   pivot_longer(everything(), names_to = "Detail", values_to = "value") |>
