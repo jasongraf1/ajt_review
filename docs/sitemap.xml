@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jasongraf1.github.io/ajt_review/transparency.html</loc>
-    <lastmod>2026-11-02T08:28:25.122Z</lastmod>
+    <loc>https://jasongraf1.github.io/ajt_review/zscore_mixed_models_summary.html</loc>
+    <lastmod>2026-11-02T09:22:36.380Z</lastmod>
   </url>
   <url>
-    <loc>https://jasongraf1.github.io/ajt_review/stimuli.html</loc>
-    <lastmod>2026-10-28T14:11:08.308Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jasongraf1.github.io/ajt_review/participants.html</loc>
-    <lastmod>2026-10-29T11:29:03.277Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jasongraf1.github.io/ajt_review/glossary.html</loc>
-    <lastmod>2026-09-04T09:50:40.296Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jasongraf1.github.io/ajt_review/design.html</loc>
-    <lastmod>2026-10-29T09:17:10.627Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jasongraf1.github.io/ajt_review/analysis.html</loc>
-    <lastmod>2026-11-01T10:17:42.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jasongraf1.github.io/ajt_review/checklist.html</loc>
-    <lastmod>2026-10-27T13:09:27.607Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jasongraf1.github.io/ajt_review/examples.html</loc>
-    <lastmod>2026-10-29T11:52:11.995Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jasongraf1.github.io/ajt_review/index.html</loc>
-    <lastmod>2026-10-27T12:19:12.594Z</lastmod>
+    <loc>https://jasongraf1.github.io/ajt_review/task.html</loc>
+    <lastmod>2026-10-29T13:21:06.131Z</lastmod>
   </url>
   <url>
     <loc>https://jasongraf1.github.io/ajt_review/references.html</loc>
     <lastmod>2026-10-09T14:06:12.934Z</lastmod>
   </url>
   <url>
-    <loc>https://jasongraf1.github.io/ajt_review/task.html</loc>
-    <lastmod>2026-10-29T13:21:06.131Z</lastmod>
+    <loc>https://jasongraf1.github.io/ajt_review/index.html</loc>
+    <lastmod>2026-11-02T08:44:34.907Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/examples.html</loc>
+    <lastmod>2026-10-29T11:52:11.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/checklist.html</loc>
+    <lastmod>2026-10-27T13:09:27.607Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/analysis.html</loc>
+    <lastmod>2026-11-01T10:17:42.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/design.html</loc>
+    <lastmod>2026-11-08T12:13:51.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/glossary.html</loc>
+    <lastmod>2026-09-04T09:50:40.296Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/participants.html</loc>
+    <lastmod>2026-10-29T11:29:03.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/stimuli.html</loc>
+    <lastmod>2026-10-28T14:11:08.308Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jasongraf1.github.io/ajt_review/transparency.html</loc>
+    <lastmod>2026-11-02T08:28:25.122Z</lastmod>
   </url>
 </urlset>
