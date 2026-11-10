@@ -37,6 +37,8 @@ What **statistical methods** were used to test hypotheses?
 ```{r}
 #| label: fig-statistical-test
 #| fig-cap: "Mixed-effects regression is now more common than traditional ANOVA"
+#| fig-width: 8
+#| fig-height: 5 
 make_perc_gg_barplot(clean, "statistical_test", title = "by statistical methods")
 ```
 
@@ -58,6 +60,7 @@ What **software tools** were used for analysis?
 #| label: fig-software
 #| fig-cap: "R is the most common analysis software when reported, but reporting is inconsistent"
 #| fig-height: 3.5
+#| fig-width: 8
 make_perc_gg_barplot(clean, "software", title = "by analysis software used")
 ```
 
@@ -69,6 +72,7 @@ Did the analysis use **Bayesian** methods?
 #| label: fig-bayesian
 #| fig-cap: "Very few studies use Bayesian analysis methods"
 #| fig-height: 2
+#| fig-width: 8
 clean |> 
   mutate(bayesian = ifelse(bayesian == "No", "Not Reported", "Yes")) |> 
   make_perc_gg_barplot("bayesian", title = "using Bayesian methods")
@@ -92,6 +96,7 @@ We also include repeated-measures tests as adjustments for by-participant varian
 #| label: fig-random-effects
 #| fig-cap: "Random effect structure used in mixed-effects models, where reported"
 #| fig-height: 3.5
+#| fig-width: 8
 make_split_perc_gg_barplot(clean, "random_effects", title = "examining participant / item variation")
 ```
 
@@ -103,6 +108,7 @@ Was the response analysed as a **continuous scale, an ordinal factor, or dichoto
 #| label: fig-stat-scale
 #| fig-cap: "How the response variable was treated in the statistical model"
 #| fig-height: 3.5
+#| fig-width: 8
 clean |> 
   filter(stat_scale != "") |> 
   make_perc_gg_barplot("stat_scale")
@@ -138,6 +144,7 @@ clean |>
 #| label: fig-preprocessing
 #| fig-cap: "Most studies do not report any preprocessing or transformation of ratings"
 #| fig-height: 3.5
+#| fig-width: 8
 make_perc_gg_barplot(clean, "preprocessing")
 ```
 
