@@ -542,8 +542,6 @@ make_recruit_time_plot <- function(data, base_size = base_font_size){
     )
 }
 
-
-
 # Design feature plots --------------------------------
 
 plot_percent_reporting <- function(data){
@@ -702,7 +700,8 @@ make_avail_time_plot <- function(data, base_size = base_font_size){
                    "In supplement", "In article")
         ),
       type = as.factor(type),
-      type = fct_recode(type, `Data / Code` = "data_avail", Items = "item_avail")
+      type = fct_recode(type, `Data / Code` = "data_avail", `Stimulus Items` = "item_avail"),
+      type = relevel(type, ref = "Stimulus Items")
       )
 
   d |> 
@@ -718,7 +717,7 @@ make_avail_time_plot <- function(data, base_size = base_font_size){
       expand = expansion(mult = c(0, 0.02)),
     ) +
     scale_x_continuous(
-      name = "",
+      name = "Number of response levels",
       expand = expansion(mult = c(0.02, 0.02)),
     ) +
     ggtitle("Statistical methods over time") + 
@@ -735,7 +734,7 @@ make_avail_time_plot <- function(data, base_size = base_font_size){
       axis.ticks.x = element_blank(),
       axis.line.y = element_line(color = "black"),
       axis.ticks.y = element_line(color = "black"),
-      strip.text = element_text(size = base_size*1.1)
+      strip.text = element_text(size = base_size*1.1, hjust = .4)
     )
 }
 
