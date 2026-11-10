@@ -43,7 +43,8 @@ make_split_perc_gg_barplot(clean, "linguistic_phenomenon",
 
 Was the **total number of conditions explicitly reported**?
 
-The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies *do* often report individual factors and/or design structure, e.g. "We used a 2x3 design crossing factor A with factor B", but then leave the reader to compute the final tally of experimental conditions (6 in this example). We coded any case where the *exact number of unique conditions is not strictly stated* as "Not Reported", thus the numbers here are more conservative than one might expect. 
+The exact number of experimental conditions is not consistently reported, although the design can often be reconstructed from the description. Studies *do* often report individual factors and/or design structure, e.g. "We used a 2x3 design crossing factor A with factor B", but then leave the reader to compute the final tally of experimental conditions (6 in this example). We coded any case where the *exact number of unique conditions is not strictly stated* as "Not Reported", thus the numbers here are more conservative than one might expect. In some instances certain contrasts are not considered part of the experimental conditions, thus under-representing the complexity of the design.
+
 
 ```{r}
 #| label: fig-des-perc-rep
@@ -56,10 +57,9 @@ clean |>
   make_perc_gg_barplot("N_conditions_reported", title = "reporting exact condition numbers")
 ```
 
-In some instances certain contrasts are not considered part of the experimental conditions, thus under-representing the complexity of the design.
 
 
-### Conditions
+### Condition Numbers
 
 How many **experimental conditions** are there?
 
@@ -67,7 +67,7 @@ The median number of experimental conditions in a given study was `r round(media
 
 There are `r length(clean$N_conds[is.na(clean$N_conds)])` studies where the total number of conditions is not clear. Those with larger numbers (>20) should probably be re-examined. There are even a few studies (N = `r length(which(clean$N_conds >= 50))`) with very large (>50) numbers of conditions, which should certain be checked and confirmed.
 
-Again, many of these numbers are deducted / inferred from incomplete descriptions of designs. We've included some examples of unclear descriptions in the [Examples](examples.qmd) page. 
+Again, **many of these numbers are deduced / inferred** from the descriptions of designs ("we used a 2x2 design...") even when exact numbers are not reported. We've included some examples of unclear descriptions in the [Examples](examples.qmd) page. 
 
 ```{r}
 #| label: fig-cond-boxplot
@@ -95,6 +95,23 @@ make_perc_gg_barplot(clean, "design_type", title = "using within- or between-sub
 ## Additional design characteristics {#sec-other-design}
 
 :::{.panel-tabset}
+
+### Trials
+
+Total number of experimental **trials per participant** (not including pre- or post-test).
+
+The median number of experimental trials in a given study was `r round(median(clean$N_trials, na.rm = T))` (min = `r min(clean$N_trials, na.rm = T)`, Q1 = `r quantile(clean$N_trials, .25, na.rm = T)`, Q3 = `r quantile(clean$N_trials, .75, na.rm = T)`, max = `r max(clean$N_trials, na.rm = T)`). Many studies with large sets of items split them into counterbalanced lists to reduce the number of trials for participants.
+
+There are `r length(clean$N_conds[is.na(clean$N_trials)])` studies where the total number of trials is not clear. These need to be checked...
+
+```{r}
+#| label: fig-trial-boxplot
+#| fig-cap: "Most studies ask for 100 or fewer responses, but some are much longer"
+#| lightbox: false
+clean |> 
+  filter(N_trials < 300) |> 
+  make_boxplot("N_trials", xlab = "Number of Response Trials")
+```
 
 ### Randomization
 
