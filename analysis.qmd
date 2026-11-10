@@ -76,15 +76,17 @@ clean |>
 
 :::
 
-## Model specification
+## Test details
 
 ::: {.panel-tabset}
 
-### By-item/subject effects
+### By-item/subject variance
 
 Were adjustments made for **by-participant or by-item variation** (e.g. as 'random effects' or F1 and F2 ANOVA)?
 
 Many studies use separate by-subject and by-item ANOVAs, and we include those here along with mixed-effects regression models. Both approaches are used to simultaneously test whether an effect generalizes across both human participants and stimulus items.
+
+We also include repeated-measures tests as adjustments for by-participant variance.
 
 ```{r}
 #| label: fig-random-effects
