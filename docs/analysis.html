@@ -248,7 +248,7 @@ window.Quarto = {
   <ul>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link active" data-scroll-target="#key-takeaways">Key takeaways</a></li>
   <li><a href="#statistical-approach" id="toc-statistical-approach" class="nav-link" data-scroll-target="#statistical-approach">Statistical approach</a></li>
-  <li><a href="#model-specification" id="toc-model-specification" class="nav-link" data-scroll-target="#model-specification">Model specification</a></li>
+  <li><a href="#test-details" id="toc-test-details" class="nav-link" data-scroll-target="#test-details">Test details</a></li>
   <li><a href="#sec-power" id="toc-sec-power" class="nav-link" data-scroll-target="#sec-power">Reporting rigor: Effect size, power, correction, and thresholds</a></li>
   </ul>
 </nav>
@@ -360,14 +360,15 @@ Figure&nbsp;4: Very few studies use Bayesian analysis methods
 </div>
 </div>
 </section>
-<section id="model-specification" class="level2">
-<h2 class="anchored" data-anchor-id="model-specification">Model specification</h2>
+<section id="test-details" class="level2">
+<h2 class="anchored" data-anchor-id="test-details">Test details</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">By-item/subject effects</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Scale treatment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Preprocessing</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">By-item/subject variance</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Scale treatment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Preprocessing</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Were adjustments made for <strong>by-participant or by-item variation</strong> (e.g.&nbsp;as ‘random effects’ or F1 and F2 ANOVA)?</p>
 <p>Many studies use separate by-subject and by-item ANOVAs, and we include those here along with mixed-effects regression models. Both approaches are used to simultaneously test whether an effect generalizes across both human participants and stimulus items.</p>
+<p>We also include repeated-measures tests as adjustments for by-participant variance.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-random-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
