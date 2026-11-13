@@ -6,7 +6,8 @@ project:
 website:
   title: "Systematic Review of Acceptability Judgment Tasks in Theoretical Linguistics"
   site-url: https://jasongraf1.github.io/ajt_review/
-  repo-url: https://github.com/jasongraf1/ajt_review
+  repo-url: https://github.com/jasongraf1/ajt_review/
+  favicon: _images/UoBcrest.ico
   repo-branch: main
   # repo-actions: [source, issue]    # optional: "View source" / "Report an issue" links
   page-navigation: true              # keeps the prev/next links you had in the book
@@ -68,7 +69,7 @@ execute:
   echo: false
   message: false
   warning: false
-  freeze: auto
+  freeze: false
   fig-dpi: 300
 
 editor: source
